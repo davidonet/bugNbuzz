@@ -19,12 +19,26 @@ class MyServer(ServerThread):
 		curses.cbreak()
 		curses.noecho()
 		self.stdscr.nodelay(True)
-		self.stdscr.addstr(0,0,"******** SooperLooper tester ********",curses.A_REVERSE)
+		self.stdscr.addstr(0,0,"******************************* SooperLooper ****************************",curses.A_REVERSE)
+		self.stdscr.addstr(4,0,"All    ",curses.A_REVERSE)
 		for l in range(4):
 			self.stdscr.addstr(l+5,0,"loop "+str(l+1)+ " ",curses.A_REVERSE)
-		self.stdscr.addstr(11,0,"q : quit / 1-4 : loop selection / r : RecPlayOver / u : UndoRedo / s : Stop",curses.A_DIM)
+		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear",curses.A_DIM)
 		self.ping()
+		self.states = [0.0,0.0,0.0,0.0,0.0]
+		self.stdscr.addstr(13,0,"********************************** Jacket *******************************",curses.A_REVERSE)
+		self.stdscr.addstr(14, 0, "Host :  osc.udp://xosc:1234")
+		for l in range(5):
+			self.stdscr.addstr(l+16,0,"button "+str(l+1)+ " ",curses.A_REVERSE)
 
+		self.stdscr.addstr(22,0,"record / play ",curses.A_REVERSE)
+		self.stdscr.addstr(23,0,"     undo     ",curses.A_REVERSE)
+		self.stdscr.addstr(24,0,"     stop     ",curses.A_REVERSE)
+			
+		for l in range(5):
+			self.stdscr.addstr(l+16,20,"led "+str(l+1)+ " ",curses.A_REVERSE)
+		for l in range(5):
+			self.stdscr.addstr(l+16,32,"analog "+str(l+1)+ " ",curses.A_REVERSE)
 
 	def quit(self):
 		curses.nocbreak()
@@ -81,6 +95,7 @@ class MyServer(ServerThread):
 	@make_method('/update', 'isf')
 	def update(self, path, args):
 		l, c, s = args
+		self.states[l]=s
 		self.stdscr.addstr(l+5,10,self.getState(s))
 
 	@make_method(None, None)
@@ -93,14 +108,32 @@ class MyServer(ServerThread):
 	
 	def loopSelect(self,loopnum):
 		self.loopnum=loopnum
-		for l in range(4):
-			self.stdscr.addstr(l+5,8," ")	
+		for l in range(5):
+			self.stdscr.addstr(l+4,8," ")	
 		self.stdscr.addstr(self.loopnum+5,8,"*",curses.A_BOLD)
+
+	def loopRecPlay(self):
+		if self.states[self.loopnum]==0.0 or self.states[self.loopnum]==14.0:
+			send(self.target,"/sl/"+str(self.loopnum)+"/hit","record")
+		elif self.states[self.loopnum]==2.0:
+			send(self.target,"/sl/"+str(self.loopnum)+"/hit","record")
+		else:
+			send(self.target,"/sl/"+str(self.loopnum)+"/hit","overdub")	
+
+	def loopStop(self):
+		send(self.target,"/sl/"+str(self.loopnum)+"/hit","pause")
+		self.states[self.loopnum]=0.0
+
+	def loopUndo(self):
+		send(self.target,"/sl/"+str(self.loopnum)+"/hit","undo")
+
 
 	def interact(self):
 		c = self.stdscr.getch()
 		if c==ord('q'):
 			self.quit()
+		elif c==ord('a'):
+			self.loopSelect(-1)
 		elif c==ord('1'):
 			self.loopSelect(0)
 		elif c==ord('2'):
