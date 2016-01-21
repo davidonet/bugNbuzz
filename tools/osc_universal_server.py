@@ -4,13 +4,15 @@ from liblo import *
 import sys
 
 class MyServer(ServerThread):
-    def __init__(self):
-        ServerThread.__init__(self, 8000)
+	def __init__(self):
+		ServerThread.__init__(self, 8000)
 
-    @make_method(None, None)
-    def fallback(self, path, args):
-        print "received message '%s'" % path
-        print args
+	@make_method(None, None)
+	def fallback(self, path, args):
+		print "received message '%s'" % path
+		print args
+
+
 try:
     server = MyServer()
 except ServerError, err:
