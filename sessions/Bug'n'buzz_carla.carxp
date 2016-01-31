@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Bitwig Studio:Mono Input</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_2</Source>
+   <Target>Bitwig Studio:Mono Input 2</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_3</Source>
+   <Target>Bitwig Studio:Mono Input 3</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_4</Source>
+   <Target>Bitwig Studio:Mono Input 4</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:Speakers-L</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:Speakers-R</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:Headphones-L</Source>
+   <Target>system:playback_9</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:Headphones-R</Source>
+   <Target>system:playback_10</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop0_out_1</Source>
+   <Target>Bitwig Studio:iSL1-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop0_out_2</Source>
+   <Target>Bitwig Studio:iSL1-2</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop0_out_3</Source>
+   <Target>Bitwig Studio:iSL1-3</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop0_out_4</Source>
+   <Target>Bitwig Studio:iSL1-4</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_1</Source>
+   <Target>Bitwig Studio:iSL2-1</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_2</Source>
+   <Target>Bitwig Studio:iSL2-2</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_3</Source>
+   <Target>Bitwig Studio:iSL2-3</Target>
+  </Connection>
+  <Connection>
+   <Source>sooperlooper:loop1_out_4</Source>
+   <Target>Bitwig Studio:iSL2-4</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL1-1 </Source>
+   <Target>sooperlooper:loop0_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL1-2</Source>
+   <Target>sooperlooper:loop0_in_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL1-3</Source>
+   <Target>sooperlooper:loop0_in_3</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL1-4</Source>
+   <Target>sooperlooper:loop0_in_4</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL2-1</Source>
+   <Target>sooperlooper:loop1_in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL2-2</Source>
+   <Target>sooperlooper:loop1_in_2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL2-3</Source>
+   <Target>sooperlooper:loop1_in_3</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:SL2-4</Source>
+   <Target>sooperlooper:loop1_in_4</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
