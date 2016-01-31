@@ -5,7 +5,6 @@
 # 10 : Erreur de lancement de Jack
 # 11 : Erreur au lancement de Sooperlooper
 # 12 : Erreur au lancement de Sooperlooper GUI
-# 13 : Erreur au lancement du script OSC
 # 14 : Erreur au lancement de bitwig
 
 PIDS=()
@@ -35,7 +34,6 @@ fi
 }
 
 
-
 echo "Lancement de la session BugNbuzz..."
 
 ############## Jack ##############
@@ -44,14 +42,6 @@ jackdmp -d coreaudio >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
 sleep 5s
 verify $! 10 jack
 
-
-#if ps -p $JACK_PID >/dev/null
-#then
-#	echo "jack est lancé avec le PID $JACK_PID"
-#else
-#	echo "erreur au lancement de jack"
-#	exit 10
-#fi
 
 ############## Sooperlooper #############
 
@@ -67,7 +57,7 @@ verify $! 12 sooperlooperGUI
 ############# Bitwig studio ##############
 
 cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
-./BitwigStudio "/User/cieconcordance/Bitwig Studio/Projects/Bug'n'Buzz.bwproject" >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
+./BitwigStudio "/Users/cieconcordance/Bitwig Studio/Projects/Bug'n'Buzz.bwproject" >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
 verify $! 14 bitwig
 
 ############# Connections jack #############
@@ -85,13 +75,3 @@ cd $DIR
 ############# Cloture de session ############
 close
 exit 0
-
-
-
-#read -n1 -rsp 'Appuis espace pour quitter la session\n' touche
-
-#if [ "$touche" = ' ' ]
-#then
-#	close
-#	exit 0
-#fi
