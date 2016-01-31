@@ -27,7 +27,7 @@ class MyServer(ServerThread):
 		self.ping()
 		self.states = [0.0,0.0,0.0,0.0,0.0]
 		self.stdscr.addstr(13,0,"********************************** Jacket *******************************",curses.A_REVERSE)
-		self.stdscr.addstr(14, 0, "Host :  osc.udp://xosc:1234")
+		self.stdscr.addstr(14, 0, "Host :  osc.udp://xosc:9000")
 		for l in range(5):
 			self.stdscr.addstr(l+16,0,"button "+str(l+1)+ " ",curses.A_REVERSE)
 
@@ -97,6 +97,24 @@ class MyServer(ServerThread):
 		l, c, s = args
 		self.states[l]=s
 		self.stdscr.addstr(l+5,10,self.getState(s))
+
+	@make_method('/battery','f')
+	def battery(self, path, args):
+		self.battery = args	
+
+	@make_method('/inputs/digital','iiiiiiiiiiiiiiii')
+	def buttons(self, path, args):
+		buttons = args	
+		if buttons[15]==0:
+			self.loopRecPlay()
+		if buttons[14]==0:
+			self.loopStop()
+		if buttons[13]==0:
+			self.loopUndo()
+
+	@make_method('/inputs/analogue','b')
+	def potar(self, path, args):
+		potar = args
 
 	@make_method(None, None)
 	def fallback(self, path, args):
