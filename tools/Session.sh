@@ -57,7 +57,7 @@ verify $! 12 sooperlooperGUI
 ############# Bitwig studio ##############
 
 cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
-./BitwigStudio "/Users/cieconcordance/Bitwig Studio/Projects/Bug'n'Buzz.bwproject" >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
+./BitwigStudio "/Users/cieconcordance/Documents/Bitwig Studio/Projects/Bug'n'Buzz.bwproject" >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
 verify $! 14 bitwig
 
 ############# Connections jack #############
