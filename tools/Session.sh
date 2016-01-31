@@ -1,0 +1,97 @@
+#!/bin/bash
+
+# Script de lancement de la session "Bug'n'Buzz
+# Exit codes :
+# 10 : Erreur de lancement de Jack
+# 11 : Erreur au lancement de Sooperlooper
+# 12 : Erreur au lancement de Sooperlooper GUI
+# 13 : Erreur au lancement du script OSC
+# 14 : Erreur au lancement de bitwig
+
+PIDS=()
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+mkdir /tmp/log
+
+function close {
+	for pid in "${PIDS[@]}"
+	do
+		:
+		kill $pid
+		killall jackdmp
+	done
+}
+
+# verify : pid exit_code name
+function verify {
+	if ps -eo pid | grep -q "^$1$"
+	then
+		echo "$3 est lancé avec le PID $1"
+		PIDS+=($1)
+	else
+		echo "erreur au lancement de $3"
+		close
+		exit $2
+fi
+}
+
+
+
+echo "Lancement de la session BugNbuzz..."
+
+############## Jack ##############
+
+jackdmp -d coreaudio >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
+sleep 5s
+verify $! 10 jack
+
+
+#if ps -p $JACK_PID >/dev/null
+#then
+#	echo "jack est lancé avec le PID $JACK_PID"
+#else
+#	echo "erreur au lancement de jack"
+#	exit 10
+#fi
+
+############## Sooperlooper #############
+
+cd /Applications/Audio/SooperLooper.app/Contents/MacOS
+./sooperlooper -L "$DIR/../sessions/Bug'n'buzz SL.slsess" >/tmp/log/sl.log 2>/tmp/log/sl_err.log &
+verify $! 11 sooperlooper
+
+./slgui >/tmp/log/slgui.log 2>/tmp/log/slgui_err.log &
+verify $! 12 sooperlooperGUI
+
+
+
+############# Bitwig studio ##############
+
+cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
+./BitwigStudio "/User/cieconcordance/Bitwig Studio/Projects/Bug'n'Buzz.bwproject" >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
+verify $! 14 bitwig
+
+############# Connections jack #############
+
+cd $DIR
+./patcher.py
+PATCH_PID=$!
+
+
+############## Script OSC #############
+
+cd $DIR
+./osc_sooperlooper_test.py
+
+############# Cloture de session ############
+close
+exit 0
+
+
+
+#read -n1 -rsp 'Appuis espace pour quitter la session\n' touche
+
+#if [ "$touche" = ' ' ]
+#then
+#	close
+#	exit 0
+#fi
