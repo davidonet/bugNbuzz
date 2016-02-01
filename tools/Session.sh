@@ -15,8 +15,8 @@ function close {
 	for pid in "${PIDS[@]}"
 	do
 		:
-		kill $pid
-		killall jackdmp
+		kill -15 $pid
+		killall -s 15 jackdmp
 	done
 }
 
