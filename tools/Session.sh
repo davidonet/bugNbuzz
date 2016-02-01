@@ -23,7 +23,7 @@ function close {
 
 # verify : pid exit_code name
 function verify {
-	if ps -eo pid | grep -q "^$1$"
+	if ps -eo pid | grep -q "$1$"
 	then
 		echo "$3 est lancé avec le PID $1"
 		PIDS+=($1)
@@ -39,8 +39,8 @@ echo "Lancement de la session BugNbuzz..."
 
 ############## Jack ##############
 
-jackdmp -d coreaudio >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
-sleep 5s
+jackdmp -R -d coreaudio -r 44100 -p 256 -d SaffireAudioEngine:0 -H >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
+sleep 10s
 verify $! 10 jack
 
 
@@ -64,7 +64,7 @@ verify $! 14 bitwig
 ############# Connections jack #############
 
 cd $DIR
-./patcher.py
+./patcher.py > /tmp/log/patcher.log
 PATCH_PID=$!
 
 
