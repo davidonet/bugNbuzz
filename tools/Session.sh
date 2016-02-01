@@ -15,9 +15,10 @@ function close {
 	for pid in "${PIDS[@]}"
 	do
 		:
+		echo "Sus au pid $pid !"
 		kill -15 $pid
-		killall -s 15 jackdmp
 	done
+	killall -s 15 jackdmp
 }
 
 # verify : pid exit_code name
