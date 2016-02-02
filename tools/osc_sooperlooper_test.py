@@ -105,23 +105,25 @@ class MyServer(ServerThread):
 
 	@make_method('/inputs/digital','iiiiiiiiiiiiiiii')
 	def buttons(self, path, args):
-		buttons = args	
-		if buttons[15]==0:
-			self.loopRecPlay()
-		if buttons[14]==0:
-			self.loopStop()
-		if buttons[13]==0:
-			self.loopUndo()
-		if buttons[12]==1:
-			this.loopSelect(-1)
-		if buttons[11]==1:
-			this.loopSelect(3)
-		if buttons[10]==1:
-			this.loopSelect(2)
-		if buttons[9]==1:
-			this.loopSelect(1)
-		if buttons[8]==1:
-			this.loopSelect(0)
+		if (self.buttons != ars)
+			self.buttons = args	
+			if self.buttons[15]==0:
+				self.loopRecPlay()
+			if self.buttons[14]==0:
+				self.loopStop()
+			if self.buttons[13]==0:
+				self.loopUndo()
+	
+	#	if buttons[12]==0:
+	#		this.loopSelect(-1)
+	#	if buttons[11]==0:
+	#		this.loopSelect(3)
+	#	if buttons[10]==0:
+	#		this.loopSelect(2)
+	#	if buttons[9]==0:
+	#		this.loopSelect(1)
+	#	if buttons[8]==0:
+	#		this.loopSelect(0)
 	
 
 
