@@ -62,7 +62,7 @@ cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
 verify $! 14 bitwig
 
 ############# Connections jack #############
-sleep 1s
+sleep 5s
 cd $DIR
 ./patcher.py > /tmp/log/patcher.log
 PATCH_PID=$!
