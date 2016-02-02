@@ -111,6 +111,18 @@ class MyServer(ServerThread):
 			self.loopStop()
 		if buttons[13]==0:
 			self.loopUndo()
+		if buttons[12]==1:
+			this.loopSelect(-1)
+		if buttons[11]==1:
+			this.loopSelect(3)
+		if buttons[10]==1:
+			this.loopSelect(2)
+		if buttons[9]==1:
+			this.loopSelect(1)
+		if buttons[8]==1:
+			this.loopSelect(0)
+	
+
 
 	@make_method('/inputs/analogue','ffffffffffffffff')
 	def potar(self, path, args):
