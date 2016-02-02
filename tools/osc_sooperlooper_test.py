@@ -18,7 +18,7 @@ class MyServer(ServerThread):
 		self.stdscr = curses.initscr()
 		curses.cbreak()
 		curses.noecho()
-		self.stdscr.nodelay(True)
+		self.stdscr.nodelay(False)
 		self.stdscr.addstr(0,0,"******************************* SooperLooper ****************************",curses.A_REVERSE)
 		self.stdscr.addstr(4,0,"All    ",curses.A_REVERSE)
 		for l in range(4):
@@ -112,7 +112,7 @@ class MyServer(ServerThread):
 		if buttons[13]==0:
 			self.loopUndo()
 
-	@make_method('/inputs/analogue','b')
+	@make_method('/inputs/analogue','ffffffffffffffff')
 	def potar(self, path, args):
 		potar = args
 
