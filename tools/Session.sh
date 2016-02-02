@@ -40,7 +40,7 @@ echo "Lancement de la session BugNbuzz..."
 ############## Jack ##############
 
 jackdmp -R -d coreaudio -r 44100 -p 256 -d SaffireAudioEngine:0 -H >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
-sleep 10s
+sleep 5s
 verify $! 10 jack
 
 
@@ -62,7 +62,7 @@ cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
 verify $! 14 bitwig
 
 ############# Connections jack #############
-
+sleep 1s
 cd $DIR
 ./patcher.py > /tmp/log/patcher.log
 PATCH_PID=$!
