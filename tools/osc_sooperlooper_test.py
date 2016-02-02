@@ -126,6 +126,9 @@ class MyServer(ServerThread):
 	
 	def loopSelect(self,loopnum):
 		self.loopnum=loopnum
+		send(self.target,"/sl/set","selected_loop_num",int(self.loopnum))
+		send(self.target,"/sl/-1/set","dry",0)
+		send(self.target,"/sl/"+str(self.loopnum)+"/set","dry",1)
 		for l in range(5):
 			self.stdscr.addstr(l+4,8," ")	
 		self.stdscr.addstr(self.loopnum+5,8,"*",curses.A_BOLD)
