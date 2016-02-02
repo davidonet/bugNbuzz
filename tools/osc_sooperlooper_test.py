@@ -54,11 +54,12 @@ class MyServer(ServerThread):
 		self.stdscr.addstr(2, 0, str(l) +" loop(s) instancied")
 		self.stdscr.refresh()
 		if(l<4):
-			send(self.target,"/loop_add",l+1,1.0)
+#			send(self.target,"/loop_add",l+1,1.0) # Déjà fait dans la session
 			send(self.target,"/ping","osc.udp://localhost:8000/","/pong")
 		else:
 			for l in range(4):
 				send(self.target,"/sl/"+str(l)+"/register_auto_update","state",100,"osc.udp://localhost:8000/","/update")
+		send(self.target,"/register_auto_update","tempo", 100, "osc.udp://localhost:8175/","/tempo/raw")
 
 	def getState(self,s):
 		if s == 0.0:
