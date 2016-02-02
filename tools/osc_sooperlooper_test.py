@@ -27,7 +27,7 @@ class MyServer(ServerThread):
 		self.stdscr.addstr(4,0,"All    ",curses.A_REVERSE)
 		for l in range(4):
 			self.stdscr.addstr(l+5,0,"loop "+str(l+1)+ " ",curses.A_REVERSE)
-		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear / c : connect Bitwig to SL",curses.A_DIM)
+		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear / c : connect Bitwig to SL / m : put all bitwig track to monitor",curses.A_DIM)
 		self.ping()
 		self.states = [0.0,0.0,0.0,0.0,0.0]
 		self.stdscr.addstr(13,0,"********************************** Jacket *******************************",curses.A_REVERSE)
@@ -142,10 +142,13 @@ class MyServer(ServerThread):
 	def potar(self, path, args):
 		potar = args
 
+	
 	@make_method(None, None)
 	def fallback(self, path, args):
-		print "received message '%s'" % path
-		print args
+		print >> sys.stderr, "received message '"+str(path)+"' "+str(args)
+	
+
+########## Send methods ###########
 
 	def ping(self):
 		send(self.target,"/ping","osc.udp://localhost:8000/","/pong")
@@ -177,6 +180,20 @@ class MyServer(ServerThread):
 	def connect(self):
 		patcher.connect_sl()
 
+############ Bitwig config #############
+
+	def bitwig_monitor(self):
+		for bank in range(4):
+			send(self.bitwig,"/track/bank/page/-")
+		
+		for bank in range(4):
+			for track in range (7):
+				track += 1
+				send(self.bitwig,"/track/"+str(track)+"/monitor", 1)
+			send(self.bitwig,"/track/bank/page/+")
+	
+############ Interactions #############	
+
 	def interact(self):
 		c = self.stdscr.getch()
 		if c==ord('q'):
@@ -199,6 +216,8 @@ class MyServer(ServerThread):
 			self.loopUndo()
 		elif c==ord('c'):
 			self.connect()
+		elif c==ord('m'):
+			self.bitwig_monitor()
 
 
 try:

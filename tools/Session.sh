@@ -71,7 +71,7 @@ PATCH_PID=$!
 ############## Script OSC #############
 
 cd $DIR
-./osc_sooperlooper_test.py
+./osc_sooperlooper_test.py 2> /tmp/log/osc_sl.log
 
 ############# Cloture de session ############
 close
