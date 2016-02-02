@@ -116,7 +116,7 @@ class MyServer(ServerThread):
 
 	@make_method('/inputs/digital','iiiiiiiiiiiiiiii')
 	def buttons(self, path, args):
-		if (self.buttons != ars)
+		if (self.buttons != args):
 			self.buttons = args	
 			if self.buttons[15]==0:
 				self.loopRecPlay()
