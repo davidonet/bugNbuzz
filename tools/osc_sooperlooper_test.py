@@ -1,10 +1,13 @@
 #!/usr/bin/env python2
+# coding=utf8
+
 
 from time import time, sleep
 from liblo import *
 import curses
 import sys
 import signal
+import patcher
 
 class MyServer(ServerThread):
 	def __init__(self):
@@ -12,18 +15,19 @@ class MyServer(ServerThread):
 		print "Ready to receive (your order)"
 		try:	
 			self.target = Address("localhost",9951)
+			self.bitwig = Address("localhost",8175)
 		except liblo.AddressError as err:
 			print(err)
 			sys.exit()
 		self.stdscr = curses.initscr()
 		curses.cbreak()
 		curses.noecho()
-		self.stdscr.nodelay(False)
+		self.stdscr.nodelay(True)
 		self.stdscr.addstr(0,0,"******************************* SooperLooper ****************************",curses.A_REVERSE)
 		self.stdscr.addstr(4,0,"All    ",curses.A_REVERSE)
 		for l in range(4):
 			self.stdscr.addstr(l+5,0,"loop "+str(l+1)+ " ",curses.A_REVERSE)
-		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear",curses.A_DIM)
+		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear / c : connect Bitwig to SL",curses.A_DIM)
 		self.ping()
 		self.states = [0.0,0.0,0.0,0.0,0.0]
 		self.stdscr.addstr(13,0,"********************************** Jacket *******************************",curses.A_REVERSE)
@@ -31,14 +35,16 @@ class MyServer(ServerThread):
 		for l in range(5):
 			self.stdscr.addstr(l+16,0,"button "+str(l+1)+ " ",curses.A_REVERSE)
 
-		self.stdscr.addstr(22,0,"record / play ",curses.A_REVERSE)
-		self.stdscr.addstr(23,0,"     undo     ",curses.A_REVERSE)
-		self.stdscr.addstr(24,0,"     stop     ",curses.A_REVERSE)
+#		self.stdscr.addstr(22,0,"record / play ",curses.A_REVERSE)
+#		self.stdscr.addstr(23,0,"     undo     ",curses.A_REVERSE)
+#		self.stdscr.addstr(24,0,"     stop     ",curses.A_REVERSE)
 			
 		for l in range(5):
 			self.stdscr.addstr(l+16,20,"led "+str(l+1)+ " ",curses.A_REVERSE)
 		for l in range(5):
 			self.stdscr.addstr(l+16,32,"analog "+str(l+1)+ " ",curses.A_REVERSE)
+
+
 
 	def quit(self):
 		curses.nocbreak()
@@ -54,13 +60,18 @@ class MyServer(ServerThread):
 		self.stdscr.addstr(2, 0, str(l) +" loop(s) instancied")
 		self.stdscr.refresh()
 		if(l<4):
-#			send(self.target,"/loop_add",l+1,1.0) # Déjà fait dans la session
+			send(self.target,"/loop_add",l+1,1.0) # Déjà fait dans la session
 			send(self.target,"/ping","osc.udp://localhost:8000/","/pong")
 		else:
 			for l in range(4):
 				send(self.target,"/sl/"+str(l)+"/register_auto_update","state",100,"osc.udp://localhost:8000/","/update")
-		send(self.target,"/register_auto_update","tempo", 100, "osc.udp://localhost:8175/","/tempo/raw")
-
+		send(self.target,"/register_auto_update","tempo", 100, "osc.udp://localhost:8000/","/tempo")
+	
+	@make_method('/tempo', 'isf')
+	def tempo(self, path, args):
+		send(self.bitwig,"/tempo/raw", args[2])
+		self.stdscr.addstr(4,20,"BPM : "+str(args[2]),curses.A_REVERSE)
+	
 	def getState(self,s):
 		if s == 0.0:
 			return "Off         "
@@ -161,6 +172,8 @@ class MyServer(ServerThread):
 	def loopUndo(self):
 		send(self.target,"/sl/"+str(self.loopnum)+"/hit","undo")
 
+	def connect(self):
+		patcher.connect_sl()
 
 	def interact(self):
 		c = self.stdscr.getch()
@@ -182,7 +195,8 @@ class MyServer(ServerThread):
 			self.loopStop()
 		elif c==ord('u'):
 			self.loopUndo()
-
+		elif c==ord('c'):
+			self.connect()
 
 
 try:
@@ -195,5 +209,6 @@ server.start()
 
 while True:
 	server.interact()
+	sleep(0.1)
 
 server.quit()
