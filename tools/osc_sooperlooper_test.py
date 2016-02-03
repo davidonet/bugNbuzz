@@ -65,6 +65,7 @@ class MyServer(ServerThread):
 		else:
 			for l in range(4):
 				send(self.target,"/sl/"+str(l)+"/register_auto_update","state",100,"osc.udp://localhost:8000/","/update")
+		send(self.target,"/sl/set","selected_loop_num",1)
 		send(self.target,"/register_auto_update","tempo", 100, "osc.udp://localhost:8000/","/tempo")
 	
 	@make_method('/tempo', 'isf')
