@@ -34,20 +34,7 @@ class MyServer(ServerThread):
 		self.stdscr.addstr(10,0,"q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear / c : connect Bitwig to SL / m : put all bitwig track to monitor",curses.A_DIM)
 		self.ping()
 		self.states = [0.0,0.0,0.0,0.0,0.0]
-		self.stdscr.addstr(13,0,"********************************** Jacket *******************************",curses.A_REVERSE)
-		self.stdscr.addstr(14, 0, "Host :  osc.udp://xosc:9000")
-		for l in range(5):
-			self.stdscr.addstr(l+16,0,"button "+str(l+1)+ " ",curses.A_REVERSE)
-
-#		self.stdscr.addstr(22,0,"record / play ",curses.A_REVERSE)
-#		self.stdscr.addstr(23,0,"     undo     ",curses.A_REVERSE)
-#		self.stdscr.addstr(24,0,"     stop     ",curses.A_REVERSE)
-			
-		for l in range(5):
-			self.stdscr.addstr(l+16,20,"led "+str(l+1)+ " ",curses.A_REVERSE)
-		for l in range(5):
-			self.stdscr.addstr(l+16,32,"analog "+str(l+1)+ " ",curses.A_REVERSE)
-
+		self.buttons= [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 
 
 	def quit(self):
@@ -75,7 +62,7 @@ class MyServer(ServerThread):
 	@make_method('/tempo', 'isf')
 	def tempo(self, path, args):
 		send(self.bitwig,"/tempo/raw", args[2])
-		self.stdscr.addstr(4,20,"BPM : "+str(args[2]),curses.A_REVERSE)
+		self.stdscr.addstr(2,30,"BPM : "+"{0:.2f}".format(args[2]),curses.A_REVERSE)
 	
 	def getState(self,s):
 		if s == 0.0:
@@ -123,29 +110,32 @@ class MyServer(ServerThread):
 	def buttons(self, path, args):
 		if (self.buttons != args):
 			self.buttons = args	
+			self.stdscr.addstr(0,0,"*",curses.A_REVERSE)
 			if self.buttons[15]==0:
 				self.loopRecPlay()
 			if self.buttons[14]==0:
 				self.loopStop()
 			if self.buttons[13]==0:
 				self.loopUndo()
-	
-	#	if buttons[12]==0:
-	#		this.loopSelect(-1)
-	#	if buttons[11]==0:
-	#		this.loopSelect(3)
-	#	if buttons[10]==0:
-	#		this.loopSelect(2)
-	#	if buttons[9]==0:
-	#		this.loopSelect(1)
-	#	if buttons[8]==0:
-	#		this.loopSelect(0)
-	
+			if self.buttons[12]==0:
+				self.loopSelect(-1)
+			if self.buttons[8]==0:
+				self.loopSelect(3)
+			if self.buttons[9]==0:
+				self.loopSelect(2)
+			if self.buttons[10]==0:
+				self.loopSelect(1)
+			if self.buttons[11]==0:
+				self.loopSelect(0)
+		else:
+			self.stdscr.addstr(0,0,"#",curses.A_REVERSE)
 
 
 	@make_method('/inputs/analogue','ffffffffffffffff')
 	def potar(self, path, args):
 		potar = args
+		for l in range(5):
+			self.stdscr.addstr(l+4,30,str(int(100.0*potar[l]))+ " % ")
 
 	
 	@make_method(None, None)
