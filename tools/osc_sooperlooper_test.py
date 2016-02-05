@@ -25,7 +25,7 @@ class MyServer(ServerThread):
         try:
             self.sooperlooper = Address("localhost", 9951)
             self.bitwig = Address("localhost", 8175)
-            self.jacket = Address("http://169.254.1.1/", 9000)
+            self.jacket = Address("169.254.1.1", 9000)
             # Assuming osc-x is in adhoc mode
         except liblo.AddressError as err:
             print(err)
