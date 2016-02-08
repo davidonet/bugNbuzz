@@ -7,6 +7,7 @@ from liblo import *
 import curses
 import sys
 import signal
+import colorsys
 
 try:
     import patcher
@@ -19,8 +20,12 @@ class MyServer(ServerThread):
     def __init__(self):
         ServerThread.__init__(self, 8000)
 
-        self.states = [0.0, 0.0, 0.0, 0.0, 0.0]
-        self.buttons = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        self.states = [0.0] * 5
+        self.buttons = [1] * 16
+        self.led = [0] * 27
+        self.ledState = [0] * 27
+        self.loopnum = -1
+        self.frame = 0
 
         try:
             self.sooperlooper = Address("localhost", 9951)
@@ -48,6 +53,8 @@ class MyServer(ServerThread):
 
     def quit(self):
         """ Trying to restore console """
+        self.blank()
+        self.refreshLed()
         curses.nocbreak()
         curses.echo()
         curses.endwin()
@@ -72,9 +79,8 @@ class MyServer(ServerThread):
             for l in range(4):
                 send(self.sooperlooper, "/sl/" + str(l) + "/register_auto_update",
                      "state", 100, "osc.udp://localhost:8000/", "/update")
-
+        self.blank()
         self.loopSelect(0)  # to be ready to receive command
-
         send(self.sooperlooper, "/register_auto_update",
              "tempo", 100, "osc.udp://localhost:8000/", "/tempo")
 
@@ -91,6 +97,8 @@ class MyServer(ServerThread):
         l, c, s = args
         self.states[l] = s
         self.stdscr.addstr(l + 5, 10, self.getState(s))
+        self.setColor(l, self.getColor(s))
+
 
 ########## OSC methods from OSC-X module ###########
 
@@ -128,18 +136,18 @@ class MyServer(ServerThread):
             if self.buttons[11] == 0:
                 self.loopSelect(0)
         else:
-        	# Just to visualize the debouncing
-            self.stdscr.addstr(0, 0, "#", curses.A_REVERSE) 
+                # Just to visualize the debouncing
+            self.stdscr.addstr(0, 0, "#", curses.A_REVERSE)
 
     @make_method('/inputs/analogue', 'ffffffffffffffff')
     def potar(self, path, args):
         """ Receiving gain value from potentiometer
-        
-        Attributes:
-            gain: contains 5 values : 0 is all then 1->4 channel 
 
-        TODO: 	send it back to right software. 
-            	Don't forget channel 1 is index 0
+        Attributes:
+            gain: contains 5 values : 0 is all then 1->4 channel
+
+        TODO: 	send it back to right software.
+                Don't forget channel 1 is index 0
         """
         gain = [0, 0, 0, 0, 0]
         for l in range(5):
@@ -151,30 +159,71 @@ class MyServer(ServerThread):
         print >> sys.stderr, "received message '" + \
             str(path) + "' " + str(args)
 
+########## osc-x Send methods ###########
 
-########## Send methods ###########
+    def setColor(self, l, c):
+        i = l + 5
+        if -1 < c:
+            c = colorsys.hsv_to_rgb(c, 1, .1)
+            self.ledState[i * 3] = int(c[0] * 150)
+            self.ledState[i * 3 + 1] = int(c[1] * 200)
+            self.ledState[i * 3 + 2] = int(c[2] * 255)
+        else:
+            self.ledState[i * 3] = 0
+            self.ledState[i * 3 + 1] = 0
+            self.ledState[i * 3 + 2] = 0
+
+    def setSelect(self, l, c):
+        i = l + 5
+        if -1 < c:
+            c = colorsys.hsv_to_rgb(c, 1, .01)
+            self.led[i * 3] = int(c[0] * 150)
+            self.led[i * 3 + 1] = int(c[1] * 200)
+            self.led[i * 3 + 2] = int(c[2] * 255)
+        else:
+            self.led[i * 3] = 0
+            self.led[i * 3 + 1] = 0
+            self.led[i * 3 + 2] = 0
+
+    def blank(self):
+        self.led = [0] * (9 * 3)
+
+    def refreshLed(self):
+        self.frame = (self.frame + 1) % 25
+        if 6 < self.frame:
+            send(self.jacket, "/outputs/rgb/16", self.ledState)
+        else:
+            send(self.jacket, "/outputs/rgb/16", self.led)
+
+########## Sooperlooper Send methods ###########
 
     def ping(self):
-    	""" Ping and ask for status """
+        """ Ping and ask for status """
         send(self.sooperlooper, "/ping", "osc.udp://localhost:8000/", "/pong")
 
     def loopSelect(self, loopnum):
-    	""" Select a channel on SooperLooper
+        """ Select a channel on SooperLooper
 
-		Args:
-			loopnum: channel number 0 based index
-		"""
+                Args:
+                        loopnum: channel number 0 based index
+                """
+        self.setSelect(self.loopnum, -1)
         self.loopnum = loopnum
-        send(self.sooperlooper, "/sl/set",
-             "selected_loop_num", int(self.loopnum))
-        send(self.sooperlooper, "/sl/-1/set", "dry", 0)
-        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
+
+        # Console interface
         for l in range(5):
             self.stdscr.addstr(l + 4, 8, " ")
         self.stdscr.addstr(self.loopnum + 5, 8, "*", curses.A_BOLD)
 
+        # Sooperlooper command
+        send(self.sooperlooper, "/sl/set",
+             "selected_loop_num", int(self.loopnum))
+        send(self.sooperlooper, "/sl/-1/set", "dry", 0)
+        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
+        self.setSelect(loopnum, .5)
+
     def loopRecPlay(self):
-    	""" Rec Play Overdub action 
+        """ Rec Play Overdub action 
 
         Depends on SooperLooper channel state send the right action
         """
@@ -189,15 +238,15 @@ class MyServer(ServerThread):
                  str(self.loopnum) + "/hit", "overdub")
 
     def loopStop(self):
-    	""" Stop Action """
+        """ Stop Action """
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
         self.states[self.loopnum] = 0.0
 
     def loopUndo(self):
-    	""" Undo Action 
+        """ Undo Action 
 
-    	TODO: need to implement redo
-		"""
+        TODO: need to implement redo
+                """
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
 
     def connect(self):
@@ -218,10 +267,10 @@ class MyServer(ServerThread):
 ############ Interactions #############
 
     def interact(self):
-    	""" wait fo keypress
+        """ wait fo keypress
 
-    	Used to debug when the jacket is not available
-    	"""
+        Used to debug when the jacket is not available
+        """
         c = self.stdscr.getch()
         if c == ord('q'):
             self.quit()
@@ -245,12 +294,14 @@ class MyServer(ServerThread):
             self.connect()
         elif c == ord('m'):
             self.bitwig_monitor()
+        self.refreshLed()
+        sleep(0.04)
 
 
 ############# Utilities #############
 
     def getState(self, s):
-    	""" Simple method to get a human readable state """
+        """ Simple method to get a human readable state """
         if s == 0.0:
             return "Off         "
         if s == 1.0:
@@ -281,6 +332,17 @@ class MyServer(ServerThread):
             return "Substitute  "
         if s == 14.0:
             return "Paused      "
+
+    def getColor(self, s):
+        if s == 2.0:
+            return 0
+        if s == 4.0:
+            return .25
+        if s == 5.0:
+            return .75
+        if s == 14.0:
+            return .15
+        return -1
 
 try:
     server = MyServer()
