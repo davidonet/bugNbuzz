@@ -152,6 +152,10 @@ class MyServer(ServerThread):
         for l in range(5):
             self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
             gain[l] = int(100.0 * args[l])
+            if l == 0:
+                send(self.bitwig, "/master/volume/indicate", arg[l])
+            else:
+                send(self.sooperlooper,"/sl/"+str(arg[l]-1)+"/set", wet, gain)
 
     @make_method(None, None)
     def fallback(self, path, args):
@@ -254,6 +258,7 @@ class MyServer(ServerThread):
 ############ Bitwig config #############
 
     def bitwig_monitor(self):
+
         for bank in range(4):
             send(self.bitwig, "/track/bank/page/-")
 
@@ -261,6 +266,7 @@ class MyServer(ServerThread):
             for track in range(7):
                 track += 1
                 send(self.bitwig, "/track/" + str(track) + "/monitor", 1)
+
             send(self.bitwig, "/track/bank/page/+")
             bank += 1
 
