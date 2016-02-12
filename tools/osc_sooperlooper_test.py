@@ -151,11 +151,11 @@ class MyServer(ServerThread):
         gain = [0, 0, 0, 0, 0]
         for l in range(5):
             self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
-            gain[l] = int(100.0 * args[l])
+            gain[l] = args[l]
             if l == 0:
-                send(self.bitwig, "/master/volume/indicate", int(arg[l]))
+                send(self.bitwig, "/master/volume/indicate", int(gain[l]))
             else:
-                send(self.sooperlooper,"/sl/"+str(arg[l]-1)+"/set", "wet", gain)
+                send(self.sooperlooper,"/sl/"+str(arg[l]-1)+"/set", "wet", float(gain[l]))
 
     @make_method(None, None)
     def fallback(self, path, args):
