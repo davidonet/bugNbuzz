@@ -30,8 +30,7 @@ class MyServer(ServerThread):
         try:
             self.sooperlooper = Address("localhost", 9951)
             self.bitwig = Address("localhost", 8175)
-            self.jacket = Address("169.254.1.1", 9000)
-            # Assuming osc-x is in adhoc mode
+            self.jacket = Address("192.168.0.30", 9000) # in router config
         except liblo.AddressError as err:
             print(err)
             sys.exit()
@@ -119,9 +118,9 @@ class MyServer(ServerThread):
         if (self.buttons != args):
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
-            if self.buttons[15] == 0:
+            if self.buttons[15] == 0 or self.buttons[7] == 0 :
                 self.loopRecPlay()
-            if self.buttons[14] == 0:
+            if self.buttons[14] == 0 or self.buttons[6] == 0:
                 self.loopStop()
             if self.buttons[13] == 0:
                 self.loopUndo()
@@ -267,7 +266,9 @@ class MyServer(ServerThread):
             for track in range(7):
                 track += 1
                 send(self.bitwig, "/track/" + str(track) + "/monitor", 1)
-            send(self.bitwig, "/track/bank/page/+") # TODO : why not apply ?
+
+            send(self.bitwig, "/track/bank/page/+")
+            bank += 1
 
 ############ Interactions #############
 
