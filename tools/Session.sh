@@ -23,6 +23,8 @@ function close {
 
 # verify : pid exit_code name
 function verify {
+	echo "Verification du pid $1"
+	sleep 1
 	if ps -eo pid | grep -q "$1$"
 	then
 		echo "$3 est lancé avec le PID $1"
@@ -39,7 +41,7 @@ echo "Lancement de la session BugNbuzz..."
 
 ############## Jack ##############
 
-jackdmp -R -d coreaudio -r 44100 -p 256 -d SaffireAudioEngine:0 -H >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
+jackdmp -R -d coreaudio -r 96000 -p 128 -d SaffireAudioEngine:0 --hog >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
 sleep 5s
 verify $! 10 jack
 
@@ -55,17 +57,19 @@ verify $! 12 sooperlooperGUI
 
 
 
-############# Bitwig studio ##############
+############# Ardour 4 ##############
 
-cd "/Applications/Audio/Bitwig Studio.app/Contents/MacOS"
-./BitwigStudio /Users/cieconcordance/Documents/Bitwig\ Studio/Projects/Bug\'n\'buzz/Bug\'n\'buzz.bwproject >/tmp/log/bitwig.log 2>/tmp/log/bitwig_err.log &
-verify $! 14 bitwig
+ARDOUR_BUNDLED=1 /Applications/Audio/Ardour4.app/Contents/MacOS/Ardour4 --no-splash /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/Ardour/BugNBuzz/BugNBuzz.ardour > /tmp/log/ardour.log 2>/tmp/log/ardour_err.log &
+verify $! 14 Ardour
+
+# todo : load  /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/Ardour/BugNBuzz/BugNBuzz.ardour directly
 
 ############# Connections jack #############
-sleep 5s
-cd $DIR
-./patcher.py > /tmp/log/patcher.log
-PATCH_PID=$!
+# Useless with ardour
+# sleep 5s
+# cd $DIR
+# ./patcher.py > /tmp/log/patcher.log
+# PATCH_PID=$!
 
 
 ############## Script OSC #############

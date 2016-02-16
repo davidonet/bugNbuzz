@@ -1,15 +1,11 @@
 Bug'n'buzz OSC ports :
 
-Sooperlooper : 9951
+Sooperlooper receive : 9951
 
 osc_sooperlooper_test.py : 8000
 
-Bitwig : 8175
+Bitwig receive : 8175
+Bitwig send : 8176
 
-X-OSC : 9000
+X-OSC : 192.168.0.30:9000
 
-ToDo :
-- Get tempo from sooperlooper and sent it to bitwig
-- Test patcher.py in the session
-- ???
-- Profit !

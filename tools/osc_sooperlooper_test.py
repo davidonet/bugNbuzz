@@ -29,7 +29,7 @@ class MyServer(ServerThread):
 
         try:
             self.sooperlooper = Address("localhost", 9951)
-            self.bitwig = Address("localhost", 8175)
+            self.ardour = Address("localhost", 8175)
             self.jacket = Address("192.168.0.30", 9000) # in router config
         except liblo.AddressError as err:
             print(err)
@@ -46,7 +46,7 @@ class MyServer(ServerThread):
             self.stdscr.addstr(l + 5, 0, "loop " +
                                str(l + 1) + " ", curses.A_REVERSE)
         self.stdscr.addstr(
-            10, 0, "q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear / c : connect Bitwig to SL / m : put all bitwig track to monitor", curses.A_DIM)
+            10, 0, "q : quit / 1-4 : loop selection / a : all / r : RecPlayOver / u : UndoRedo / s : Stop and Clear", curses.A_DIM)
 
         self.ping()
 
@@ -80,15 +80,17 @@ class MyServer(ServerThread):
                      "state", 100, "osc.udp://localhost:8000/", "/update")
         self.blank()
         self.loopSelect(0)  # to be ready to receive command
-        send(self.sooperlooper, "/register_auto_update",
-             "tempo", 100, "osc.udp://localhost:8000/", "/tempo")
+ 
+#  Useless with ardour, tempo given by jack timebase
+#        send(self.sooperlooper, "/register_auto_update",
+#             "tempo", 100, "osc.udp://localhost:8000/", "/tempo")
 
-    @make_method('/tempo', 'isf')
-    def tempo(self, path, args):
-        """ when tempo changed in SooperLooper sync it to bitwig"""
-        send(self.bitwig, "/tempo/raw", args[2])
-        self.stdscr.addstr(2, 30, "BPM : " +
-                           "{0:.2f}".format(args[2]), curses.A_REVERSE)
+#    @make_method('/tempo', 'isf')
+#    def tempo(self, path, args):
+#        """ when tempo changed in SooperLooper sync it to bitwig"""
+#        send(self.bitwig, "/tempo/raw", args[2])
+#        self.stdscr.addstr(2, 30, "BPM : " +
+#                           "{0:.2f}".format(args[2]), curses.A_REVERSE)
 
     @make_method('/update', 'isf')
     def update(self, path, args):
@@ -153,9 +155,10 @@ class MyServer(ServerThread):
             self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
             gain[l] = args[l]
             if l == 0:
-                send(self.bitwig, "/master/volume/indicate", int(gain[l]))
+				pass
+#                send(self.bitwig, "/master/volume", int(gain[l]*100))
             else:
-                send(self.sooperlooper,"/sl/"+str(arg[l]-1)+"/set", "wet", float(gain[l]))
+                send(self.sooperlooper, "/sl/" + str(l-1) + "/set", "wet", float(gain[l]))
 
     @make_method(None, None)
     def fallback(self, path, args):
@@ -256,19 +259,20 @@ class MyServer(ServerThread):
         patcher.connect_sl()
 
 ############ Bitwig config #############
-
-    def bitwig_monitor(self):
-
-        for bank in range(27):
-            send(self.bitwig, "/track/bank/-")
-
-        for bank in range(4):
-            for track in range(7):
-                track += 1
-                send(self.bitwig, "/track/" + str(track) + "/monitor", 1)
-
-            send(self.bitwig, "/track/bank/page/+")
-            bank += 1
+# Useless with ardour
+#
+#    def bitwig_monitor(self):
+#
+#        for bank in range(27):
+#            send(self.bitwig, "/track/bank/-")
+#
+#        for bank in range(4):
+#            for track in range(7):
+#                track += 1
+#                send(self.bitwig, "/track/" + str(track) + "/monitor", 1)
+#
+#            send(self.bitwig, "/track/bank/page/+")
+#            bank += 1
 
 ############ Interactions #############
 
@@ -296,10 +300,11 @@ class MyServer(ServerThread):
             self.loopStop()
         elif c == ord('u'):
             self.loopUndo()
-        elif c == ord('c'):
-            self.connect()
-        elif c == ord('m'):
-            self.bitwig_monitor()
+# Useless with ardour
+#        elif c == ord('c'):
+#            self.connect()
+#        elif c == ord('m'):
+#            self.bitwig_monitor()
         self.refreshLed()
         sleep(0.04)
 
