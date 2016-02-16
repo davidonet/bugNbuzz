@@ -41,7 +41,7 @@ echo "Lancement de la session BugNbuzz..."
 
 ############## Jack ##############
 
-jackdmp -R -d coreaudio -r 96000 -p 128 -d SaffireAudioEngine:0 --hog >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
+jackdmp -R -X coremidi -d coreaudio -r 96000 -p 128 -d SaffireAudioEngine:0 --hog >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
 sleep 5s
 verify $! 10 jack
 
@@ -55,14 +55,15 @@ verify $! 11 sooperlooper
 ./slgui >/tmp/log/slgui.log 2>/tmp/log/slgui_err.log &
 verify $! 12 sooperlooperGUI
 
-
+############# Carla #############
+/Applications/Audio/Carla.app/Contents/MacOS/Carla /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/bugnbuzz.carxp >/tmp/log/carla.log 2>/tmp/log/carla.log &
+verify $! 13 carla
 
 ############# Ardour 4 ##############
 
 ARDOUR_BUNDLED=1 /Applications/Audio/Ardour4.app/Contents/MacOS/Ardour4 --no-splash /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/Ardour/BugNBuzz/BugNBuzz.ardour > /tmp/log/ardour.log 2>/tmp/log/ardour_err.log &
 verify $! 14 Ardour
 
-# todo : load  /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/Ardour/BugNBuzz/BugNBuzz.ardour directly
 
 ############# Connections jack #############
 # Useless with ardour
