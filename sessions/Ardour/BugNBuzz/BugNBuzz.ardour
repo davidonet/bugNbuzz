@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="44100" id-counter="10833" event-counter="12">
+<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="14054" event-counter="20">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -107,12 +107,14 @@
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
+          <Connection other="Mogees/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
+          <Connection other="Mogees/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
@@ -162,7 +164,12 @@
         </Port>
       </IO>
       <IO name="Audio 1" id="275" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 1/audio_out 1"/>
+        <Port type="audio" name="Audio 1/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_1"/>
+          <Connection other="sooperlooper:loop1_in_1"/>
+          <Connection other="sooperlooper:loop2_in_1"/>
+          <Connection other="sooperlooper:loop3_in_1"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="257" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="259" flags="Toggle" value="0.000000000000"/>
@@ -181,7 +188,7 @@
         <Controllable name="trimcontrol" id="281" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="278" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.668521583080"/>
       </Processor>
       <Processor id="282" name="meter-Audio 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="283" name="Audio 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 1" type="main-outs" role="Main">
@@ -219,7 +226,12 @@
         </Port>
       </IO>
       <IO name="Audio 2" id="313" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 2/audio_out 1"/>
+        <Port type="audio" name="Audio 2/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="295" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="297" flags="Toggle" value="0.000000000000"/>
@@ -238,7 +250,7 @@
         <Controllable name="trimcontrol" id="319" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="314" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="316" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="316" flags="GainLike" value="0.638793766499"/>
       </Processor>
       <Processor id="320" name="meter-Audio 2" active="yes" user-latency="0" type="meter"/>
       <Processor id="321" name="Audio 2" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 2" type="main-outs" role="Main">
@@ -276,7 +288,12 @@
         </Port>
       </IO>
       <IO name="Audio 3" id="351" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 3/audio_out 1"/>
+        <Port type="audio" name="Audio 3/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="333" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="335" flags="Toggle" value="0.000000000000"/>
@@ -333,7 +350,12 @@
         </Port>
       </IO>
       <IO name="Audio 4" id="389" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 4/audio_out 1"/>
+        <Port type="audio" name="Audio 4/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="371" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="373" flags="Toggle" value="0.000000000000"/>
@@ -390,7 +412,12 @@
         </Port>
       </IO>
       <IO name="Audio 5" id="427" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 5/audio_out 1"/>
+        <Port type="audio" name="Audio 5/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_5"/>
+          <Connection other="sooperlooper:loop1_in_5"/>
+          <Connection other="sooperlooper:loop2_in_5"/>
+          <Connection other="sooperlooper:loop3_in_5"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="409" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="411" flags="Toggle" value="0.000000000000"/>
@@ -447,7 +474,12 @@
         </Port>
       </IO>
       <IO name="Audio 6" id="465" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 6/audio_out 1"/>
+        <Port type="audio" name="Audio 6/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_6"/>
+          <Connection other="sooperlooper:loop1_in_6"/>
+          <Connection other="sooperlooper:loop2_in_6"/>
+          <Connection other="sooperlooper:loop3_in_6"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="447" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="449" flags="Toggle" value="0.000000000000"/>
@@ -504,7 +536,12 @@
         </Port>
       </IO>
       <IO name="Audio 7" id="503" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 7/audio_out 1"/>
+        <Port type="audio" name="Audio 7/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_7"/>
+          <Connection other="sooperlooper:loop1_in_7"/>
+          <Connection other="sooperlooper:loop2_in_7"/>
+          <Connection other="sooperlooper:loop3_in_7"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="485" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="487" flags="Toggle" value="0.000000000000"/>
@@ -561,7 +598,12 @@
         </Port>
       </IO>
       <IO name="Audio 8" id="541" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 8/audio_out 1"/>
+        <Port type="audio" name="Audio 8/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_8"/>
+          <Connection other="sooperlooper:loop1_in_8"/>
+          <Connection other="sooperlooper:loop2_in_8"/>
+          <Connection other="sooperlooper:loop3_in_8"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="523" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="525" flags="Toggle" value="0.000000000000"/>
@@ -691,7 +733,9 @@
     </Route>
     <Route id="559" name="Audio 9" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="10" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 9" id="578" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 9/audio_in 1"/>
+        <Port type="audio" name="Audio 9/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_1"/>
+        </Port>
       </IO>
       <IO name="Audio 9" id="579" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 9/audio_out 1">
@@ -751,7 +795,9 @@
     </Route>
     <Route id="597" name="Audio 10" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="11" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 10" id="616" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 10/audio_in 1"/>
+        <Port type="audio" name="Audio 10/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_2"/>
+        </Port>
       </IO>
       <IO name="Audio 10" id="617" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 10/audio_out 1">
@@ -811,7 +857,9 @@
     </Route>
     <Route id="635" name="Audio 11" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="12" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 11" id="654" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 11/audio_in 1"/>
+        <Port type="audio" name="Audio 11/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_3"/>
+        </Port>
       </IO>
       <IO name="Audio 11" id="655" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 11/audio_out 1">
@@ -871,7 +919,9 @@
     </Route>
     <Route id="673" name="Audio 12" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="13" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 12" id="692" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 12/audio_in 1"/>
+        <Port type="audio" name="Audio 12/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_4"/>
+        </Port>
       </IO>
       <IO name="Audio 12" id="693" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 12/audio_out 1">
@@ -931,7 +981,9 @@
     </Route>
     <Route id="711" name="Audio 13" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="14" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 13" id="730" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 13/audio_in 1"/>
+        <Port type="audio" name="Audio 13/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_5"/>
+        </Port>
       </IO>
       <IO name="Audio 13" id="731" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 13/audio_out 1">
@@ -991,7 +1043,9 @@
     </Route>
     <Route id="749" name="Audio 14" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="15" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 14" id="768" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 14/audio_in 1"/>
+        <Port type="audio" name="Audio 14/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_6"/>
+        </Port>
       </IO>
       <IO name="Audio 14" id="769" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 14/audio_out 1">
@@ -1018,7 +1072,7 @@
         <Controllable name="trimcontrol" id="775" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="770" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="772" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="772" flags="GainLike" value="0.532506883144"/>
       </Processor>
       <Processor id="776" name="meter-Audio 14" active="yes" user-latency="0" type="meter"/>
       <Processor id="777" name="Audio 14" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 14" type="main-outs" role="Main">
@@ -1051,7 +1105,9 @@
     </Route>
     <Route id="787" name="Audio 15" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="16" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 15" id="806" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 15/audio_in 1"/>
+        <Port type="audio" name="Audio 15/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_7"/>
+        </Port>
       </IO>
       <IO name="Audio 15" id="807" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 15/audio_out 1">
@@ -1067,7 +1123,7 @@
       <Automation/>
       <RemoteControl id="16"/>
       <Pannable>
-        <Controllable name="pan-azimuth" id="797" flags="" value="0.500000000000"/>
+        <Controllable name="pan-azimuth" id="797" flags="" value="0.416666666667"/>
         <Controllable name="pan-width" id="801" flags="" value="0.000000000000"/>
         <Controllable name="pan-elevation" id="799" flags="" value="0.000000000000"/>
         <Controllable name="pan-frontback" id="803" flags="" value="0.000000000000"/>
@@ -1084,7 +1140,7 @@
       <Processor id="815" name="Audio 15" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 15" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="797" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="797" flags="" value="0.416666666667"/>
           <Controllable name="pan-width" id="801" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="799" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="803" flags="" value="0.000000000000"/>
@@ -1095,7 +1151,7 @@
       <Processor id="1887" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="797" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="797" flags="" value="0.416666666667"/>
           <Controllable name="pan-width" id="801" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="799" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="803" flags="" value="0.000000000000"/>
@@ -1111,7 +1167,9 @@
     </Route>
     <Route id="825" name="Audio 16" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="17" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 16" id="844" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 16/audio_in 1"/>
+        <Port type="audio" name="Audio 16/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_8"/>
+        </Port>
       </IO>
       <IO name="Audio 16" id="845" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 16/audio_out 1">
@@ -1249,7 +1307,9 @@
     </Route>
     <Route id="863" name="Audio 17" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="19" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 17" id="882" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 17/audio_in 1"/>
+        <Port type="audio" name="Audio 17/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_1"/>
+        </Port>
       </IO>
       <IO name="Audio 17" id="883" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 17/audio_out 1">
@@ -1309,7 +1369,9 @@
     </Route>
     <Route id="901" name="Audio 18" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="20" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 18" id="920" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 18/audio_in 1"/>
+        <Port type="audio" name="Audio 18/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_2"/>
+        </Port>
       </IO>
       <IO name="Audio 18" id="921" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 18/audio_out 1">
@@ -1325,7 +1387,7 @@
       <Automation/>
       <RemoteControl id="20"/>
       <Pannable>
-        <Controllable name="pan-azimuth" id="911" flags="" value="0.500000000000"/>
+        <Controllable name="pan-azimuth" id="911" flags="" value="0.472222222222"/>
         <Controllable name="pan-width" id="915" flags="" value="0.000000000000"/>
         <Controllable name="pan-elevation" id="913" flags="" value="0.000000000000"/>
         <Controllable name="pan-frontback" id="917" flags="" value="0.000000000000"/>
@@ -1336,13 +1398,13 @@
         <Controllable name="trimcontrol" id="927" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="922" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="924" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="924" flags="GainLike" value="0.046884953976"/>
       </Processor>
       <Processor id="928" name="meter-Audio 18" active="yes" user-latency="0" type="meter"/>
       <Processor id="929" name="Audio 18" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 18" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="911" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="911" flags="" value="0.472222222222"/>
           <Controllable name="pan-width" id="915" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="913" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="917" flags="" value="0.000000000000"/>
@@ -1353,7 +1415,7 @@
       <Processor id="1911" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="911" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="911" flags="" value="0.472222222222"/>
           <Controllable name="pan-width" id="915" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="913" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="917" flags="" value="0.000000000000"/>
@@ -1369,7 +1431,9 @@
     </Route>
     <Route id="939" name="Audio 19" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="21" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 19" id="958" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 19/audio_in 1"/>
+        <Port type="audio" name="Audio 19/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_3"/>
+        </Port>
       </IO>
       <IO name="Audio 19" id="959" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 19/audio_out 1">
@@ -1429,7 +1493,9 @@
     </Route>
     <Route id="977" name="Audio 20" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="22" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 20" id="996" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 20/audio_in 1"/>
+        <Port type="audio" name="Audio 20/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_4"/>
+        </Port>
       </IO>
       <IO name="Audio 20" id="997" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 20/audio_out 1">
@@ -1445,7 +1511,7 @@
       <Automation/>
       <RemoteControl id="22"/>
       <Pannable>
-        <Controllable name="pan-azimuth" id="987" flags="" value="0.500000000000"/>
+        <Controllable name="pan-azimuth" id="987" flags="" value="0.472222222222"/>
         <Controllable name="pan-width" id="991" flags="" value="0.000000000000"/>
         <Controllable name="pan-elevation" id="989" flags="" value="0.000000000000"/>
         <Controllable name="pan-frontback" id="993" flags="" value="0.000000000000"/>
@@ -1462,7 +1528,7 @@
       <Processor id="1005" name="Audio 20" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 20" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="987" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="987" flags="" value="0.472222222222"/>
           <Controllable name="pan-width" id="991" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="989" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="993" flags="" value="0.000000000000"/>
@@ -1473,7 +1539,7 @@
       <Processor id="1927" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="987" flags="" value="0.500000000000"/>
+          <Controllable name="pan-azimuth" id="987" flags="" value="0.472222222222"/>
           <Controllable name="pan-width" id="991" flags="" value="0.000000000000"/>
           <Controllable name="pan-elevation" id="989" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="993" flags="" value="0.000000000000"/>
@@ -1489,7 +1555,9 @@
     </Route>
     <Route id="1015" name="Audio 21" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="23" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 21" id="1034" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 21/audio_in 1"/>
+        <Port type="audio" name="Audio 21/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_5"/>
+        </Port>
       </IO>
       <IO name="Audio 21" id="1035" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 21/audio_out 1">
@@ -1549,7 +1617,9 @@
     </Route>
     <Route id="1053" name="Audio 22" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="24" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 22" id="1072" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 22/audio_in 1"/>
+        <Port type="audio" name="Audio 22/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_6"/>
+        </Port>
       </IO>
       <IO name="Audio 22" id="1073" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 22/audio_out 1">
@@ -1609,7 +1679,9 @@
     </Route>
     <Route id="1091" name="Audio 23" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="25" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 23" id="1110" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 23/audio_in 1"/>
+        <Port type="audio" name="Audio 23/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_7"/>
+        </Port>
       </IO>
       <IO name="Audio 23" id="1111" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 23/audio_out 1">
@@ -1669,7 +1741,9 @@
     </Route>
     <Route id="1129" name="Audio 24" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="26" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 24" id="1148" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 24/audio_in 1"/>
+        <Port type="audio" name="Audio 24/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_8"/>
+        </Port>
       </IO>
       <IO name="Audio 24" id="1149" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 24/audio_out 1">
@@ -1807,7 +1881,9 @@
     </Route>
     <Route id="1167" name="Audio 25" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="28" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 25" id="1186" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 25/audio_in 1"/>
+        <Port type="audio" name="Audio 25/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_1"/>
+        </Port>
       </IO>
       <IO name="Audio 25" id="1187" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 25/audio_out 1">
@@ -1867,7 +1943,9 @@
     </Route>
     <Route id="1205" name="Audio 26" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="29" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 26" id="1224" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 26/audio_in 1"/>
+        <Port type="audio" name="Audio 26/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_2"/>
+        </Port>
       </IO>
       <IO name="Audio 26" id="1225" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 26/audio_out 1">
@@ -1927,7 +2005,9 @@
     </Route>
     <Route id="1243" name="Audio 27" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="30" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 27" id="1262" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 27/audio_in 1"/>
+        <Port type="audio" name="Audio 27/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_3"/>
+        </Port>
       </IO>
       <IO name="Audio 27" id="1263" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 27/audio_out 1">
@@ -1987,7 +2067,9 @@
     </Route>
     <Route id="1281" name="Audio 28" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="31" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 28" id="1300" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 28/audio_in 1"/>
+        <Port type="audio" name="Audio 28/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_4"/>
+        </Port>
       </IO>
       <IO name="Audio 28" id="1301" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 28/audio_out 1">
@@ -2047,7 +2129,9 @@
     </Route>
     <Route id="1319" name="Audio 29" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="32" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 29" id="1338" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 29/audio_in 1"/>
+        <Port type="audio" name="Audio 29/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_5"/>
+        </Port>
       </IO>
       <IO name="Audio 29" id="1339" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 29/audio_out 1">
@@ -2107,7 +2191,9 @@
     </Route>
     <Route id="1357" name="Audio 30" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="33" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 30" id="1376" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 30/audio_in 1"/>
+        <Port type="audio" name="Audio 30/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_6"/>
+        </Port>
       </IO>
       <IO name="Audio 30" id="1377" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 30/audio_out 1">
@@ -2167,7 +2253,9 @@
     </Route>
     <Route id="1395" name="Audio 31" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="34" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 31" id="1414" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 31/audio_in 1"/>
+        <Port type="audio" name="Audio 31/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_7"/>
+        </Port>
       </IO>
       <IO name="Audio 31" id="1415" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 31/audio_out 1">
@@ -2227,7 +2315,9 @@
     </Route>
     <Route id="1433" name="Audio 32" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="35" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 32" id="1452" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 32/audio_in 1"/>
+        <Port type="audio" name="Audio 32/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_8"/>
+        </Port>
       </IO>
       <IO name="Audio 32" id="1453" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 32/audio_out 1">
@@ -2365,7 +2455,9 @@
     </Route>
     <Route id="1471" name="Audio 33" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="37" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 33" id="1490" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 33/audio_in 1"/>
+        <Port type="audio" name="Audio 33/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_1"/>
+        </Port>
       </IO>
       <IO name="Audio 33" id="1491" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 33/audio_out 1">
@@ -2425,7 +2517,9 @@
     </Route>
     <Route id="1509" name="Audio 34" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="38" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 34" id="1528" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 34/audio_in 1"/>
+        <Port type="audio" name="Audio 34/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_2"/>
+        </Port>
       </IO>
       <IO name="Audio 34" id="1529" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 34/audio_out 1">
@@ -2485,7 +2579,9 @@
     </Route>
     <Route id="1547" name="Audio 35" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="39" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 35" id="1566" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 35/audio_in 1"/>
+        <Port type="audio" name="Audio 35/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_3"/>
+        </Port>
       </IO>
       <IO name="Audio 35" id="1567" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 35/audio_out 1">
@@ -2545,7 +2641,9 @@
     </Route>
     <Route id="1585" name="Audio 36" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="40" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 36" id="1604" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 36/audio_in 1"/>
+        <Port type="audio" name="Audio 36/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_4"/>
+        </Port>
       </IO>
       <IO name="Audio 36" id="1605" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 36/audio_out 1">
@@ -2605,7 +2703,9 @@
     </Route>
     <Route id="1623" name="Audio 37" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="41" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 37" id="1642" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 37/audio_in 1"/>
+        <Port type="audio" name="Audio 37/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_5"/>
+        </Port>
       </IO>
       <IO name="Audio 37" id="1643" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 37/audio_out 1">
@@ -2665,7 +2765,9 @@
     </Route>
     <Route id="1661" name="Audio 38" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="42" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 38" id="1680" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 38/audio_in 1"/>
+        <Port type="audio" name="Audio 38/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_6"/>
+        </Port>
       </IO>
       <IO name="Audio 38" id="1681" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 38/audio_out 1">
@@ -2725,7 +2827,9 @@
     </Route>
     <Route id="1699" name="Audio 39" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="43" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 39" id="1718" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 39/audio_in 1"/>
+        <Port type="audio" name="Audio 39/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_7"/>
+        </Port>
       </IO>
       <IO name="Audio 39" id="1719" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 39/audio_out 1">
@@ -2785,7 +2889,9 @@
     </Route>
     <Route id="1737" name="Audio 40" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="44" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="Audio 40" id="1756" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Audio 40/audio_in 1"/>
+        <Port type="audio" name="Audio 40/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_8"/>
+        </Port>
       </IO>
       <IO name="Audio 40" id="1757" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Audio 40/audio_out 1">
@@ -2843,6 +2949,119 @@
       <Controllable name="recenable" id="1767" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 40.1" name="Audio 40" id="1769" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
     </Route>
+    <Route id="13616" name="Mogees" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="45" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Mogees" id="13635" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Mogees/audio_in 1"/>
+        <Port type="audio" name="Mogees/audio_in 2"/>
+      </IO>
+      <IO name="Mogees" id="13636" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Mogees/audio_out 1">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="Mogees/audio_out 2">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+      </IO>
+      <Controllable name="solo" id="13618" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="13620" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="45"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="13626" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="13630" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="13628" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="13632" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="13634" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="13640" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="13642" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="13637" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="13639" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="13643" name="meter-Mogees" active="yes" user-latency="0" type="meter"/>
+      <Processor id="13644" name="Mogees" active="yes" user-latency="0" own-input="yes" own-output="no" output="Mogees" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="13626" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="13630" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="13628" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="13632" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="13634" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="13656" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="13626" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="13630" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="13628" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="13632" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="13634" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="13658" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="13660" flags="GainLike" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="13646" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Mogees.1" name="Mogees" id="13648" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
+    </Route>
+    <Route id="13669" name="Mogees 1" default-type="midi" active="yes" phase-invert="" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="46" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
+      <IO name="Mogees 1" id="13688" direction="Input" default-type="midi" user-latency="0">
+        <Port type="midi" name="Mogees 1/midi_in 1"/>
+      </IO>
+      <IO name="Mogees 1" id="13689" direction="Output" default-type="midi" user-latency="0">
+        <Port type="midi" name="Mogees 1/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="13671" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="13673" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="46"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="13679" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="13683" flags="" value="0.000000000000"/>
+        <Controllable name="pan-elevation" id="13681" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="13685" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="13687" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="13690" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="13692" flags="GainLike" value="1.000000000000"/>
+      </Processor>
+      <Processor id="13696" name="meter-Mogees 1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="13697" name="Mogees 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Mogees 1" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="13679" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="13683" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="13681" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="13685" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="13687" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="13706" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="13679" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="13683" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="13681" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="13685" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="13687" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="13708" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="13710" flags="GainLike" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="13699" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Mogees 1.1" name="Mogees 1" id="13701" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
+    </Route>
   </Routes>
   <Playlists>
     <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
@@ -2885,6 +3104,8 @@
     <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
     <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
     <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
+    <Playlist id="13649" name="Mogees.1" type="audio" orig-track-id="13616" frozen="no" combine-ops="0"/>
+    <Playlist id="13702" name="Mogees 1.1" type="midi" orig-track-id="13669" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -2896,12 +3117,8 @@
   </RouteGroups>
   <Click>
     <IO name="Click" id="24" direction="Output" default-type="audio" user-latency="0">
-      <Port type="audio" name="Click/audio_out 1">
-        <Connection other="system:playback_1"/>
-      </Port>
-      <Port type="audio" name="Click/audio_out 2">
-        <Connection other="system:playback_2"/>
-      </Port>
+      <Port type="audio" name="Click/audio_out 1"/>
+      <Port type="audio" name="Click/audio_out 2"/>
     </IO>
     <Processor id="25" name="Amp" active="yes" user-latency="0" type="amp">
       <Controllable name="gaincontrol" id="27" flags="GainLike" value="1.000000000000"/>
@@ -2948,7 +3165,7 @@
       <Window name="bundle-manager" visible="no" x-off="377" y-off="75" x-size="480" y-size="240"/>
       <Window name="locations" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="big-clock" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="audio-connection-manager" visible="no" x-off="33" y-off="22" x-size="1024" y-size="720"/>
+      <Window name="audio-connection-manager" visible="no" x-off="33" y-off="22" x-size="1152" y-size="720"/>
       <Window name="midi-connection-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-28-52" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-28-49" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -3183,6 +3400,15 @@
       <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13616-13640" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13616-13637" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13616-13643" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13616-13644" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13616-13656" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13669-13690" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13669-13696" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13669-13697" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-13669-13706" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <GUIObjectState>
         <Object id="route 28" color="64677:42885:49059"/>
         <Object id="rtav 28" height="64" visible="1"/>
@@ -3600,6 +3826,23 @@
         <Object id="automation 2377 10/0/0" height="64" visible="0"/>
         <Object id="automation 2387" height="64" visible="0"/>
         <Object id="automation 2391" height="64" visible="0"/>
+        <Object id="route 13616" color="64677:42885:49059"/>
+        <Object id="rtav 13616" height="64" visible="1"/>
+        <Object id="automation 13639" height="64" visible="0"/>
+        <Object id="automation 13642" height="64" visible="0"/>
+        <Object id="automation 13616 10/0/0" height="64" visible="0"/>
+        <Object id="automation 13626" height="64" visible="0"/>
+        <Object id="automation 13630" height="64" visible="0"/>
+        <Object id="strip 13616" visible="1">
+          <Object id="processor 13637"/>
+        </Object>
+        <Object id="route 13669" color="41872:58981:40317"/>
+        <Object id="rtav 13669" height="64" visible="1" note-range-min="60" note-range-max="71" midnam-model-name="Generic" midnam-custom-device-mode="MIDI" color-mode="MeterColors"/>
+        <Object id="automation 13692" height="64" visible="0"/>
+        <Object id="automation 13669 10/0/0" height="64" visible="0"/>
+        <Object id="strip 13669" visible="1" strip-width="Wide">
+          <Object id="processor 13690"/>
+        </Object>
       </GUIObjectState>
     </UI>
     <Videomonitor active="no"/>
