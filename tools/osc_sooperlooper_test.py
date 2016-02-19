@@ -30,7 +30,7 @@ class MyServer(ServerThread):
         try:
             self.sooperlooper = Address("localhost", 9951)
             self.ardour = Address("localhost", 8175)
-            self.jacket = Address("192.168.0.30", 9000) # in router config
+            self.jacket = Address("192.168.1.30", 9000) # in router config
         except liblo.AddressError as err:
             print(err)
             sys.exit()
