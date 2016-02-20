@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="21872" event-counter="26">
+<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="21876" event-counter="27">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -64,7 +64,9 @@
   <Metadata/>
   <Sources/>
   <Regions/>
-  <Locations/>
+  <Locations>
+    <Location id="21872" name="mark1" start="768" end="768" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
+  </Locations>
   <Bundles/>
   <Routes>
     <Route id="58" name="Monitor" default-type="audio" flags="MonitorOut" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="1" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -183,8 +185,8 @@
         <Port type="audio" name="Audio 1/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="257" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="259" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="259" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="1"/>
       <Pannable>
@@ -213,7 +215,7 @@
         </Processor>
       </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.426499813795"/>
+        <Controllable name="gaincontrol" id="278" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="282" name="meter-Audio 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="283" name="Audio 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 1" type="main-outs" role="Main">
@@ -240,8 +242,8 @@
         <Port type="audio" name="Audio 2/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="295" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="297" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="297" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="2"/>
       <Pannable>
@@ -270,7 +272,7 @@
         </Processor>
       </Processor>
       <Processor id="314" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="316" flags="GainLike" value="0.543475151062"/>
+        <Controllable name="gaincontrol" id="316" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="320" name="meter-Audio 2" active="yes" user-latency="0" type="meter"/>
       <Processor id="321" name="Audio 2" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 2" type="main-outs" role="Main">
@@ -297,8 +299,8 @@
         <Port type="audio" name="Audio 3/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="333" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="335" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="335" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="3"/>
       <Pannable>
@@ -354,8 +356,8 @@
         <Port type="audio" name="Audio 4/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="371" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="373" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="373" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="4"/>
       <Pannable>
@@ -411,8 +413,8 @@
         <Port type="audio" name="Audio 5/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="409" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="411" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="411" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="5"/>
       <Pannable>
@@ -468,8 +470,8 @@
         <Port type="audio" name="Audio 6/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="447" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="449" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="449" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="6"/>
       <Pannable>
@@ -525,8 +527,8 @@
         <Port type="audio" name="Audio 7/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="485" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="487" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="487" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="7"/>
       <Pannable>
@@ -582,8 +584,8 @@
         <Port type="audio" name="Audio 8/audio_out 1"/>
       </IO>
       <Controllable name="solo" id="523" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="525" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="525" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="8"/>
       <Pannable>
@@ -612,7 +614,7 @@
         </Processor>
       </Processor>
       <Processor id="542" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="544" flags="GainLike" value="0.387331932783"/>
+        <Controllable name="gaincontrol" id="544" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="548" name="meter-Audio 8" active="yes" user-latency="0" type="meter"/>
       <Processor id="549" name="Audio 8" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 8" type="main-outs" role="Main">
@@ -692,7 +694,7 @@
         </Processor>
       </Processor>
       <Processor id="2290" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="2292" flags="GainLike" value="0.507792949677"/>
+        <Controllable name="gaincontrol" id="2292" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="2296" name="meter-Bus 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="2297" name="LOOP1" active="yes" user-latency="0" own-input="yes" own-output="no" output="LOOP1" type="main-outs" role="Main">
@@ -750,7 +752,7 @@
         </Processor>
       </Processor>
       <Processor id="580" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="582" flags="GainLike" value="0.623835682869"/>
+        <Controllable name="gaincontrol" id="582" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="586" name="meter-Audio 9" active="yes" user-latency="0" type="meter"/>
       <Processor id="587" name="Audio 9" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 9" type="main-outs" role="Main">
@@ -810,7 +812,7 @@
         </Processor>
       </Processor>
       <Processor id="618" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="620" flags="GainLike" value="0.500385880470"/>
+        <Controllable name="gaincontrol" id="620" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="624" name="meter-Audio 10" active="yes" user-latency="0" type="meter"/>
       <Processor id="625" name="Audio 10" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 10" type="main-outs" role="Main">
@@ -930,7 +932,7 @@
         </Processor>
       </Processor>
       <Processor id="694" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="696" flags="GainLike" value="0.000000562341"/>
+        <Controllable name="gaincontrol" id="696" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="700" name="meter-Audio 12" active="yes" user-latency="0" type="meter"/>
       <Processor id="701" name="Audio 12" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 12" type="main-outs" role="Main">
@@ -1050,7 +1052,7 @@
         </Processor>
       </Processor>
       <Processor id="770" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="772" flags="GainLike" value="0.532506883144"/>
+        <Controllable name="gaincontrol" id="772" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="776" name="meter-Audio 14" active="yes" user-latency="0" type="meter"/>
       <Processor id="777" name="Audio 14" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 14" type="main-outs" role="Main">
@@ -1308,7 +1310,7 @@
         </Processor>
       </Processor>
       <Processor id="884" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="886" flags="GainLike" value="0.229182362556"/>
+        <Controllable name="gaincontrol" id="886" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="890" name="meter-Audio 17" active="yes" user-latency="0" type="meter"/>
       <Processor id="891" name="Audio 17" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 17" type="main-outs" role="Main">
@@ -1368,7 +1370,7 @@
         </Processor>
       </Processor>
       <Processor id="922" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="924" flags="GainLike" value="0.295241475105"/>
+        <Controllable name="gaincontrol" id="924" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="928" name="meter-Audio 18" active="yes" user-latency="0" type="meter"/>
       <Processor id="929" name="Audio 18" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 18" type="main-outs" role="Main">
@@ -1428,7 +1430,7 @@
         </Processor>
       </Processor>
       <Processor id="960" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="962" flags="GainLike" value="0.540376424789"/>
+        <Controllable name="gaincontrol" id="962" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="966" name="meter-Audio 19" active="yes" user-latency="0" type="meter"/>
       <Processor id="967" name="Audio 19" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 19" type="main-outs" role="Main">
@@ -1488,7 +1490,7 @@
         </Processor>
       </Processor>
       <Processor id="998" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1000" flags="GainLike" value="0.495404452085"/>
+        <Controllable name="gaincontrol" id="1000" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1004" name="meter-Audio 20" active="yes" user-latency="0" type="meter"/>
       <Processor id="1005" name="Audio 20" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 20" type="main-outs" role="Main">
@@ -1548,7 +1550,7 @@
         </Processor>
       </Processor>
       <Processor id="1036" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1038" flags="GainLike" value="0.375831067562"/>
+        <Controllable name="gaincontrol" id="1038" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1042" name="meter-Audio 21" active="yes" user-latency="0" type="meter"/>
       <Processor id="1043" name="Audio 21" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 21" type="main-outs" role="Main">
@@ -1608,7 +1610,7 @@
         </Processor>
       </Processor>
       <Processor id="1074" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1076" flags="GainLike" value="0.480911105871"/>
+        <Controllable name="gaincontrol" id="1076" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1080" name="meter-Audio 22" active="yes" user-latency="0" type="meter"/>
       <Processor id="1081" name="Audio 22" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 22" type="main-outs" role="Main">
@@ -1668,7 +1670,7 @@
         </Processor>
       </Processor>
       <Processor id="1112" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1114" flags="GainLike" value="0.546837031841"/>
+        <Controllable name="gaincontrol" id="1114" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1118" name="meter-Audio 23" active="yes" user-latency="0" type="meter"/>
       <Processor id="1119" name="Audio 23" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 23" type="main-outs" role="Main">
@@ -1866,7 +1868,7 @@
         </Processor>
       </Processor>
       <Processor id="1188" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1190" flags="GainLike" value="0.693147182465"/>
+        <Controllable name="gaincontrol" id="1190" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1194" name="meter-Audio 25" active="yes" user-latency="0" type="meter"/>
       <Processor id="1195" name="Audio 25" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 25" type="main-outs" role="Main">
@@ -1926,7 +1928,7 @@
         </Processor>
       </Processor>
       <Processor id="1226" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1228" flags="GainLike" value="0.000000000000"/>
+        <Controllable name="gaincontrol" id="1228" flags="GainLike" value="0.996931076050"/>
       </Processor>
       <Processor id="1232" name="meter-Audio 26" active="yes" user-latency="0" type="meter"/>
       <Processor id="1233" name="Audio 26" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 26" type="main-outs" role="Main">
@@ -1986,7 +1988,7 @@
         </Processor>
       </Processor>
       <Processor id="1264" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1266" flags="GainLike" value="0.000000000000"/>
+        <Controllable name="gaincontrol" id="1266" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1270" name="meter-Audio 27" active="yes" user-latency="0" type="meter"/>
       <Processor id="1271" name="Audio 27" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 27" type="main-outs" role="Main">
@@ -2046,7 +2048,7 @@
         </Processor>
       </Processor>
       <Processor id="1302" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1304" flags="GainLike" value="0.609341979027"/>
+        <Controllable name="gaincontrol" id="1304" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1308" name="meter-Audio 28" active="yes" user-latency="0" type="meter"/>
       <Processor id="1309" name="Audio 28" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 28" type="main-outs" role="Main">
@@ -2106,7 +2108,7 @@
         </Processor>
       </Processor>
       <Processor id="1340" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1342" flags="GainLike" value="0.432983487844"/>
+        <Controllable name="gaincontrol" id="1342" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1346" name="meter-Audio 29" active="yes" user-latency="0" type="meter"/>
       <Processor id="1347" name="Audio 29" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 29" type="main-outs" role="Main">
@@ -2166,7 +2168,7 @@
         </Processor>
       </Processor>
       <Processor id="1378" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1380" flags="GainLike" value="0.470982223749"/>
+        <Controllable name="gaincontrol" id="1380" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1384" name="meter-Audio 30" active="yes" user-latency="0" type="meter"/>
       <Processor id="1385" name="Audio 30" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 30" type="main-outs" role="Main">
@@ -2226,7 +2228,7 @@
         </Processor>
       </Processor>
       <Processor id="1416" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="1418" flags="GainLike" value="0.479995250702"/>
+        <Controllable name="gaincontrol" id="1418" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="1422" name="meter-Audio 31" active="yes" user-latency="0" type="meter"/>
       <Processor id="1423" name="Audio 31" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 31" type="main-outs" role="Main">

@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instant>
-  <Editor id="18" mixer-width="Wide" zoom-focus="ZoomFocusPlayhead" zoom="2048" snap-to="SnapToBeat" snap-mode="SnapOff" internal-snap-to="SnapToBeat" internal-snap-mode="SnapOff" pre-internal-snap-to="SnapToBeat" pre-internal-snap-mode="SnapOff" edit-point="EditAtMouse" visible-track-count="-1" playhead="0" left-frame="0" y-origin="0,000000" show-measures="yes" maximised="no" follow-playhead="yes" stationary-playhead="no" region-list-sort-type="ByEndInFile" mouse-mode="MouseObject" join-object-range="no" show-editor-mixer="no" show-editor-list="no" editor-list-page="0" show-marker-lines="no" nudge-clock-value="220500">
-    <geometry x-size="1004" y-size="765" x-pos="5" y-pos="22" edit-horizontal-pane-pos="903" notebook-shrunk="0" edit-vertical-pane-pos="569"/>
+  <LastUsedSnapshot name="BugNBuzz"/>
+  <Editor id="18" mixer-width="Wide" zoom-focus="ZoomFocusPlayhead" zoom="2048" snap-to="SnapToBeat" snap-mode="SnapOff" internal-snap-to="SnapToBeat" internal-snap-mode="SnapOff" pre-internal-snap-to="SnapToBeat" pre-internal-snap-mode="SnapOff" edit-point="EditAtMouse" visible-track-count="-1" playhead="4160000" left-frame="3426304" y-origin="0,000000" show-measures="yes" maximised="no" follow-playhead="yes" stationary-playhead="no" region-list-sort-type="ByEndInFile" mouse-mode="MouseObject" join-object-range="no" show-editor-mixer="no" show-editor-list="no" editor-list-page="0" show-marker-lines="no" nudge-clock-value="220500">
+    <geometry x-size="1115" y-size="765" x-pos="5" y-pos="145" edit-horizontal-pane-pos="903" notebook-shrunk="0" edit-vertical-pane-pos="567"/>
     <Buttons>
       <Press/>
       <Release/>
     </Buttons>
     <Selection>
-      <RouteView id="255"/>
+      <RouteView id="13616"/>
+      <Marker id="21872" start="yes"/>
     </Selection>
     <RegionList sort-type="ByEndInFile" sort-ascending="yes" show-all="no" show-automatic-regions="yes"/>
   </Editor>
   <Mixer narrow-strips="no" show-mixer="yes" show-mixer-list="yes" maximised="no">
-    <geometry x-size="1436" y-size="856" x-pos="4" y-pos="22" x-off="0" y-off="0" mixer-rhs-pane1-pos="89" mixer-rhs-pane2-pos="686" mixer-list-hpane-pos="119"/>
+    <geometry x-size="1280" y-size="988" x-pos="0" y-pos="145" x-off="0" y-off="0" mixer-rhs-pane1-pos="89" mixer-rhs-pane2-pos="792" mixer-list-hpane-pos="119"/>
     <PluginOrder/>
   </Mixer>
   <Meterbridge show-meterbridge="no">
     <geometry x-size="600" y-size="400" x-pos="1" y-pos="1"/>
   </Meterbridge>
-  <LastUsedSnapshot name="BugNBuzz"/>
 </instant>

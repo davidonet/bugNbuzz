@@ -3,9 +3,7 @@
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
-    <Port name="MIDI control in" direction="input">
-      <Connection other="system_midi:capture_9"/>
-    </Port>
+    <Port name="MIDI control in" direction="input"/>
     <Port name="MIDI control out" direction="output"/>
     <Port name="MMC in" direction="input"/>
     <Port name="MMC out" direction="output"/>
