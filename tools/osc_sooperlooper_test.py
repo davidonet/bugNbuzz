@@ -9,10 +9,16 @@ import sys
 import signal
 import colorsys
 
+# Useless with ardour
+#try:
+#    import patcher
+#except ImportError:
+#    print('patcher import failed')
+
 try:
-    import patcher
+	import touch2ardour
 except ImportError:
-    print('patcher import failed')
+	print('touch2ardour import failed')
 
 
 class MyServer(ServerThread):
@@ -29,7 +35,7 @@ class MyServer(ServerThread):
 
         try:
             self.sooperlooper = Address("localhost", 9951)
-            self.ardour = Address("localhost", 8175)
+            self.ardour = Address("localhost", 3819)
             self.jacket = Address("192.168.0.30", 9000) # in router config
         except liblo.AddressError as err:
             print(err)
@@ -160,9 +166,30 @@ class MyServer(ServerThread):
             else:
                 send(self.sooperlooper, "/sl/" + str(l-1) + "/set", "wet", float(gain[l]))
 
+########### OSC methods for TouchOSC to ardour ############
+	def ard_send(self, path, args):
+		send(self.ardour, touch2ardour(path, args))
+
+#	@make_method('/ardour/routes/mute', 'i')
+#	def ard_mute(self, path, args):
+#		send(self.ardour, touch2ardour.path(path), touch2ardour.args(args))
+
+
+
+########### wildcard ##########
+
     @make_method(None, None)
     def fallback(self, path, args):
-        print >> sys.stderr, "received message '" + \
+		path_split = path.split("/")
+
+#		Ardour path catch
+		if path_split[1] == "ardour":
+			ard_path, track, arg = touch2ardour.touch2ardour(path, args)
+			send(self.ardour, ard_path, track, arg)
+
+#		All other
+		else:		
+			print >> sys.stderr, "received message '" + \
             str(path) + "' " + str(args)
 
 ########## osc-x Send methods ###########
@@ -255,8 +282,9 @@ class MyServer(ServerThread):
                 """
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
 
-    def connect(self):
-        patcher.connect_sl()
+# useles with ardour
+#    def connect(self):
+#        patcher.connect_sl()
 
 ############ Bitwig config #############
 # Useless with ardour
