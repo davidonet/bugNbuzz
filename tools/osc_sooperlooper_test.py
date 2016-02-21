@@ -16,9 +16,9 @@ import colorsys
 #    print('patcher import failed')
 
 try:
-	import touch2ardour
+	import touch2bug
 except ImportError:
-	print('touch2ardour import failed')
+	print('touch2bug import failed')
 
 
 class MyServer(ServerThread):
@@ -37,6 +37,7 @@ class MyServer(ServerThread):
             self.sooperlooper = Address("localhost", 9951)
             self.ardour = Address("localhost", 3819)
             self.jacket = Address("192.168.1.30", 9000) # in router config
+            self.carla = Address("localhost", 17001)
         except liblo.AddressError as err:
             print(err)
             sys.exit()
@@ -166,13 +167,7 @@ class MyServer(ServerThread):
             else:
                 send(self.sooperlooper, "/sl/" + str(l-1) + "/set", "wet", float(gain[l]))
 
-########### OSC methods for TouchOSC to ardour ############
-	def ard_send(self, path, args):
-		send(self.ardour, touch2ardour(path, args))
 
-#	@make_method('/ardour/routes/mute', 'i')
-#	def ard_mute(self, path, args):
-#		send(self.ardour, touch2ardour.path(path), touch2ardour.args(args))
 
 
 
@@ -182,10 +177,15 @@ class MyServer(ServerThread):
     def fallback(self, path, args):
 		path_split = path.split("/")
 
-#		Ardour path catch
+
+########### OSC methods for TouchOSC to ardour and carla ############
 		if path_split[1] == "ardour":
-			ard_path, track, arg = touch2ardour.touch2ardour(path, args)
+			ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
 			send(self.ardour, ard_path, track, arg)
+		if path_split[1] == "Carla":
+			carla_path, arg = touch2bug.touch2bug("carla", path, args)
+			send(self.carla, carla_path, arg)
+			
 
 #		All other
 		else:		
