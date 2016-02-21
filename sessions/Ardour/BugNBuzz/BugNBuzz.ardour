@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="48140" event-counter="1592">
+<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="48672" event-counter="3480">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -7,6 +7,8 @@
       <Connection other="system_midi:capture_7"/>
       <Connection other="system_midi:capture_8"/>
       <Connection other="system_midi:capture_9"/>
+      <Connection other="system_midi:capture_10"/>
+      <Connection other="system_midi:capture_11"/>
     </Port>
     <Port name="MIDI control out" direction="output"/>
     <Port name="MMC in" direction="input"/>
@@ -111,12 +113,14 @@
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
+          <Connection other="Piezzo HF/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
+          <Connection other="Piezzo HF/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
@@ -245,7 +249,7 @@
 	MjUwIDAKODg3Ny44OTk5OTk5OTk5OTk2MzYyIDcuMDk5OTk5OTk5OTk5OTk5NjQ0NyAw
 	IC0yMC4xMDAwMDAwMDAwMDAwMDE0MjEgLTE0MCAwIDAgMCAxCjAgMCAwIDEgMSAxIDEg
 	MCAqCiogPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0RGF0YT4KCTwvUHJlc2V0Pgo8L1By
-	ZXNldENodW5rWE1MVHJlZT4KAAAAAA==
+	ZXNldENodW5rWE1MVHJlZT4KAgAAnA==
 	</data>
               <key>data</key>
               <data>
@@ -3393,7 +3397,7 @@
     <Route id="23613" name="Instrument 5" default-type="midi" active="yes" phase-invert="" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="49" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="Instrument 5" id="23636" direction="Input" default-type="midi" user-latency="0">
         <Port type="midi" name="Instrument 5/midi_in 1">
-          <Connection other="system_midi:capture_11"/>
+          <Connection other="system_midi:capture_10"/>
         </Port>
       </IO>
       <IO name="Instrument 5" id="23637" direction="Output" default-type="midi" user-latency="0">
@@ -3466,6 +3470,153 @@
       <Controllable name="recenable" id="23647" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Instrument 5.1" name="Instrument 5" id="23651" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
+    <Route id="48140" name="Piezzo HF" default-type="midi" active="yes" phase-invert="" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="50" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
+      <IO name="Piezzo HF" id="48163" direction="Input" default-type="midi" user-latency="0">
+        <Port type="midi" name="Piezzo HF/midi_in 1">
+          <Connection other="system_midi:capture_12"/>
+        </Port>
+      </IO>
+      <IO name="Piezzo HF" id="48164" direction="Output" default-type="midi" user-latency="0">
+        <Port type="audio" name="Piezzo HF/audio_out 1">
+          <Connection other="Master/audio_in 1"/>
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
+        <Port type="audio" name="Piezzo HF/audio_out 2">
+          <Connection other="Master/audio_in 2"/>
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
+        <Port type="midi" name="Piezzo HF/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="48142" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="48144" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
+      <Automation/>
+      <RemoteControl id="50"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="48154" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="48158" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="48156" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="48160" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="48162" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="48612" name="Reasonable Synth" active="yes" user-latency="0" type="lv2" unique-id="https://community.ardour.org/node/7596" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no"/>
+      </Processor>
+      <Processor id="48167" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="48166" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="48171" name="meter-Piezzo HF" active="yes" user-latency="0" type="meter"/>
+      <Processor id="48172" name="Piezzo HF" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezzo HF" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="48154" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="48158" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="48156" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="48160" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="48162" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="48183" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="48154" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="48158" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="48156" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="48160" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="48162" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="48187" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="48186" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="48174" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezzo HF.2" name="Piezzo HF" id="48178" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
+    </Route>
+    <Route id="48616" name="Piezzo HF Audio" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="51" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezzo HF Audio" id="48639" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezzo HF Audio/audio_in 1">
+          <Connection other="Mogees-plugin (6):output_1"/>
+          <Connection other="Mogees-plugin (6):output_2"/>
+        </Port>
+      </IO>
+      <IO name="Piezzo HF Audio" id="48640" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezzo HF Audio/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
+        <Port type="audio" name="Piezzo HF Audio/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
+      </IO>
+      <Controllable name="solo" id="48618" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="48620" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
+      <Automation/>
+      <RemoteControl id="51"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="48630" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="48634" flags="" value="0.000000000000"/>
+        <Controllable name="pan-elevation" id="48632" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="48636" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="48638" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="48646" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="48645" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="48643" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="48642" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="48647" name="meter-Piezzo HF Audio" active="yes" user-latency="0" type="meter"/>
+      <Processor id="48648" name="Piezzo HF Audio" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezzo HF Audio" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="48630" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="48634" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="48632" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="48636" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="48638" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="48660" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="48630" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="48634" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="48632" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="48636" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="48638" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="48664" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="48663" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="48650" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezzo HF Audio.1" name="Piezzo HF Audio" id="48654" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
   </Routes>
   <Playlists>
     <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
@@ -3513,7 +3664,8 @@
     <Playlist id="23609" name="Instrument 4.1" type="midi" orig-track-id="23570" frozen="no" combine-ops="0"/>
     <Playlist id="23566" name="Instrument 3.1" type="midi" orig-track-id="23527" frozen="no" combine-ops="0"/>
     <Playlist id="23480" name="Instrument 1.1" type="midi" orig-track-id="23441" frozen="no" combine-ops="0"/>
-    <Playlist id="48123" name="Piezzo HF.1" type="audio" orig-track-id="48084" frozen="no" combine-ops="0"/>
+    <Playlist id="48179" name="Piezzo HF.2" type="midi" orig-track-id="48140" frozen="no" combine-ops="0"/>
+    <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -3803,7 +3955,6 @@
       <Window name="P-1737-1764" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-1737-1765" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-1737-2087" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-23441-25647" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-23441-23468" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-23441-23472" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-23441-23473" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -3833,6 +3984,17 @@
       <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-255-47961" visible="no" x-off="459" y-off="249" x-size="769" y-size="610" custom-ui="yes"/>
+      <Window name="P-48140-48167" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48140-48171" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48140-48172" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48140-48183" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48140-48612" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48616-48646" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48616-48643" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48616-48647" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48616-48648" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-48616-48660" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <GUIObjectState>
         <Object id="route 28" color="64677:42885:49059"/>
         <Object id="rtav 28" height="64" visible="1"/>
@@ -3850,6 +4012,7 @@
           <Object id="processor 18551"/>
           <Object id="processor 18591"/>
           <Object id="processor 18599"/>
+          <Object id="processor 47961"/>
         </Object>
         <Object id="route 293" color="29490:36371:58981"/>
         <Object id="strip 293" visible="1" strip-width="Wide">
@@ -4331,6 +4494,8 @@
         <Object id="strip 23441" visible="1" strip-width="Wide">
           <Object id="processor 23468"/>
           <Object id="processor 25647"/>
+          <Object id="processor 48055"/>
+          <Object id="processor 48081"/>
         </Object>
         <Object id="strip 23484" visible="1" strip-width="Wide">
           <Object id="processor 23511"/>
@@ -4362,6 +4527,28 @@
         <Object id="strip 47483" visible="1" strip-width="Wide">
           <Object id="processor 47510"/>
           <Object id="processor 47952"/>
+        </Object>
+        <Object id="strip 48084" visible="1" strip-width="Wide">
+          <Object id="processor 48111"/>
+        </Object>
+        <Object id="route 48140" color="58981:42028:38637"/>
+        <Object id="rtav 48140" height="64" visible="1" note-range-min="60" note-range-max="71" midnam-model-name="Generic" midnam-custom-device-mode="MIDI" color-mode="MeterColors"/>
+        <Object id="automation 48166" height="64" visible="0"/>
+        <Object id="automation 48140 12/0/0" height="64" visible="0"/>
+        <Object id="strip 48140" visible="1" strip-width="Wide">
+          <Object id="processor 48167"/>
+          <Object id="processor 48612"/>
+        </Object>
+        <Object id="automation 48154" height="64" visible="0"/>
+        <Object id="automation 48158" height="64" visible="0"/>
+        <Object id="route 48616" color="55022:58981:53927"/>
+        <Object id="rtav 48616" height="64" visible="1"/>
+        <Object id="automation 48642" height="64" visible="0"/>
+        <Object id="automation 48645" height="64" visible="0"/>
+        <Object id="automation 48616 12/0/0" height="64" visible="0"/>
+        <Object id="automation 48630" height="64" visible="0"/>
+        <Object id="strip 48616" visible="1" strip-width="Wide">
+          <Object id="processor 48643"/>
         </Object>
       </GUIObjectState>
     </UI>
