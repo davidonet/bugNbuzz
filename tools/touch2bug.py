@@ -11,13 +11,13 @@ def touch2bug(dst, path, args):
 		if splited[3] == "mute":
 			track = multiple * 8 + int(splited[6]) + multiple
 			arg = int(args[0])
-	
+		return ard_path, track, arg
+		
 	if dst =="carla":
 		splited = path.split("/")
 		carla_path = "/" + splited[1] + "/" + str(int(splited[4]) - 1) + "/" + splited[2]
 		arg = int(args[0])
-		
-	return carla_path, arg
+		return carla_path, arg
 
 
 if __name__ == '__main__':
