@@ -251,8 +251,15 @@ class MyServer(ServerThread):
 
     def loopStop(self):
         """ Stop Action """
-        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
-        self.states[self.loopnum] = 0.0
+        if -1 == self.loopnum:
+            for l in range(4):
+                if 14.0 != self.states[self.loopnum]:
+                    send(self.sooperlooper, "/sl/" + str(l) + "/hit", "pause")
+                    self.states[l] = 0.0
+
+        else:
+            send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
+            self.states[self.loopnum] = 0.0
 
     def loopUndo(self):
         """ Undo Action 
