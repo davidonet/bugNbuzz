@@ -5,7 +5,7 @@ from time import time, sleep
 from random import randint
 from liblo import *
 import colorsys
-target = Address("169.254.1.1", 9000)
+target = Address("192.168.1.30", 9000)
 
 l = 9
 e = [0] * (9 * 3)

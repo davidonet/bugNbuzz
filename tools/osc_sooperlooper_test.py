@@ -38,7 +38,6 @@ class MyServer(ServerThread):
             sys.exit()
 
         self.stdscr = curses.initscr()
-        curses.cbreak()
         curses.noecho()
         self.stdscr.nodelay(False)
         self.stdscr.addstr(
@@ -113,6 +112,7 @@ class MyServer(ServerThread):
         if (self.buttons != args):
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
+            self.stdscr.refresh()
             if self.buttons[15] == 0 or self.buttons[7] == 0:
                 self.loopRecPlay()
             if self.buttons[14] == 0 or self.buttons[6] == 0:
@@ -151,6 +151,8 @@ class MyServer(ServerThread):
             if l != 0:
                 send(self.sooperlooper, "/sl/" + str(l - 1) +
                      "/set", "wet", float(gain[l]))
+        send(self.jacket, "/outputs/rgb/16", self.ledState)
+        self.stdscr.refresh()
 
 
 ########### wildcard ##########
@@ -170,9 +172,9 @@ class MyServer(ServerThread):
 
 
 #		All other
-        else:
-            print >> sys.stderr, "received message '" + \
-                str(path) + "' " + str(args)
+#        else:
+#            print >> sys.stderr, "received message '" + \
+#                str(path) + "' " + str(args)
 
 ########## osc-x Send methods ###########
 
@@ -294,7 +296,6 @@ class MyServer(ServerThread):
             self.loopStop()
         elif c == ord('u'):
             self.loopUndo()
-        sleep(0.4)
         
 
 ############# Utilities #############
