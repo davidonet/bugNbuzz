@@ -241,6 +241,7 @@ class MyServer(ServerThread):
         Depends on SooperLooper channel state send the right action
         """
         if -1 != self.loopnum:        
+            self.allPaused = False
             if self.states[self.loopnum] == 0.0 or self.states[self.loopnum] == 14.0:
                 send(self.sooperlooper, "/sl/" +
                      str(self.loopnum) + "/hit", "record")
@@ -266,9 +267,9 @@ class MyServer(ServerThread):
                 self.allPaused = True
 
         else:
-            self.allPaused = False
             if 14.0 == self.states[self.loopnum]:            
                 send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "trigger")
+                self.allPaused = False
             else:
                 send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
                 self.states[self.loopnum] = 0.0
@@ -285,7 +286,7 @@ class MyServer(ServerThread):
 
 ############ Interactions #############
 
-    def interact(self):
+    def interact(self): 
         """ wait fo keypress
 
         Used to debug when the jacket is not available
