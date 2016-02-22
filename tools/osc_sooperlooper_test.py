@@ -10,15 +10,15 @@ import signal
 import colorsys
 
 # Useless with ardour
-#try:
+# try:
 #    import patcher
-#except ImportError:
+# except ImportError:
 #    print('patcher import failed')
 
 try:
-	import touch2bug
+    import touch2bug
 except ImportError:
-	print('touch2bug import failed')
+    print('touch2bug import failed')
 
 
 class MyServer(ServerThread):
@@ -36,7 +36,7 @@ class MyServer(ServerThread):
         try:
             self.sooperlooper = Address("localhost", 9951)
             self.ardour = Address("localhost", 3819)
-            self.jacket = Address("192.168.1.30", 9000) # in router config
+            self.jacket = Address("192.168.1.30", 9000)  # in router config
             self.carla = Address("localhost", 17001)
         except liblo.AddressError as err:
             print(err)
@@ -87,7 +87,7 @@ class MyServer(ServerThread):
                      "state", 100, "osc.udp://localhost:8000/", "/update")
         self.blank()
         self.loopSelect(0)  # to be ready to receive command
- 
+
 #  Useless with ardour, tempo given by jack timebase
 #        send(self.sooperlooper, "/register_auto_update",
 #             "tempo", 100, "osc.udp://localhost:8000/", "/tempo")
@@ -124,15 +124,13 @@ class MyServer(ServerThread):
 
                 A basic debouncer is implemented by keeping the last buttons state
         """
+
         if (self.buttons != args):
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
-            if self.buttons[15] == 0 or self.buttons[7] == 0 :
-                self.loopRecPlay()
-            if self.buttons[14] == 0 or self.buttons[6] == 0:
-                self.loopStop()
-            if self.buttons[13] == 0:
-                self.loopUndo()
+            self.loopRecPlay(self.buttons[15] == 0 or self.buttons[7])
+            self.loopStop(self.buttons[14] == 0 or self.buttons[6])
+            self.loopUndo(self.buttons[13] == 0)
             if self.buttons[12] == 0:
                 self.loopSelect(-1)
             if self.buttons[8] == 0:
@@ -162,35 +160,33 @@ class MyServer(ServerThread):
             self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
             gain[l] = args[l]
             if l == 0:
-				pass
+                pass
 #                send(self.bitwig, "/master/volume", int(gain[l]*100))
             else:
-                send(self.sooperlooper, "/sl/" + str(l-1) + "/set", "wet", float(gain[l]))
-
-
-
+                send(self.sooperlooper, "/sl/" + str(l - 1) +
+                     "/set", "wet", float(gain[l]))
 
 
 ########### wildcard ##########
 
     @make_method(None, None)
     def fallback(self, path, args):
-		path_split = path.split("/")
+        path_split = path.split("/")
 
 
 ########### OSC methods for TouchOSC to ardour and carla ############
-		if path_split[1] == "ardour":
-			ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
-			send(self.ardour, ard_path, track, arg)
-		if path_split[1] == "Carla":
-			carla_path, arg = touch2bug.touch2bug("carla", path, args)
-			send(self.carla, carla_path, arg)
-			
+        if path_split[1] == "ardour":
+            ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
+            send(self.ardour, ard_path, track, arg)
+        if path_split[1] == "Carla":
+            carla_path, arg = touch2bug.touch2bug("carla", path, args)
+            send(self.carla, carla_path, arg)
+
 
 #		All other
-		else:		
-			print >> sys.stderr, "received message '" + \
-            str(path) + "' " + str(args)
+        else:
+            print >> sys.stderr, "received message '" + \
+                str(path) + "' " + str(args)
 
 ########## osc-x Send methods ###########
 
@@ -255,31 +251,44 @@ class MyServer(ServerThread):
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
         self.setSelect(loopnum, .5)
 
-    def loopRecPlay(self):
+    def loopRecPlay(self, press):
         """ Rec Play Overdub action 
 
         Depends on SooperLooper channel state send the right action
         """
+        if press:
+            action = "/down"
+        else:
+            action = "/up"
+
         if self.states[self.loopnum] == 0.0 or self.states[self.loopnum] == 14.0:
             send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "record")
+                 str(self.loopnum) + action, "record")
         elif self.states[self.loopnum] == 2.0:
             send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "record")
+                 str(self.loopnum) + action, "record")
         else:
             send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "overdub")
+                 str(self.loopnum) + action, "overdub")
 
-    def loopStop(self):
+    def loopStop(self, press):
         """ Stop Action """
-        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
-        self.states[self.loopnum] = 0.0
+        if press:
+            action = "/down"
+            self.states[self.loopnum] = 0.0
+        else:
+            action = "/up"
+        send(self.sooperlooper, "/sl/" + str(self.loopnum) + action, "pause")
 
-    def loopUndo(self):
+    def loopUndo(self,press):
         """ Undo Action 
 
         TODO: need to implement redo
                 """
+        if press:
+            action = "/down"
+        else:
+            action = "/up"
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
 
 # useles with ardour
