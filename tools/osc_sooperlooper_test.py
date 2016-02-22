@@ -9,16 +9,10 @@ import sys
 import signal
 import colorsys
 
-# Useless with ardour
-#try:
-#    import patcher
-#except ImportError:
-#    print('patcher import failed')
-
 try:
-	import touch2bug
+    import touch2bug
 except ImportError:
-	print('touch2bug import failed')
+    print('touch2bug import failed')
 
 
 class MyServer(ServerThread):
@@ -36,7 +30,7 @@ class MyServer(ServerThread):
         try:
             self.sooperlooper = Address("localhost", 9951)
             self.ardour = Address("localhost", 3819)
-            self.jacket = Address("192.168.1.30", 9000) # in router config
+            self.jacket = Address("192.168.1.30", 9000)  # in router config
             self.carla = Address("localhost", 17001)
         except liblo.AddressError as err:
             print(err)
@@ -61,6 +55,7 @@ class MyServer(ServerThread):
         """ Trying to restore console """
         self.blank()
         self.refreshLed()
+        self.free()
         curses.nocbreak()
         curses.echo()
         curses.endwin()
@@ -87,17 +82,6 @@ class MyServer(ServerThread):
                      "state", 100, "osc.udp://localhost:8000/", "/update")
         self.blank()
         self.loopSelect(0)  # to be ready to receive command
- 
-#  Useless with ardour, tempo given by jack timebase
-#        send(self.sooperlooper, "/register_auto_update",
-#             "tempo", 100, "osc.udp://localhost:8000/", "/tempo")
-
-#    @make_method('/tempo', 'isf')
-#    def tempo(self, path, args):
-#        """ when tempo changed in SooperLooper sync it to bitwig"""
-#        send(self.bitwig, "/tempo/raw", args[2])
-#        self.stdscr.addstr(2, 30, "BPM : " +
-#                           "{0:.2f}".format(args[2]), curses.A_REVERSE)
 
     @make_method('/update', 'isf')
     def update(self, path, args):
@@ -127,7 +111,7 @@ class MyServer(ServerThread):
         if (self.buttons != args):
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
-            if self.buttons[15] == 0 or self.buttons[7] == 0 :
+            if self.buttons[15] == 0 or self.buttons[7] == 0:
                 self.loopRecPlay()
             if self.buttons[14] == 0 or self.buttons[6] == 0:
                 self.loopStop()
@@ -161,36 +145,31 @@ class MyServer(ServerThread):
         for l in range(5):
             self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
             gain[l] = args[l]
-            if l == 0:
-				pass
-#                send(self.bitwig, "/master/volume", int(gain[l]*100))
-            else:
-                send(self.sooperlooper, "/sl/" + str(l-1) + "/set", "wet", float(gain[l]))
-
-
-
+            if l != 0:
+                send(self.sooperlooper, "/sl/" + str(l - 1) +
+                     "/set", "wet", float(gain[l]))
 
 
 ########### wildcard ##########
 
     @make_method(None, None)
     def fallback(self, path, args):
-		path_split = path.split("/")
+        path_split = path.split("/")
 
 
 ########### OSC methods for TouchOSC to ardour and carla ############
-		if path_split[1] == "ardour":
-			ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
-			send(self.ardour, ard_path, track, arg)
-		if path_split[1] == "Carla":
-			carla_path, arg = touch2bug.touch2bug("carla", path, args)
-			send(self.carla, carla_path, arg)
-			
+        if path_split[1] == "ardour":
+            ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
+            send(self.ardour, ard_path, track, arg)
+        if path_split[1] == "Carla":
+            carla_path, arg = touch2bug.touch2bug("carla", path, args)
+            send(self.carla, carla_path, arg)
+
 
 #		All other
-		else:		
-			print >> sys.stderr, "received message '" + \
-            str(path) + "' " + str(args)
+        else:
+            print >> sys.stderr, "received message '" + \
+                str(path) + "' " + str(args)
 
 ########## osc-x Send methods ###########
 
@@ -222,8 +201,8 @@ class MyServer(ServerThread):
         self.led = [0] * (9 * 3)
 
     def refreshLed(self):
-        self.frame = (self.frame + 1) % 4
-        if 2 < self.frame:
+        self.frame = (self.frame + 1) % 2
+        if 0 < self.frame:
             send(self.jacket, "/outputs/rgb/16", self.ledState)
         else:
             send(self.jacket, "/outputs/rgb/16", self.led)
@@ -282,25 +261,6 @@ class MyServer(ServerThread):
                 """
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
 
-# useles with ardour
-#    def connect(self):
-#        patcher.connect_sl()
-
-############ Bitwig config #############
-# Useless with ardour
-#
-#    def bitwig_monitor(self):
-#
-#        for bank in range(27):
-#            send(self.bitwig, "/track/bank/-")
-#
-#        for bank in range(4):
-#            for track in range(7):
-#                track += 1
-#                send(self.bitwig, "/track/" + str(track) + "/monitor", 1)
-#
-#            send(self.bitwig, "/track/bank/page/+")
-#            bank += 1
 
 ############ Interactions #############
 
@@ -328,13 +288,8 @@ class MyServer(ServerThread):
             self.loopStop()
         elif c == ord('u'):
             self.loopUndo()
-# Useless with ardour
-#        elif c == ord('c'):
-#            self.connect()
-#        elif c == ord('m'):
-#            self.bitwig_monitor()
         self.refreshLed()
-        sleep(0.1)
+        sleep(0.2)
 
 
 ############# Utilities #############
@@ -393,6 +348,5 @@ server.start()
 
 while True:
     server.interact()
-    # sleep(0.1) # TODO: Check if needed
 
 server.quit()
