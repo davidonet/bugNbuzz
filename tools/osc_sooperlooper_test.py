@@ -40,7 +40,7 @@ class MyServer(ServerThread):
         self.stdscr = curses.initscr()
         curses.cbreak()
         curses.noecho()
-        self.stdscr.nodelay(True)
+        self.stdscr.nodelay(False)
         self.stdscr.addstr(
             0, 0, "******************************* SooperLooper ****************************", curses.A_REVERSE)
         self.stdscr.addstr(4, 0, "All    ", curses.A_REVERSE)
@@ -55,7 +55,6 @@ class MyServer(ServerThread):
     def quit(self):
         """ Trying to restore console """
         self.blank()
-        self.refreshLed()
         self.free()
         curses.nocbreak()
         curses.echo()
@@ -83,6 +82,7 @@ class MyServer(ServerThread):
                      "state", 100, "osc.udp://localhost:8000/", "/update")
         self.blank()
         self.loopSelect(0)  # to be ready to receive command
+        self.stdscr.refresh()
 
     @make_method('/update', 'isf')
     def update(self, path, args):
@@ -91,6 +91,7 @@ class MyServer(ServerThread):
         self.states[l] = s
         self.stdscr.addstr(l + 5, 10, self.getState(s))
         self.setColor(l, self.getColor(s))
+        self.stdscr.refresh()
 
 
 ########## OSC methods from OSC-X module ###########
@@ -131,6 +132,7 @@ class MyServer(ServerThread):
         else:
                 # Just to visualize the debouncing
             self.stdscr.addstr(0, 0, "#", curses.A_REVERSE)
+            self.stdscr.refresh()
 
     @make_method('/inputs/analogue', 'ffffffffffffffff')
     def potar(self, path, args):
@@ -185,28 +187,12 @@ class MyServer(ServerThread):
             self.ledState[i * 3] = 0
             self.ledState[i * 3 + 1] = 0
             self.ledState[i * 3 + 2] = 0
-
-    def setSelect(self, l, c):
-        i = l + 5
-        if -1 < c:
-            c = colorsys.hsv_to_rgb(c, 1, .01)
-            self.led[i * 3] = int(c[0] * 150)
-            self.led[i * 3 + 1] = int(c[1] * 200)
-            self.led[i * 3 + 2] = int(c[2] * 255)
-        else:
-            self.led[i * 3] = 0
-            self.led[i * 3 + 1] = 0
-            self.led[i * 3 + 2] = 0
+        send(self.jacket, "/outputs/rgb/16", self.ledState)
 
     def blank(self):
-        self.led = [0] * (9 * 3)
+        self.ledState = [0] * (9 * 3)
+        send(self.jacket, "/outputs/rgb/16", self.ledState)
 
-    def refreshLed(self):
-        self.frame = (self.frame + 1) % 2
-        if 0 < self.frame:
-            send(self.jacket, "/outputs/rgb/16", self.ledState)
-        else:
-            send(self.jacket, "/outputs/rgb/16", self.led)
 
 ########## Sooperlooper Send methods ###########
 
@@ -220,7 +206,6 @@ class MyServer(ServerThread):
                 Args:
                         loopnum: channel number 0 based index
                 """
-        self.setSelect(self.loopnum, -1)
         self.loopnum = loopnum
 
         # Console interface
@@ -233,7 +218,6 @@ class MyServer(ServerThread):
              "selected_loop_num", int(self.loopnum))
         send(self.sooperlooper, "/sl/-1/set", "dry", 0)
         send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
-        self.setSelect(loopnum, .5)
 
     def loopRecPlay(self):
         """ Rec Play Overdub action 
@@ -310,9 +294,8 @@ class MyServer(ServerThread):
             self.loopStop()
         elif c == ord('u'):
             self.loopUndo()
-        self.refreshLed()
-        sleep(0.2)
-
+        sleep(0.4)
+        
 
 ############# Utilities #############
 
@@ -349,15 +332,16 @@ class MyServer(ServerThread):
         if s == 14.0:
             return "Paused      "
 
+
     def getColor(self, s):
         if s == 2.0:
             return 0
         if s == 4.0:
-            return .25
+            return .3
         if s == 5.0:
-            return .75
+            return .1
         if s == 14.0:
-            return .15
+            return .75
         return -1
 
 try:
