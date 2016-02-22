@@ -26,6 +26,7 @@ class MyServer(ServerThread):
         self.ledState = [0] * 27
         self.loopnum = -1
         self.frame = 0
+        self.allPaused = False  
 
         try:
             self.sooperlooper = Address("localhost", 9951)
@@ -239,34 +240,47 @@ class MyServer(ServerThread):
 
         Depends on SooperLooper channel state send the right action
         """
-        if self.states[self.loopnum] == 0.0 or self.states[self.loopnum] == 14.0:
-            send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "record")
-        elif self.states[self.loopnum] == 2.0:
-            send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "record")
-        else:
-            send(self.sooperlooper, "/sl/" +
-                 str(self.loopnum) + "/hit", "overdub")
+        if -1 != self.loopnum:        
+            if self.states[self.loopnum] == 0.0 or self.states[self.loopnum] == 14.0:
+                send(self.sooperlooper, "/sl/" +
+                     str(self.loopnum) + "/hit", "record")
+            elif self.states[self.loopnum] == 2.0:
+                send(self.sooperlooper, "/sl/" +
+                     str(self.loopnum) + "/hit", "record")
+            else:
+                send(self.sooperlooper, "/sl/" +
+                     str(self.loopnum) + "/hit", "overdub")
 
     def loopStop(self):
         """ Stop Action """
         if -1 == self.loopnum:
-            for l in range(4):
-                if 14.0 != self.states[self.loopnum]:
-                    send(self.sooperlooper, "/sl/" + str(l) + "/hit", "pause")
-                    self.states[l] = 0.0
+            if self.allPaused:
+                self.allPaused = False
+                for l in range(4):
+                    send(self.sooperlooper, "/sl/" + str(l) + "/hit", "trigger")      
+            else:
+                for l in range(4):
+                    if 14.0 != self.states[l]:
+                        send(self.sooperlooper, "/sl/" + str(l) + "/hit", "pause")
+                        self.states[l] = 0.0
+                self.allPaused = True
 
         else:
-            send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
-            self.states[self.loopnum] = 0.0
+            self.allPaused = False
+            if 14.0 == self.states[self.loopnum]:            
+                send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "trigger")
+            else:
+                send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "pause")
+                self.states[self.loopnum] = 0.0
+                
 
     def loopUndo(self):
         """ Undo Action 
 
         TODO: need to implement redo
                 """
-        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
+        if -1 != self.loopnum:
+            send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
 
 
 ############ Interactions #############
