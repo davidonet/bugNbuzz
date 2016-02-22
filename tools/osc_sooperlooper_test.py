@@ -222,8 +222,8 @@ class MyServer(ServerThread):
         self.led = [0] * (9 * 3)
 
     def refreshLed(self):
-        self.frame = (self.frame + 1) % 25
-        if 6 < self.frame:
+        self.frame = (self.frame + 1) % 4
+        if 2 < self.frame:
             send(self.jacket, "/outputs/rgb/16", self.ledState)
         else:
             send(self.jacket, "/outputs/rgb/16", self.led)
@@ -334,7 +334,7 @@ class MyServer(ServerThread):
 #        elif c == ord('m'):
 #            self.bitwig_monitor()
         self.refreshLed()
-        sleep(0.04)
+        sleep(0.1)
 
 
 ############# Utilities #############
