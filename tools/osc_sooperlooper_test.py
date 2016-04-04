@@ -27,6 +27,7 @@ class MyServer(ServerThread):
         self.loopnum = -1
         self.frame = 0
         self.allPaused = False  
+        self.ts = time()
 
         try:
             self.sooperlooper = Address("localhost", 9951)
@@ -109,7 +110,8 @@ class MyServer(ServerThread):
 
                 A basic debouncer is implemented by keeping the last buttons state
         """
-        if (self.buttons != args):
+        if( 0.1 < (time()-self.ts) ) and (self.buttons != args):
+            self.ts = time()
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
             self.stdscr.refresh()
@@ -179,7 +181,7 @@ class MyServer(ServerThread):
 ########## osc-x Send methods ###########
 
     def setColor(self, l, c):
-        i = l + 5
+        i = l + 9
         if -1 < c:
             c = colorsys.hsv_to_rgb(c, 1, .1)
             self.ledState[i * 3] = int(c[0] * 150)
@@ -192,7 +194,7 @@ class MyServer(ServerThread):
         send(self.jacket, "/outputs/rgb/16", self.ledState)
 
     def blank(self):
-        self.ledState = [0] * (9 * 3)
+        self.ledState = [0] * (14 * 3)
         send(self.jacket, "/outputs/rgb/16", self.ledState)
 
 
