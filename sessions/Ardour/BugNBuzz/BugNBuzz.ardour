@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="48672" event-counter="3480">
+<Session version="3001" name="BugNBuzz" sample-rate="96000" id-counter="64408" event-counter="7730">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
     <Port name="MIDI control in" direction="input">
+      <Connection other="system_midi:capture_10"/>
+      <Connection other="system_midi:capture_11"/>
       <Connection other="system_midi:capture_7"/>
       <Connection other="system_midi:capture_8"/>
       <Connection other="system_midi:capture_9"/>
-      <Connection other="system_midi:capture_10"/>
-      <Connection other="system_midi:capture_11"/>
     </Port>
     <Port name="MIDI control out" direction="output"/>
     <Port name="MMC in" direction="input"/>
@@ -193,7 +193,7 @@
       <Processor id="279" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="281" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="47961" name="H-EQ (m)" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1212502349-1802721110" count="1">
+      <Processor id="61198" name="Molot" active="yes" user-latency="0" type="audiounit" unique-id="1635083896-1296847922-1449936723" count="1">
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
         </ConfiguredInput>
@@ -203,140 +203,127 @@
         <audiounit last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no">
           <plist version="1.0">
             <dict>
-              <key>Waves_XPst</key>
-              <data>
-	AAAI2gAAAAQAAAABSEVRTXNldEEAAAi6WFBzdDxQcmVzZXRDaHVua1hNTFRyZWUgdmVy
-	c2lvbj0iMiI+Cgk8UHJlc2V0IE5hbWU9IiIgR2VuZXJpY1R5cGU9IkgtRVEiPgoJCTxQ
-	cmVzZXRIZWFkZXI+CgkJCTxQbHVnaW5OYW1lPkgtRVE8L1BsdWdpbk5hbWU+CgkJCTxQ
-	bHVnaW5WZXJzaW9uPjkuMy4wPC9QbHVnaW5WZXJzaW9uPgoJCQk8QWN0aXZlU2V0dXA+
-	U0VUVVBfQTwvQWN0aXZlU2V0dXA+CgkJCTxSZWFkT25seT50cnVlPC9SZWFkT25seT4K
-	CQk8L1ByZXNldEhlYWRlcj4KCQk8TWVzc2FnZVRvU2hlbGwvPgoJCTxQcmVzZXREYXRh
-	IFNldHVwPSJTRVRVUF9BIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVhbFdvcmxkIj4w
-	LjQwMDAwMDAwMDAwMDAwMDAyMjIgMSAwIDMuNzk5OTk5OTk5OTk5OTk5ODIyNCAwIDAg
-	MCAwICogKgoqIDAgMCAwIDMwIDc1IDEuNSAyLjUgMAoqICogKiAqIDAgMCAwIDAgMAow
-	IDAgMCAwIDAgMSAxIDEgMQoxIDAgMCAxIDEgMSAxIDEgMAowIDAgMCAwIDAgMCAwIDAg
-	MAowIDAgMCAwIDAgMCAwIDEwMCAwCjEwMCAxIDEgODcgODcgNDk0IDQ5NCA5ODggOTg4
-	CjM1MjAgMzUyMCA4MzcyIDgzNzIgMzAgMzAgMTYwNTYgMTYwNTYgMAowIDAgMCAwIDAg
-	MCAwIDAgMAowIDAgMCAwIDUwIDUwIDUwIDUwIDUwCjUwIDUwIDUwIDUwIDUwIDUwIDUw
-	IDUwIDUwCjAgMCAwIDAgMCAxMiA5MTAwIDUgMTIwMAozNzUwIDQ1NTAgNDcwMCAzLjA4
-	OTk5OTk5OTk5OTk5OTg1NzkgMy41IDEwMCAyNCAxNDAwIDEwODAKMTQwMCAxMDgwIDE0
-	MDAgMTA4MCAxNDAwIDExMzAgMzIuNSAyNCAwCjEgLTg4IC0xNi41IDEwOSAwLjcwODk5
-	OTk5OTk5OTk5OTk2MzU4IDggMiAwICoKKiAwIDEgMSAwIDEwICogKiAqCjE5OSAwICog
-	KiAxIDEgMSAtOTggMzAKMjAwIC0xMi4xOTk5OTk5OTk5OTk5OTkyODkgMTExMjQgLTk4
-	IDAgLTI5LjUgMTI1LjI5OTk5OTk5OTk5OTk5NzE2IDIyLjMwMDAwMDAwMDAwMDAwMDcx
-	MSAyNTAKMCA4ODc3Ljg5OTk5OTk5OTk5OTYzNjIgNy4wOTk5OTk5OTk5OTk5OTk2NDQ3
-	IDAgLTIwLjEwMDAwMDAwMDAwMDAwMTQyMSAwIDE2IDAgMTcwMjYuMjk5OTk5OTk5OTk5
-	MjcyCjAgMCAwIDAgLTI5LjUgMTI1LjI5OTk5OTk5OTk5OTk5NzE2IDIyLjMwMDAwMDAw
-	MDAwMDAwMDcxMSAyNTAgMAo4ODc3Ljg5OTk5OTk5OTk5OTYzNjIgNy4wOTk5OTk5OTk5
-	OTk5OTk2NDQ3IDAgLTIwLjEwMDAwMDAwMDAwMDAwMTQyMSAtMTQwIDAgMCAwIDEKMCAw
-	IDAgMSAxIDEgMSAwICoKKiA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXREYXRhPgoJCTxQ
-	cmVzZXREYXRhIFNldHVwPSJTRVRVUF9CIj4KCQkJPFBhcmFtZXRlcnMgVHlwZT0iUmVh
-	bFdvcmxkIj4wLjQwMDAwMDAwMDAwMDAwMDAyMjIgMSAwIDAgMCAwIDAgMCAqICoKKiAw
-	IDAgMCAzMCA3NSAxLjUgMi41IDAKKiAqICogKiAwIDAgMCAwIDAKMCAwIDAgMCAwIDEg
-	MSAxIDEKMSAwIDAgMSAxIDEgMSAxIDAKMCAwIDAgMCAwIDAgMCAwIDAKMCAwIDAgMCAw
-	IDAgMCAxMDAgMAoxMDAgMSAxIDg3IDg3IDQ5NCA0OTQgOTg4IDk4OAozNTIwIDM1MjAg
-	ODM3MiA4MzcyIDMwIDMwIDE2MDU2IDE2MDU2IDAKMCAwIDAgMCAwIDAgMCAwIDAKMCAw
-	IDAgMCA1MCA1MCA1MCA1MCA1MAo1MCA1MCA1MCA1MCA1MCA1MCA1MCA1MCA1MAowIDAg
-	MCAwIDAgMTIgOTEwMCA1IDEyMDAKMzc1MCA0NTUwIDQ3MDAgMy4wODk5OTk5OTk5OTk5
-	OTk4NTc5IDMuNSAxMDAgMjQgMTQwMCAxMDgwCjE0MDAgMTA4MCAxNDAwIDEwODAgMTQw
-	MCAxMTMwIDMyLjUgMjQgMAoxIC04OCAtMTYuNSAxMDkgMC43MDg5OTk5OTk5OTk5OTk5
-	NjM1OCA4IDIgMCAqCiogMCAxIDEgMCAxMCAqICogKgoxOTkgMCAqICogMSAxIDEgLTk4
-	IDMwCjIwMCAtMTIuMTk5OTk5OTk5OTk5OTk5Mjg5IDExMTI0IC05OCAwIC0yOS41IDEy
-	NS4yOTk5OTk5OTk5OTk5OTcxNiAyMi4zMDAwMDAwMDAwMDAwMDA3MTEgMjUwCjAgODg3
-	Ny44OTk5OTk5OTk5OTk2MzYyIDcuMDk5OTk5OTk5OTk5OTk5NjQ0NyAwIC0yMC4xMDAw
-	MDAwMDAwMDAwMDE0MjEgMCAxNiAwIDE3MDI2LjI5OTk5OTk5OTk5OTI3MgowIDAgMCAw
-	IC0yOS41IDEyNS4yOTk5OTk5OTk5OTk5OTcxNiAyMi4zMDAwMDAwMDAwMDAwMDA3MTEg
-	MjUwIDAKODg3Ny44OTk5OTk5OTk5OTk2MzYyIDcuMDk5OTk5OTk5OTk5OTk5NjQ0NyAw
-	IC0yMC4xMDAwMDAwMDAwMDAwMDE0MjEgLTE0MCAwIDAgMCAxCjAgMCAwIDEgMSAxIDEg
-	MCAqCiogPC9QYXJhbWV0ZXJzPgoJCTwvUHJlc2V0RGF0YT4KCTwvUHJlc2V0Pgo8L1By
-	ZXNldENodW5rWE1MVHJlZT4KAgAAnA==
-	</data>
-              <key>data</key>
-              <data>
-	AAAAAAAAAAAAAAAuAAAAAEQygAAAAAABAAAAAAAAAAIAAAAAAAAAA0KuAAAAAAAEQ/eA
-	AAAAAAU/gAAAAAAABgAAAAAAAAAHAAAAAAAAAAhDSgAAAAAACUP3gAAAAAAKQ/oAAAAA
-	AAs/gAAAAAAADAAAAAAAAAANQ+MAAAAAAA5D94AAAAAAD0P6AAAAAAAQP4AAAAAAABEA
-	AAAAAAAAEkQKwAAAAAATQ/eAAAAAABRD+gAAAAAAFT+AAAAAAAAWAAAAAAAAABdEOMAA
-	AAAAGEP3gAAAAAAZQ/oAAAAAABo/gAAAAAAAGwAAAAAAAAAcAAAAAAAAAB1EWIAAAAAA
-	HkP3gAAAAAAfQ/oAAAAAACAAAAAAAAAAIQAAAAAAAAAiRHCAAAAAACND94AAAAAAJAAA
-	AAAAAAAlQ/oAAAAAACZCyAAAAAAAJz+AAAAAAAAoP4AAAAAAACk/gAAAAAAAKgAAAAAA
-	AAArAAAAAAAAACwAAAAAAAAALURJAAA=
-	</data>
-              <key>element-name</key>
-              <dict>
-                <key>1</key>
-                <dict>
-                  <key>0</key>
-                  <string>Main Input Bus</string>
-                </dict>
-                <key>2</key>
-                <dict>
-                  <key>0</key>
-                  <string>Main Output Bus</string>
-                </dict>
-              </dict>
+              <key>ProgramNumber</key>
+              <integer>0</integer>
               <key>manufacturer</key>
-              <integer>1802721110</integer>
+              <integer>1449936723</integer>
               <key>name</key>
-              <string>Untitled</string>
+              <string>Default</string>
               <key>subtype</key>
-              <integer>1212502349</integer>
+              <integer>1296847922</integer>
               <key>type</key>
               <integer>1635083896</integer>
               <key>version</key>
-              <integer>0</integer>
+              <integer>1</integer>
+              <key>vstdata</key>
+              <data>
+	Q2NuSwAAAIhGeENrAAAAAU1MVDIAAAABAAAAFkRlZmF1bHQAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAA+raFIPyBlHz8qMKQ+IhM+PkWs2D4pMzM/gAAAPxPszT8AAAA+m5cKP4AAAD8q
+	qqsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	</data>
             </dict>
           </plist>
         </audiounit>
-        <Controllable name="Input" id="47963" flags="" value="714.000000000000" parameter="0"/>
-        <Controllable name="HP On/Off" id="47965" flags="Toggle" value="0.000000000000" parameter="1"/>
-        <Controllable name="HP Type" id="47967" flags="" value="0.000000000000" parameter="2"/>
-        <Controllable name="HP Freq" id="47969" flags="" value="87.000000000000" parameter="3"/>
-        <Controllable name="HP Q" id="47971" flags="" value="495.000000000000" parameter="4"/>
-        <Controllable name="LF On/Off" id="47973" flags="Toggle" value="1.000000000000" parameter="5"/>
-        <Controllable name="LF Shape" id="47975" flags="Toggle" value="0.000000000000" parameter="6"/>
-        <Controllable name="LF Type" id="47977" flags="" value="0.000000000000" parameter="7"/>
-        <Controllable name="LF Freq" id="47979" flags="" value="202.000000000000" parameter="8"/>
-        <Controllable name="LF Q" id="47981" flags="" value="495.000000000000" parameter="9"/>
-        <Controllable name="LF Gain" id="47983" flags="" value="500.000000000000" parameter="10"/>
-        <Controllable name="LMF On/Off" id="47985" flags="Toggle" value="1.000000000000" parameter="11"/>
-        <Controllable name="LMF Type" id="47987" flags="" value="0.000000000000" parameter="12"/>
-        <Controllable name="LMF Freq" id="47989" flags="" value="454.000000000000" parameter="13"/>
-        <Controllable name="LMF Q" id="47991" flags="" value="495.000000000000" parameter="14"/>
-        <Controllable name="LMF Gain" id="47993" flags="" value="500.000000000000" parameter="15"/>
-        <Controllable name="MF On/Off" id="47995" flags="Toggle" value="1.000000000000" parameter="16"/>
-        <Controllable name="MF Type" id="47997" flags="" value="0.000000000000" parameter="17"/>
-        <Controllable name="MF Freq" id="47999" flags="" value="555.000000000000" parameter="18"/>
-        <Controllable name="MF Q" id="48001" flags="" value="495.000000000000" parameter="19"/>
-        <Controllable name="MF Gain" id="48003" flags="" value="500.000000000000" parameter="20"/>
-        <Controllable name="HMF On/Off" id="48005" flags="Toggle" value="1.000000000000" parameter="21"/>
-        <Controllable name="HMF Type" id="48007" flags="" value="0.000000000000" parameter="22"/>
-        <Controllable name="HMF Freq" id="48009" flags="" value="739.000000000000" parameter="23"/>
-        <Controllable name="HMF Q" id="48011" flags="" value="495.000000000000" parameter="24"/>
-        <Controllable name="HMF Gain" id="48013" flags="" value="500.000000000000" parameter="25"/>
-        <Controllable name="HF On/Off" id="48015" flags="Toggle" value="1.000000000000" parameter="26"/>
-        <Controllable name="HF Shape" id="48017" flags="Toggle" value="0.000000000000" parameter="27"/>
-        <Controllable name="HF Type" id="48019" flags="" value="0.000000000000" parameter="28"/>
-        <Controllable name="HF Freq" id="48021" flags="" value="866.000000000000" parameter="29"/>
-        <Controllable name="HF Q" id="48023" flags="" value="495.000000000000" parameter="30"/>
-        <Controllable name="HF Gain" id="48025" flags="" value="500.000000000000" parameter="31"/>
-        <Controllable name="LP On/Off" id="48027" flags="Toggle" value="0.000000000000" parameter="32"/>
-        <Controllable name="LP Type" id="48029" flags="" value="0.000000000000" parameter="33"/>
-        <Controllable name="LP Freq" id="48031" flags="" value="962.000000000000" parameter="34"/>
-        <Controllable name="LP Q" id="48033" flags="" value="495.000000000000" parameter="35"/>
-        <Controllable name="Analog Type" id="48035" flags="" value="0.000000000000" parameter="36"/>
-        <Controllable name="Analog Level" id="48037" flags="" value="500.000000000000" parameter="37"/>
-        <Controllable name="Thd Level" id="48039" flags="" value="100.000000000000" parameter="38"/>
-        <Controllable name="Analyzer On/Off" id="48041" flags="Toggle" value="1.000000000000" parameter="39"/>
-        <Controllable name="Analyzer In" id="48043" flags="Toggle" value="1.000000000000" parameter="40"/>
-        <Controllable name="Analyzer Out" id="48045" flags="Toggle" value="1.000000000000" parameter="41"/>
-        <Controllable name="Freeze Graph" id="48047" flags="Toggle" value="0.000000000000" parameter="42"/>
-        <Controllable name="Peakhold" id="48049" flags="Toggle" value="0.000000000000" parameter="43"/>
-        <Controllable name="Phase" id="48051" flags="Toggle" value="0.000000000000" parameter="44"/>
-        <Controllable name="Output" id="48053" flags="" value="804.000000000000" parameter="45"/>
+        <Controllable name="Filter" id="61200" flags="" value="114.606643676758" parameter="0"/>
+        <Controllable name="Threshold" id="61202" flags="" value="-14.938280105591" parameter="1"/>
+        <Controllable name="Knee" id="61204" flags="" value="0.664804697037" parameter="2"/>
+        <Controllable name="Attack" id="61206" flags="" value="16.669376373291" parameter="3"/>
+        <Controllable name="Release" id="61208" flags="" value="233.390045166016" parameter="4"/>
+        <Controllable name="Limiter" id="61210" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="Makeup" id="61212" flags="" value="1.867969512939" parameter="6"/>
+        <Controllable name="MidScoop" id="61214" flags="" value="0.000000000000" parameter="7"/>
+        <Controllable name="Dry/Wet" id="61216" flags="" value="30.084783554077" parameter="8"/>
+        <Controllable name="Mode" id="61218" flags="" value="6.000000000000" parameter="9"/>
+        <Controllable name="Upsampling" id="61220" flags="" value="2.000000000000" parameter="10"/>
+        <Controllable name="Attack Mode" id="61222" flags="Toggle" value="0.000000000000" parameter="11"/>
+        <Controllable name="Input" id="61224" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="Limiter" id="61226" flags="" value="0.000000000000" parameter="13"/>
+        <Controllable name="Saturation" id="61228" flags="" value="0.000000000000" parameter="14"/>
+        <Controllable name="Bypass" id="61230" flags="Toggle" value="0.000000000000" parameter="15"/>
+        <Controllable name="Render8x" id="61232" flags="Toggle" value="0.000000000000" parameter="16"/>
+        <Controllable name="Dither" id="61234" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="Sd.chain" id="61236" flags="Toggle" value="0.000000000000" parameter="18"/>
+        <Controllable name="A,R Time" id="61238" flags="" value="0.000000000000" parameter="19"/>
+        <Controllable name="Upsampling Mode" id="61240" flags="Toggle" value="0.000000000000" parameter="20"/>
+      </Processor>
+      <Processor id="61130" name="4 Band Parametric EQ Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/fil4#mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes" state-dir="state1">
+          <Port symbol="enable" value="+1.000000"/>
+          <Port symbol="gain" value="+0.000000"/>
+          <Port symbol="peakreset" value="+1.000000"/>
+          <Port symbol="HighPass" value="+1.000000"/>
+          <Port symbol="HPfreq" value="+72.502342"/>
+          <Port symbol="HPQ" value="+1.133997"/>
+          <Port symbol="LowPass" value="+0.000000"/>
+          <Port symbol="LPfreq" value="+20000.000000"/>
+          <Port symbol="LPQ" value="+1.000000"/>
+          <Port symbol="LSsec" value="+1.000000"/>
+          <Port symbol="LSfreq" value="+80.000000"/>
+          <Port symbol="LSq" value="+1.000000"/>
+          <Port symbol="LSgain" value="+0.000000"/>
+          <Port symbol="sec1" value="+1.000000"/>
+          <Port symbol="freq1" value="+159.999985"/>
+          <Port symbol="q1" value="+0.601512"/>
+          <Port symbol="gain1" value="+0.000000"/>
+          <Port symbol="sec2" value="+1.000000"/>
+          <Port symbol="freq2" value="+206.095154"/>
+          <Port symbol="q2" value="+0.378929"/>
+          <Port symbol="gain2" value="-5.800000"/>
+          <Port symbol="sec3" value="+1.000000"/>
+          <Port symbol="freq3" value="+1250.000122"/>
+          <Port symbol="q3" value="+0.601512"/>
+          <Port symbol="gain3" value="+0.000000"/>
+          <Port symbol="sec4" value="+1.000000"/>
+          <Port symbol="freq4" value="+2500.000244"/>
+          <Port symbol="q4" value="+0.601512"/>
+          <Port symbol="gain4" value="+0.000000"/>
+          <Port symbol="HSsec" value="+1.000000"/>
+          <Port symbol="HSfreq" value="+9730.217773"/>
+          <Port symbol="HSq" value="+1.013959"/>
+          <Port symbol="HSgain" value="+2.000000"/>
+        </lv2>
+        <Controllable name="Enable" id="61132" flags="Toggle" value="1.000000000000" parameter="2" symbol="enable"/>
+        <Controllable name="Gain" id="61134" flags="" value="0.000000000000" parameter="3" symbol="gain"/>
+        <Controllable name="Reset Peak Hold" id="61136" flags="Toggle" value="1.000000000000" parameter="5" symbol="peakreset"/>
+        <Controllable name="Highpass" id="61138" flags="Toggle" value="1.000000000000" parameter="6" symbol="HighPass"/>
+        <Controllable name="Highpass Frequency" id="61140" flags="" value="72.502342224121" parameter="7" symbol="HPfreq"/>
+        <Controllable name="HighPass Resonance" id="61142" flags="" value="1.133997321129" parameter="8" symbol="HPQ"/>
+        <Controllable name="Lowpass" id="61144" flags="Toggle" value="0.000000000000" parameter="9" symbol="LowPass"/>
+        <Controllable name="Lowpass Frequency" id="61146" flags="" value="20000.000000000000" parameter="10" symbol="LPfreq"/>
+        <Controllable name="LowPass Resonance" id="61148" flags="" value="1.000000000000" parameter="11" symbol="LPQ"/>
+        <Controllable name="Lowshelf" id="61150" flags="Toggle" value="1.000000000000" parameter="12" symbol="LSsec"/>
+        <Controllable name="Lowshelf Frequency" id="61152" flags="" value="80.000000000000" parameter="13" symbol="LSfreq"/>
+        <Controllable name="Lowshelf Bandwidth" id="61154" flags="" value="1.000000000000" parameter="14" symbol="LSq"/>
+        <Controllable name="Lowshelf Gain" id="61156" flags="" value="0.000000000000" parameter="15" symbol="LSgain"/>
+        <Controllable name="Section 1" id="61158" flags="Toggle" value="1.000000000000" parameter="16" symbol="sec1"/>
+        <Controllable name="Frequency 1" id="61160" flags="" value="159.999984741211" parameter="17" symbol="freq1"/>
+        <Controllable name="Bandwidth 1" id="61162" flags="" value="0.601512491703" parameter="18" symbol="q1"/>
+        <Controllable name="Gain 1" id="61164" flags="" value="0.000000000000" parameter="19" symbol="gain1"/>
+        <Controllable name="Section 2" id="61166" flags="Toggle" value="1.000000000000" parameter="20" symbol="sec2"/>
+        <Controllable name="Frequency 2" id="61168" flags="" value="206.095153808594" parameter="21" symbol="freq2"/>
+        <Controllable name="Bandwidth 2" id="61170" flags="" value="0.378929108381" parameter="22" symbol="q2"/>
+        <Controllable name="Gain 2" id="61172" flags="" value="-5.800000190735" parameter="23" symbol="gain2"/>
+        <Controllable name="Section 3" id="61174" flags="Toggle" value="1.000000000000" parameter="24" symbol="sec3"/>
+        <Controllable name="Frequency 3" id="61176" flags="" value="1250.000122070312" parameter="25" symbol="freq3"/>
+        <Controllable name="Bandwidth 3" id="61178" flags="" value="0.601512491703" parameter="26" symbol="q3"/>
+        <Controllable name="Gain 3" id="61180" flags="" value="0.000000000000" parameter="27" symbol="gain3"/>
+        <Controllable name="Section 4" id="61182" flags="Toggle" value="1.000000000000" parameter="28" symbol="sec4"/>
+        <Controllable name="Frequency 4" id="61184" flags="" value="2500.000244140625" parameter="29" symbol="freq4"/>
+        <Controllable name="Bandwidth 4" id="61186" flags="" value="0.601512491703" parameter="30" symbol="q4"/>
+        <Controllable name="Gain 4" id="61188" flags="" value="0.000000000000" parameter="31" symbol="gain4"/>
+        <Controllable name="Highshelf" id="61190" flags="Toggle" value="1.000000000000" parameter="32" symbol="HSsec"/>
+        <Controllable name="Highshelf Frequency" id="61192" flags="" value="9730.217773437500" parameter="33" symbol="HSfreq"/>
+        <Controllable name="Highshelf Bandwidth" id="61194" flags="" value="1.013959169388" parameter="34" symbol="HSq"/>
+        <Controllable name="Highshelf Gain" id="61196" flags="" value="2.000000000000" parameter="35" symbol="HSgain"/>
       </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="278" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.769662916660"/>
       </Processor>
       <Processor id="282" name="meter-Audio 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="283" name="Audio 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 1" type="main-outs" role="Main">
@@ -3122,8 +3109,8 @@
         <Port type="midi" name="Instrument 1/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="23443" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="23445" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23445" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="45"/>
       <Pannable>
@@ -3134,8 +3121,169 @@
         <Controllable name="pan-lfe" id="23463" flags="" value="0.000000000000"/>
         <Automation/>
       </Pannable>
+      <Processor id="60961" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="53" last-preset-label="BS Reso Bass Classic TAL" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIbkGAAA8dGFsIGN1cnByb2dyYW09IjUzIiB2ZXJzaW9uPSIxLjciPjxwcm9ncmFt
+	cz48cHJvZ3JhbSBwcm9ncmFtbmFtZT0iQlMgUmVzbyBCYXNzIENsYXNzaWMgVEFMIiB2
+	b2x1bWU9IjAuNDU2MDAwMDMiIGZpbHRlcnR5cGU9IjAiIGN1dG9mZj0iMC4yOTYwMDAw
+	MDQiIHJlc29uYW5jZT0iMC43MTYwMDAwMjEiIG9zYzF2b2x1bWU9IjAuNjg4MDAwMDIz
+	IiBvc2Mydm9sdW1lPSIwLjMxNjAwMDAxNSIgb3NjM3ZvbHVtZT0iMC4zMzYwMDAwMjUi
+	IG9zYzF3YXZlZm9ybT0iMCIgb3NjMndhdmVmb3JtPSIwIiBvc2NzeW5jPSIwIiBvc2Nt
+	YXN0ZXJ0dW5lPSIwLjUiIG9zYzF0dW5lPSIwLjI1IiBvc2MydHVuZT0iMC41IiBvc2Mx
+	ZmluZXR1bmU9IjAuNTQwMDAwMDIxIiBvc2MyZmluZXR1bmU9IjAuNTQ0MDAwMDMiIHBv
+	cnRhbWVudG89IjAiIGtleWZvbGxvdz0iMSIgZmlsdGVyY29udG91cj0iMC44MzIwMDAw
+	MTciIGZpbHRlcmF0dGFjaz0iMCIgZmlsdGVyZGVjYXk9IjAuNDcyMDAwMDMzIiBmaWx0
+	ZXJzdXN0YWluPSIwLjQ3MjAwMDAzMyIgZmlsdGVycmVsZWFzZT0iMC4yMDAwMDAwMDMi
+	IGFtcGF0dGFjaz0iMCIgYW1wZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVh
+	c2U9IjAuMTgwMDAwMDA3IiB2b2ljZXM9IjAiIHBvcnRhbWVudG9tb2RlPSIwIiBsZm8x
+	d2F2ZWZvcm09IjEiIGxmbzJ3YXZlZm9ybT0iMCIgbGZvMXJhdGU9IjEiIGxmbzJyYXRl
+	PSIwIiBsZm8xYW1vdW50PSIwLjc1MjAwMDAzNCIgbGZvMmFtb3VudD0iMC41IiBsZm8x
+	ZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMCIgbGZvMXBoYXNlPSIwIiBs
+	Zm8ycGhhc2U9IjAiIG9zYzFwdz0iMC41IiBvc2MyZm09IjAiIG9zYzFwaGFzZT0iMC4y
+	ODAwMDAwMDEiIG9zYzJwaGFzZT0iMC40MTIwMDAwMyIgdHJhbnNwb3NlPSIwLjUiIGZy
+	ZWVhZGF0dGFjaz0iMCIgZnJlZWFkZGVjYXk9IjAiIGZyZWVhZGFtb3VudD0iMCIgZnJl
+	ZWFkZGVzdGluYXRpb249IjAiIGxmbzFzeW5jPSIwIiBsZm8xa2V5dHJpZ2dlcj0iMCIg
+	bGZvMnN5bmM9IjAiIGxmbzJrZXl0cmlnZ2VyPSIwIiB2ZWxvY2l0eXZvbHVtZT0iMCIg
+	dmVsb2NpdHljb250b3VyPSIwIiB2ZWxvY2l0eWN1dG9mZj0iMCIgcGl0Y2h3aGVlbGN1
+	dG9mZj0iMC4xNzIwMDAwMDYiIHBpdGNod2hlZWxwaXRjaD0iMCIgaGlnaHBhc3M9IjAi
+	IGRldHVuZT0iMCIgdmludGFnZW5vaXNlPSIwIiByaW5nbW9kdWxhdGlvbj0iMCIgY2hv
+	cnVzMWVuYWJsZT0iMCIgY2hvcnVzMmVuYWJsZT0iMCIgcmV2ZXJid2V0PSIwIiByZXZl
+	cmJkZWNheT0iMC41IiByZXZlcmJwcmVkZWxheT0iMCIgcmV2ZXJiaGlnaGN1dD0iMCIg
+	cmV2ZXJibG93Y3V0PSIxIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0ZXJkcml2ZT0iMCIg
+	ZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9IjAiIGRlbGF5ZmFj
+	dG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVsZj0iMCIgZGVsYXls
+	b3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9wZWVkaXRvcmRlc3Qx
+	PSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVkaXRvcmFtb3VudD0i
+	MCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBvPSIwIiB0YWIxb3Bl
+	bj0iMSIgdGFiMm9wZW49IjEiIHRhYjNvcGVuPSIwIiB0YWI0b3Blbj0iMCI+PHNwbGlu
+	ZVBvaW50cy8+PC9wcm9ncmFtPjwvcHJvZ3JhbXM+PG1pZGltYXAvPjwvdGFsPgBz
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Reso Bass Classic TAL</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="60963" flags="" value="0.456000030041" parameter="1"/>
+        <Controllable name="filtertype" id="60965" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="60967" flags="" value="0.296000003815" parameter="3"/>
+        <Controllable name="resonance" id="60969" flags="" value="0.716000020504" parameter="4"/>
+        <Controllable name="keyfollow" id="60971" flags="" value="1.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="60973" flags="" value="0.832000017166" parameter="6"/>
+        <Controllable name="filterattack" id="60975" flags="" value="0.000000000000" parameter="7"/>
+        <Controllable name="filterdecay" id="60977" flags="" value="0.472000032663" parameter="8"/>
+        <Controllable name="filtersustain" id="60979" flags="" value="0.472000032663" parameter="9"/>
+        <Controllable name="filterrelease" id="60981" flags="" value="0.200000002980" parameter="10"/>
+        <Controllable name="ampattack" id="60983" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="60985" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="60987" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="60989" flags="" value="0.180000007153" parameter="14"/>
+        <Controllable name="osc1volume" id="60991" flags="" value="0.688000023365" parameter="15"/>
+        <Controllable name="osc2volume" id="60993" flags="" value="0.316000014544" parameter="16"/>
+        <Controllable name="osc3volume" id="60995" flags="" value="0.336000025272" parameter="17"/>
+        <Controllable name="oscmastertune" id="60997" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="60999" flags="" value="0.250000000000" parameter="19"/>
+        <Controllable name="osc2tune" id="61001" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="61003" flags="" value="0.540000021458" parameter="21"/>
+        <Controllable name="osc2finetune" id="61005" flags="" value="0.544000029564" parameter="22"/>
+        <Controllable name="osc1waveform" id="61007" flags="" value="0.000000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="61009" flags="" value="0.000000000000" parameter="24"/>
+        <Controllable name="oscsync" id="61011" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="61013" flags="" value="1.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="61015" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="61017" flags="" value="1.000000000000" parameter="28"/>
+        <Controllable name="lfo2rate" id="61019" flags="" value="0.000000000000" parameter="29"/>
+        <Controllable name="lfo1amount" id="61021" flags="" value="0.752000033855" parameter="30"/>
+        <Controllable name="lfo2amount" id="61023" flags="" value="0.500000000000" parameter="31"/>
+        <Controllable name="lfo1destination" id="61025" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="61027" flags="" value="0.000000000000" parameter="33"/>
+        <Controllable name="lfo1phase" id="61029" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="61031" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="61033" flags="" value="0.000000000000" parameter="36"/>
+        <Controllable name="osc2phase" id="61035" flags="" value="0.412000030279" parameter="37"/>
+        <Controllable name="osc1pw" id="61037" flags="" value="0.500000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="61039" flags="" value="0.280000001192" parameter="39"/>
+        <Controllable name="transpose" id="61041" flags="" value="0.500000000000" parameter="40"/>
+        <Controllable name="freeadattack" id="61043" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="61045" flags="" value="0.000000000000" parameter="42"/>
+        <Controllable name="freeadamount" id="61047" flags="" value="0.000000000000" parameter="43"/>
+        <Controllable name="freeaddestination" id="61049" flags="" value="0.000000000000" parameter="44"/>
+        <Controllable name="lfo1sync" id="61051" flags="" value="0.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="61053" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="61055" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="61057" flags="" value="0.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="61059" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="61061" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="61063" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="61065" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="61067" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="61069" flags="" value="0.000000000000" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="61071" flags="" value="0.172000005841" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="61073" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="61075" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="61077" flags="" value="0.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="61079" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="61081" flags="" value="0.000000000000" parameter="60"/>
+        <Controllable name="reverbdecay" id="61083" flags="" value="0.500000000000" parameter="61"/>
+        <Controllable name="reverbpredelay" id="61085" flags="" value="0.000000000000" parameter="62"/>
+        <Controllable name="reverbhighcut" id="61087" flags="" value="0.000000000000" parameter="63"/>
+        <Controllable name="reverblowcut" id="61089" flags="" value="1.000000000000" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="61091" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="61093" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="61095" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="61097" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="61099" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="61101" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="61103" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="61105" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="61107" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="61109" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="61111" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="61113" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="61115" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="61117" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="61119" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="61121" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="61123" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="61125" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
       <Processor id="23468" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="23467" flags="" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="23467" flags="" value="0.201963558793"/>
       </Processor>
       <Processor id="23472" name="meter-Instrument 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="23473" name="Instrument 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Instrument 1" type="main-outs" role="Main">
@@ -3188,8 +3336,8 @@
         <Port type="midi" name="Instrument 2/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="23486" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="23488" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23488" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="46"/>
       <Pannable>
@@ -3200,16 +3348,6 @@
         <Controllable name="pan-lfe" id="23506" flags="" value="0.000000000000"/>
         <Automation/>
       </Pannable>
-      <Processor id="25652" name="Reasonable Synth" active="yes" user-latency="0" type="lv2" unique-id="https://community.ardour.org/node/7596" count="1">
-        <ConfiguredInput>
-          <Channels type="midi" count="1"/>
-        </ConfiguredInput>
-        <ConfiguredOutput>
-          <Channels type="audio" count="2"/>
-          <Channels type="midi" count="1"/>
-        </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no"/>
-      </Processor>
       <Processor id="23511" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="23510" flags="" value="1.000000000000"/>
       </Processor>
@@ -3264,8 +3402,8 @@
         <Port type="midi" name="Instrument 3/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="23529" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="23531" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23531" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="47"/>
       <Pannable>
@@ -3340,8 +3478,8 @@
         <Port type="midi" name="Instrument 4/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="23572" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="23574" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23574" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="48"/>
       <Pannable>
@@ -3416,8 +3554,8 @@
         <Port type="midi" name="Instrument 5/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="23615" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="23617" flags="Toggle" value="0.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Controllable name="mute" id="23617" flags="Toggle" value="1.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
       <Automation/>
       <RemoteControl id="49"/>
       <Pannable>
@@ -3568,6 +3706,7 @@
           <Connection other="sooperlooper:loop2_in_2"/>
           <Connection other="sooperlooper:loop3_in_2"/>
         </Port>
+        <Port type="midi" name="Piezzo HF Audio/midi_out 1"/>
       </IO>
       <Controllable name="solo" id="48618" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="48620" flags="Toggle" value="1.000000000000"/>
@@ -3584,6 +3723,203 @@
       </Pannable>
       <Processor id="48646" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="48645" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="64208" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="61491" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="61493" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="61495" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="61497" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="61499" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="61501" flags="" value="0.455669999123" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="61503" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="61505" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="64226" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa0IAAA8dGFsIGN1cnByb2dyYW09IjAiIHZlcnNpb249IjEuNyI+PHByb2dyYW1z
+	Pjxwcm9ncmFtIHByb2dyYW1uYW1lPSJCUyBXb2JibGVyIEZOIiB2b2x1bWU9IjAuMzMy
+	MDAwMDE3IiBmaWx0ZXJ0eXBlPSIwIiBjdXRvZmY9IjAiIHJlc29uYW5jZT0iMC41OTYw
+	MDAwMTYiIG9zYzF2b2x1bWU9IjAuODU2MDAwMDY2IiBvc2Mydm9sdW1lPSIwLjY4ODAw
+	MDAyMyIgb3NjM3ZvbHVtZT0iMCIgb3NjMXdhdmVmb3JtPSIwLjUiIG9zYzJ3YXZlZm9y
+	bT0iMC4yNSIgb3Njc3luYz0iMCIgb3NjbWFzdGVydHVuZT0iMC41IiBvc2MxdHVuZT0i
+	MC42MTAwMDAwMTQiIG9zYzJ0dW5lPSIwLjUiIG9zYzFmaW5ldHVuZT0iMC40ODQwMDAw
+	MjciIG9zYzJmaW5ldHVuZT0iMC41NDgwMDAwMzgiIHBvcnRhbWVudG89IjAiIGtleWZv
+	bGxvdz0iMCIgZmlsdGVyY29udG91cj0iMC44MzYwMDAwMjUiIGZpbHRlcmF0dGFjaz0i
+	MC4xODgwMDAwMDgiIGZpbHRlcmRlY2F5PSIwLjM2NDAwMDAyMiIgZmlsdGVyc3VzdGFp
+	bj0iMCIgZmlsdGVycmVsZWFzZT0iMC4zMjAwMDAwMjMiIGFtcGF0dGFjaz0iMCIgYW1w
+	ZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVhc2U9IjAuNDU2MDAwMDMiIHZv
+	aWNlcz0iMCIgcG9ydGFtZW50b21vZGU9IjAiIGxmbzF3YXZlZm9ybT0iMCIgbGZvMndh
+	dmVmb3JtPSIwIiBsZm8xcmF0ZT0iMC40NTIwMDAwMjIiIGxmbzJyYXRlPSIwLjQ2MDAw
+	MDAwOCIgbGZvMWFtb3VudD0iMC43MTIwMDAwMTIiIGxmbzJhbW91bnQ9IjAuNzg0MDAw
+	MDM5IiBsZm8xZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMC4xNDI4NTcx
+	NDkiIGxmbzFwaGFzZT0iMCIgbGZvMnBoYXNlPSIwIiBvc2MxcHc9IjAiIG9zYzJmbT0i
+	MC4xMzYwMDAwMDciIG9zYzFwaGFzZT0iMC41IiBvc2MycGhhc2U9IjAuMTg4MDAwMDA4
+	IiB0cmFuc3Bvc2U9IjAuMjIwMDAwMDE0IiBmcmVlYWRhdHRhY2s9IjAiIGZyZWVhZGRl
+	Y2F5PSIwLjc1MjAwMDAzNCIgZnJlZWFkYW1vdW50PSIwLjY2NDAwMDAzNCIgZnJlZWFk
+	ZGVzdGluYXRpb249IjAuODAwMDAwMDEyIiBsZm8xc3luYz0iMSIgbGZvMWtleXRyaWdn
+	ZXI9IjAiIGxmbzJzeW5jPSIwIiBsZm8ya2V5dHJpZ2dlcj0iMSIgdmVsb2NpdHl2b2x1
+	bWU9IjAiIHZlbG9jaXR5Y29udG91cj0iMCIgdmVsb2NpdHljdXRvZmY9IjAuNzg0MDAw
+	MDM5IiBwaXRjaHdoZWVsY3V0b2ZmPSIwLjIzNjAwMDAxNiIgcGl0Y2h3aGVlbHBpdGNo
+	PSIwIiBoaWdocGFzcz0iMCIgZGV0dW5lPSIwIiB2aW50YWdlbm9pc2U9IjAiIHJpbmdt
+	b2R1bGF0aW9uPSIwIiBjaG9ydXMxZW5hYmxlPSIxIiBjaG9ydXMyZW5hYmxlPSIwIiBy
+	ZXZlcmJ3ZXQ9IjAuMzQ4MDAwMDIiIHJldmVyYmRlY2F5PSIwLjIyNDAwMDAwNyIgcmV2
+	ZXJicHJlZGVsYXk9IjAuMzQ0MDAwMDEyIiByZXZlcmJoaWdoY3V0PSIwLjMwNDAwMDAy
+	IiByZXZlcmJsb3djdXQ9IjAuMzg0MDAwMDAzIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0
+	ZXJkcml2ZT0iMCIgZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9
+	IjAiIGRlbGF5ZmFjdG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVs
+	Zj0iMCIgZGVsYXlsb3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9w
+	ZWVkaXRvcmRlc3QxPSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVk
+	aXRvcmFtb3VudD0iMCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBv
+	PSIwIiB0YWIxb3Blbj0iMSIgdGFiMm9wZW49IjAiIHRhYjNvcGVuPSIwIiB0YWI0b3Bl
+	bj0iMSI+PHNwbGluZVBvaW50cz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIxIiBp
+	c0VuZFBvaW50PSIwIiBjZW50ZXJQb2ludFg9IjAiIGNlbnRlclBvaW50WT0iMC41IiBj
+	b250cm9sUG9pbnRMZWZ0WD0iMCIgY29udHJvbFBvaW50TGVmdFk9IjAuNSIgY29udHJv
+	bFBvaW50UmlnaHRYPSIwLjEwMDAwMDAwMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUi
+	Lz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIwIiBpc0VuZFBvaW50PSIxIiBjZW50
+	ZXJQb2ludFg9IjEiIGNlbnRlclBvaW50WT0iMC41IiBjb250cm9sUG9pbnRMZWZ0WD0i
+	MC44OTk5OTk5NzYiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRyb2xQb2ludFJp
+	Z2h0WD0iMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUiLz48L3NwbGluZVBvaW50cz48
+	L3Byb2dyYW0+PC9wcm9ncmFtcz48bWlkaW1hcC8+PC90YWw+AAA=
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="61652" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="61654" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="61656" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="61658" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="61660" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="61662" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="61664" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="61666" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="61668" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="61670" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="61672" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="61674" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="61676" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="61678" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="61680" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="61682" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="61684" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="61686" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="61688" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="61690" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="61692" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="61694" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="61696" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="61698" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="61700" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="61702" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="61704" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="61706" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="61708" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="61710" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="61712" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="61714" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="61716" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="61718" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="61720" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="61722" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="61724" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="61726" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="61728" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="61730" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="61732" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="61734" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="61736" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="61738" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="61740" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="61742" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="61744" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="61746" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="61748" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="61750" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="61752" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="61754" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="61756" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="61758" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="61760" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="61762" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="61764" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="61766" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="61768" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="61770" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="61772" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="61774" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="61776" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="61778" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="61780" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="61782" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="61784" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="61786" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="61788" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="61790" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="61792" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="61794" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="61796" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="61798" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="61800" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="61802" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="61804" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="61806" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="61808" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="61810" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="61812" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="61814" flags="" value="0.500000000000" parameter="89"/>
       </Processor>
       <Processor id="48643" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="48642" flags="" value="1.000000000000"/>
@@ -3617,14 +3953,1289 @@
       <Controllable name="recenable" id="48650" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Piezzo HF Audio.1" name="Piezzo HF Audio" id="48654" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
     </Route>
+    <Route id="61259" name="Piezz 1" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="52" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezz 1" id="61282" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 1/audio_in 1">
+          <Connection other="system:capture_4"/>
+        </Port>
+      </IO>
+      <IO name="Piezz 1" id="61283" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 1/audio_out 1"/>
+        <Port type="audio" name="Piezz 1/audio_out 2"/>
+        <Port type="midi" name="Piezz 1/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="61261" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="61263" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="52"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="61273" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="61277" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="61275" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="61279" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="61281" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="61289" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="61288" flags="" value="3.589221477509"/>
+      </Processor>
+      <Processor id="61489" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="61491" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="61493" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="61495" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="61497" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="61499" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="61501" flags="" value="0.455670207739" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="61503" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="61505" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="61650" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa4IAAA8dGFsIGN1cnByb2dyYW09IjY2IiB2ZXJzaW9uPSIxLjciPjxwcm9ncmFt
+	cz48cHJvZ3JhbSBwcm9ncmFtbmFtZT0iQlMgV29iYmxlciBGTiIgdm9sdW1lPSIwLjMz
+	MjAwMDAxNyIgZmlsdGVydHlwZT0iMCIgY3V0b2ZmPSIwIiByZXNvbmFuY2U9IjAuNTk2
+	MDAwMDE2IiBvc2Mxdm9sdW1lPSIwLjg1NjAwMDA2NiIgb3NjMnZvbHVtZT0iMC42ODgw
+	MDAwMjMiIG9zYzN2b2x1bWU9IjAiIG9zYzF3YXZlZm9ybT0iMC41IiBvc2Myd2F2ZWZv
+	cm09IjAuMjUiIG9zY3N5bmM9IjAiIG9zY21hc3RlcnR1bmU9IjAuNSIgb3NjMXR1bmU9
+	IjAuNjEwMDAwMDE0IiBvc2MydHVuZT0iMC41IiBvc2MxZmluZXR1bmU9IjAuNDg0MDAw
+	MDI3IiBvc2MyZmluZXR1bmU9IjAuNTQ4MDAwMDM4IiBwb3J0YW1lbnRvPSIwIiBrZXlm
+	b2xsb3c9IjAiIGZpbHRlcmNvbnRvdXI9IjAuODM2MDAwMDI1IiBmaWx0ZXJhdHRhY2s9
+	IjAuMTg4MDAwMDA4IiBmaWx0ZXJkZWNheT0iMC4zNjQwMDAwMjIiIGZpbHRlcnN1c3Rh
+	aW49IjAiIGZpbHRlcnJlbGVhc2U9IjAuMzIwMDAwMDIzIiBhbXBhdHRhY2s9IjAiIGFt
+	cGRlY2F5PSIwIiBhbXBzdXN0YWluPSIxIiBhbXByZWxlYXNlPSIwLjQ1NjAwMDAzIiB2
+	b2ljZXM9IjAiIHBvcnRhbWVudG9tb2RlPSIwIiBsZm8xd2F2ZWZvcm09IjAiIGxmbzJ3
+	YXZlZm9ybT0iMCIgbGZvMXJhdGU9IjAuNDUyMDAwMDIyIiBsZm8ycmF0ZT0iMC40NjAw
+	MDAwMDgiIGxmbzFhbW91bnQ9IjAuNzEyMDAwMDEyIiBsZm8yYW1vdW50PSIwLjc4NDAw
+	MDAzOSIgbGZvMWRlc3RpbmF0aW9uPSIwIiBsZm8yZGVzdGluYXRpb249IjAuMTQyODU3
+	MTQ5IiBsZm8xcGhhc2U9IjAiIGxmbzJwaGFzZT0iMCIgb3NjMXB3PSIwIiBvc2MyZm09
+	IjAuMTM2MDAwMDA3IiBvc2MxcGhhc2U9IjAuNSIgb3NjMnBoYXNlPSIwLjE4ODAwMDAw
+	OCIgdHJhbnNwb3NlPSIwLjIyMDAwMDAxNCIgZnJlZWFkYXR0YWNrPSIwIiBmcmVlYWRk
+	ZWNheT0iMC43NTIwMDAwMzQiIGZyZWVhZGFtb3VudD0iMC42NjQwMDAwMzQiIGZyZWVh
+	ZGRlc3RpbmF0aW9uPSIwLjgwMDAwMDAxMiIgbGZvMXN5bmM9IjEiIGxmbzFrZXl0cmln
+	Z2VyPSIwIiBsZm8yc3luYz0iMCIgbGZvMmtleXRyaWdnZXI9IjEiIHZlbG9jaXR5dm9s
+	dW1lPSIwIiB2ZWxvY2l0eWNvbnRvdXI9IjAiIHZlbG9jaXR5Y3V0b2ZmPSIwLjc4NDAw
+	MDAzOSIgcGl0Y2h3aGVlbGN1dG9mZj0iMC4yMzYwMDAwMTYiIHBpdGNod2hlZWxwaXRj
+	aD0iMCIgaGlnaHBhc3M9IjAiIGRldHVuZT0iMCIgdmludGFnZW5vaXNlPSIwIiByaW5n
+	bW9kdWxhdGlvbj0iMCIgY2hvcnVzMWVuYWJsZT0iMSIgY2hvcnVzMmVuYWJsZT0iMCIg
+	cmV2ZXJid2V0PSIwLjM0ODAwMDAyIiByZXZlcmJkZWNheT0iMC4yMjQwMDAwMDciIHJl
+	dmVyYnByZWRlbGF5PSIwLjM0NDAwMDAxMiIgcmV2ZXJiaGlnaGN1dD0iMC4zMDQwMDAw
+	MiIgcmV2ZXJibG93Y3V0PSIwLjM4NDAwMDAwMyIgb3NjYml0Y3J1c2hlcj0iMSIgZmls
+	dGVyZHJpdmU9IjAiIGRlbGF5d2V0PSIwIiBkZWxheXRpbWU9IjAuNSIgZGVsYXlzeW5j
+	PSIwIiBkZWxheWZhY3Rvcmw9IjAiIGRlbGF5ZmFjdG9ycj0iMCIgZGVsYXloaWdoc2hl
+	bGY9IjAiIGRlbGF5bG93c2hlbGY9IjAiIGRlbGF5ZmVlZGJhY2s9IjAuNSIgZW52ZWxv
+	cGVlZGl0b3JkZXN0MT0iMCIgZW52ZWxvcGVlZGl0b3JzcGVlZD0iMCIgZW52ZWxvcGVl
+	ZGl0b3JhbW91bnQ9IjAiIGVudmVsb3Blb25lc2hvdD0iMCIgZW52ZWxvcGVmaXh0ZW1w
+	bz0iMCIgdGFiMW9wZW49IjEiIHRhYjJvcGVuPSIwIiB0YWIzb3Blbj0iMCIgdGFiNG9w
+	ZW49IjEiPjxzcGxpbmVQb2ludHM+PHNwbGluZVBvaW50IGlzU3RhcnRQb2ludD0iMSIg
+	aXNFbmRQb2ludD0iMCIgY2VudGVyUG9pbnRYPSIwIiBjZW50ZXJQb2ludFk9IjAuNSIg
+	Y29udHJvbFBvaW50TGVmdFg9IjAiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRy
+	b2xQb2ludFJpZ2h0WD0iMC4xMDAwMDAwMDEiIGNvbnRyb2xQb2ludFJpZ2h0WT0iMC41
+	Ii8+PHNwbGluZVBvaW50IGlzU3RhcnRQb2ludD0iMCIgaXNFbmRQb2ludD0iMSIgY2Vu
+	dGVyUG9pbnRYPSIxIiBjZW50ZXJQb2ludFk9IjAuNSIgY29udHJvbFBvaW50TGVmdFg9
+	IjAuODk5OTk5OTc2IiBjb250cm9sUG9pbnRMZWZ0WT0iMC41IiBjb250cm9sUG9pbnRS
+	aWdodFg9IjEiIGNvbnRyb2xQb2ludFJpZ2h0WT0iMC41Ii8+PC9zcGxpbmVQb2ludHM+
+	PC9wcm9ncmFtPjwvcHJvZ3JhbXM+PG1pZGltYXAvPjwvdGFsPgBu
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="61652" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="61654" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="61656" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="61658" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="61660" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="61662" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="61664" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="61666" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="61668" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="61670" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="61672" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="61674" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="61676" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="61678" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="61680" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="61682" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="61684" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="61686" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="61688" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="61690" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="61692" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="61694" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="61696" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="61698" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="61700" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="61702" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="61704" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="61706" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="61708" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="61710" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="61712" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="61714" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="61716" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="61718" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="61720" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="61722" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="61724" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="61726" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="61728" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="61730" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="61732" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="61734" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="61736" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="61738" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="61740" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="61742" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="61744" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="61746" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="61748" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="61750" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="61752" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="61754" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="61756" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="61758" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="61760" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="61762" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="61764" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="61766" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="61768" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="61770" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="61772" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="61774" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="61776" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="61778" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="61780" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="61782" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="61784" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="61786" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="61788" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="61790" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="61792" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="61794" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="61796" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="61798" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="61800" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="61802" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="61804" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="61806" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="61808" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="61810" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="61812" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="61814" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
+      <Processor id="61286" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="61285" flags="" value="0.379629999399"/>
+      </Processor>
+      <Processor id="61290" name="meter-Piezz1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="61291" name="Piezz 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezz 1" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="61273" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="61277" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="61275" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="61279" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="61281" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="61303" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="61273" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="61277" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="61275" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="61279" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="61281" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="61307" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="61306" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="61293" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezz 1" name="Piezz 1" id="61297" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="61978" name="Piezz 2" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="53" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezz 2" id="61979" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 2/audio_in 1">
+          <Connection other="system:capture_5"/>
+        </Port>
+      </IO>
+      <IO name="Piezz 2" id="61980" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 2/audio_out 1"/>
+        <Port type="audio" name="Piezz 2/audio_out 2"/>
+        <Port type="midi" name="Piezz 2/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="62300" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="62301" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="53"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="62272" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="62273" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="62274" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="62275" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="62276" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="61987" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="61988" flags="" value="3.589221477509"/>
+      </Processor>
+      <Processor id="62016" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="62008" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="62009" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="62010" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="62011" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="62012" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="62013" flags="" value="0.455669999123" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="62014" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="62015" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="62266" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa0IAAA8dGFsIGN1cnByb2dyYW09IjAiIHZlcnNpb249IjEuNyI+PHByb2dyYW1z
+	Pjxwcm9ncmFtIHByb2dyYW1uYW1lPSJCUyBXb2JibGVyIEZOIiB2b2x1bWU9IjAuMzMy
+	MDAwMDE3IiBmaWx0ZXJ0eXBlPSIwIiBjdXRvZmY9IjAiIHJlc29uYW5jZT0iMC41OTYw
+	MDAwMTYiIG9zYzF2b2x1bWU9IjAuODU2MDAwMDY2IiBvc2Mydm9sdW1lPSIwLjY4ODAw
+	MDAyMyIgb3NjM3ZvbHVtZT0iMCIgb3NjMXdhdmVmb3JtPSIwLjUiIG9zYzJ3YXZlZm9y
+	bT0iMC4yNSIgb3Njc3luYz0iMCIgb3NjbWFzdGVydHVuZT0iMC41IiBvc2MxdHVuZT0i
+	MC42MTAwMDAwMTQiIG9zYzJ0dW5lPSIwLjUiIG9zYzFmaW5ldHVuZT0iMC40ODQwMDAw
+	MjciIG9zYzJmaW5ldHVuZT0iMC41NDgwMDAwMzgiIHBvcnRhbWVudG89IjAiIGtleWZv
+	bGxvdz0iMCIgZmlsdGVyY29udG91cj0iMC44MzYwMDAwMjUiIGZpbHRlcmF0dGFjaz0i
+	MC4xODgwMDAwMDgiIGZpbHRlcmRlY2F5PSIwLjM2NDAwMDAyMiIgZmlsdGVyc3VzdGFp
+	bj0iMCIgZmlsdGVycmVsZWFzZT0iMC4zMjAwMDAwMjMiIGFtcGF0dGFjaz0iMCIgYW1w
+	ZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVhc2U9IjAuNDU2MDAwMDMiIHZv
+	aWNlcz0iMCIgcG9ydGFtZW50b21vZGU9IjAiIGxmbzF3YXZlZm9ybT0iMCIgbGZvMndh
+	dmVmb3JtPSIwIiBsZm8xcmF0ZT0iMC40NTIwMDAwMjIiIGxmbzJyYXRlPSIwLjQ2MDAw
+	MDAwOCIgbGZvMWFtb3VudD0iMC43MTIwMDAwMTIiIGxmbzJhbW91bnQ9IjAuNzg0MDAw
+	MDM5IiBsZm8xZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMC4xNDI4NTcx
+	NDkiIGxmbzFwaGFzZT0iMCIgbGZvMnBoYXNlPSIwIiBvc2MxcHc9IjAiIG9zYzJmbT0i
+	MC4xMzYwMDAwMDciIG9zYzFwaGFzZT0iMC41IiBvc2MycGhhc2U9IjAuMTg4MDAwMDA4
+	IiB0cmFuc3Bvc2U9IjAuMjIwMDAwMDE0IiBmcmVlYWRhdHRhY2s9IjAiIGZyZWVhZGRl
+	Y2F5PSIwLjc1MjAwMDAzNCIgZnJlZWFkYW1vdW50PSIwLjY2NDAwMDAzNCIgZnJlZWFk
+	ZGVzdGluYXRpb249IjAuODAwMDAwMDEyIiBsZm8xc3luYz0iMSIgbGZvMWtleXRyaWdn
+	ZXI9IjAiIGxmbzJzeW5jPSIwIiBsZm8ya2V5dHJpZ2dlcj0iMSIgdmVsb2NpdHl2b2x1
+	bWU9IjAiIHZlbG9jaXR5Y29udG91cj0iMCIgdmVsb2NpdHljdXRvZmY9IjAuNzg0MDAw
+	MDM5IiBwaXRjaHdoZWVsY3V0b2ZmPSIwLjIzNjAwMDAxNiIgcGl0Y2h3aGVlbHBpdGNo
+	PSIwIiBoaWdocGFzcz0iMCIgZGV0dW5lPSIwIiB2aW50YWdlbm9pc2U9IjAiIHJpbmdt
+	b2R1bGF0aW9uPSIwIiBjaG9ydXMxZW5hYmxlPSIxIiBjaG9ydXMyZW5hYmxlPSIwIiBy
+	ZXZlcmJ3ZXQ9IjAuMzQ4MDAwMDIiIHJldmVyYmRlY2F5PSIwLjIyNDAwMDAwNyIgcmV2
+	ZXJicHJlZGVsYXk9IjAuMzQ0MDAwMDEyIiByZXZlcmJoaWdoY3V0PSIwLjMwNDAwMDAy
+	IiByZXZlcmJsb3djdXQ9IjAuMzg0MDAwMDAzIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0
+	ZXJkcml2ZT0iMCIgZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9
+	IjAiIGRlbGF5ZmFjdG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVs
+	Zj0iMCIgZGVsYXlsb3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9w
+	ZWVkaXRvcmRlc3QxPSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVk
+	aXRvcmFtb3VudD0iMCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBv
+	PSIwIiB0YWIxb3Blbj0iMSIgdGFiMm9wZW49IjAiIHRhYjNvcGVuPSIwIiB0YWI0b3Bl
+	bj0iMSI+PHNwbGluZVBvaW50cz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIxIiBp
+	c0VuZFBvaW50PSIwIiBjZW50ZXJQb2ludFg9IjAiIGNlbnRlclBvaW50WT0iMC41IiBj
+	b250cm9sUG9pbnRMZWZ0WD0iMCIgY29udHJvbFBvaW50TGVmdFk9IjAuNSIgY29udHJv
+	bFBvaW50UmlnaHRYPSIwLjEwMDAwMDAwMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUi
+	Lz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIwIiBpc0VuZFBvaW50PSIxIiBjZW50
+	ZXJQb2ludFg9IjEiIGNlbnRlclBvaW50WT0iMC41IiBjb250cm9sUG9pbnRMZWZ0WD0i
+	MC44OTk5OTk5NzYiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRyb2xQb2ludFJp
+	Z2h0WD0iMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUiLz48L3NwbGluZVBvaW50cz48
+	L3Byb2dyYW0+PC9wcm9ncmFtcz48bWlkaW1hcC8+PC90YWw+AAA=
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="62184" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="62185" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="62186" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="62187" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="62188" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="62189" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="62190" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="62191" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="62192" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="62193" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="62194" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="62195" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="62196" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="62197" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="62198" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="62199" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="62200" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="62201" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="62202" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="62203" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="62204" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="62205" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="62206" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="62207" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="62208" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="62209" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="62210" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="62211" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="62212" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="62213" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="62214" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="62215" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="62216" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="62217" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="62218" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="62219" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="62220" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="62221" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="62222" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="62223" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="62224" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="62225" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="62226" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="62227" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="62228" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="62229" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="62230" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="62231" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="62232" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="62233" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="62234" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="62235" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="62236" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="62237" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="62238" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="62239" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="62240" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="62241" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="62242" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="62243" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="62244" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="62245" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="62246" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="62247" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="62248" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="62249" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="62250" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="62251" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="62252" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="62253" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="62254" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="62255" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="62256" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="62257" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="62258" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="62259" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="62260" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="62261" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="62262" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="62263" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="62264" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="62265" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
+      <Processor id="62267" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="62268" flags="" value="0.402425944805"/>
+      </Processor>
+      <Processor id="62269" name="meter-Piezz1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="62270" name="Piezz 2" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezz 2" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="62272" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="62273" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="62274" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="62275" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="62276" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="62296" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="62272" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="62273" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="62274" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="62275" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="62276" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="62297" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="62298" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="62308" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezz1 1.2" name="Piezz1 1" id="62303" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="63490" name="Piezz 3" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="54" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezz 3" id="63491" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 3/audio_in 1">
+          <Connection other="system:capture_6"/>
+        </Port>
+      </IO>
+      <IO name="Piezz 3" id="63492" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 3/audio_out 1"/>
+        <Port type="audio" name="Piezz 3/audio_out 2"/>
+        <Port type="midi" name="Piezz 3/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="63812" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="63813" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="54"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="63784" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="63785" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="63786" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="63787" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="63788" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="63499" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="63500" flags="" value="3.589221477509"/>
+      </Processor>
+      <Processor id="63528" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="63520" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="63521" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="63522" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="63523" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="63524" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="63525" flags="" value="0.455669999123" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="63526" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="63527" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="63778" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa0IAAA8dGFsIGN1cnByb2dyYW09IjAiIHZlcnNpb249IjEuNyI+PHByb2dyYW1z
+	Pjxwcm9ncmFtIHByb2dyYW1uYW1lPSJCUyBXb2JibGVyIEZOIiB2b2x1bWU9IjAuMzMy
+	MDAwMDE3IiBmaWx0ZXJ0eXBlPSIwIiBjdXRvZmY9IjAiIHJlc29uYW5jZT0iMC41OTYw
+	MDAwMTYiIG9zYzF2b2x1bWU9IjAuODU2MDAwMDY2IiBvc2Mydm9sdW1lPSIwLjY4ODAw
+	MDAyMyIgb3NjM3ZvbHVtZT0iMCIgb3NjMXdhdmVmb3JtPSIwLjUiIG9zYzJ3YXZlZm9y
+	bT0iMC4yNSIgb3Njc3luYz0iMCIgb3NjbWFzdGVydHVuZT0iMC41IiBvc2MxdHVuZT0i
+	MC42MTAwMDAwMTQiIG9zYzJ0dW5lPSIwLjUiIG9zYzFmaW5ldHVuZT0iMC40ODQwMDAw
+	MjciIG9zYzJmaW5ldHVuZT0iMC41NDgwMDAwMzgiIHBvcnRhbWVudG89IjAiIGtleWZv
+	bGxvdz0iMCIgZmlsdGVyY29udG91cj0iMC44MzYwMDAwMjUiIGZpbHRlcmF0dGFjaz0i
+	MC4xODgwMDAwMDgiIGZpbHRlcmRlY2F5PSIwLjM2NDAwMDAyMiIgZmlsdGVyc3VzdGFp
+	bj0iMCIgZmlsdGVycmVsZWFzZT0iMC4zMjAwMDAwMjMiIGFtcGF0dGFjaz0iMCIgYW1w
+	ZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVhc2U9IjAuNDU2MDAwMDMiIHZv
+	aWNlcz0iMCIgcG9ydGFtZW50b21vZGU9IjAiIGxmbzF3YXZlZm9ybT0iMCIgbGZvMndh
+	dmVmb3JtPSIwIiBsZm8xcmF0ZT0iMC40NTIwMDAwMjIiIGxmbzJyYXRlPSIwLjQ2MDAw
+	MDAwOCIgbGZvMWFtb3VudD0iMC43MTIwMDAwMTIiIGxmbzJhbW91bnQ9IjAuNzg0MDAw
+	MDM5IiBsZm8xZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMC4xNDI4NTcx
+	NDkiIGxmbzFwaGFzZT0iMCIgbGZvMnBoYXNlPSIwIiBvc2MxcHc9IjAiIG9zYzJmbT0i
+	MC4xMzYwMDAwMDciIG9zYzFwaGFzZT0iMC41IiBvc2MycGhhc2U9IjAuMTg4MDAwMDA4
+	IiB0cmFuc3Bvc2U9IjAuMjIwMDAwMDE0IiBmcmVlYWRhdHRhY2s9IjAiIGZyZWVhZGRl
+	Y2F5PSIwLjc1MjAwMDAzNCIgZnJlZWFkYW1vdW50PSIwLjY2NDAwMDAzNCIgZnJlZWFk
+	ZGVzdGluYXRpb249IjAuODAwMDAwMDEyIiBsZm8xc3luYz0iMSIgbGZvMWtleXRyaWdn
+	ZXI9IjAiIGxmbzJzeW5jPSIwIiBsZm8ya2V5dHJpZ2dlcj0iMSIgdmVsb2NpdHl2b2x1
+	bWU9IjAiIHZlbG9jaXR5Y29udG91cj0iMCIgdmVsb2NpdHljdXRvZmY9IjAuNzg0MDAw
+	MDM5IiBwaXRjaHdoZWVsY3V0b2ZmPSIwLjIzNjAwMDAxNiIgcGl0Y2h3aGVlbHBpdGNo
+	PSIwIiBoaWdocGFzcz0iMCIgZGV0dW5lPSIwIiB2aW50YWdlbm9pc2U9IjAiIHJpbmdt
+	b2R1bGF0aW9uPSIwIiBjaG9ydXMxZW5hYmxlPSIxIiBjaG9ydXMyZW5hYmxlPSIwIiBy
+	ZXZlcmJ3ZXQ9IjAuMzQ4MDAwMDIiIHJldmVyYmRlY2F5PSIwLjIyNDAwMDAwNyIgcmV2
+	ZXJicHJlZGVsYXk9IjAuMzQ0MDAwMDEyIiByZXZlcmJoaWdoY3V0PSIwLjMwNDAwMDAy
+	IiByZXZlcmJsb3djdXQ9IjAuMzg0MDAwMDAzIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0
+	ZXJkcml2ZT0iMCIgZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9
+	IjAiIGRlbGF5ZmFjdG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVs
+	Zj0iMCIgZGVsYXlsb3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9w
+	ZWVkaXRvcmRlc3QxPSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVk
+	aXRvcmFtb3VudD0iMCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBv
+	PSIwIiB0YWIxb3Blbj0iMSIgdGFiMm9wZW49IjAiIHRhYjNvcGVuPSIwIiB0YWI0b3Bl
+	bj0iMSI+PHNwbGluZVBvaW50cz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIxIiBp
+	c0VuZFBvaW50PSIwIiBjZW50ZXJQb2ludFg9IjAiIGNlbnRlclBvaW50WT0iMC41IiBj
+	b250cm9sUG9pbnRMZWZ0WD0iMCIgY29udHJvbFBvaW50TGVmdFk9IjAuNSIgY29udHJv
+	bFBvaW50UmlnaHRYPSIwLjEwMDAwMDAwMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUi
+	Lz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIwIiBpc0VuZFBvaW50PSIxIiBjZW50
+	ZXJQb2ludFg9IjEiIGNlbnRlclBvaW50WT0iMC41IiBjb250cm9sUG9pbnRMZWZ0WD0i
+	MC44OTk5OTk5NzYiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRyb2xQb2ludFJp
+	Z2h0WD0iMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUiLz48L3NwbGluZVBvaW50cz48
+	L3Byb2dyYW0+PC9wcm9ncmFtcz48bWlkaW1hcC8+PC90YWw+AAA=
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="63696" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="63697" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="63698" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="63699" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="63700" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="63701" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="63702" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="63703" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="63704" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="63705" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="63706" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="63707" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="63708" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="63709" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="63710" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="63711" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="63712" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="63713" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="63714" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="63715" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="63716" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="63717" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="63718" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="63719" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="63720" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="63721" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="63722" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="63723" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="63724" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="63725" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="63726" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="63727" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="63728" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="63729" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="63730" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="63731" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="63732" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="63733" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="63734" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="63735" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="63736" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="63737" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="63738" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="63739" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="63740" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="63741" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="63742" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="63743" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="63744" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="63745" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="63746" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="63747" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="63748" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="63749" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="63750" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="63751" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="63752" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="63753" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="63754" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="63755" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="63756" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="63757" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="63758" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="63759" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="63760" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="63761" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="63762" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="63763" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="63764" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="63765" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="63766" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="63767" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="63768" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="63769" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="63770" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="63771" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="63772" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="63773" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="63774" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="63775" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="63776" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="63777" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
+      <Processor id="63779" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="63780" flags="" value="0.372228175402"/>
+      </Processor>
+      <Processor id="63781" name="meter-Piezz1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="63782" name="Piezz 3" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezz 3" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63784" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63785" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63786" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63787" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63788" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="63808" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63784" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63785" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63786" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63787" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63788" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="63809" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="63810" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="63820" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezz1 2 1.2" name="Piezz1 2 1" id="63815" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="62724" name="Piezz 4" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="55" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezz 4" id="62725" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 4/audio_in 1">
+          <Connection other="system:capture_7"/>
+        </Port>
+      </IO>
+      <IO name="Piezz 4" id="62726" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 4/audio_out 1"/>
+        <Port type="audio" name="Piezz 4/audio_out 2"/>
+        <Port type="midi" name="Piezz 4/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="63046" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="63047" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="55"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="63018" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="63019" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="63020" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="63021" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="63022" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="62733" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="62734" flags="" value="3.589221477509"/>
+      </Processor>
+      <Processor id="62762" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="62754" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="62755" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="62756" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="62757" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="62758" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="62759" flags="" value="0.455669999123" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="62760" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="62761" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="63012" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa0IAAA8dGFsIGN1cnByb2dyYW09IjAiIHZlcnNpb249IjEuNyI+PHByb2dyYW1z
+	Pjxwcm9ncmFtIHByb2dyYW1uYW1lPSJCUyBXb2JibGVyIEZOIiB2b2x1bWU9IjAuMzMy
+	MDAwMDE3IiBmaWx0ZXJ0eXBlPSIwIiBjdXRvZmY9IjAiIHJlc29uYW5jZT0iMC41OTYw
+	MDAwMTYiIG9zYzF2b2x1bWU9IjAuODU2MDAwMDY2IiBvc2Mydm9sdW1lPSIwLjY4ODAw
+	MDAyMyIgb3NjM3ZvbHVtZT0iMCIgb3NjMXdhdmVmb3JtPSIwLjUiIG9zYzJ3YXZlZm9y
+	bT0iMC4yNSIgb3Njc3luYz0iMCIgb3NjbWFzdGVydHVuZT0iMC41IiBvc2MxdHVuZT0i
+	MC42MTAwMDAwMTQiIG9zYzJ0dW5lPSIwLjUiIG9zYzFmaW5ldHVuZT0iMC40ODQwMDAw
+	MjciIG9zYzJmaW5ldHVuZT0iMC41NDgwMDAwMzgiIHBvcnRhbWVudG89IjAiIGtleWZv
+	bGxvdz0iMCIgZmlsdGVyY29udG91cj0iMC44MzYwMDAwMjUiIGZpbHRlcmF0dGFjaz0i
+	MC4xODgwMDAwMDgiIGZpbHRlcmRlY2F5PSIwLjM2NDAwMDAyMiIgZmlsdGVyc3VzdGFp
+	bj0iMCIgZmlsdGVycmVsZWFzZT0iMC4zMjAwMDAwMjMiIGFtcGF0dGFjaz0iMCIgYW1w
+	ZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVhc2U9IjAuNDU2MDAwMDMiIHZv
+	aWNlcz0iMCIgcG9ydGFtZW50b21vZGU9IjAiIGxmbzF3YXZlZm9ybT0iMCIgbGZvMndh
+	dmVmb3JtPSIwIiBsZm8xcmF0ZT0iMC40NTIwMDAwMjIiIGxmbzJyYXRlPSIwLjQ2MDAw
+	MDAwOCIgbGZvMWFtb3VudD0iMC43MTIwMDAwMTIiIGxmbzJhbW91bnQ9IjAuNzg0MDAw
+	MDM5IiBsZm8xZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMC4xNDI4NTcx
+	NDkiIGxmbzFwaGFzZT0iMCIgbGZvMnBoYXNlPSIwIiBvc2MxcHc9IjAiIG9zYzJmbT0i
+	MC4xMzYwMDAwMDciIG9zYzFwaGFzZT0iMC41IiBvc2MycGhhc2U9IjAuMTg4MDAwMDA4
+	IiB0cmFuc3Bvc2U9IjAuMjIwMDAwMDE0IiBmcmVlYWRhdHRhY2s9IjAiIGZyZWVhZGRl
+	Y2F5PSIwLjc1MjAwMDAzNCIgZnJlZWFkYW1vdW50PSIwLjY2NDAwMDAzNCIgZnJlZWFk
+	ZGVzdGluYXRpb249IjAuODAwMDAwMDEyIiBsZm8xc3luYz0iMSIgbGZvMWtleXRyaWdn
+	ZXI9IjAiIGxmbzJzeW5jPSIwIiBsZm8ya2V5dHJpZ2dlcj0iMSIgdmVsb2NpdHl2b2x1
+	bWU9IjAiIHZlbG9jaXR5Y29udG91cj0iMCIgdmVsb2NpdHljdXRvZmY9IjAuNzg0MDAw
+	MDM5IiBwaXRjaHdoZWVsY3V0b2ZmPSIwLjIzNjAwMDAxNiIgcGl0Y2h3aGVlbHBpdGNo
+	PSIwIiBoaWdocGFzcz0iMCIgZGV0dW5lPSIwIiB2aW50YWdlbm9pc2U9IjAiIHJpbmdt
+	b2R1bGF0aW9uPSIwIiBjaG9ydXMxZW5hYmxlPSIxIiBjaG9ydXMyZW5hYmxlPSIwIiBy
+	ZXZlcmJ3ZXQ9IjAuMzQ4MDAwMDIiIHJldmVyYmRlY2F5PSIwLjIyNDAwMDAwNyIgcmV2
+	ZXJicHJlZGVsYXk9IjAuMzQ0MDAwMDEyIiByZXZlcmJoaWdoY3V0PSIwLjMwNDAwMDAy
+	IiByZXZlcmJsb3djdXQ9IjAuMzg0MDAwMDAzIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0
+	ZXJkcml2ZT0iMCIgZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9
+	IjAiIGRlbGF5ZmFjdG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVs
+	Zj0iMCIgZGVsYXlsb3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9w
+	ZWVkaXRvcmRlc3QxPSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVk
+	aXRvcmFtb3VudD0iMCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBv
+	PSIwIiB0YWIxb3Blbj0iMSIgdGFiMm9wZW49IjAiIHRhYjNvcGVuPSIwIiB0YWI0b3Bl
+	bj0iMSI+PHNwbGluZVBvaW50cz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIxIiBp
+	c0VuZFBvaW50PSIwIiBjZW50ZXJQb2ludFg9IjAiIGNlbnRlclBvaW50WT0iMC41IiBj
+	b250cm9sUG9pbnRMZWZ0WD0iMCIgY29udHJvbFBvaW50TGVmdFk9IjAuNSIgY29udHJv
+	bFBvaW50UmlnaHRYPSIwLjEwMDAwMDAwMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUi
+	Lz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIwIiBpc0VuZFBvaW50PSIxIiBjZW50
+	ZXJQb2ludFg9IjEiIGNlbnRlclBvaW50WT0iMC41IiBjb250cm9sUG9pbnRMZWZ0WD0i
+	MC44OTk5OTk5NzYiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRyb2xQb2ludFJp
+	Z2h0WD0iMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUiLz48L3NwbGluZVBvaW50cz48
+	L3Byb2dyYW0+PC9wcm9ncmFtcz48bWlkaW1hcC8+PC90YWw+AAA=
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="62930" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="62931" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="62932" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="62933" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="62934" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="62935" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="62936" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="62937" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="62938" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="62939" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="62940" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="62941" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="62942" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="62943" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="62944" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="62945" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="62946" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="62947" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="62948" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="62949" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="62950" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="62951" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="62952" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="62953" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="62954" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="62955" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="62956" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="62957" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="62958" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="62959" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="62960" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="62961" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="62962" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="62963" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="62964" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="62965" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="62966" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="62967" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="62968" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="62969" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="62970" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="62971" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="62972" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="62973" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="62974" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="62975" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="62976" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="62977" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="62978" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="62979" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="62980" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="62981" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="62982" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="62983" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="62984" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="62985" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="62986" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="62987" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="62988" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="62989" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="62990" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="62991" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="62992" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="62993" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="62994" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="62995" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="62996" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="62997" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="62998" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="62999" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="63000" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="63001" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="63002" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="63003" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="63004" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="63005" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="63006" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="63007" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="63008" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="63009" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="63010" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="63011" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
+      <Processor id="63013" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="63014" flags="" value="0.387129664421"/>
+      </Processor>
+      <Processor id="63015" name="meter-Piezz1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="63016" name="Piezz 4" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezz 4" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63018" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63019" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63020" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63021" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63022" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="63042" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63018" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63019" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63020" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63021" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63022" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="63043" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="63044" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="63054" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezz1 3.2" name="Piezz1 3" id="63049" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
+    <Route id="63112" name="Piezz 5" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="56" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Piezz 5" id="63113" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 5/audio_in 1">
+          <Connection other="system:capture_8"/>
+        </Port>
+      </IO>
+      <IO name="Piezz 5" id="63114" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Piezz 5/audio_out 1"/>
+        <Port type="audio" name="Piezz 5/audio_out 2"/>
+        <Port type="midi" name="Piezz 5/midi_out 1"/>
+      </IO>
+      <Controllable name="solo" id="63434" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="63435" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="56"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="63406" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="63407" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="63408" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="63409" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="63410" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="63121" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="63122" flags="" value="3.589221477509"/>
+      </Processor>
+      <Processor id="63150" name="Onset Trigger - Bassdrum Detection Mono" active="yes" user-latency="0" type="lv2" unique-id="http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono" count="1">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
+          <Port symbol="threshold" value="-77.113426"/>
+          <Port symbol="midinote" value="+56.000000"/>
+          <Port symbol="mididuration" value="+80.000000"/>
+          <Port symbol="velocity_min" value="+6.000000"/>
+          <Port symbol="velocity_scale" value="+3.309276"/>
+          <Port symbol="velocity_exponent" value="+0.455670"/>
+          <Port symbol="filter_freq" value="+291.030945"/>
+          <Port symbol="filter_bandwidth" value="+76.855682"/>
+        </lv2>
+        <Controllable name="Signal Level Theshold [dBFS, RMS]" id="63142" flags="" value="-77.113426208496" parameter="2" symbol="threshold"/>
+        <Controllable name="Midi Note" id="63143" flags="" value="56.000000000000" parameter="3" symbol="midinote"/>
+        <Controllable name="Note Duration [ms]" id="63144" flags="" value="80.000000000000" parameter="4" symbol="mididuration"/>
+        <Controllable name="Midi Velocity Minimum" id="63145" flags="" value="6.000000000000" parameter="5" symbol="velocity_min"/>
+        <Controllable name="Midi Velocity Scale Factor" id="63146" flags="" value="3.309276103973" parameter="6" symbol="velocity_scale"/>
+        <Controllable name="Midi Velocity Exponent" id="63147" flags="" value="0.455669999123" parameter="7" symbol="velocity_exponent"/>
+        <Controllable name="Filter Frequency (advanced)" id="63148" flags="" value="291.030944824219" parameter="8" symbol="filter_freq"/>
+        <Controllable name="Filter Bandwidth (advanced)" id="63149" flags="" value="76.855682373047" parameter="9" symbol="filter_bandwidth"/>
+      </Processor>
+      <Processor id="63400" name="TAL NoiseMaker Plugin" active="yes" user-latency="0" type="audiounit" unique-id="1635085685-1852011892-1414481749" count="1">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <audiounit last-preset-uri="66" last-preset-label="BS Wobbler FN" parameter-changed-since-last-preset="no">
+          <plist version="1.0">
+            <dict>
+              <key>data</key>
+              <data>
+	AAAAAAAAAAAAAABcAAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAA
+	AAAAAAUAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAA
+	AAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAQAAAAAAAAABEA
+	AAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAWAAAAAAAAABcAAAAA
+	AAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAB0AAAAAAAAA
+	HgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAAAAAAJAAA
+	AAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+	AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAx
+	AAAAAAAAADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAA
+	AAAAADgAAAAAAAAAOQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAA
+	AD4AAAAAAAAAPwAAAAAAAABAAAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQA
+	AAAAAAAARQAAAAAAAABGAAAAAAAAAEcAAAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAA
+	AAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAAAAAAAABPAAAAAAAAAFAAAAAAAAAA
+	UQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAAAAAAAFYAAAAAAAAAVwAA
+	AAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAA==
+	</data>
+              <key>jucePluginState</key>
+              <data>
+	VkMyIa0IAAA8dGFsIGN1cnByb2dyYW09IjAiIHZlcnNpb249IjEuNyI+PHByb2dyYW1z
+	Pjxwcm9ncmFtIHByb2dyYW1uYW1lPSJCUyBXb2JibGVyIEZOIiB2b2x1bWU9IjAuMzMy
+	MDAwMDE3IiBmaWx0ZXJ0eXBlPSIwIiBjdXRvZmY9IjAiIHJlc29uYW5jZT0iMC41OTYw
+	MDAwMTYiIG9zYzF2b2x1bWU9IjAuODU2MDAwMDY2IiBvc2Mydm9sdW1lPSIwLjY4ODAw
+	MDAyMyIgb3NjM3ZvbHVtZT0iMCIgb3NjMXdhdmVmb3JtPSIwLjUiIG9zYzJ3YXZlZm9y
+	bT0iMC4yNSIgb3Njc3luYz0iMCIgb3NjbWFzdGVydHVuZT0iMC41IiBvc2MxdHVuZT0i
+	MC42MTAwMDAwMTQiIG9zYzJ0dW5lPSIwLjUiIG9zYzFmaW5ldHVuZT0iMC40ODQwMDAw
+	MjciIG9zYzJmaW5ldHVuZT0iMC41NDgwMDAwMzgiIHBvcnRhbWVudG89IjAiIGtleWZv
+	bGxvdz0iMCIgZmlsdGVyY29udG91cj0iMC44MzYwMDAwMjUiIGZpbHRlcmF0dGFjaz0i
+	MC4xODgwMDAwMDgiIGZpbHRlcmRlY2F5PSIwLjM2NDAwMDAyMiIgZmlsdGVyc3VzdGFp
+	bj0iMCIgZmlsdGVycmVsZWFzZT0iMC4zMjAwMDAwMjMiIGFtcGF0dGFjaz0iMCIgYW1w
+	ZGVjYXk9IjAiIGFtcHN1c3RhaW49IjEiIGFtcHJlbGVhc2U9IjAuNDU2MDAwMDMiIHZv
+	aWNlcz0iMCIgcG9ydGFtZW50b21vZGU9IjAiIGxmbzF3YXZlZm9ybT0iMCIgbGZvMndh
+	dmVmb3JtPSIwIiBsZm8xcmF0ZT0iMC40NTIwMDAwMjIiIGxmbzJyYXRlPSIwLjQ2MDAw
+	MDAwOCIgbGZvMWFtb3VudD0iMC43MTIwMDAwMTIiIGxmbzJhbW91bnQ9IjAuNzg0MDAw
+	MDM5IiBsZm8xZGVzdGluYXRpb249IjAiIGxmbzJkZXN0aW5hdGlvbj0iMC4xNDI4NTcx
+	NDkiIGxmbzFwaGFzZT0iMCIgbGZvMnBoYXNlPSIwIiBvc2MxcHc9IjAiIG9zYzJmbT0i
+	MC4xMzYwMDAwMDciIG9zYzFwaGFzZT0iMC41IiBvc2MycGhhc2U9IjAuMTg4MDAwMDA4
+	IiB0cmFuc3Bvc2U9IjAuMjIwMDAwMDE0IiBmcmVlYWRhdHRhY2s9IjAiIGZyZWVhZGRl
+	Y2F5PSIwLjc1MjAwMDAzNCIgZnJlZWFkYW1vdW50PSIwLjY2NDAwMDAzNCIgZnJlZWFk
+	ZGVzdGluYXRpb249IjAuODAwMDAwMDEyIiBsZm8xc3luYz0iMSIgbGZvMWtleXRyaWdn
+	ZXI9IjAiIGxmbzJzeW5jPSIwIiBsZm8ya2V5dHJpZ2dlcj0iMSIgdmVsb2NpdHl2b2x1
+	bWU9IjAiIHZlbG9jaXR5Y29udG91cj0iMCIgdmVsb2NpdHljdXRvZmY9IjAuNzg0MDAw
+	MDM5IiBwaXRjaHdoZWVsY3V0b2ZmPSIwLjIzNjAwMDAxNiIgcGl0Y2h3aGVlbHBpdGNo
+	PSIwIiBoaWdocGFzcz0iMCIgZGV0dW5lPSIwIiB2aW50YWdlbm9pc2U9IjAiIHJpbmdt
+	b2R1bGF0aW9uPSIwIiBjaG9ydXMxZW5hYmxlPSIxIiBjaG9ydXMyZW5hYmxlPSIwIiBy
+	ZXZlcmJ3ZXQ9IjAuMzQ4MDAwMDIiIHJldmVyYmRlY2F5PSIwLjIyNDAwMDAwNyIgcmV2
+	ZXJicHJlZGVsYXk9IjAuMzQ0MDAwMDEyIiByZXZlcmJoaWdoY3V0PSIwLjMwNDAwMDAy
+	IiByZXZlcmJsb3djdXQ9IjAuMzg0MDAwMDAzIiBvc2NiaXRjcnVzaGVyPSIxIiBmaWx0
+	ZXJkcml2ZT0iMCIgZGVsYXl3ZXQ9IjAiIGRlbGF5dGltZT0iMC41IiBkZWxheXN5bmM9
+	IjAiIGRlbGF5ZmFjdG9ybD0iMCIgZGVsYXlmYWN0b3JyPSIwIiBkZWxheWhpZ2hzaGVs
+	Zj0iMCIgZGVsYXlsb3dzaGVsZj0iMCIgZGVsYXlmZWVkYmFjaz0iMC41IiBlbnZlbG9w
+	ZWVkaXRvcmRlc3QxPSIwIiBlbnZlbG9wZWVkaXRvcnNwZWVkPSIwIiBlbnZlbG9wZWVk
+	aXRvcmFtb3VudD0iMCIgZW52ZWxvcGVvbmVzaG90PSIwIiBlbnZlbG9wZWZpeHRlbXBv
+	PSIwIiB0YWIxb3Blbj0iMSIgdGFiMm9wZW49IjAiIHRhYjNvcGVuPSIwIiB0YWI0b3Bl
+	bj0iMSI+PHNwbGluZVBvaW50cz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIxIiBp
+	c0VuZFBvaW50PSIwIiBjZW50ZXJQb2ludFg9IjAiIGNlbnRlclBvaW50WT0iMC41IiBj
+	b250cm9sUG9pbnRMZWZ0WD0iMCIgY29udHJvbFBvaW50TGVmdFk9IjAuNSIgY29udHJv
+	bFBvaW50UmlnaHRYPSIwLjEwMDAwMDAwMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUi
+	Lz48c3BsaW5lUG9pbnQgaXNTdGFydFBvaW50PSIwIiBpc0VuZFBvaW50PSIxIiBjZW50
+	ZXJQb2ludFg9IjEiIGNlbnRlclBvaW50WT0iMC41IiBjb250cm9sUG9pbnRMZWZ0WD0i
+	MC44OTk5OTk5NzYiIGNvbnRyb2xQb2ludExlZnRZPSIwLjUiIGNvbnRyb2xQb2ludFJp
+	Z2h0WD0iMSIgY29udHJvbFBvaW50UmlnaHRZPSIwLjUiLz48L3NwbGluZVBvaW50cz48
+	L3Byb2dyYW0+PC9wcm9ncmFtcz48bWlkaW1hcC8+PC90YWw+AGk=
+	</data>
+              <key>manufacturer</key>
+              <integer>1414481749</integer>
+              <key>name</key>
+              <string>BS Wobbler FN</string>
+              <key>subtype</key>
+              <integer>1852011892</integer>
+              <key>type</key>
+              <integer>1635085685</integer>
+              <key>version</key>
+              <integer>0</integer>
+            </dict>
+          </plist>
+        </audiounit>
+        <Controllable name="volume" id="63318" flags="" value="0.332000017166" parameter="1"/>
+        <Controllable name="filtertype" id="63319" flags="" value="0.000000000000" parameter="2"/>
+        <Controllable name="cutoff" id="63320" flags="" value="0.000000000000" parameter="3"/>
+        <Controllable name="resonance" id="63321" flags="" value="0.596000015736" parameter="4"/>
+        <Controllable name="keyfollow" id="63322" flags="" value="0.000000000000" parameter="5"/>
+        <Controllable name="filtercontour" id="63323" flags="" value="0.836000025272" parameter="6"/>
+        <Controllable name="filterattack" id="63324" flags="" value="0.188000008464" parameter="7"/>
+        <Controllable name="filterdecay" id="63325" flags="" value="0.364000022411" parameter="8"/>
+        <Controllable name="filtersustain" id="63326" flags="" value="0.000000000000" parameter="9"/>
+        <Controllable name="filterrelease" id="63327" flags="" value="0.320000022650" parameter="10"/>
+        <Controllable name="ampattack" id="63328" flags="" value="0.000000000000" parameter="11"/>
+        <Controllable name="ampdecay" id="63329" flags="" value="0.000000000000" parameter="12"/>
+        <Controllable name="ampsustain" id="63330" flags="" value="1.000000000000" parameter="13"/>
+        <Controllable name="amprelease" id="63331" flags="" value="0.456000030041" parameter="14"/>
+        <Controllable name="osc1volume" id="63332" flags="" value="0.856000065804" parameter="15"/>
+        <Controllable name="osc2volume" id="63333" flags="" value="0.688000023365" parameter="16"/>
+        <Controllable name="osc3volume" id="63334" flags="" value="0.000000000000" parameter="17"/>
+        <Controllable name="oscmastertune" id="63335" flags="" value="0.500000000000" parameter="18"/>
+        <Controllable name="osc1tune" id="63336" flags="" value="0.610000014305" parameter="19"/>
+        <Controllable name="osc2tune" id="63337" flags="" value="0.500000000000" parameter="20"/>
+        <Controllable name="osc1finetune" id="63338" flags="" value="0.484000027180" parameter="21"/>
+        <Controllable name="osc2finetune" id="63339" flags="" value="0.548000037670" parameter="22"/>
+        <Controllable name="osc1waveform" id="63340" flags="" value="0.500000000000" parameter="23"/>
+        <Controllable name="osc2waveform" id="63341" flags="" value="0.250000000000" parameter="24"/>
+        <Controllable name="oscsync" id="63342" flags="" value="0.000000000000" parameter="25"/>
+        <Controllable name="lfo1waveform" id="63343" flags="" value="0.000000000000" parameter="26"/>
+        <Controllable name="lfo2waveform" id="63344" flags="" value="0.000000000000" parameter="27"/>
+        <Controllable name="lfo1rate" id="63345" flags="" value="0.452000021935" parameter="28"/>
+        <Controllable name="lfo2rate" id="63346" flags="" value="0.460000008345" parameter="29"/>
+        <Controllable name="lfo1amount" id="63347" flags="" value="0.712000012398" parameter="30"/>
+        <Controllable name="lfo2amount" id="63348" flags="" value="0.784000039101" parameter="31"/>
+        <Controllable name="lfo1destination" id="63349" flags="" value="0.000000000000" parameter="32"/>
+        <Controllable name="lfo2destination" id="63350" flags="" value="0.142857149243" parameter="33"/>
+        <Controllable name="lfo1phase" id="63351" flags="" value="0.000000000000" parameter="34"/>
+        <Controllable name="lfo2phase" id="63352" flags="" value="0.000000000000" parameter="35"/>
+        <Controllable name="osc2fm" id="63353" flags="" value="0.136000007391" parameter="36"/>
+        <Controllable name="osc2phase" id="63354" flags="" value="0.188000008464" parameter="37"/>
+        <Controllable name="osc1pw" id="63355" flags="" value="0.000000000000" parameter="38"/>
+        <Controllable name="osc1phase" id="63356" flags="" value="0.500000000000" parameter="39"/>
+        <Controllable name="transpose" id="63357" flags="" value="0.220000013709" parameter="40"/>
+        <Controllable name="freeadattack" id="63358" flags="" value="0.000000000000" parameter="41"/>
+        <Controllable name="freeaddecay" id="63359" flags="" value="0.752000033855" parameter="42"/>
+        <Controllable name="freeadamount" id="63360" flags="" value="0.664000034332" parameter="43"/>
+        <Controllable name="freeaddestination" id="63361" flags="" value="0.800000011921" parameter="44"/>
+        <Controllable name="lfo1sync" id="63362" flags="" value="1.000000000000" parameter="45"/>
+        <Controllable name="lfo1keytrigger" id="63363" flags="" value="0.000000000000" parameter="46"/>
+        <Controllable name="lfo2sync" id="63364" flags="" value="0.000000000000" parameter="47"/>
+        <Controllable name="lfo2keytrigger" id="63365" flags="" value="1.000000000000" parameter="48"/>
+        <Controllable name="portamento" id="63366" flags="" value="0.000000000000" parameter="49"/>
+        <Controllable name="portamentomode" id="63367" flags="" value="0.000000000000" parameter="50"/>
+        <Controllable name="voices" id="63368" flags="" value="0.000000000000" parameter="51"/>
+        <Controllable name="velocityvolume" id="63369" flags="" value="0.000000000000" parameter="52"/>
+        <Controllable name="velocitycontour" id="63370" flags="" value="0.000000000000" parameter="53"/>
+        <Controllable name="velocitycutoff" id="63371" flags="" value="0.784000039101" parameter="54"/>
+        <Controllable name="pitchwheelcutoff" id="63372" flags="" value="0.236000016332" parameter="55"/>
+        <Controllable name="pitchwheelpitch" id="63373" flags="" value="0.000000000000" parameter="56"/>
+        <Controllable name="ringmodulation" id="63374" flags="" value="0.000000000000" parameter="57"/>
+        <Controllable name="chorus1enable" id="63375" flags="" value="1.000000000000" parameter="58"/>
+        <Controllable name="chorus2enable" id="63376" flags="" value="0.000000000000" parameter="59"/>
+        <Controllable name="reverbwet" id="63377" flags="" value="0.348000019789" parameter="60"/>
+        <Controllable name="reverbdecay" id="63378" flags="" value="0.224000006914" parameter="61"/>
+        <Controllable name="reverbpredelay" id="63379" flags="" value="0.344000011683" parameter="62"/>
+        <Controllable name="reverbhighcut" id="63380" flags="" value="0.304000020027" parameter="63"/>
+        <Controllable name="reverblowcut" id="63381" flags="" value="0.384000003338" parameter="64"/>
+        <Controllable name="oscbitcrusher" id="63382" flags="" value="1.000000000000" parameter="65"/>
+        <Controllable name="highpass" id="63383" flags="" value="0.000000000000" parameter="66"/>
+        <Controllable name="detune" id="63384" flags="" value="0.000000000000" parameter="67"/>
+        <Controllable name="vintagenoise" id="63385" flags="" value="0.000000000000" parameter="68"/>
+        <Controllable name="envelopeeditordest1" id="63386" flags="" value="0.000000000000" parameter="71"/>
+        <Controllable name="envelopeeditorspeed" id="63387" flags="" value="0.000000000000" parameter="72"/>
+        <Controllable name="envelopeeditoramount" id="63388" flags="" value="0.000000000000" parameter="73"/>
+        <Controllable name="envelopeoneshot" id="63389" flags="" value="0.000000000000" parameter="74"/>
+        <Controllable name="envelopefixtempo" id="63390" flags="" value="0.000000000000" parameter="75"/>
+        <Controllable name="filterdrive" id="63391" flags="" value="0.000000000000" parameter="81"/>
+        <Controllable name="delaywet" id="63392" flags="" value="0.000000000000" parameter="82"/>
+        <Controllable name="delaytime" id="63393" flags="" value="0.500000000000" parameter="83"/>
+        <Controllable name="delaysync" id="63394" flags="" value="0.000000000000" parameter="84"/>
+        <Controllable name="delayfactorl" id="63395" flags="" value="0.000000000000" parameter="85"/>
+        <Controllable name="delayfactorr" id="63396" flags="" value="0.000000000000" parameter="86"/>
+        <Controllable name="delayhighshelf" id="63397" flags="" value="0.000000000000" parameter="87"/>
+        <Controllable name="delaylowshelf" id="63398" flags="" value="0.000000000000" parameter="88"/>
+        <Controllable name="delayfeedback" id="63399" flags="" value="0.500000000000" parameter="89"/>
+      </Processor>
+      <Processor id="63401" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="63402" flags="" value="0.387129664421"/>
+      </Processor>
+      <Processor id="63403" name="meter-Piezz1" active="yes" user-latency="0" type="meter"/>
+      <Processor id="63404" name="Piezz 5" active="yes" user-latency="0" own-input="yes" own-output="no" output="Piezz 5" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63406" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63407" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63408" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63409" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63410" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="63430" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="63406" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="63407" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="63408" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="63409" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="63410" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="63431" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="63432" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="63442" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Piezz1 3 1.2" name="Piezz1 3 1" id="63437" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
+    </Route>
   </Routes>
   <Playlists>
-    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
-    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
-    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
-    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
-    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
-    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
+    <Playlist id="62309" name="Piezz1 1.2" type="audio" orig-track-id="61978" frozen="no" combine-ops="0"/>
     <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
     <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
     <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
@@ -3666,6 +5277,16 @@
     <Playlist id="23480" name="Instrument 1.1" type="midi" orig-track-id="23441" frozen="no" combine-ops="0"/>
     <Playlist id="48179" name="Piezzo HF.2" type="midi" orig-track-id="48140" frozen="no" combine-ops="0"/>
     <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
+    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
+    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
+    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
+    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
+    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
+    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
+    <Playlist id="63055" name="Piezz1 3.2" type="audio" orig-track-id="62724" frozen="no" combine-ops="0"/>
+    <Playlist id="61298" name="Piezz 1" type="audio" orig-track-id="61259" frozen="no" combine-ops="0"/>
+    <Playlist id="63821" name="Piezz1 2 1.2" type="audio" orig-track-id="63490" frozen="no" combine-ops="0"/>
+    <Playlist id="63443" name="Piezz1 3 1.2" type="audio" orig-track-id="63112" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -3725,8 +5346,8 @@
       <Window name="bundle-manager" visible="no" x-off="377" y-off="75" x-size="480" y-size="240"/>
       <Window name="locations" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="big-clock" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="audio-connection-manager" visible="no" x-off="288" y-off="22" x-size="1152" y-size="720"/>
-      <Window name="midi-connection-manager" visible="no" x-off="135" y-off="104" x-size="1152" y-size="720"/>
+      <Window name="audio-connection-manager" visible="no" x-off="4" y-off="22" x-size="1436" y-size="856"/>
+      <Window name="midi-connection-manager" visible="no" x-off="95" y-off="45" x-size="1152" y-size="720"/>
       <Window name="P-28-52" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-28-49" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-28-55" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -3979,22 +5600,22 @@
       <Window name="P-23613-23644" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-23613-23645" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-23613-23688" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-58-76" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-58-81" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-255-47961" visible="no" x-off="459" y-off="249" x-size="769" y-size="610" custom-ui="yes"/>
+      <Window name="P-48140-48612" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48140-48167" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48140-48171" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48140-48172" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48140-48183" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-48140-48612" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48646" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48643" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48647" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48648" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48660" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-58-76" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-58-81" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-23441-60961" visible="no" x-off="440" y-off="22" x-size="695" y-size="719" custom-ui="yes"/>
       <GUIObjectState>
         <Object id="route 28" color="64677:42885:49059"/>
         <Object id="rtav 28" height="64" visible="1"/>
@@ -4496,6 +6117,7 @@
           <Object id="processor 25647"/>
           <Object id="processor 48055"/>
           <Object id="processor 48081"/>
+          <Object id="processor 60961"/>
         </Object>
         <Object id="strip 23484" visible="1" strip-width="Wide">
           <Object id="processor 23511"/>

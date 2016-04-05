@@ -41,8 +41,8 @@ echo "Lancement de la session BugNbuzz..."
 
 ############## Jack ##############
 
-jackdmp -R -X coremidi -d coreaudio -r 96000 -p 256 -d SaffireAudioEngine:0 --hog >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
-sleep 5s
+jackdmp -S -R -X coremidi -d coreaudio -r 48000 -p 256 -d SaffireAudioEngine:0 --hog >/tmp/log/jack.log 2>/tmp/log/jack_err.log &
+sleep 10s
 verify $! 10 jack
 
 
