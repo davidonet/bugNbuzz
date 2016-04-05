@@ -218,8 +218,9 @@ class MyServer(ServerThread):
         # Sooperlooper command
         send(self.sooperlooper, "/sl/set",
              "selected_loop_num", int(self.loopnum))
-        send(self.sooperlooper, "/sl/-1/set", "dry", 0)
-        send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
+        if self.loopnum != -1:
+			send(self.sooperlooper, "/sl/-1/set", "dry", 0)
+			send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
 
     def loopRecPlay(self):
         """ Rec Play Overdub action 
