@@ -56,9 +56,12 @@ verify $! 11 sooperlooper
 verify $! 12 sooperlooperGUI
 
 ############# Carla #############
-export CARLA_OSC_UDP_PORT=17001
-/Applications/Audio/Carla.app/Contents/MacOS/Carla /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/bugnbuzz.carxp >/tmp/log/carla.log 2>/tmp/log/carla.log &
-verify $! 13 carla
+#export CARLA_OSC_UDP_PORT=17001
+#/Applications/Audio/Carla.app/Contents/MacOS/Carla /Users/cieconcordance/BugNBuzz/bugNbuzz/sessions/bugnbuzz.carxp >/tmp/log/carla.log 2>/tmp/log/carla.log &
+#verify $! 13 carla
+#
+# Useless with X42's onset trigger 
+
 
 ############# Ardour 4 ##############
 
