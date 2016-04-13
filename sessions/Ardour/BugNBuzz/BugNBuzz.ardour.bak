@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="84964" event-counter="7793">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="91149" event-counter="7796">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -103,12 +103,14 @@
     <Route id="28" name="Master" default-type="audio" flags="MasterOut" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterK20" order-key="0" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
       <IO name="Master" id="47" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_in 1">
+          <Connection other="Entrée piste son/audio_out 1"/>
           <Connection other="LOOP1/audio_out 1"/>
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
+          <Connection other="Entrée piste son/audio_out 2"/>
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
@@ -140,7 +142,7 @@
         <Controllable name="trimcontrol" id="54" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="49" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="51" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="gaincontrol" id="51" flags="GainLike" value="0.000000000000"/>
       </Processor>
       <Processor id="55" name="meter-Master" active="yes" user-latency="0" type="meter"/>
       <Processor id="56" name="Master" active="yes" user-latency="0" own-input="yes" own-output="no" output="Master" type="main-outs" role="Main">
@@ -2868,8 +2870,8 @@
       <Automation/>
       <RemoteControl id="6"/>
       <Pannable>
-        <Controllable name="pan-azimuth" id="455" flags="" value="0.500000000000"/>
-        <Controllable name="pan-width" id="459" flags="" value="0.000000000000"/>
+        <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
+        <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
         <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
         <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
         <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -3064,14 +3066,14 @@
         <Controllable name="delayfeedback" id="64795" flags="" value="0.500000000000" parameter="89"/>
       </Processor>
       <Processor id="466" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="468" flags="GainLike" value="0.356741636992"/>
+        <Controllable name="gaincontrol" id="468" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="472" name="meter-Audio 6" active="yes" user-latency="0" type="meter"/>
       <Processor id="473" name="Audio 6" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 6" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="455" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="459" flags="" value="0.000000000000"/>
+          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
+          <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
           <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
           <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -3081,8 +3083,8 @@
       <Processor id="1815" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="455" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="459" flags="" value="0.000000000000"/>
+          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
+          <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
           <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
           <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -3214,7 +3216,7 @@
 	IGVudmVsb3BlZWRpdG9yYW1vdW50PSIwIiBlbnZlbG9wZW9uZXNob3Q9IjAiIGVudmVs
 	b3BlZml4dGVtcG89IjAiIHRhYjFvcGVuPSIxIiB0YWIyb3Blbj0iMCIgdGFiM29wZW49
 	IjAiIHRhYjRvcGVuPSIxIj48c3BsaW5lUG9pbnRzLz48L3Byb2dyYW0+PC9wcm9ncmFt
-	cz48bWlkaW1hcC8+PC90YWw+AG4=
+	cz48bWlkaW1hcC8+PC90YWw+ADA=
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -3313,7 +3315,7 @@
         <Controllable name="delayfeedback" id="64795" flags="" value="0.500000000000" parameter="89"/>
       </Processor>
       <Processor id="504" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="506" flags="GainLike" value="0.339887678623"/>
+        <Controllable name="gaincontrol" id="506" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="510" name="meter-Audio 7" active="yes" user-latency="0" type="meter"/>
       <Processor id="511" name="Audio 7" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 7" type="main-outs" role="Main">
@@ -3463,7 +3465,7 @@
 	IGVudmVsb3BlZWRpdG9yYW1vdW50PSIwIiBlbnZlbG9wZW9uZXNob3Q9IjAiIGVudmVs
 	b3BlZml4dGVtcG89IjAiIHRhYjFvcGVuPSIxIiB0YWIyb3Blbj0iMCIgdGFiM29wZW49
 	IjAiIHRhYjRvcGVuPSIxIj48c3BsaW5lUG9pbnRzLz48L3Byb2dyYW0+PC9wcm9ncmFt
-	cz48bWlkaW1hcC8+PC90YWw+AG4=
+	cz48bWlkaW1hcC8+PC90YWw+AAA=
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -3562,7 +3564,7 @@
         <Controllable name="delayfeedback" id="64795" flags="" value="0.500000000000" parameter="89"/>
       </Processor>
       <Processor id="542" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="544" flags="GainLike" value="0.651685416698"/>
+        <Controllable name="gaincontrol" id="544" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="548" name="meter-Audio 8" active="yes" user-latency="0" type="meter"/>
       <Processor id="549" name="Audio 8" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 8" type="main-outs" role="Main">
@@ -4031,7 +4033,7 @@
 	OTk5OTk4MjI0IDI0LjYwMDAwMDAwMDAwMDAwMTQyMSAzMi4xMDAwMDAwMDAwMDAwMDE0
 	MjEgMTMKLTkuNSAtMjcuMTk5OTk5OTk5OTk5OTk5Mjg5IC0yMyAtMTcuODAwMDAwMDAw
 	MDAwMDAwNzExIC0xMy41IDAgMCAwIDAKMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXRE
-	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgpNVkhK
+	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgoAAAA1
 	</data>
               <key>data</key>
               <data>
@@ -4184,7 +4186,7 @@
 	OTk5OTk4MjI0IDI0LjYwMDAwMDAwMDAwMDAwMTQyMSAzMi4xMDAwMDAwMDAwMDAwMDE0
 	MjEgMTMKLTkuNSAtMjcuMTk5OTk5OTk5OTk5OTk5Mjg5IC0yMyAtMTcuODAwMDAwMDAw
 	MDAwMDAwNzExIC0xMy41IDAgMCAwIDAKMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXRE
-	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgpNVkhK
+	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgoAAAAA
 	</data>
               <key>data</key>
               <data>
@@ -6377,7 +6379,7 @@
 	bnRyb2xQb2ludExlZnRYPSIwLjg5OTk5OTk3NiIgY29udHJvbFBvaW50TGVmdFk9IjAu
 	NSIgY29udHJvbFBvaW50UmlnaHRYPSIxIiBjb250cm9sUG9pbnRSaWdodFk9IjAuNSIv
 	Pjwvc3BsaW5lUG9pbnRzPjwvcHJvZ3JhbT48L3Byb2dyYW1zPjxtaWRpbWFwLz48L3Rh
-	bD4AAA==
+	bD4AMw==
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -6507,21 +6509,82 @@
       <Controllable name="recenable" id="48650" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Piezzo HF Audio.1" name="Piezzo HF Audio" id="48654" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
     </Route>
+    <Route id="91082" name="Entrée piste son" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="46" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="Entrée piste son" id="91105" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="Entrée piste son/audio_in 1"/>
+        <Port type="audio" name="Entrée piste son/audio_in 2"/>
+      </IO>
+      <IO name="Entrée piste son" id="91106" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="Entrée piste son/audio_out 1">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port type="audio" name="Entrée piste son/audio_out 2">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+      </IO>
+      <Controllable name="solo" id="91084" flags="Toggle" value="0.000000000000"/>
+      <Controllable name="mute" id="91086" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
+      <Automation/>
+      <RemoteControl id="46"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
+        <Controllable name="pan-width" id="91100" flags="" value="1.000000000000"/>
+        <Controllable name="pan-elevation" id="91098" flags="" value="0.000000000000"/>
+        <Controllable name="pan-frontback" id="91102" flags="" value="0.000000000000"/>
+        <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
+        <Automation/>
+      </Pannable>
+      <Processor id="91112" name="Amp" active="yes" user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="91111" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="91109" name="Amp" active="yes" user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="91108" flags="" value="1.000000000000"/>
+      </Processor>
+      <Processor id="91113" name="meter-Audio" active="yes" user-latency="0" type="meter"/>
+      <Processor id="91114" name="Entrée piste son" active="yes" user-latency="0" own-input="yes" own-output="no" output="Entrée piste son" type="main-outs" role="Main">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="91100" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="91098" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="91102" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+      </Processor>
+      <Processor id="91128" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="91100" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="91098" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="91102" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="91132" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="91131" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
+      <Controllable name="recenable" id="91116" flags="Toggle" value="0.000000000000"/>
+      <Diskstream flags="Recordable" playlist="Entrée piste son" name="Entrée piste son" id="91120" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
+    </Route>
   </Routes>
   <Playlists>
     <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
-    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
-    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
     <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
     <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
     <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
     <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
     <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
     <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
-    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
-    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
+    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
     <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
     <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
+    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
+    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
+    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
     <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
     <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
     <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
@@ -6551,6 +6614,7 @@
     <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
     <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
+    <Playlist id="91121" name="Entrée piste son" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>

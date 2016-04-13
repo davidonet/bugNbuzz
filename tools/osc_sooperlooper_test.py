@@ -181,7 +181,7 @@ class MyServer(ServerThread):
 ########## osc-x Send methods ###########
 
     def setColor(self, l, c):
-        i = l + 11
+        i = l + 12
         if -1 < c:
             c = colorsys.hsv_to_rgb(c, 1, .1)
             self.ledState[i * 3] = int(c[0] * 150)
@@ -194,7 +194,7 @@ class MyServer(ServerThread):
         send(self.jacket, "/outputs/rgb/16", self.ledState)
 
     def blank(self):
-        self.ledState = [0] * (14 * 3)
+        self.ledState = [0] * (16 * 3)
         send(self.jacket, "/outputs/rgb/16", self.ledState)
 
 

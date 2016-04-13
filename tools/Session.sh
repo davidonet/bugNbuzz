@@ -76,6 +76,9 @@ verify $! 14 Ardour
 # ./patcher.py > /tmp/log/patcher.log
 # PATCH_PID=$!
 
+############ Lancement MadJack #############
+#/Users/cieconcordance/BugNBuzz/src/madjack/src/madjack -p 10000 -d /Users/cieconcordance/BugNBuzz/mp3/ -l "ardour:mp3/audio_in 1" -r "ardour:mp3/audio_in 2"
+
 
 ############## Script OSC #############
 
