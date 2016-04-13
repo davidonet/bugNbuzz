@@ -1,6 +1,9 @@
 #!/usr/bin/env python2
 #from subprocess import Popen, PIPE
 
+from liblo import *
+target = Address("localhost",10000)
+
 
 def touch2bug(dst, path, args):
 	if dst == "ardour":
@@ -40,13 +43,14 @@ def touch2bug(dst, path, args):
 		return carla_path, arg
 		
 	
-#	if dst =="mplayer":
-#		splited = path.split("/")
-#		if splited[1] = "play":
-#			tracknbr = int(args[1])
-#			...
-#		if splited[1] = "stop":
-#			...
+	if dst =="mplayer":
+		splited = path.split("/")
+		if splited[1] == "play":
+			tracknbr = int(args[1])
+			send(target, "/deck/load","0"+tracknbr+".mp3")
+			send(target, "/deck/play")
+		if splited[1] == "stop":
+			send(target, "/deck/stop")
 
 
 if __name__ == '__main__':
