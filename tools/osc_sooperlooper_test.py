@@ -34,6 +34,7 @@ class MyServer(ServerThread):
             self.ardour = Address("localhost", 3819)
             self.jacket = Address("192.168.1.30", 9000)  # in router config
             self.carla = Address("localhost", 17001)
+            self.madjack = Address("localhost", 10000)
         except liblo.AddressError as err:
             print(err)
             sys.exit()
@@ -156,6 +157,17 @@ class MyServer(ServerThread):
         send(self.jacket, "/outputs/rgb/16", self.ledState)
         self.stdscr.refresh()
 
+
+########## OSC methods for audio file ###########
+
+    @make_method('/mplayer/play/1','i')
+    def mp3play(self, path, args):
+        send(self.madjack,"/deck/load","0"+args[0]+".mp3")
+        send(self.madjack,"/deck/play")
+
+    @make_method('/mplayer/stop')
+    def mp3stop(self, path, args):
+        send(self.madjack,"/deck/stop")
 
 ########### wildcard ##########
 
