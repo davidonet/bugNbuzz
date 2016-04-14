@@ -160,12 +160,12 @@ class MyServer(ServerThread):
 
 ########## OSC methods for audio file ###########
 
-    @make_method('/mplayer/play/1','i')
+    @make_method('/mplayer/play/1/1','f')
     def mp3play(self, path, args):
-        send(self.madjack,"/deck/load","0"+args[0]+".mp3")
+        send(self.madjack,"/deck/load","01.mp3")
         send(self.madjack,"/deck/play")
 
-    @make_method('/mplayer/stop')
+    @make_method('/mplayer/stop', 'f')
     def mp3stop(self, path, args):
         send(self.madjack,"/deck/stop")
 

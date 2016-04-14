@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="91149" event-counter="7796">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="103529" event-counter="7802">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -103,18 +103,18 @@
     <Route id="28" name="Master" default-type="audio" flags="MasterOut" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterK20" order-key="0" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
       <IO name="Master" id="47" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_in 1">
-          <Connection other="Entrée piste son/audio_out 1"/>
           <Connection other="LOOP1/audio_out 1"/>
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
+          <Connection other="mp3/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
-          <Connection other="Entrée piste son/audio_out 2"/>
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
+          <Connection other="mp3/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
@@ -2719,7 +2719,7 @@
 	bnRYPSIxIiBjZW50ZXJQb2ludFk9IjAuNSIgY29udHJvbFBvaW50TGVmdFg9IjAuODk5
 	OTk5OTc2IiBjb250cm9sUG9pbnRMZWZ0WT0iMC41IiBjb250cm9sUG9pbnRSaWdodFg9
 	IjEiIGNvbnRyb2xQb2ludFJpZ2h0WT0iMC41Ii8+PC9zcGxpbmVQb2ludHM+PC9wcm9n
-	cmFtPjwvcHJvZ3JhbXM+PG1pZGltYXAvPjwvdGFsPgAA
+	cmFtPjwvcHJvZ3JhbXM+PG1pZGltYXAvPjwvdGFsPgBf
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -2870,8 +2870,8 @@
       <Automation/>
       <RemoteControl id="6"/>
       <Pannable>
-        <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
-        <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
+        <Controllable name="pan-azimuth" id="455" flags="" value="0.527777791023"/>
+        <Controllable name="pan-width" id="459" flags="" value="-0.277777791023"/>
         <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
         <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
         <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -2967,7 +2967,7 @@
 	IGVudmVsb3BlZWRpdG9yYW1vdW50PSIwIiBlbnZlbG9wZW9uZXNob3Q9IjAiIGVudmVs
 	b3BlZml4dGVtcG89IjAiIHRhYjFvcGVuPSIxIiB0YWIyb3Blbj0iMCIgdGFiM29wZW49
 	IjAiIHRhYjRvcGVuPSIxIj48c3BsaW5lUG9pbnRzLz48L3Byb2dyYW0+PC9wcm9ncmFt
-	cz48bWlkaW1hcC8+PC90YWw+ADA=
+	cz48bWlkaW1hcC8+PC90YWw+AGk=
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -3072,8 +3072,8 @@
       <Processor id="473" name="Audio 6" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 6" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
-          <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
+          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777791023"/>
+          <Controllable name="pan-width" id="459" flags="" value="-0.277777791023"/>
           <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
           <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -3083,8 +3083,8 @@
       <Processor id="1815" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777777778"/>
-          <Controllable name="pan-width" id="459" flags="" value="-0.277777777778"/>
+          <Controllable name="pan-azimuth" id="455" flags="" value="0.527777791023"/>
+          <Controllable name="pan-width" id="459" flags="" value="-0.277777791023"/>
           <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
           <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
           <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
@@ -3216,7 +3216,7 @@
 	IGVudmVsb3BlZWRpdG9yYW1vdW50PSIwIiBlbnZlbG9wZW9uZXNob3Q9IjAiIGVudmVs
 	b3BlZml4dGVtcG89IjAiIHRhYjFvcGVuPSIxIiB0YWIyb3Blbj0iMCIgdGFiM29wZW49
 	IjAiIHRhYjRvcGVuPSIxIj48c3BsaW5lUG9pbnRzLz48L3Byb2dyYW0+PC9wcm9ncmFt
-	cz48bWlkaW1hcC8+PC90YWw+ADA=
+	cz48bWlkaW1hcC8+PC90YWw+AAA=
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -3465,7 +3465,7 @@
 	IGVudmVsb3BlZWRpdG9yYW1vdW50PSIwIiBlbnZlbG9wZW9uZXNob3Q9IjAiIGVudmVs
 	b3BlZml4dGVtcG89IjAiIHRhYjFvcGVuPSIxIiB0YWIyb3Blbj0iMCIgdGFiM29wZW49
 	IjAiIHRhYjRvcGVuPSIxIj48c3BsaW5lUG9pbnRzLz48L3Byb2dyYW0+PC9wcm9ncmFt
-	cz48bWlkaW1hcC8+PC90YWw+AAA=
+	cz48bWlkaW1hcC8+PC90YWw+AG4=
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -3880,7 +3880,7 @@
 	OTk5OTk4MjI0IDI0LjYwMDAwMDAwMDAwMDAwMTQyMSAzMi4xMDAwMDAwMDAwMDAwMDE0
 	MjEgMTMKLTkuNSAtMjcuMTk5OTk5OTk5OTk5OTk5Mjg5IC0yMyAtMTcuODAwMDAwMDAw
 	MDAwMDAwNzExIC0xMy41IDAgMCAwIDAKMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXRE
-	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgpPVGs1
+	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgpyYnBy
 	</data>
               <key>data</key>
               <data>
@@ -4033,7 +4033,7 @@
 	OTk5OTk4MjI0IDI0LjYwMDAwMDAwMDAwMDAwMTQyMSAzMi4xMDAwMDAwMDAwMDAwMDE0
 	MjEgMTMKLTkuNSAtMjcuMTk5OTk5OTk5OTk5OTk5Mjg5IC0yMyAtMTcuODAwMDAwMDAw
 	MDAwMDAwNzExIC0xMy41IDAgMCAwIDAKMCA8L1BhcmFtZXRlcnM+CgkJPC9QcmVzZXRE
-	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgoAAAA1
+	YXRhPgoJPC9QcmVzZXQ+CjwvUHJlc2V0Q2h1bmtYTUxUcmVlPgpNQ0E4
 	</data>
               <key>data</key>
               <data>
@@ -6379,7 +6379,7 @@
 	bnRyb2xQb2ludExlZnRYPSIwLjg5OTk5OTk3NiIgY29udHJvbFBvaW50TGVmdFk9IjAu
 	NSIgY29udHJvbFBvaW50UmlnaHRYPSIxIiBjb250cm9sUG9pbnRSaWdodFk9IjAuNSIv
 	Pjwvc3BsaW5lUG9pbnRzPjwvcHJvZ3JhbT48L3Byb2dyYW1zPjxtaWRpbWFwLz48L3Rh
-	bD4AMw==
+	bD4AAA==
 	</data>
               <key>manufacturer</key>
               <integer>1414481749</integer>
@@ -6509,16 +6509,20 @@
       <Controllable name="recenable" id="48650" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Piezzo HF Audio.1" name="Piezzo HF Audio" id="48654" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
     </Route>
-    <Route id="91082" name="Entrée piste son" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="46" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
-      <IO name="Entrée piste son" id="91105" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Entrée piste son/audio_in 1"/>
-        <Port type="audio" name="Entrée piste son/audio_in 2"/>
+    <Route id="91082" name="mp3" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="46" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="" saved-meter-point="MeterPostFader" mode="Normal">
+      <IO name="mp3" id="91105" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="mp3/audio_in 1">
+          <Connection other="madjack:left"/>
+        </Port>
+        <Port type="audio" name="mp3/audio_in 2">
+          <Connection other="madjack:right"/>
+        </Port>
       </IO>
-      <IO name="Entrée piste son" id="91106" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Entrée piste son/audio_out 1">
+      <IO name="mp3" id="91106" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="mp3/audio_out 1">
           <Connection other="Master/audio_in 1"/>
         </Port>
-        <Port type="audio" name="Entrée piste son/audio_out 2">
+        <Port type="audio" name="mp3/audio_out 2">
           <Connection other="Master/audio_in 2"/>
         </Port>
       </IO>
@@ -6542,7 +6546,7 @@
         <Controllable name="gaincontrol" id="91108" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="91113" name="meter-Audio" active="yes" user-latency="0" type="meter"/>
-      <Processor id="91114" name="Entrée piste son" active="yes" user-latency="0" own-input="yes" own-output="no" output="Entrée piste son" type="main-outs" role="Main">
+      <Processor id="91114" name="mp3" active="yes" user-latency="0" own-input="yes" own-output="no" output="mp3" type="main-outs" role="Main">
         <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
         <Pannable>
           <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
@@ -6568,10 +6572,11 @@
         </Processor>
       </Processor>
       <Controllable name="recenable" id="91116" flags="Toggle" value="0.000000000000"/>
-      <Diskstream flags="Recordable" playlist="Entrée piste son" name="Entrée piste son" id="91120" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
+      <Diskstream flags="Recordable" playlist="mp3" name="mp3" id="91120" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
     </Route>
   </Routes>
   <Playlists>
+    <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
     <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
     <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
     <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
@@ -6580,7 +6585,6 @@
     <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
     <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
     <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
-    <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
     <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
     <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
     <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
@@ -6614,7 +6618,7 @@
     <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
     <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
-    <Playlist id="91121" name="Entrée piste son" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
+    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -6682,35 +6686,36 @@
       <Window name="P-28-56" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-255-279" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-255-61198" visible="no" x-off="492" y-off="55" x-size="692" y-size="563" custom-ui="no"/>
-      <Window name="P-255-61130" visible="no" x-off="538" y-off="74" x-size="835" y-size="412" custom-ui="yes"/>
+      <Window name="P-255-61130" visible="no" x-off="538" y-off="74" x-size="835" y-size="412" custom-ui="no"/>
       <Window name="P-255-276" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-255-282" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-255-283" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-255-1775" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-317" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-293-66104" visible="no" x-off="559" y-off="56" x-size="835" y-size="412" custom-ui="yes"/>
+      <Window name="P-293-84949" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-314" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-320" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-321" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-1783" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-355" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-331-65566" visible="no" x-off="71" y-off="22" x-size="683" y-size="370" custom-ui="yes"/>
-      <Window name="P-331-65584" visible="no" x-off="669" y-off="22" x-size="695" y-size="719" custom-ui="yes"/>
+      <Window name="P-331-65566" visible="no" x-off="71" y-off="22" x-size="683" y-size="370" custom-ui="no"/>
+      <Window name="P-331-65584" visible="no" x-off="669" y-off="22" x-size="695" y-size="719" custom-ui="no"/>
+      <Window name="P-331-71245" visible="no" x-off="520" y-off="22" x-size="920" y-size="559" custom-ui="no"/>
       <Window name="P-331-352" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-358" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-359" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-1791" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-369-393" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-369-65379" visible="no" x-off="182" y-off="22" x-size="683" y-size="370" custom-ui="yes"/>
-      <Window name="P-369-65397" visible="no" x-off="166" y-off="22" x-size="695" y-size="719" custom-ui="yes"/>
-      <Window name="P-369-66172" visible="no" x-off="333" y-off="287" x-size="1107" y-size="501" custom-ui="yes"/>
+      <Window name="P-369-65379" visible="no" x-off="182" y-off="22" x-size="683" y-size="370" custom-ui="no"/>
+      <Window name="P-369-65397" visible="no" x-off="166" y-off="22" x-size="695" y-size="719" custom-ui="no"/>
+      <Window name="P-369-66172" visible="no" x-off="333" y-off="287" x-size="1107" y-size="501" custom-ui="no"/>
       <Window name="P-369-390" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-369-396" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-369-397" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-369-1799" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-407-431" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-407-65192" visible="no" x-off="297" y-off="22" x-size="683" y-size="370" custom-ui="yes"/>
-      <Window name="P-407-65210" visible="no" x-off="293" y-off="22" x-size="695" y-size="719" custom-ui="yes"/>
+      <Window name="P-407-65192" visible="no" x-off="297" y-off="22" x-size="683" y-size="370" custom-ui="no"/>
+      <Window name="P-407-65210" visible="no" x-off="293" y-off="22" x-size="695" y-size="719" custom-ui="no"/>
       <Window name="P-407-428" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-407-434" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-407-435" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -6931,13 +6936,16 @@
       <Window name="P-48616-48647" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48648" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-48616-48660" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-91082-91112" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-91082-91109" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-91082-91113" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-91082-91114" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-91082-91128" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-76" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-81" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-293-71227" visible="no" x-off="651" y-off="187" x-size="586" y-size="387" custom-ui="yes"/>
-      <Window name="P-331-71245" visible="no" x-off="520" y-off="22" x-size="920" y-size="559" custom-ui="yes"/>
       <GUIObjectState>
         <Object id="route 28" color="64677:42885:49059"/>
         <Object id="rtav 28" height="64" visible="1"/>
@@ -6964,6 +6972,7 @@
           <Object id="processor 314"/>
           <Object id="processor 66104"/>
           <Object id="processor 71227"/>
+          <Object id="processor 84949"/>
         </Object>
         <Object id="route 331" color="29490:58489:58981"/>
         <Object id="strip 331" visible="1" strip-width="Wide">
@@ -7551,6 +7560,17 @@
         <Object id="automation 611" height="64" visible="0"/>
         <Object id="automation 649" height="64" visible="0"/>
         <Object id="automation 687" height="64" visible="0"/>
+        <Object id="automation 307" height="64" visible="0"/>
+        <Object id="route 91082" color="64677:42885:49059"/>
+        <Object id="rtav 91082" height="64" visible="1"/>
+        <Object id="automation 91108" height="64" visible="0"/>
+        <Object id="automation 91111" height="64" visible="0"/>
+        <Object id="automation 91082 12/0/0" height="64" visible="0"/>
+        <Object id="automation 91096" height="64" visible="0"/>
+        <Object id="automation 91100" height="64" visible="0"/>
+        <Object id="strip 91082" visible="1" strip-width="Wide">
+          <Object id="processor 91109"/>
+        </Object>
       </GUIObjectState>
     </UI>
     <Videomonitor active="no"/>

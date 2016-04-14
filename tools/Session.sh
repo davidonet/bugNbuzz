@@ -5,7 +5,8 @@
 # 10 : Erreur de lancement de Jack
 # 11 : Erreur au lancement de Sooperlooper
 # 12 : Erreur au lancement de Sooperlooper GUI
-# 14 : Erreur au lancement de bitwig
+# 13 : Erreur au lancement de Madjack
+# 14 : Erreur au lancement de ardour
 
 PIDS=()
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -62,6 +63,10 @@ verify $! 12 sooperlooperGUI
 #
 # Useless with X42's onset trigger 
 
+############ Lancement MadJack #############
+exec /Users/cieconcordance/BugNBuzz/src/madjack/src/madjack -p 10000 -d /Users/cieconcordance/BugNBuzz/mp3/ > /dev/null 2> /tmp/log/madjack_err.log < /dev/null &
+verify $! 13 madjack
+
 
 ############# Ardour 4 ##############
 
@@ -76,8 +81,6 @@ verify $! 14 Ardour
 # ./patcher.py > /tmp/log/patcher.log
 # PATCH_PID=$!
 
-############ Lancement MadJack #############
-#/Users/cieconcordance/BugNBuzz/src/madjack/src/madjack -p 10000 -d /Users/cieconcordance/BugNBuzz/mp3/ -l "ardour:mp3/audio_in 1" -r "ardour:mp3/audio_in 2"
 
 
 ############## Script OSC #############

@@ -15,7 +15,7 @@ def touch2bug(dst, path, args):
 		
 		if splited[3] == "gainabs":
 			if multiple == 317:
-				track == 318
+				track = 318
 			else:
 				track = multiple * 8 + int(splited[5]) + multiple
 			arg = float(args[0])
@@ -28,7 +28,7 @@ def touch2bug(dst, path, args):
 #					params are Route-ID Plugin-Number Parameter-Number Value */
 #		Touchosc	/ardour/route/plugin/parameter/[tracknumer]/[Plugin-number]/[Parameter-number] [arg]
 		elif splited[3] == "plugin":
-			ard_path = ard_path + splited[4]
+			ard_path = ard_path + "/" + splited[4]
 			track = int(splited[5])
 			plugin = int(splited[6])
 			parm = int(splited[7])
