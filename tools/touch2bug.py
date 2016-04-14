@@ -42,16 +42,5 @@ def touch2bug(dst, path, args):
 		arg = int(args[0])
 		return carla_path, arg
 		
-	
-	if dst =="mplayer":
-		splited = path.split("/")
-		if splited[1] == "play":
-			tracknbr = int(args[1])
-			send(target, "/deck/load","0"+tracknbr+".mp3")
-			send(target, "/deck/play")
-		if splited[1] == "stop":
-			send(target, "/deck/stop")
-
-
 if __name__ == '__main__':
 	touch2bug()
