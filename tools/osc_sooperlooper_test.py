@@ -31,7 +31,8 @@ class MyServer(ServerThread):
 
         try:
             self.sooperlooper = Address("localhost", 9951)
-            self.ardour = Address("localhost", 3819)
+            #self.ardour = Address("localhost", 3819)
+            self.ardour = Address("localhost", 1337)
             self.jacket = Address("192.168.1.30", 9000)  # in router config
             self.carla = Address("localhost", 17001)
             self.madjack = Address("localhost", 10000)
@@ -177,8 +178,10 @@ class MyServer(ServerThread):
 
 
 ########### OSC methods for TouchOSC to ardour and carla ############
+		
         if path_split[1] == "ardour":
             ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
+#            print('####', arg)
             send(self.ardour, ard_path, track, arg)
         if path_split[1] == "Carla":
             carla_path, arg = touch2bug.touch2bug("carla", path, args)
