@@ -6,7 +6,12 @@ target = Address("localhost",10000)
 
 
 def touch2bug(dst, path, args):
+	""" TODO
 	
+	 dst: Str
+	 path: Str
+	 args: List(str)
+	"""
 	if dst == "ardour":
 		splited = path.split("/")
 #		print('###', splited)
@@ -21,12 +26,12 @@ def touch2bug(dst, path, args):
 				track = 318
 			else:
 				track = multiple * 8 + int(splited[5]) + multiple
-			arg = float(args[0])
+			arg = float(args[0]),
 		
 		elif splited[3] == "mute":
 			multiple = int(splited[4]) - 1
 			track = multiple * 8 + int(splited[6]) + multiple
-			arg = int(args[0])
+			arg = int(args[0]), 
 		
 #	 	Adrour      REGISTER_CALLBACK (serv, "/ardour/routes/plugin/parameter", "iiif", route_plugin_parameter);
 #					params are Route-ID Plugin-Number Parameter-Number Value */
@@ -41,7 +46,7 @@ def touch2bug(dst, path, args):
 			arg = plugin, parm, float(args[0])
 #			print('###', ard_path, track, arg)
 		
-		return ard_path, track, arg
+		return ard_path, track, arg,
 		
 	if dst =="carla":
 		splited = path.split("/")
