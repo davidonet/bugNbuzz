@@ -40,9 +40,9 @@ def touch2bug(dst, path, args):
 #			print('### plugin ###')
 			ard_path = ard_path + "/" + splited[4]
 #			print('### newpath ###', ard_path)
-			track = int(splited[5])
+			track = int(splited[7])+1
 			plugin = int(splited[6])
-			parm = int(splited[7])
+			parm = int(splited[5])
 			arg = plugin, parm, float(args[0])
 #			print('###', ard_path, track, arg)
 		
