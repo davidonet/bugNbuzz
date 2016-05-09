@@ -1,0 +1,20 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <http://drumgizmo.org/lv2> ;
+	state:state [
+		<http://drumgizmo.org/lv2/atom#config> """PGNvbmZpZz4KICA8dmFsdWUgbmFtZT0iZHJ1bWtpdGZpbGUiPjwvdmFsdWU+CiAgPHZhbHVlIG5h
+bWU9Im1pZGltYXBmaWxlIj48L3ZhbHVlPgogIDx2YWx1ZSBuYW1lPSJlbmFibGVfdmVsb2NpdHlf
+bW9kaWZpZXIiPnRydWU8L3ZhbHVlPgogIDx2YWx1ZSBuYW1lPSJ2ZWxvY2l0eV9tb2RpZmllcl9m
+YWxsb2ZmIj4wLjUwMDAwMDwvdmFsdWU+CiAgPHZhbHVlIG5hbWU9InZlbG9jaXR5X21vZGlmaWVy
+X3dlaWdodCI+MC4yNTAwMDA8L3ZhbHVlPgogIDx2YWx1ZSBuYW1lPSJlbmFibGVfdmVsb2NpdHlf
+cmFuZG9taXNlciI+ZmFsc2U8L3ZhbHVlPgogIDx2YWx1ZSBuYW1lPSJ2ZWxvY2l0eV9yYW5kb21p
+c2VyX3dlaWdodCI+MC4xMDAwMDA8L3ZhbHVlPgo8L2NvbmZpZz4K"""^^xsd:base64Binary
+	] .
