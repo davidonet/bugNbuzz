@@ -34,7 +34,7 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="32"/>
+        <Control name="trigger_latency" value="256"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
         <Control name="round_integer_tempo" value="0"/>
@@ -72,7 +72,7 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="32"/>
+        <Control name="trigger_latency" value="256"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
         <Control name="round_integer_tempo" value="0"/>
@@ -110,7 +110,7 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="32"/>
+        <Control name="trigger_latency" value="256"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
         <Control name="round_integer_tempo" value="0"/>
@@ -148,7 +148,7 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="32"/>
+        <Control name="trigger_latency" value="256"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
         <Control name="round_integer_tempo" value="0"/>
