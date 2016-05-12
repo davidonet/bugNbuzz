@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="329073" event-counter="92625">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="353274" event-counter="96097">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -99,32 +99,16 @@
     <Route id="28" name="Master" default-type="audio" flags="MasterOut" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterK20" order-key="0" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
       <IO name="Master" id="47" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_in 1">
-          <Connection other="IN Piezzo Synth 1/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 2/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 3/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 4/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 5/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 6/audio_out 1"/>
-          <Connection other="IN Piezzo Synth 7/audio_out 1"/>
           <Connection other="LOOP1/audio_out 1"/>
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
-          <Connection other="mp3/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
-          <Connection other="IN Piezzo Synth 1/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 2/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 3/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 4/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 5/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 6/audio_out 2"/>
-          <Connection other="IN Piezzo Synth 7/audio_out 2"/>
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
-          <Connection other="mp3/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
@@ -280,7 +264,7 @@
         <Controllable name="Filter 5 Enable" id="288705" flags="Toggle" value="1.000000000000" parameter="33" symbol="filter5_enable"/>
         <Controllable name="Filter 6 Enable" id="288707" flags="Toggle" value="1.000000000000" parameter="34" symbol="filter6_enable"/>
       </Processor>
-      <Processor id="288709" name="CS10QM" active="yes" user-latency="0" type="lv2" unique-id="http://eq10q.sourceforge.net/compressor" count="1">
+      <Processor id="288709" name="CS10QM" active="no" user-latency="0" type="lv2" unique-id="http://eq10q.sourceforge.net/compressor" count="1">
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
         </ConfiguredInput>
@@ -315,7 +299,7 @@
         <Controllable name="FeedBack Compressor" id="288733" flags="" value="0.000000000000" parameter="15" symbol="isfeedbackcompressor"/>
       </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.999999940395"/>
+        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.988764047623"/>
       </Processor>
       <Processor id="282" name="meter-Audio 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="283" name="Audio 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 1" type="main-outs" role="Main">
@@ -399,16 +383,16 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="-0.876457"/>
+          <Port symbol="xfade" value="+0.988345"/>
           <Port symbol="shape" value="+0.465054"/>
           <Port symbol="mode" value="+1.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-0.876456975937" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.988345026970" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.465054005384" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="1.000000000000" parameter="2" symbol="mode"/>
       </Processor>
       <Processor id="314" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="316" flags="GainLike" value="0.850422024727"/>
+        <Controllable name="gaincontrol" id="316" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="320" name="meter-Audio 2" active="yes" user-latency="0" type="meter"/>
       <Processor id="321" name="Audio 2" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 2" type="main-outs" role="Main">
@@ -493,11 +477,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="+0.212121"/>
+          <Port symbol="xfade" value="+0.995338"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="0.212120994925" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.995337963104" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -587,11 +571,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="+0.067599"/>
+          <Port symbol="xfade" value="+0.906760"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="0.067598998547" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.906759858131" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -681,11 +665,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="-0.041958"/>
+          <Port symbol="xfade" value="-1.000000"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-0.041958000511" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="-1.000000000000" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -751,8 +735,8 @@
         </Port>
       </IO>
       <Controllable name="solo" id="447" flags="Toggle" value="0.000000000000"/>
-      <Controllable name="mute" id="449" flags="Toggle" value="1.000000000000"/>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="yes"/>
+      <Controllable name="mute" id="449" flags="Toggle" value="0.000000000000"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="no"/>
       <Automation/>
       <RemoteControl id="6"/>
       <Pannable>
@@ -774,11 +758,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="-0.041958"/>
+          <Port symbol="xfade" value="-1.000000"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-0.041958000511" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="-1.000000000000" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -868,11 +852,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="-0.034965"/>
+          <Port symbol="xfade" value="-1.000000"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-0.034965001047" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="-1.000000000000" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -962,11 +946,11 @@
           <Channels type="audio" count="2"/>
         </ConfiguredOutput>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="yes">
-          <Port symbol="xfade" value="-0.060606"/>
+          <Port symbol="xfade" value="-1.000000"/>
           <Port symbol="shape" value="+0.598425"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-0.060605999082" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="-1.000000000000" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -1111,7 +1095,7 @@
         <Controllable name="trimcontrol" id="585" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="580" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="582" flags="GainLike" value="0.952247202396"/>
+        <Controllable name="gaincontrol" id="582" flags="GainLike" value="0.999999940395"/>
       </Processor>
       <Processor id="586" name="meter-Audio 9" active="yes" user-latency="0" type="meter"/>
       <Processor id="587" name="Audio 9" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 9" type="main-outs" role="Main">
@@ -1173,7 +1157,7 @@
         <Controllable name="trimcontrol" id="623" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="618" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="620" flags="GainLike" value="0.971910119057"/>
+        <Controllable name="gaincontrol" id="620" flags="GainLike" value="0.999999940395"/>
       </Processor>
       <Processor id="624" name="meter-Audio 10" active="yes" user-latency="0" type="meter"/>
       <Processor id="625" name="Audio 10" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 10" type="main-outs" role="Main">
@@ -3300,16 +3284,16 @@
     </Route>
     <Route id="91082" name="mp3" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="45" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="mp3" id="91105" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="mp3/audio_in 1"/>
-        <Port type="audio" name="mp3/audio_in 2"/>
+        <Port type="audio" name="mp3/audio_in 1">
+          <Connection other="madjack:left"/>
+        </Port>
+        <Port type="audio" name="mp3/audio_in 2">
+          <Connection other="madjack:right"/>
+        </Port>
       </IO>
       <IO name="mp3" id="91106" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="mp3/audio_out 1">
-          <Connection other="Master/audio_in 1"/>
-        </Port>
-        <Port type="audio" name="mp3/audio_out 2">
-          <Connection other="Master/audio_in 2"/>
-        </Port>
+        <Port type="audio" name="mp3/audio_out 1"/>
+        <Port type="audio" name="mp3/audio_out 2"/>
       </IO>
       <Controllable name="solo" id="91084" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="91086" flags="Toggle" value="0.000000000000"/>
@@ -3798,11 +3782,9 @@
       <IO name="IN Piezzo Synth 1" id="284296" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 1/audio_out 1">
           <Connection other="Audio 2/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 1/audio_out 2">
           <Connection other="Audio 2/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 1/midi_out 1"/>
       </IO>
@@ -3877,11 +3859,9 @@
       <IO name="IN Piezzo Synth 2" id="284396" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 2/audio_out 1">
           <Connection other="Audio 3/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 2/audio_out 2">
           <Connection other="Audio 3/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 2/midi_out 1"/>
       </IO>
@@ -3956,11 +3936,9 @@
       <IO name="IN Piezzo Synth 3" id="284496" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 3/audio_out 1">
           <Connection other="Audio 4/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 3/audio_out 2">
           <Connection other="Audio 4/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 3/midi_out 1"/>
       </IO>
@@ -4035,11 +4013,9 @@
       <IO name="IN Piezzo Synth 4" id="284596" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 4/audio_out 1">
           <Connection other="Audio 5/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 4/audio_out 2">
           <Connection other="Audio 5/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 4/midi_out 1"/>
       </IO>
@@ -4065,7 +4041,7 @@
           <Channels type="audio" count="2"/>
           <Channels type="midi" count="1"/>
         </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state7">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state9">
           <Port symbol="lv2_freewheel" value="+0.000000"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
@@ -4114,11 +4090,9 @@
       <IO name="IN Piezzo Synth 5" id="284696" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 5/audio_out 1">
           <Connection other="Audio 6/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 5/audio_out 2">
           <Connection other="Audio 6/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 5/midi_out 1"/>
       </IO>
@@ -4144,7 +4118,7 @@
           <Channels type="audio" count="2"/>
           <Channels type="midi" count="1"/>
         </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state7">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state11">
           <Port symbol="lv2_freewheel" value="+0.000000"/>
         </lv2>
         <Controllable name="hidden" id="284708" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
@@ -4193,11 +4167,9 @@
       <IO name="IN Piezzo Synth 6" id="284796" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 6/audio_out 1">
           <Connection other="Audio 7/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 6/audio_out 2">
           <Connection other="Audio 7/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 6/midi_out 1"/>
       </IO>
@@ -4272,11 +4244,9 @@
       <IO name="IN Piezzo Synth 7" id="288034" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 7/audio_out 1">
           <Connection other="Audio 8/audio_in 3"/>
-          <Connection other="Master/audio_in 1"/>
         </Port>
         <Port type="audio" name="IN Piezzo Synth 7/audio_out 2">
           <Connection other="Audio 8/audio_in 4"/>
-          <Connection other="Master/audio_in 2"/>
         </Port>
         <Port type="midi" name="IN Piezzo Synth 7/midi_out 1"/>
       </IO>
@@ -4341,56 +4311,56 @@
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
-    <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
-    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
-    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
-    <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
-    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
-    <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
-    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
-    <Playlist id="1656" name="Audio 37.1" type="audio" orig-track-id="1623" frozen="no" combine-ops="0"/>
     <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
     <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
+    <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
+    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
+    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
+    <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
+    <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
     <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
-    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
+    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
     <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
-    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
+    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
+    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
     <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
-    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
+    <Playlist id="1656" name="Audio 37.1" type="audio" orig-track-id="1623" frozen="no" combine-ops="0"/>
     <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
-    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
+    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
     <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
+    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
     <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
+    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
+    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
+    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
     <Playlist id="1200" name="Audio 25.1" type="audio" orig-track-id="1167" frozen="no" combine-ops="0"/>
     <Playlist id="1694" name="Audio 38.1" type="audio" orig-track-id="1661" frozen="no" combine-ops="0"/>
-    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
+    <Playlist id="288090" name="IN Piezzo Synth 7" type="midi" orig-track-id="288032" frozen="no" combine-ops="0"/>
     <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
     <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
-    <Playlist id="288090" name="IN Piezzo Synth 7" type="midi" orig-track-id="288032" frozen="no" combine-ops="0"/>
-    <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
-    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
     <Playlist id="284852" name="IN Piezzo Synth 6.2" type="midi" orig-track-id="284794" frozen="no" combine-ops="0"/>
+    <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
     <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
     <Playlist id="284452" name="IN Piezzo Synth 2.2" type="midi" orig-track-id="284394" frozen="no" combine-ops="0"/>
     <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
-    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
     <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
+    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
     <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
-    <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
-    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
     <Playlist id="1010" name="Audio 20.1" type="audio" orig-track-id="977" frozen="no" combine-ops="0"/>
-    <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
-    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
+    <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
+    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
     <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
     <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
+    <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
+    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
+    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
+    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
     <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
+    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
     <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
     <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
     <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
-    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
-    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -4450,7 +4420,7 @@
       <Window name="bundle-manager" visible="no" x-off="516" y-off="0" x-size="480" y-size="240"/>
       <Window name="locations" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="big-clock" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="audio-connection-manager" visible="no" x-off="0" y-off="26" x-size="1152" y-size="720"/>
+      <Window name="audio-connection-manager" visible="no" x-off="0" y-off="26" x-size="1353" y-size="816"/>
       <Window name="midi-connection-manager" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-28-52" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-28-49" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4488,7 +4458,7 @@
       <Window name="P-407-435" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-407-1807" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-445-469" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-445-190814" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-445-190814" visible="no" x-off="387" y-off="49" x-size="726" y-size="240" custom-ui="yes"/>
       <Window name="P-445-466" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-445-472" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-445-473" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4751,12 +4721,12 @@
       <Window name="P-284494-284534" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284494-284535" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284494-284529" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-284594-284609" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-284594-284609" visible="no" x-off="60" y-off="185" x-size="760" y-size="565" custom-ui="yes"/>
       <Window name="P-284594-284632" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284594-284634" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284594-284635" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284594-284629" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-284694-284709" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-284694-284709" visible="no" x-off="72" y-off="261" x-size="760" y-size="565" custom-ui="yes"/>
       <Window name="P-284694-284732" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284694-284734" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284694-284735" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>

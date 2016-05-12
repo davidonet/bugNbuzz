@@ -11,7 +11,7 @@
     <RegionList sort-type="ByEndInFile" sort-ascending="yes" show-all="no" show-automatic-regions="yes"/>
   </Editor>
   <Mixer narrow-strips="no" show-mixer="yes" show-mixer-list="yes" maximised="no">
-    <geometry x-size="1436" y-size="817" x-pos="142" y-pos="25" x-off="0" y-off="0" mixer-rhs-pane1-pos="255" mixer-rhs-pane2-pos="693" mixer-list-hpane-pos="125"/>
+    <geometry x-size="1436" y-size="817" x-pos="0" y-pos="25" x-off="0" y-off="0" mixer-rhs-pane1-pos="255" mixer-rhs-pane2-pos="693" mixer-list-hpane-pos="125"/>
     <PluginOrder>
       <PluginInfo sort="0" unique-id="urn:juce:TalReverb" expanded="1"/>
     </PluginOrder>
