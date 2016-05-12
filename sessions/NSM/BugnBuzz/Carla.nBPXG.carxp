@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (2)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (3)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (4)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (5)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (6)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern (7)</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+</CARLA-PROJECT>
