@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="353274" event-counter="97012">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="353274" event-counter="96097">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -103,14 +103,12 @@
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
-          <Connection other="mp3/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
           <Connection other="LOOP1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
-          <Connection other="mp3/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
@@ -3294,12 +3292,8 @@
         </Port>
       </IO>
       <IO name="mp3" id="91106" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="mp3/audio_out 1">
-          <Connection other="Master/audio_in 1"/>
-        </Port>
-        <Port type="audio" name="mp3/audio_out 2">
-          <Connection other="Master/audio_in 2"/>
-        </Port>
+        <Port type="audio" name="mp3/audio_out 1"/>
+        <Port type="audio" name="mp3/audio_out 2"/>
       </IO>
       <Controllable name="solo" id="91084" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="91086" flags="Toggle" value="0.000000000000"/>
@@ -4047,7 +4041,7 @@
           <Channels type="audio" count="2"/>
           <Channels type="midi" count="1"/>
         </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state10">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state9">
           <Port symbol="lv2_freewheel" value="+0.000000"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
@@ -4124,7 +4118,7 @@
           <Channels type="audio" count="2"/>
           <Channels type="midi" count="1"/>
         </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state12">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state11">
           <Port symbol="lv2_freewheel" value="+0.000000"/>
         </lv2>
         <Controllable name="hidden" id="284708" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>

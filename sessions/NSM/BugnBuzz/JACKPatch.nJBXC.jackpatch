@@ -1,0 +1,227 @@
+MIDI Pattern (2):events-out              |> ardour:IN Piezzo Synth 2/midi_in 1
+MIDI Pattern (3):events-out              |> ardour:IN Piezzo Synth 3/midi_in 1
+MIDI Pattern (4):events-out              |> ardour:IN Piezzo Synth 4/midi_in 1
+MIDI Pattern (5):events-out              |> ardour:IN Piezzo Synth 5/midi_in 1
+MIDI Pattern (6):events-out              |> ardour:IN Piezzo Synth 6/midi_in 1
+MIDI Pattern (7):events-out              |> ardour:IN Piezzo Synth 7/midi_in 1
+MIDI Pattern:events-out                  |> ardour:IN Piezzo Synth 1/midi_in 1
+ardour:Audio 1/audio_out 1               |> sooperlooper:loop0_in_1
+ardour:Audio 1/audio_out 1               |> sooperlooper:loop1_in_1
+ardour:Audio 1/audio_out 1               |> sooperlooper:loop2_in_1
+ardour:Audio 1/audio_out 1               |> sooperlooper:loop3_in_1
+ardour:Audio 1/audio_out 2               |> sooperlooper:loop0_in_1
+ardour:Audio 1/audio_out 2               |> sooperlooper:loop1_in_1
+ardour:Audio 1/audio_out 2               |> sooperlooper:loop2_in_1
+ardour:Audio 1/audio_out 2               |> sooperlooper:loop3_in_1
+ardour:Audio 10/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 10/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 11/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 11/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 12/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 12/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 13/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 13/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 14/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 14/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 15/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 15/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 16/audio_out 1              |> ardour:LOOP1/audio_in 1
+ardour:Audio 16/audio_out 2              |> ardour:LOOP1/audio_in 2
+ardour:Audio 17/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 17/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 18/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 18/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 19/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 19/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 2/audio_out 1               |> sooperlooper:loop0_in_2
+ardour:Audio 2/audio_out 1               |> sooperlooper:loop1_in_2
+ardour:Audio 2/audio_out 1               |> sooperlooper:loop2_in_2
+ardour:Audio 2/audio_out 1               |> sooperlooper:loop3_in_2
+ardour:Audio 2/audio_out 2               |> sooperlooper:loop0_in_2
+ardour:Audio 2/audio_out 2               |> sooperlooper:loop1_in_2
+ardour:Audio 2/audio_out 2               |> sooperlooper:loop2_in_2
+ardour:Audio 2/audio_out 2               |> sooperlooper:loop3_in_2
+ardour:Audio 20/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 20/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 21/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 21/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 22/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 22/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 23/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 23/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 24/audio_out 1              |> ardour:LOOP2/audio_in 1
+ardour:Audio 24/audio_out 2              |> ardour:LOOP2/audio_in 2
+ardour:Audio 25/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 25/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 26/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 26/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 27/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 27/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 28/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 28/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 29/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 29/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 3/audio_out 1               |> sooperlooper:loop0_in_3
+ardour:Audio 3/audio_out 1               |> sooperlooper:loop1_in_3
+ardour:Audio 3/audio_out 1               |> sooperlooper:loop2_in_3
+ardour:Audio 3/audio_out 1               |> sooperlooper:loop3_in_3
+ardour:Audio 3/audio_out 2               |> sooperlooper:loop0_in_3
+ardour:Audio 3/audio_out 2               |> sooperlooper:loop1_in_3
+ardour:Audio 3/audio_out 2               |> sooperlooper:loop2_in_3
+ardour:Audio 3/audio_out 2               |> sooperlooper:loop3_in_3
+ardour:Audio 30/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 30/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 31/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 31/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 32/audio_out 1              |> ardour:LOOP3/audio_in 1
+ardour:Audio 32/audio_out 2              |> ardour:LOOP3/audio_in 2
+ardour:Audio 33/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 33/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 34/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 34/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 35/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 35/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 36/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 36/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 37/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 37/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 38/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 38/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 39/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 39/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 4/audio_out 1               |> sooperlooper:loop0_in_4
+ardour:Audio 4/audio_out 1               |> sooperlooper:loop1_in_4
+ardour:Audio 4/audio_out 1               |> sooperlooper:loop2_in_4
+ardour:Audio 4/audio_out 1               |> sooperlooper:loop3_in_4
+ardour:Audio 4/audio_out 2               |> sooperlooper:loop0_in_4
+ardour:Audio 4/audio_out 2               |> sooperlooper:loop1_in_4
+ardour:Audio 4/audio_out 2               |> sooperlooper:loop2_in_4
+ardour:Audio 4/audio_out 2               |> sooperlooper:loop3_in_4
+ardour:Audio 40/audio_out 1              |> ardour:LOOP4/audio_in 1
+ardour:Audio 40/audio_out 2              |> ardour:LOOP4/audio_in 2
+ardour:Audio 5/audio_out 1               |> sooperlooper:loop0_in_5
+ardour:Audio 5/audio_out 1               |> sooperlooper:loop1_in_5
+ardour:Audio 5/audio_out 1               |> sooperlooper:loop2_in_5
+ardour:Audio 5/audio_out 1               |> sooperlooper:loop3_in_5
+ardour:Audio 5/audio_out 2               |> sooperlooper:loop0_in_5
+ardour:Audio 5/audio_out 2               |> sooperlooper:loop1_in_5
+ardour:Audio 5/audio_out 2               |> sooperlooper:loop2_in_5
+ardour:Audio 5/audio_out 2               |> sooperlooper:loop3_in_5
+ardour:Audio 6/audio_out 1               |> sooperlooper:loop0_in_6
+ardour:Audio 6/audio_out 1               |> sooperlooper:loop1_in_6
+ardour:Audio 6/audio_out 1               |> sooperlooper:loop2_in_6
+ardour:Audio 6/audio_out 1               |> sooperlooper:loop3_in_6
+ardour:Audio 6/audio_out 2               |> sooperlooper:loop0_in_6
+ardour:Audio 6/audio_out 2               |> sooperlooper:loop1_in_6
+ardour:Audio 6/audio_out 2               |> sooperlooper:loop2_in_6
+ardour:Audio 6/audio_out 2               |> sooperlooper:loop3_in_6
+ardour:Audio 7/audio_out 1               |> sooperlooper:loop0_in_7
+ardour:Audio 7/audio_out 1               |> sooperlooper:loop1_in_7
+ardour:Audio 7/audio_out 1               |> sooperlooper:loop2_in_7
+ardour:Audio 7/audio_out 1               |> sooperlooper:loop3_in_7
+ardour:Audio 7/audio_out 2               |> sooperlooper:loop0_in_7
+ardour:Audio 7/audio_out 2               |> sooperlooper:loop1_in_7
+ardour:Audio 7/audio_out 2               |> sooperlooper:loop2_in_7
+ardour:Audio 7/audio_out 2               |> sooperlooper:loop3_in_7
+ardour:Audio 8/audio_out 1               |> sooperlooper:loop0_in_8
+ardour:Audio 8/audio_out 1               |> sooperlooper:loop1_in_8
+ardour:Audio 8/audio_out 1               |> sooperlooper:loop2_in_8
+ardour:Audio 8/audio_out 1               |> sooperlooper:loop3_in_8
+ardour:Audio 8/audio_out 2               |> sooperlooper:loop0_in_8
+ardour:Audio 8/audio_out 2               |> sooperlooper:loop1_in_8
+ardour:Audio 8/audio_out 2               |> sooperlooper:loop2_in_8
+ardour:Audio 8/audio_out 2               |> sooperlooper:loop3_in_8
+ardour:Audio 9/audio_out 1               |> ardour:LOOP1/audio_in 1
+ardour:Audio 9/audio_out 2               |> ardour:LOOP1/audio_in 2
+ardour:IN Piezzo 1/audio_out 1           |> ardour:Audio 2/audio_in 1
+ardour:IN Piezzo 1/audio_out 2           |> ardour:Audio 2/audio_in 2
+ardour:IN Piezzo 2/audio_out 1           |> ardour:Audio 3/audio_in 1
+ardour:IN Piezzo 2/audio_out 2           |> ardour:Audio 3/audio_in 2
+ardour:IN Piezzo 3/audio_out 1           |> ardour:Audio 4/audio_in 1
+ardour:IN Piezzo 3/audio_out 2           |> ardour:Audio 4/audio_in 2
+ardour:IN Piezzo 4/audio_out 1           |> ardour:Audio 5/audio_in 1
+ardour:IN Piezzo 4/audio_out 2           |> ardour:Audio 5/audio_in 2
+ardour:IN Piezzo 5/audio_out 1           |> ardour:Audio 6/audio_in 1
+ardour:IN Piezzo 5/audio_out 2           |> ardour:Audio 6/audio_in 2
+ardour:IN Piezzo 6/audio_out 1           |> ardour:Audio 7/audio_in 1
+ardour:IN Piezzo 6/audio_out 2           |> ardour:Audio 7/audio_in 2
+ardour:IN Piezzo 7/audio_out 1           |> ardour:Audio 8/audio_in 1
+ardour:IN Piezzo 7/audio_out 2           |> ardour:Audio 8/audio_in 2
+ardour:IN Piezzo Synth 1/audio_out 1     |> ardour:Audio 2/audio_in 3
+ardour:IN Piezzo Synth 1/audio_out 2     |> ardour:Audio 2/audio_in 4
+ardour:IN Piezzo Synth 2/audio_out 1     |> ardour:Audio 3/audio_in 3
+ardour:IN Piezzo Synth 2/audio_out 2     |> ardour:Audio 3/audio_in 4
+ardour:IN Piezzo Synth 3/audio_out 1     |> ardour:Audio 4/audio_in 3
+ardour:IN Piezzo Synth 3/audio_out 2     |> ardour:Audio 4/audio_in 4
+ardour:IN Piezzo Synth 4/audio_out 1     |> ardour:Audio 5/audio_in 3
+ardour:IN Piezzo Synth 4/audio_out 2     |> ardour:Audio 5/audio_in 4
+ardour:IN Piezzo Synth 5/audio_out 1     |> ardour:Audio 6/audio_in 3
+ardour:IN Piezzo Synth 5/audio_out 2     |> ardour:Audio 6/audio_in 4
+ardour:IN Piezzo Synth 6/audio_out 1     |> ardour:Audio 7/audio_in 3
+ardour:IN Piezzo Synth 6/audio_out 2     |> ardour:Audio 7/audio_in 4
+ardour:IN Piezzo Synth 7/audio_out 1     |> ardour:Audio 8/audio_in 3
+ardour:IN Piezzo Synth 7/audio_out 2     |> ardour:Audio 8/audio_in 4
+ardour:LOOP1/audio_out 1                 |> ardour:Master/audio_in 1
+ardour:LOOP1/audio_out 2                 |> ardour:Master/audio_in 2
+ardour:LOOP2/audio_out 1                 |> ardour:Master/audio_in 1
+ardour:LOOP2/audio_out 2                 |> ardour:Master/audio_in 2
+ardour:LOOP3/audio_out 1                 |> ardour:Master/audio_in 1
+ardour:LOOP3/audio_out 2                 |> ardour:Master/audio_in 2
+ardour:LOOP4/audio_out 1                 |> ardour:Master/audio_in 1
+ardour:LOOP4/audio_out 2                 |> ardour:Master/audio_in 2
+ardour:Master/audio_out 1                |> firewire_pcm:000a3501c6742fd9_pbk_analog-1_out
+ardour:Master/audio_out 2                |> firewire_pcm:000a3501c6742fd9_pbk_analog-2_out
+ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
+ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
+ardour:mp3/audio_out 1                   |> ardour:Master/audio_in 1
+ardour:mp3/audio_out 2                   |> ardour:Master/audio_in 2
+firewire_pcm:000a3501c6742fd9_cap_analog-1_in |> ardour:Audio 1/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-1_in |> ardour:LTC-in
+firewire_pcm:000a3501c6742fd9_cap_analog-2_in |> ardour:IN Piezzo 1/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-2_in |> ardour:IN Piezzo Synth 1/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-3_in |> ardour:IN Piezzo 2/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-3_in |> ardour:IN Piezzo Synth 2/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-4_in |> ardour:IN Piezzo 3/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-4_in |> ardour:IN Piezzo Synth 3/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-5_in |> ardour:IN Piezzo 4/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-5_in |> ardour:IN Piezzo Synth 4/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-6_in |> ardour:IN Piezzo 5/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-6_in |> ardour:IN Piezzo Synth 5/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo 6/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo Synth 6/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo 7/audio_in 1
+firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo Synth 7/audio_in 1
+madjack:left                             |> ardour:mp3/audio_in 1
+madjack:right                            |> ardour:mp3/audio_in 2
+sooperlooper:loop0_out_1                 |> ardour:Audio 9/audio_in 1
+sooperlooper:loop0_out_2                 |> ardour:Audio 10/audio_in 1
+sooperlooper:loop0_out_3                 |> ardour:Audio 11/audio_in 1
+sooperlooper:loop0_out_4                 |> ardour:Audio 12/audio_in 1
+sooperlooper:loop0_out_5                 |> ardour:Audio 13/audio_in 1
+sooperlooper:loop0_out_6                 |> ardour:Audio 14/audio_in 1
+sooperlooper:loop0_out_7                 |> ardour:Audio 15/audio_in 1
+sooperlooper:loop0_out_8                 |> ardour:Audio 16/audio_in 1
+sooperlooper:loop1_out_1                 |> ardour:Audio 17/audio_in 1
+sooperlooper:loop1_out_2                 |> ardour:Audio 18/audio_in 1
+sooperlooper:loop1_out_3                 |> ardour:Audio 19/audio_in 1
+sooperlooper:loop1_out_4                 |> ardour:Audio 20/audio_in 1
+sooperlooper:loop1_out_5                 |> ardour:Audio 21/audio_in 1
+sooperlooper:loop1_out_6                 |> ardour:Audio 22/audio_in 1
+sooperlooper:loop1_out_7                 |> ardour:Audio 23/audio_in 1
+sooperlooper:loop1_out_8                 |> ardour:Audio 24/audio_in 1
+sooperlooper:loop2_out_1                 |> ardour:Audio 25/audio_in 1
+sooperlooper:loop2_out_2                 |> ardour:Audio 26/audio_in 1
+sooperlooper:loop2_out_3                 |> ardour:Audio 27/audio_in 1
+sooperlooper:loop2_out_4                 |> ardour:Audio 28/audio_in 1
+sooperlooper:loop2_out_5                 |> ardour:Audio 29/audio_in 1
+sooperlooper:loop2_out_6                 |> ardour:Audio 30/audio_in 1
+sooperlooper:loop2_out_7                 |> ardour:Audio 31/audio_in 1
+sooperlooper:loop2_out_8                 |> ardour:Audio 32/audio_in 1
+sooperlooper:loop3_out_1                 |> ardour:Audio 33/audio_in 1
+sooperlooper:loop3_out_2                 |> ardour:Audio 34/audio_in 1
+sooperlooper:loop3_out_3                 |> ardour:Audio 35/audio_in 1
+sooperlooper:loop3_out_4                 |> ardour:Audio 36/audio_in 1
+sooperlooper:loop3_out_5                 |> ardour:Audio 37/audio_in 1
+sooperlooper:loop3_out_6                 |> ardour:Audio 38/audio_in 1
+sooperlooper:loop3_out_7                 |> ardour:Audio 39/audio_in 1
+sooperlooper:loop3_out_8                 |> ardour:Audio 40/audio_in 1
