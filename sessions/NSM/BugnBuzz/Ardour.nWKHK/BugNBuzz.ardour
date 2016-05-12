@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="321006" event-counter="92623">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="329073" event-counter="92625">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -129,10 +129,10 @@
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_out 1">
-          <Connection other="system:playback_1"/>
+          <Connection other="firewire_pcm:000a3501c6742fd9_pbk_analog-1_out"/>
         </Port>
         <Port type="audio" name="Master/audio_out 2">
-          <Connection other="system:playback_2"/>
+          <Connection other="firewire_pcm:000a3501c6742fd9_pbk_analog-2_out"/>
         </Port>
       </IO>
       <Controllable name="solo" id="30" flags="Toggle" value="0.000000000000"/>
@@ -312,20 +312,6 @@
         <Controllable name="Dry/Wet" id="288731" flags="" value="1.000000000000" parameter="14" symbol="drywet"/>
         <Controllable name="FeedBack Compressor" id="288733" flags="" value="0.000000000000" parameter="15" symbol="isfeedbackcompressor"/>
       </Processor>
-      <Processor id="1775" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="265" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="269" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="267" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="271" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="273" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1777" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1779" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.999999940395"/>
       </Processor>
@@ -340,6 +326,20 @@
           <Controllable name="pan-lfe" id="273" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1775" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="265" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="269" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="267" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="271" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="273" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1777" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1779" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="285" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 1.1" name="Audio 1" id="287" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -405,20 +405,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.465054005384" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="1.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1783" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="303" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="307" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="305" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="309" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="311" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1785" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1787" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="314" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="316" flags="GainLike" value="0.850422024727"/>
       </Processor>
@@ -433,6 +419,20 @@
           <Controllable name="pan-lfe" id="311" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1783" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="303" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="307" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="305" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="309" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="311" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1785" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1787" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="323" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 2.1" name="Audio 2" id="325" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -499,20 +499,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1791" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="341" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="345" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="343" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="347" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="349" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1793" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1795" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="352" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="354" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -527,6 +513,20 @@
           <Controllable name="pan-lfe" id="349" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1791" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="341" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="345" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="343" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="347" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="349" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1793" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1795" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="361" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 3.1" name="Audio 3" id="363" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -593,20 +593,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1799" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="379" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="383" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="381" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="385" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="387" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1801" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1803" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="390" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="392" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -621,6 +607,20 @@
           <Controllable name="pan-lfe" id="387" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1799" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="379" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="383" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="381" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="385" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="387" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1801" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1803" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="399" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 4.1" name="Audio 4" id="401" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -687,20 +687,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1807" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="417" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="421" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="419" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="423" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="425" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1809" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1811" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="428" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="430" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -715,6 +701,20 @@
           <Controllable name="pan-lfe" id="425" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1807" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="417" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="421" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="419" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="423" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="425" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1809" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1811" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="437" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 5.1" name="Audio 5" id="439" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -780,20 +780,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1815" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="455" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="459" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1817" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1819" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="466" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="468" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -808,6 +794,20 @@
           <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1815" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="455" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="459" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="457" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="461" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="463" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1817" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1819" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="475" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 6.1" name="Audio 6" id="477" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -874,20 +874,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1823" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="493" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="497" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="495" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="499" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="501" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1825" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1827" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="504" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="506" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -902,6 +888,20 @@
           <Controllable name="pan-lfe" id="501" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1823" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="493" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="497" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="495" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="499" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="501" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1825" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1827" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="513" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 7.1" name="Audio 7" id="515" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -968,20 +968,6 @@
         <Controllable name="Shape" id="84953" flags="" value="0.598424971104" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
-      <Processor id="1831" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="531" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="535" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="533" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="537" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="539" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1833" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1835" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="542" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="544" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -996,6 +982,20 @@
           <Controllable name="pan-lfe" id="539" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1831" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="531" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="535" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="533" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="537" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="539" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1833" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1835" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="551" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 8.1" name="Audio 8" id="553" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="4"/>
@@ -1048,20 +1048,6 @@
         <Controllable name="trimcontrol" id="2295" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="2300" name="return 2" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="1"/>
-      <Processor id="2413" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="2279" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="2283" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="2281" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="2285" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="2287" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2415" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2417" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="2290" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="2292" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1076,6 +1062,20 @@
           <Controllable name="pan-lfe" id="2287" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2413" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="2279" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="2283" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="2281" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="2285" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="2287" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2415" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2417" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="559" name="Audio 9" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1" order-key="10" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
@@ -1108,20 +1108,6 @@
       <Processor id="583" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="585" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1839" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="569" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="573" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="571" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="575" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="577" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1841" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1843" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="580" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="582" flags="GainLike" value="0.952247202396"/>
       </Processor>
@@ -1136,6 +1122,20 @@
           <Controllable name="pan-lfe" id="577" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1839" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="569" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="573" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="571" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="575" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="577" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1841" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1843" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="589" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 9.1" name="Audio 9" id="591" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1170,20 +1170,6 @@
       <Processor id="621" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="623" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1847" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="607" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="611" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="609" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="613" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="615" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1849" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1851" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="618" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="620" flags="GainLike" value="0.971910119057"/>
       </Processor>
@@ -1198,6 +1184,20 @@
           <Controllable name="pan-lfe" id="615" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1847" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="607" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="611" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="609" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="613" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="615" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1849" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1851" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="627" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 10.1" name="Audio 10" id="629" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1232,20 +1232,6 @@
       <Processor id="659" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="661" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1855" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="645" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="649" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="647" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="651" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="653" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1857" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1859" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="656" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="658" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1260,6 +1246,20 @@
           <Controllable name="pan-lfe" id="653" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1855" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="645" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="649" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="647" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="651" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="653" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1857" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1859" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="665" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 11.1" name="Audio 11" id="667" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1294,20 +1294,6 @@
       <Processor id="697" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="699" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1863" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="683" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="687" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="685" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="689" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="691" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1865" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1867" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="694" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="696" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1322,6 +1308,20 @@
           <Controllable name="pan-lfe" id="691" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1863" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="683" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="687" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="685" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="689" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="691" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1865" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1867" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="703" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 12.1" name="Audio 12" id="705" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1356,20 +1356,6 @@
       <Processor id="735" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="737" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1871" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="721" flags="" value="0.222222223878"/>
-          <Controllable name="pan-width" id="725" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="723" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="727" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="729" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1873" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1875" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="732" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="734" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1384,6 +1370,20 @@
           <Controllable name="pan-lfe" id="729" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1871" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="721" flags="" value="0.222222223878"/>
+          <Controllable name="pan-width" id="725" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="723" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="727" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="729" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1873" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1875" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="741" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 13.1" name="Audio 13" id="743" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1418,20 +1418,6 @@
       <Processor id="773" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="775" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1879" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="759" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="763" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="761" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="765" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="767" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1881" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1883" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="770" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="772" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1446,6 +1432,20 @@
           <Controllable name="pan-lfe" id="767" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1879" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="759" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="763" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="761" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="765" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="767" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1881" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1883" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="779" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 14.1" name="Audio 14" id="781" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1480,20 +1480,6 @@
       <Processor id="811" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="813" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1887" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="797" flags="" value="0.416666656733"/>
-          <Controllable name="pan-width" id="801" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="799" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="803" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="805" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1889" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1891" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="808" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="810" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1508,6 +1494,20 @@
           <Controllable name="pan-lfe" id="805" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1887" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="797" flags="" value="0.416666656733"/>
+          <Controllable name="pan-width" id="801" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="799" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="803" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="805" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1889" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1891" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="817" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 15.1" name="Audio 15" id="819" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1542,20 +1542,6 @@
       <Processor id="849" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="851" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1895" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="835" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="839" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="837" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="841" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="843" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1897" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1899" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="846" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="848" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1570,6 +1556,20 @@
           <Controllable name="pan-lfe" id="843" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1895" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="835" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="839" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="837" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="841" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="843" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1897" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1899" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="855" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 16.1" name="Audio 16" id="857" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1622,20 +1622,6 @@
         <Controllable name="trimcontrol" id="2331" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="2336" name="return 3" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="2"/>
-      <Processor id="2421" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="2315" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="2319" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="2317" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="2321" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="2323" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2423" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2425" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="2326" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="2328" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1650,6 +1636,20 @@
           <Controllable name="pan-lfe" id="2323" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2421" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="2315" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="2319" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="2317" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="2321" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="2323" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2423" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2425" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="863" name="Audio 17" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop2" order-key="19" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
@@ -1682,20 +1682,6 @@
       <Processor id="887" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="889" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1903" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="873" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="877" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="875" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="879" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="881" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1905" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1907" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="884" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="886" flags="GainLike" value="0.983146071434"/>
       </Processor>
@@ -1710,6 +1696,20 @@
           <Controllable name="pan-lfe" id="881" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1903" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="873" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="877" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="875" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="879" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="881" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1905" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1907" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="893" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 17.1" name="Audio 17" id="895" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1744,20 +1744,6 @@
       <Processor id="925" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="927" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1911" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="911" flags="" value="0.472222208977"/>
-          <Controllable name="pan-width" id="915" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="913" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="917" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="919" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1913" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1915" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="922" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="924" flags="GainLike" value="0.943820238113"/>
       </Processor>
@@ -1772,6 +1758,20 @@
           <Controllable name="pan-lfe" id="919" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1911" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="911" flags="" value="0.472222208977"/>
+          <Controllable name="pan-width" id="915" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="913" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="917" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="919" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1913" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1915" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="931" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 18.1" name="Audio 18" id="933" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1806,20 +1806,6 @@
       <Processor id="963" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="965" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1919" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="949" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="953" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="951" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="955" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="957" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1921" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1923" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="960" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="962" flags="GainLike" value="0.946629226208"/>
       </Processor>
@@ -1834,6 +1820,20 @@
           <Controllable name="pan-lfe" id="957" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1919" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="949" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="953" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="951" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="955" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="957" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1921" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1923" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="969" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 19.1" name="Audio 19" id="971" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1868,20 +1868,6 @@
       <Processor id="1001" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1003" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1927" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="987" flags="" value="0.472222208977"/>
-          <Controllable name="pan-width" id="991" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="989" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="993" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="995" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1929" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1931" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="998" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1000" flags="GainLike" value="0.974719107151"/>
       </Processor>
@@ -1896,6 +1882,20 @@
           <Controllable name="pan-lfe" id="995" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1927" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="987" flags="" value="0.472222208977"/>
+          <Controllable name="pan-width" id="991" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="989" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="993" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="995" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1929" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1931" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1007" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 20.1" name="Audio 20" id="1009" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1930,20 +1930,6 @@
       <Processor id="1039" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1041" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1935" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1025" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1029" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1027" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1031" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1033" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1937" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1939" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1036" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1038" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -1958,6 +1944,20 @@
           <Controllable name="pan-lfe" id="1033" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1935" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1025" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1029" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1027" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1031" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1033" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1937" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1939" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1045" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 21.1" name="Audio 21" id="1047" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -1992,20 +1992,6 @@
       <Processor id="1077" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1079" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1943" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1063" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1067" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1065" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1069" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1071" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1945" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1947" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1074" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1076" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2020,6 +2006,20 @@
           <Controllable name="pan-lfe" id="1071" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1943" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1063" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1067" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1065" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1069" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1071" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1945" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1947" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1083" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 22.1" name="Audio 22" id="1085" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2054,20 +2054,6 @@
       <Processor id="1115" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1117" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1951" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1101" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1105" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1103" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1107" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1109" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1953" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1955" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1112" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1114" flags="GainLike" value="0.971910119057"/>
       </Processor>
@@ -2082,6 +2068,20 @@
           <Controllable name="pan-lfe" id="1109" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1951" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1101" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1105" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1103" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1107" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1109" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1953" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1955" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1121" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 23.1" name="Audio 23" id="1123" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2116,20 +2116,6 @@
       <Processor id="1153" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1155" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1959" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1139" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1143" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1141" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1145" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1147" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1961" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1963" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1150" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1152" flags="GainLike" value="0.918539345264"/>
       </Processor>
@@ -2144,6 +2130,20 @@
           <Controllable name="pan-lfe" id="1147" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1959" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1139" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1143" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1141" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1145" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1147" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1961" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1963" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1159" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 24.1" name="Audio 24" id="1161" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2196,20 +2196,6 @@
         <Controllable name="trimcontrol" id="2367" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="2372" name="return 4" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="3"/>
-      <Processor id="2429" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="2351" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="2355" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="2353" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="2357" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="2359" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2431" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2433" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="2362" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="2364" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2224,6 +2210,20 @@
           <Controllable name="pan-lfe" id="2359" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2429" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="2351" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="2355" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="2353" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="2357" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="2359" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2431" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2433" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="1167" name="Audio 25" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop3" order-key="28" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
@@ -2256,20 +2256,6 @@
       <Processor id="1191" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1193" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1967" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1177" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1181" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1179" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1183" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1185" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1969" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1971" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1188" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1190" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2284,6 +2270,20 @@
           <Controllable name="pan-lfe" id="1185" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1967" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1177" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1181" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1179" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1183" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1185" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1969" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1971" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1197" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 25.1" name="Audio 25" id="1199" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2318,20 +2318,6 @@
       <Processor id="1229" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1231" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1975" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1215" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1219" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1217" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1221" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1223" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1977" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1979" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1226" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1228" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2346,6 +2332,20 @@
           <Controllable name="pan-lfe" id="1223" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1975" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1215" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1219" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1217" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1221" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1223" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1977" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1979" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1235" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 26.1" name="Audio 26" id="1237" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2380,20 +2380,6 @@
       <Processor id="1267" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1269" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1983" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1253" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1257" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1255" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1259" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1261" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1985" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1987" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1264" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1266" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2408,6 +2394,20 @@
           <Controllable name="pan-lfe" id="1261" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1983" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1253" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1257" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1255" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1259" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1261" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1985" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1987" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1273" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 27.1" name="Audio 27" id="1275" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2442,20 +2442,6 @@
       <Processor id="1305" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1307" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1991" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1291" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1295" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1293" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1297" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1299" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="1993" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="1995" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1302" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1304" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2470,6 +2456,20 @@
           <Controllable name="pan-lfe" id="1299" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1991" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1291" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1295" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1293" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1297" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1299" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="1993" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="1995" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1311" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 28.1" name="Audio 28" id="1313" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2504,20 +2504,6 @@
       <Processor id="1343" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1345" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="1999" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1329" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1333" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1331" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1335" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1337" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2001" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2003" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1340" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1342" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2532,6 +2518,20 @@
           <Controllable name="pan-lfe" id="1337" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="1999" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1329" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1333" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1331" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1335" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1337" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2001" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2003" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1349" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 29.1" name="Audio 29" id="1351" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2566,20 +2566,6 @@
       <Processor id="1381" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1383" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2007" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1367" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1371" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1369" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1373" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1375" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2009" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2011" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1378" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1380" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2594,6 +2580,20 @@
           <Controllable name="pan-lfe" id="1375" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2007" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1367" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1371" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1369" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1373" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1375" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2009" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2011" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1387" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 30.1" name="Audio 30" id="1389" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2628,20 +2628,6 @@
       <Processor id="1419" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1421" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2015" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1405" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1409" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1407" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1411" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1413" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2017" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2019" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1416" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1418" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2656,6 +2642,20 @@
           <Controllable name="pan-lfe" id="1413" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2015" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1405" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1409" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1407" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1411" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1413" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2017" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2019" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1425" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 31.1" name="Audio 31" id="1427" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2690,20 +2690,6 @@
       <Processor id="1457" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1459" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2023" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1443" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1447" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1445" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1449" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1451" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2025" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2027" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1454" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1456" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2718,6 +2704,20 @@
           <Controllable name="pan-lfe" id="1451" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2023" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1443" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1447" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1445" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1449" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1451" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2025" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2027" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1463" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 32.1" name="Audio 32" id="1465" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2770,20 +2770,6 @@
         <Controllable name="trimcontrol" id="2403" flags="GainLike" value="1.000000000000"/>
       </Processor>
       <Processor id="2408" name="return 5" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="4"/>
-      <Processor id="2437" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="2387" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="2391" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="2389" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="2393" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="2395" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2439" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2441" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="2398" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="2400" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2798,6 +2784,20 @@
           <Controllable name="pan-lfe" id="2395" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2437" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="2387" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="2391" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="2389" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="2393" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="2395" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2439" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2441" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="1471" name="Audio 33" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop4" order-key="37" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
@@ -2830,20 +2830,6 @@
       <Processor id="1495" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1497" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2031" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1481" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1485" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1483" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1487" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1489" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2033" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2035" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1492" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1494" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2858,6 +2844,20 @@
           <Controllable name="pan-lfe" id="1489" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2031" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1481" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1485" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1483" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1487" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1489" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2033" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2035" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1501" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 33.1" name="Audio 33" id="1503" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2892,20 +2892,6 @@
       <Processor id="1533" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1535" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2039" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1519" flags="" value="0.611111104488"/>
-          <Controllable name="pan-width" id="1523" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1521" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1525" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1527" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2041" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2043" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1530" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1532" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2920,6 +2906,20 @@
           <Controllable name="pan-lfe" id="1527" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2039" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1519" flags="" value="0.611111104488"/>
+          <Controllable name="pan-width" id="1523" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1521" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1525" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1527" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2041" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2043" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1539" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 34.1" name="Audio 34" id="1541" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -2954,20 +2954,6 @@
       <Processor id="1571" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1573" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2047" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1557" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1561" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1559" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1563" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1565" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2049" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2051" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1568" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1570" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -2982,6 +2968,20 @@
           <Controllable name="pan-lfe" id="1565" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2047" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1557" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1561" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1559" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1563" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1565" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2049" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2051" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1577" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 35.1" name="Audio 35" id="1579" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3016,20 +3016,6 @@
       <Processor id="1609" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1611" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2055" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1595" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1599" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1597" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1601" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1603" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2057" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2059" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1606" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1608" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -3044,6 +3030,20 @@
           <Controllable name="pan-lfe" id="1603" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2055" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1595" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1599" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1597" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1601" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1603" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2057" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2059" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1615" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 36.1" name="Audio 36" id="1617" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3078,20 +3078,6 @@
       <Processor id="1647" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1649" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2063" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1633" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1637" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1635" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1639" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1641" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2065" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2067" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1644" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1646" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -3106,6 +3092,20 @@
           <Controllable name="pan-lfe" id="1641" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2063" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1633" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1637" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1635" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1639" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1641" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2065" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2067" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1653" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 37.1" name="Audio 37" id="1655" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3140,20 +3140,6 @@
       <Processor id="1685" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1687" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2071" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1671" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1675" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1673" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1677" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1679" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2073" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2075" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1682" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1684" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -3168,6 +3154,20 @@
           <Controllable name="pan-lfe" id="1679" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2071" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1671" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1675" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1673" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1677" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1679" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2073" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2075" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1691" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 38.1" name="Audio 38" id="1693" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3202,20 +3202,6 @@
       <Processor id="1723" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1725" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2079" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1709" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1713" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1711" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1715" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1717" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2081" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2083" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1720" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1722" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -3230,6 +3216,20 @@
           <Controllable name="pan-lfe" id="1717" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2079" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1709" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1713" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1711" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1715" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1717" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2081" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2083" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1729" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 39.1" name="Audio 39" id="1731" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3264,20 +3264,6 @@
       <Processor id="1761" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="1763" flags="GainLike" value="1.000000000000"/>
       </Processor>
-      <Processor id="2087" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="1747" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="1751" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="1749" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="1753" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="1755" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="2089" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="2091" flags="GainLike" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="1758" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="1760" flags="GainLike" value="1.000000000000"/>
       </Processor>
@@ -3292,6 +3278,20 @@
           <Controllable name="pan-lfe" id="1755" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="2087" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="1747" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="1751" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="1749" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="1753" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="1755" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="2089" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="2091" flags="GainLike" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="1767" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="Audio 40.1" name="Audio 40" id="1769" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="1"/>
@@ -3325,20 +3325,6 @@
       <Processor id="91112" name="Amp" active="yes" user-latency="0" type="trim">
         <Controllable name="trimcontrol" id="91111" flags="" value="1.000000000000"/>
       </Processor>
-      <Processor id="91128" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="91100" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="91098" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="91102" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="91132" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="91131" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="91109" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="91108" flags="" value="0.999999940395"/>
       </Processor>
@@ -3353,6 +3339,20 @@
           <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="91128" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="91096" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="91100" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="91098" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="91102" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="91104" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="91132" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="91131" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
       <Controllable name="recenable" id="91116" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="mp3" name="mp3" id="91120" speed="1.000000" capture-alignment="Automatic" record-safe="no" channels="2"/>
@@ -3386,20 +3386,6 @@
         <Controllable name="trimcontrol" id="187853" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="187859" name="return 6" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="5"/>
-      <Processor id="188384" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="187838" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="187842" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="187840" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="187844" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="187846" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188388" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188387" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="187851" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="187850" flags="" value="1.000000000000"/>
       </Processor>
@@ -3414,6 +3400,20 @@
           <Controllable name="pan-lfe" id="187846" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188384" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="187838" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="187842" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="187840" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="187844" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="187846" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188388" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188387" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="187864" name="IN Piezzo 2" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="47" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3445,20 +3445,6 @@
         <Controllable name="trimcontrol" id="187893" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="187899" name="return 7" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="6"/>
-      <Processor id="188392" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="187878" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="187882" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="187880" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="187884" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="187886" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188396" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188395" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="187891" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="187890" flags="" value="1.000000000000"/>
       </Processor>
@@ -3473,6 +3459,20 @@
           <Controllable name="pan-lfe" id="187886" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188392" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="187878" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="187882" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="187880" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="187884" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="187886" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188396" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188395" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="187904" name="IN Piezzo 3" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="48" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3504,20 +3504,6 @@
         <Controllable name="trimcontrol" id="187933" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="187939" name="return 8" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="7"/>
-      <Processor id="188400" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="187918" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="187922" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="187920" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="187924" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="187926" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188404" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188403" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="187931" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="187930" flags="" value="1.000000000000"/>
       </Processor>
@@ -3532,6 +3518,20 @@
           <Controllable name="pan-lfe" id="187926" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188400" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="187918" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="187922" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="187920" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="187924" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="187926" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188404" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188403" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="187944" name="IN Piezzo 4" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="49" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3563,20 +3563,6 @@
         <Controllable name="trimcontrol" id="187973" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="187979" name="return 9" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="8"/>
-      <Processor id="188408" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="187958" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="187962" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="187960" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="187964" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="187966" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188412" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188411" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="187971" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="187970" flags="" value="1.000000000000"/>
       </Processor>
@@ -3591,6 +3577,20 @@
           <Controllable name="pan-lfe" id="187966" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188408" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="187958" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="187962" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="187960" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="187964" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="187966" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188412" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188411" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="187984" name="IN Piezzo 5" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="50" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3622,20 +3622,6 @@
         <Controllable name="trimcontrol" id="188013" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="188019" name="return 10" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="9"/>
-      <Processor id="188416" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="187998" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="188002" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="188000" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="188004" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="188006" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188420" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188419" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="188011" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="188010" flags="" value="1.000000000000"/>
       </Processor>
@@ -3650,6 +3636,20 @@
           <Controllable name="pan-lfe" id="188006" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188416" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="187998" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="188002" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="188000" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="188004" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="188006" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188420" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188419" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="188024" name="IN Piezzo 6" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="51" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3681,20 +3681,6 @@
         <Controllable name="trimcontrol" id="188053" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="188059" name="return 11" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="10"/>
-      <Processor id="188424" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="188038" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="188042" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="188040" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="188044" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="188046" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188428" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188427" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="188051" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="188050" flags="" value="1.000000000000"/>
       </Processor>
@@ -3709,6 +3695,20 @@
           <Controllable name="pan-lfe" id="188046" flags="" value="0.000000000000"/>
           <Automation/>
         </Pannable>
+      </Processor>
+      <Processor id="188424" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="188038" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="188042" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="188040" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="188044" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="188046" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188428" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188427" flags="" value="1.000000000000"/>
+        </Processor>
       </Processor>
     </Route>
     <Route id="188064" name="IN Piezzo 7" default-type="audio" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="52" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
@@ -3740,20 +3740,6 @@
         <Controllable name="trimcontrol" id="188093" flags="" value="1.000000000000"/>
       </Processor>
       <Processor id="188099" name="return 12" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="11"/>
-      <Processor id="188432" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="188078" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="188082" flags="" value="0.000000000000"/>
-          <Controllable name="pan-elevation" id="188080" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="188084" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="188086" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="188436" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="188435" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="188091" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="188090" flags="" value="1.000000000000"/>
       </Processor>
@@ -3769,11 +3755,27 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="188432" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="188078" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="188082" flags="" value="0.000000000000"/>
+          <Controllable name="pan-elevation" id="188080" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="188084" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="188086" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="188436" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="188435" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
     </Route>
     <Route id="284294" name="IN Piezzo Synth 1" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="53" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 1" id="284295" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 1/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 1/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 1/midi_in 1">
+          <Connection other="MIDI Pattern:events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 1" id="284296" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 1/audio_out 1">
@@ -3813,20 +3815,6 @@
         </lv2>
         <Controllable name="hidden" id="284308" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284329" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284337" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284338" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284339" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284340" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284341" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284330" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284331" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284332" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284333" flags="" value="1.000000000000"/>
       </Processor>
@@ -3842,13 +3830,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284329" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284337" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284338" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284339" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284340" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284341" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284330" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284331" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284351" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 1.2" name="IN Piezzo Synth 1" id="284346" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="284394" name="IN Piezzo Synth 2" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="54" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 2" id="284395" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 2/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 2/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 2/midi_in 1">
+          <Connection other="MIDI Pattern (2):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 2" id="284396" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 2/audio_out 1">
@@ -3888,20 +3892,6 @@
         </lv2>
         <Controllable name="hidden" id="284408" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284429" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284437" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284438" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284439" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284440" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284441" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284430" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284431" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284432" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284433" flags="" value="1.000000000000"/>
       </Processor>
@@ -3917,13 +3907,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284429" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284437" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284438" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284439" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284440" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284441" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284430" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284431" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284451" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 2.2" name="IN Piezzo Synth 2" id="284446" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="284494" name="IN Piezzo Synth 3" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="55" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 3" id="284495" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 3/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 3/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 3/midi_in 1">
+          <Connection other="MIDI Pattern (3):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 3" id="284496" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 3/audio_out 1">
@@ -3963,20 +3969,6 @@
         </lv2>
         <Controllable name="hidden" id="284508" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284529" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284537" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284538" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284539" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284540" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284541" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284530" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284531" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284532" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284533" flags="" value="1.000000000000"/>
       </Processor>
@@ -3992,13 +3984,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284529" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284537" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284538" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284539" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284540" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284541" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284530" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284531" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284551" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 3.2" name="IN Piezzo Synth 3" id="284546" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="284594" name="IN Piezzo Synth 4" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="56" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 4" id="284595" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 4/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 4/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 4/midi_in 1">
+          <Connection other="MIDI Pattern (4):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 4" id="284596" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 4/audio_out 1">
@@ -4038,20 +4046,6 @@
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284629" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284637" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284638" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284639" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284640" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284641" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284630" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284631" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284632" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284633" flags="" value="1.000000000000"/>
       </Processor>
@@ -4067,13 +4061,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284629" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284637" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284638" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284639" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284640" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284641" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284630" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284631" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284651" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 4.2" name="IN Piezzo Synth 4" id="284646" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="284694" name="IN Piezzo Synth 5" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="57" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 5" id="284695" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 5/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 5/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 5/midi_in 1">
+          <Connection other="MIDI Pattern (5):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 5" id="284696" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 5/audio_out 1">
@@ -4113,20 +4123,6 @@
         </lv2>
         <Controllable name="hidden" id="284708" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284729" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284737" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284738" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284739" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284740" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284741" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284730" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284731" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284732" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284733" flags="" value="1.000000000000"/>
       </Processor>
@@ -4142,13 +4138,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284729" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284737" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284738" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284739" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284740" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284741" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284730" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284731" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284751" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 5.2" name="IN Piezzo Synth 5" id="284746" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="284794" name="IN Piezzo Synth 6" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="58" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 6" id="284795" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 6/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 6/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 6/midi_in 1">
+          <Connection other="MIDI Pattern (6):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 6" id="284796" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 6/audio_out 1">
@@ -4188,20 +4200,6 @@
         </lv2>
         <Controllable name="hidden" id="284808" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="284829" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="284837" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="284838" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="284839" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="284840" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="284841" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="284830" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="284831" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="284832" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="284833" flags="" value="1.000000000000"/>
       </Processor>
@@ -4217,13 +4215,29 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="284829" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="284837" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="284838" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="284839" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="284840" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="284841" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="284830" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="284831" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="284851" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 6.2" name="IN Piezzo Synth 6" id="284846" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
     <Route id="288032" name="IN Piezzo Synth 7" default-type="midi" active="yes" phase-invert="0" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="59" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="no" input-active="yes">
       <IO name="IN Piezzo Synth 7" id="288033" direction="Input" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 7/audio_in 1"/>
-        <Port type="midi" name="IN Piezzo Synth 7/midi_in 1"/>
+        <Port type="midi" name="IN Piezzo Synth 7/midi_in 1">
+          <Connection other="MIDI Pattern (7):events-out"/>
+        </Port>
       </IO>
       <IO name="IN Piezzo Synth 7" id="288034" direction="Output" default-type="midi" user-latency="0">
         <Port type="audio" name="IN Piezzo Synth 7/audio_out 1">
@@ -4263,20 +4277,6 @@
         </lv2>
         <Controllable name="hidden" id="288046" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
       </Processor>
-      <Processor id="288067" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
-        <PannerShell bypassed="yes" user-panner="" linked-to-route="yes"/>
-        <Pannable>
-          <Controllable name="pan-azimuth" id="288075" flags="" value="0.500000000000"/>
-          <Controllable name="pan-width" id="288076" flags="" value="1.000000000000"/>
-          <Controllable name="pan-elevation" id="288077" flags="" value="0.000000000000"/>
-          <Controllable name="pan-frontback" id="288078" flags="" value="0.000000000000"/>
-          <Controllable name="pan-lfe" id="288079" flags="" value="0.000000000000"/>
-          <Automation/>
-        </Pannable>
-        <Processor id="288068" name="Amp" active="no" user-latency="0" type="amp">
-          <Controllable name="gaincontrol" id="288069" flags="" value="1.000000000000"/>
-        </Processor>
-      </Processor>
       <Processor id="288070" name="Amp" active="yes" user-latency="0" type="amp">
         <Controllable name="gaincontrol" id="288071" flags="" value="1.000000000000"/>
       </Processor>
@@ -4292,61 +4292,75 @@
           <Automation/>
         </Pannable>
       </Processor>
+      <Processor id="288067" name="Monitor" active="no" user-latency="0" own-input="yes" own-output="yes" type="intsend" role="Listen" target="58">
+        <PannerShell bypassed="no" user-panner="" linked-to-route="yes"/>
+        <Pannable>
+          <Controllable name="pan-azimuth" id="288075" flags="" value="0.500000000000"/>
+          <Controllable name="pan-width" id="288076" flags="" value="1.000000000000"/>
+          <Controllable name="pan-elevation" id="288077" flags="" value="0.000000000000"/>
+          <Controllable name="pan-frontback" id="288078" flags="" value="0.000000000000"/>
+          <Controllable name="pan-lfe" id="288079" flags="" value="0.000000000000"/>
+          <Automation/>
+        </Pannable>
+        <Processor id="288068" name="Amp" active="no" user-latency="0" type="amp">
+          <Controllable name="gaincontrol" id="288069" flags="" value="1.000000000000"/>
+        </Processor>
+      </Processor>
       <Controllable name="recenable" id="288089" flags="Toggle" value="0.000000000000"/>
       <Diskstream flags="Recordable" playlist="IN Piezzo Synth 7" name="IN Piezzo Synth 7" id="288084" speed="1.000000" capture-alignment="Automatic" record-safe="no"/>
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
-    <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
-    <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
-    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
-    <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
-    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
-    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
-    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
     <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
     <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
     <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
-    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
+    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
     <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
     <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
     <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
-    <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
+    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
     <Playlist id="1656" name="Audio 37.1" type="audio" orig-track-id="1623" frozen="no" combine-ops="0"/>
     <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
     <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
-    <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
+    <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
     <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
     <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
     <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
-    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
+    <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
     <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
     <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
     <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
+    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
     <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
-    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
     <Playlist id="1200" name="Audio 25.1" type="audio" orig-track-id="1167" frozen="no" combine-ops="0"/>
     <Playlist id="1694" name="Audio 38.1" type="audio" orig-track-id="1661" frozen="no" combine-ops="0"/>
     <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
-    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
+    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
     <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
     <Playlist id="288090" name="IN Piezzo Synth 7" type="midi" orig-track-id="288032" frozen="no" combine-ops="0"/>
     <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
+    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
     <Playlist id="284852" name="IN Piezzo Synth 6.2" type="midi" orig-track-id="284794" frozen="no" combine-ops="0"/>
     <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
     <Playlist id="284452" name="IN Piezzo Synth 2.2" type="midi" orig-track-id="284394" frozen="no" combine-ops="0"/>
     <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
-    <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
     <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
     <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
     <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
-    <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
-    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
+    <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
     <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
     <Playlist id="1010" name="Audio 20.1" type="audio" orig-track-id="977" frozen="no" combine-ops="0"/>
+    <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
     <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
+    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
+    <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
+    <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
+    <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
+    <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
+    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
+    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
+    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -4368,7 +4382,7 @@
   <LTC-In>
     <IO name="LTC In" id="22" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
-        <Connection other="system:capture_1"/>
+        <Connection other="firewire_pcm:000a3501c6742fd9_cap_analog-1_in"/>
       </Port>
     </IO>
   </LTC-In>
@@ -4386,9 +4400,9 @@
     <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
   </TempoMap>
   <ControlProtocols>
+    <Protocol name="Mackie" active="no"/>
     <Protocol name="Open Sound Control (OSC)" feedback="yes" debugmode="2" active="yes"/>
     <Protocol name="Generic MIDI" active="no"/>
-    <Protocol name="Mackie" active="no"/>
     <Protocol name="PreSonus FaderPort" active="no"/>
   </ControlProtocols>
   <Extra>
