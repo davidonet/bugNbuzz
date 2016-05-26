@@ -1,10 +1,3 @@
-MIDI Pattern (2):events-out              |> ardour:IN Piezzo Synth 2/midi_in 1
-MIDI Pattern (3):events-out              |> ardour:IN Piezzo Synth 3/midi_in 1
-MIDI Pattern (4):events-out              |> ardour:IN Piezzo Synth 4/midi_in 1
-MIDI Pattern (5):events-out              |> ardour:IN Piezzo Synth 5/midi_in 1
-MIDI Pattern (6):events-out              |> ardour:IN Piezzo Synth 6/midi_in 1
-MIDI Pattern (7):events-out              |> ardour:IN Piezzo Synth 7/midi_in 1
-MIDI Pattern:events-out                  |> ardour:IN Piezzo Synth 1/midi_in 1
 PulseAudio JACK Sink:front-left          |> firewire_pcm:000a3501c6742fd9_pbk_analog-1_out
 PulseAudio JACK Sink:front-right         |> firewire_pcm:000a3501c6742fd9_pbk_analog-2_out
 ardour:Audio 1/audio_out 1               |> sooperlooper:loop0_in_1
