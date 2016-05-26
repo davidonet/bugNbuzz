@@ -20,14 +20,14 @@
   <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
   <MaxParameters>200</MaxParameters>
   <UIBridgesTimeout>4000</UIBridgesTimeout>
-  <LADSPA_PATH>/home/wargreen/.ladspa:/opt/ardour4/plugins:/usr/lib/ladspa:/usr/local/lib/ladspa</LADSPA_PATH>
-  <DSSI_PATH>/home/wargreen/.dssi:/usr/lib/dssi:/usr/local/lib/dssi</DSSI_PATH>
-  <LV2_PATH>/home/wargreen/.lv2:/usr/lib/lv2:/usr/local/lib/lv2</LV2_PATH>
-  <VST2_PATH>/home/wargreen/.vst:/usr/lib/vst:/usr/local/lib/vst</VST2_PATH>
-  <VST3_PATH>/home/wargreen/.vst3:/home/wargreen/.wine/drive_c/Program Files/Common Files/VST3:/usr/lib/vst3:/usr/local/lib/vst3</VST3_PATH>
-  <GIG_PATH>/home/wargreen/.sounds/gig:/usr/share/sounds/gig</GIG_PATH>
-  <SF2_PATH>/home/wargreen/.sounds/sf2:/usr/share/sounds/sf2</SF2_PATH>
-  <SFZ_PATH>/home/wargreen/.sounds/sfz:/usr/share/sounds/sfz</SFZ_PATH>
+  <LADSPA_PATH>/home/cieconcordance/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa:/opt/ardour4/plugins</LADSPA_PATH>
+  <DSSI_PATH>/home/cieconcordance/.dssi:/usr/lib/dssi:/usr/local/lib/dssi</DSSI_PATH>
+  <LV2_PATH>/home/cieconcordance/.lv2:/usr/lib/lv2:/usr/local/lib/lv2</LV2_PATH>
+  <VST2_PATH>/home/cieconcordance/.vst:/usr/lib/vst:/usr/local/lib/vst</VST2_PATH>
+  <VST3_PATH>/home/cieconcordance/.vst3:/usr/lib/vst3:/usr/local/lib/vst3</VST3_PATH>
+  <GIG_PATH>/home/cieconcordance/.sounds/gig:/usr/share/sounds/gig</GIG_PATH>
+  <SF2_PATH>/home/cieconcordance/.sounds/sf2:/usr/share/sounds/sf2</SF2_PATH>
+  <SFZ_PATH>/home/cieconcordance/.sounds/sfz:/usr/share/sounds/sfz</SFZ_PATH>
  </EngineSettings>
 
  <!-- Onset Trigger - Bassdrum Detection Mono -->
@@ -56,7 +56,7 @@
     <Symbol>midinote</Symbol>
     <MidiCC>20</MidiCC>
     <MidiChannel>1</MidiChannel>
-    <Value>55</Value>
+    <Value>72</Value>
    </Parameter>
 
    <Parameter>
