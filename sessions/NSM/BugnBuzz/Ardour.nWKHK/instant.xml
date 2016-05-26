@@ -2,12 +2,14 @@
 <instant>
   <LastUsedSnapshot name="Ardour"/>
   <Editor id="18" mixer-width="Wide" zoom-focus="ZoomFocusPlayhead" zoom="65536" snap-to="SnapToRegionBoundary" snap-mode="SnapMagnetic" internal-snap-to="SnapToBeat" internal-snap-mode="SnapOff" pre-internal-snap-to="SnapToRegionBoundary" pre-internal-snap-mode="SnapMagnetic" edit-point="EditAtMouse" visible-track-count="-1" playhead="0" left-frame="0" y-origin="0,000000" show-measures="yes" maximised="no" follow-playhead="yes" stationary-playhead="no" region-list-sort-type="ByEndInFile" mouse-mode="MouseObject" join-object-range="yes" show-editor-mixer="no" show-editor-list="no" editor-list-page="0" show-marker-lines="no" nudge-clock-value="240000">
-    <geometry x-size="1920" y-size="1017" x-pos="1280" y-pos="27" edit-horizontal-pane-pos="1643" notebook-shrunk="0" edit-vertical-pane-pos="818"/>
+    <geometry x-size="1920" y-size="1017" x-pos="1280" y-pos="27" edit-horizontal-pane-pos="1643" notebook-shrunk="0" edit-vertical-pane-pos="816"/>
     <Buttons>
       <Press/>
       <Release/>
     </Buttons>
-    <Selection/>
+    <Selection>
+      <RouteView id="255"/>
+    </Selection>
     <RegionList sort-type="ByEndInFile" sort-ascending="yes" show-all="no" show-automatic-regions="yes"/>
   </Editor>
   <Mixer narrow-strips="no" show-mixer="yes" show-mixer-list="yes" maximised="no">
