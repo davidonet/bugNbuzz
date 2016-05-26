@@ -195,8 +195,6 @@ firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo 6/audio_in 1
 firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo Synth 6/audio_in 1
 firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo 7/audio_in 1
 firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo Synth 7/audio_in 1
-madjack-01:left                          |> ardour:mp3/audio_in 1
-madjack-01:right                         |> ardour:mp3/audio_in 2
 madjack:left                             |> ardour:mp3/audio_in 1
 madjack:right                            |> ardour:mp3/audio_in 2
 sooperlooper:loop0_out_1                 |> ardour:Audio 9/audio_in 1
