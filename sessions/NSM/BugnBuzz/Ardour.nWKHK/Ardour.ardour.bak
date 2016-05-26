@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="418264" event-counter="96138">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="434534" event-counter="96223">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -3363,9 +3363,13 @@
     <Route id="91082" name="mp3" default-type="audio" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="45" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no" monitoring="MonitorInput" saved-meter-point="MeterPostFader" mode="Normal">
       <IO name="mp3" id="91105" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="mp3/audio_in 1">
+          <Connection other="madjack-01:left"/>
+          <Connection other="madjack-02:left"/>
           <Connection other="madjack:left"/>
         </Port>
         <Port type="audio" name="mp3/audio_in 2">
+          <Connection other="madjack-01:right"/>
+          <Connection other="madjack-02:right"/>
           <Connection other="madjack:right"/>
         </Port>
       </IO>
@@ -4379,56 +4383,56 @@
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
+    <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
+    <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
+    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
+    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
+    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
+    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
+    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
+    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
+    <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
+    <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
+    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
     <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
     <Playlist id="1200" name="Audio 25.1" type="audio" orig-track-id="1167" frozen="no" combine-ops="0"/>
-    <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
-    <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
-    <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
-    <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
-    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
-    <Playlist id="1694" name="Audio 38.1" type="audio" orig-track-id="1661" frozen="no" combine-ops="0"/>
-    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
-    <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
-    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
-    <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
-    <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
-    <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
-    <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
-    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
-    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
-    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
-    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
-    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
+    <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
     <Playlist id="288090" name="IN Piezzo Synth 7" type="midi" orig-track-id="288032" frozen="no" combine-ops="0"/>
     <Playlist id="284852" name="IN Piezzo Synth 6.2" type="midi" orig-track-id="284794" frozen="no" combine-ops="0"/>
     <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
-    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
-    <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
-    <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
-    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
-    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
-    <Playlist id="284452" name="IN Piezzo Synth 2.2" type="midi" orig-track-id="284394" frozen="no" combine-ops="0"/>
-    <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
-    <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
-    <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
-    <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
     <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
     <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
     <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
-    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
+    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
+    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
     <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
     <Playlist id="1656" name="Audio 37.1" type="audio" orig-track-id="1623" frozen="no" combine-ops="0"/>
-    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
-    <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
-    <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
-    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
-    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
-    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
-    <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
+    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
+    <Playlist id="1694" name="Audio 38.1" type="audio" orig-track-id="1661" frozen="no" combine-ops="0"/>
     <Playlist id="1010" name="Audio 20.1" type="audio" orig-track-id="977" frozen="no" combine-ops="0"/>
+    <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
+    <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
+    <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
     <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
+    <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
+    <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
+    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
+    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
+    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
+    <Playlist id="284452" name="IN Piezzo Synth 2.2" type="midi" orig-track-id="284394" frozen="no" combine-ops="0"/>
+    <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
     <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
+    <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
+    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
+    <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
+    <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
+    <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
+    <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
+    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
+    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
+    <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
+    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
+    <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -4486,7 +4490,7 @@
       <Window name="audio-midi-setup" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="video-export" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="bundle-manager" visible="no" x-off="419" y-off="114" x-size="480" y-size="240"/>
-      <Window name="locations" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="locations" visible="no" x-off="331" y-off="145" x-size="249" y-size="449"/>
       <Window name="big-clock" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="audio-connection-manager" visible="no" x-off="1280" y-off="27" x-size="1920" y-size="935"/>
       <Window name="midi-connection-manager" visible="no" x-off="1489" y-off="115" x-size="1711" y-size="935"/>
@@ -4780,7 +4784,7 @@
       <Window name="P-284294-284332" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284294-284334" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284294-284335" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-284394-401964" visible="no" x-off="2086" y-off="27" x-size="760" y-size="565" custom-ui="yes"/>
+      <Window name="P-284394-401964" visible="no" x-off="2086" y-off="27" x-size="760" y-size="565" custom-ui="no"/>
       <Window name="P-284394-284429" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284394-284432" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284394-284434" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>

@@ -34,10 +34,10 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="256"/>
+        <Control name="trigger_latency" value="128"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
-        <Control name="round_integer_tempo" value="0"/>
+        <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
     <Looper index="1" channels="8" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
@@ -72,10 +72,10 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="256"/>
+        <Control name="trigger_latency" value="128"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
-        <Control name="round_integer_tempo" value="0"/>
+        <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
     <Looper index="2" channels="8" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
@@ -110,10 +110,10 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="256"/>
+        <Control name="trigger_latency" value="128"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
-        <Control name="round_integer_tempo" value="0"/>
+        <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
     <Looper index="3" channels="8" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
@@ -148,10 +148,10 @@
         <Control name="use_safety_feedback" value="1"/>
         <Control name="input_latency" value="0"/>
         <Control name="output_latency" value="0"/>
-        <Control name="trigger_latency" value="256"/>
+        <Control name="trigger_latency" value="128"/>
         <Control name="mute_quantized" value="0"/>
         <Control name="overdub_quantized" value="0"/>
-        <Control name="round_integer_tempo" value="0"/>
+        <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
   </Loopers>
