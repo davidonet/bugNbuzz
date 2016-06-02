@@ -27,6 +27,7 @@ def touch2bug(dst, path, args):
 			else:
 				track = multiple * 8 + int(splited[5]) + multiple
 			arg = float(args[0]),
+
 		
 		elif splited[3] == "mute":
 			multiple = int(splited[4]) - 1
@@ -43,7 +44,7 @@ def touch2bug(dst, path, args):
 			track = int(splited[7])+1
 			plugin = int(splited[6])
 			parm = int(splited[5])
-			arg = plugin, parm, float(args[0])
+			arg = plugin, parm, 0.9999*float(args[0])
 #			print('###', ard_path, track, arg)
 		
 		return ard_path, track, arg,
