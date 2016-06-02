@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="516526" event-counter="97132">
+<Session version="3001" name="BugNBuzz" sample-rate="48000" id-counter="541363" event-counter="97833">
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
     <Port name="MIDI Clock out" direction="output"/>
@@ -70,15 +70,21 @@
     <Route id="58" name="Monitor" default-type="audio" flags="MonitorOut" active="yes" phase-invert="00" denormal-protection="no" meter-point="MeterPostFader" meter-type="MeterPeak" order-key="1" self-solo="no" soloed-by-upstream="0" soloed-by-downstream="0" solo-isolated="no" solo-safe="no">
       <IO name="Monitor" id="66" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="Monitor/audio_in 1">
+          <Connection other="Master/audio_out 1"/>
           <Connection other="auditioner/audio_out 1"/>
         </Port>
         <Port type="audio" name="Monitor/audio_in 2">
+          <Connection other="Master/audio_out 2"/>
           <Connection other="auditioner/audio_out 2"/>
         </Port>
       </IO>
       <IO name="Monitor" id="67" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Monitor/audio_out 1"/>
-        <Port type="audio" name="Monitor/audio_out 2"/>
+        <Port type="audio" name="Monitor/audio_out 1">
+          <Connection other="firewire_pcm:000a350196e1d168_pbk_phones-L_out"/>
+        </Port>
+        <Port type="audio" name="Monitor/audio_out 2">
+          <Connection other="firewire_pcm:000a350196e1d168_pbk_phones-R_out"/>
+        </Port>
       </IO>
       <Controllable name="solo" id="60" flags="Toggle" value="0.000000000000"/>
       <Controllable name="mute" id="62" flags="Toggle" value="0.000000000000"/>
@@ -86,7 +92,7 @@
       <Automation/>
       <RemoteControl id="0"/>
       <Processor id="76" name="return 1" active="yes" user-latency="0" own-input="yes" own-output="yes" type="intreturn" bitslot="0"/>
-      <Processor id="81" name="MonitorOut" active="yes" user-latency="0" type="monitor" dim-level="0.10000000149" solo-boost-level="1" cut-all="no" dim-all="no" mono="no" channels="2">
+      <Processor id="81" name="MonitorOut" active="yes" user-latency="0" type="monitor" dim-level="0.10000000149" solo-boost-level="1.00540566444" cut-all="no" dim-all="no" mono="no" channels="2">
         <Channel id="0" cut="no" invert="no" dim="no" solo="no"/>
         <Channel id="1" cut="no" invert="no" dim="no" solo="no"/>
       </Processor>
@@ -115,9 +121,11 @@
       </IO>
       <IO name="Master" id="48" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_out 1">
+          <Connection other="Monitor/audio_in 1"/>
           <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-1_out"/>
         </Port>
         <Port type="audio" name="Master/audio_out 2">
+          <Connection other="Monitor/audio_in 2"/>
           <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-2_out"/>
         </Port>
       </IO>
@@ -188,7 +196,7 @@
         <Automation/>
       </Pannable>
       <Processor id="279" name="Amp" active="yes" user-latency="0" type="trim">
-        <Controllable name="trimcontrol" id="281" flags="GainLike" value="1.000000000000"/>
+        <Controllable name="trimcontrol" id="281" flags="GainLike" value="1.566750407219"/>
       </Processor>
       <Processor id="288641" name="EQ6Q Mono" active="yes" user-latency="0" type="lv2" unique-id="http://eq10q.sourceforge.net/eq/eq6qm" count="1">
         <ConfiguredInput>
@@ -377,7 +385,7 @@
         <Controllable name="Highshelf Gain" id="385651" flags="" value="0.000000000000" parameter="35" symbol="HSgain"/>
       </Processor>
       <Processor id="276" name="Amp" active="yes" user-latency="0" type="amp">
-        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.567415714264"/>
+        <Controllable name="gaincontrol" id="278" flags="GainLike" value="0.928428769112"/>
       </Processor>
       <Processor id="282" name="meter-Audio 1" active="yes" user-latency="0" type="meter"/>
       <Processor id="283" name="Audio 1" active="yes" user-latency="0" own-input="yes" own-output="no" output="Audio 1" type="main-outs" role="Main">
@@ -559,7 +567,7 @@
           <Port symbol="shape" value="+0.923167"/>
           <Port symbol="mode" value="+0.000000"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="0.745957136154" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.745957016945" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.923166990280" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0.000000000000" parameter="2" symbol="mode"/>
       </Processor>
@@ -4030,7 +4038,7 @@
           <Channels type="audio" count="2"/>
           <Channels type="midi" count="1"/>
         </ConfiguredOutput>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state27">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="no" state-dir="state30">
           <Port symbol="lv2_freewheel" value="+0.000000"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0.000000000000" parameter="2" symbol="lv2_freewheel"/>
@@ -4444,56 +4452,56 @@
     </Route>
   </Routes>
   <Playlists>
-    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
-    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
-    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
-    <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
-    <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
-    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
-    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
-    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
-    <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
-    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
-    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
-    <Playlist id="284852" name="IN Piezzo Synth 6.2" type="midi" orig-track-id="284794" frozen="no" combine-ops="0"/>
     <Playlist id="1656" name="Audio 37.1" type="audio" orig-track-id="1623" frozen="no" combine-ops="0"/>
-    <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
-    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
-    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
-    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
     <Playlist id="48655" name="Piezzo HF Audio.1" type="audio" orig-track-id="48616" frozen="no" combine-ops="0"/>
+    <Playlist id="934" name="Audio 18.1" type="audio" orig-track-id="901" frozen="no" combine-ops="0"/>
+    <Playlist id="896" name="Audio 17.1" type="audio" orig-track-id="863" frozen="no" combine-ops="0"/>
+    <Playlist id="1390" name="Audio 30.1" type="audio" orig-track-id="1357" frozen="no" combine-ops="0"/>
+    <Playlist id="668" name="Audio 11.1" type="audio" orig-track-id="635" frozen="no" combine-ops="0"/>
+    <Playlist id="1504" name="Audio 33.1" type="audio" orig-track-id="1471" frozen="no" combine-ops="0"/>
+    <Playlist id="782" name="Audio 14.1" type="audio" orig-track-id="749" frozen="no" combine-ops="0"/>
+    <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
     <Playlist id="402" name="Audio 4.1" type="audio" orig-track-id="369" frozen="no" combine-ops="0"/>
     <Playlist id="1200" name="Audio 25.1" type="audio" orig-track-id="1167" frozen="no" combine-ops="0"/>
-    <Playlist id="284752" name="IN Piezzo Synth 5.2" type="midi" orig-track-id="284694" frozen="no" combine-ops="0"/>
+    <Playlist id="1010" name="Audio 20.1" type="audio" orig-track-id="977" frozen="no" combine-ops="0"/>
     <Playlist id="820" name="Audio 15.1" type="audio" orig-track-id="787" frozen="no" combine-ops="0"/>
     <Playlist id="1124" name="Audio 23.1" type="audio" orig-track-id="1091" frozen="no" combine-ops="0"/>
     <Playlist id="288" name="Audio 1.1" type="audio" orig-track-id="255" frozen="no" combine-ops="0"/>
-    <Playlist id="1010" name="Audio 20.1" type="audio" orig-track-id="977" frozen="no" combine-ops="0"/>
+    <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
     <Playlist id="706" name="Audio 12.1" type="audio" orig-track-id="673" frozen="no" combine-ops="0"/>
     <Playlist id="1694" name="Audio 38.1" type="audio" orig-track-id="1661" frozen="no" combine-ops="0"/>
-    <Playlist id="284352" name="IN Piezzo Synth 1.2" type="midi" orig-track-id="284294" frozen="no" combine-ops="0"/>
+    <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
     <Playlist id="326" name="Audio 2.1" type="audio" orig-track-id="293" frozen="no" combine-ops="0"/>
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" frozen="no" combine-ops="0"/>
-    <Playlist id="284552" name="IN Piezzo Synth 3.2" type="midi" orig-track-id="284494" frozen="no" combine-ops="0"/>
+    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
     <Playlist id="1428" name="Audio 31.1" type="audio" orig-track-id="1395" frozen="no" combine-ops="0"/>
     <Playlist id="1580" name="Audio 35.1" type="audio" orig-track-id="1547" frozen="no" combine-ops="0"/>
-    <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
-    <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
-    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
-    <Playlist id="858" name="Audio 16.1" type="audio" orig-track-id="825" frozen="no" combine-ops="0"/>
-    <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
     <Playlist id="288090" name="IN Piezzo Synth 7" type="midi" orig-track-id="288032" frozen="no" combine-ops="0"/>
     <Playlist id="1732" name="Audio 39.1" type="audio" orig-track-id="1699" frozen="no" combine-ops="0"/>
-    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
-    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
+    <Playlist id="630" name="Audio 10.1" type="audio" orig-track-id="597" frozen="no" combine-ops="0"/>
+    <Playlist id="364" name="Audio 3.1" type="audio" orig-track-id="331" frozen="no" combine-ops="0"/>
     <Playlist id="1770" name="Audio 40.1" type="audio" orig-track-id="1737" frozen="no" combine-ops="0"/>
+    <Playlist id="91121" name="mp3" type="audio" orig-track-id="91082" frozen="no" combine-ops="0"/>
     <Playlist id="972" name="Audio 19.1" type="audio" orig-track-id="939" frozen="no" combine-ops="0"/>
+    <Playlist id="744" name="Audio 13.1" type="audio" orig-track-id="711" frozen="no" combine-ops="0"/>
     <Playlist id="284452" name="IN Piezzo Synth 2.2" type="midi" orig-track-id="284394" frozen="no" combine-ops="0"/>
-    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
-    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
+    <Playlist id="478" name="Audio 6.1" type="audio" orig-track-id="445" frozen="no" combine-ops="0"/>
+    <Playlist id="592" name="Audio 9.1" type="audio" orig-track-id="559" frozen="no" combine-ops="0"/>
+    <Playlist id="1466" name="Audio 32.1" type="audio" orig-track-id="1433" frozen="no" combine-ops="0"/>
+    <Playlist id="1086" name="Audio 22.1" type="audio" orig-track-id="1053" frozen="no" combine-ops="0"/>
+    <Playlist id="1618" name="Audio 36.1" type="audio" orig-track-id="1585" frozen="no" combine-ops="0"/>
+    <Playlist id="1352" name="Audio 29.1" type="audio" orig-track-id="1319" frozen="no" combine-ops="0"/>
     <Playlist id="516" name="Audio 7.1" type="audio" orig-track-id="483" frozen="no" combine-ops="0"/>
-    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
+    <Playlist id="1276" name="Audio 27.1" type="audio" orig-track-id="1243" frozen="no" combine-ops="0"/>
+    <Playlist id="1162" name="Audio 24.1" type="audio" orig-track-id="1129" frozen="no" combine-ops="0"/>
+    <Playlist id="1542" name="Audio 34.1" type="audio" orig-track-id="1509" frozen="no" combine-ops="0"/>
     <Playlist id="1048" name="Audio 21.1" type="audio" orig-track-id="1015" frozen="no" combine-ops="0"/>
+    <Playlist id="284652" name="IN Piezzo Synth 4.2" type="midi" orig-track-id="284594" frozen="no" combine-ops="0"/>
+    <Playlist id="1238" name="Audio 26.1" type="audio" orig-track-id="1205" frozen="no" combine-ops="0"/>
+    <Playlist id="1314" name="Audio 28.1" type="audio" orig-track-id="1281" frozen="no" combine-ops="0"/>
+    <Playlist id="554" name="Audio 8.1" type="audio" orig-track-id="521" frozen="no" combine-ops="0"/>
+    <Playlist id="440" name="Audio 5.1" type="audio" orig-track-id="407" frozen="no" combine-ops="0"/>
+    <Playlist id="284852" name="IN Piezzo Synth 6.2" type="midi" orig-track-id="284794" frozen="no" combine-ops="0"/>
   </Playlists>
   <UnusedPlaylists/>
   <RouteGroups>
@@ -4574,7 +4582,7 @@
       <Window name="P-293-321" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-293-1783" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-355" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-331-190787" visible="no" x-off="1323" y-off="57" x-size="655" y-size="259" custom-ui="no"/>
+      <Window name="P-331-190787" visible="no" x-off="710" y-off="57" x-size="726" y-size="259" custom-ui="no"/>
       <Window name="P-331-352" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-358" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-331-359" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4616,6 +4624,7 @@
       <Window name="P-2269-2297" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-2269-2413" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-559-583" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-559-508222" visible="no" x-off="774" y-off="426" x-size="608" y-size="416" custom-ui="no"/>
       <Window name="P-559-580" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-559-586" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-559-587" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4806,6 +4815,7 @@
       <Window name="P-187824-188384" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-187864-187894" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-187864-187899" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
+      <Window name="P-187864-508196" visible="no" x-off="575" y-off="426" x-size="608" y-size="416" custom-ui="no"/>
       <Window name="P-187864-187891" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-187864-187895" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-187864-187896" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4840,12 +4850,12 @@
       <Window name="P-188064-188095" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-188064-188096" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-188064-188432" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-284294-377497" visible="no" x-off="676" y-off="248" x-size="760" y-size="565" custom-ui="yes"/>
+      <Window name="P-284294-377497" visible="no" x-off="676" y-off="248" x-size="760" y-size="565" custom-ui="no"/>
       <Window name="P-284294-284332" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284294-284334" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284294-284335" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284294-284329" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-284394-401964" visible="no" x-off="676" y-off="27" x-size="760" y-size="565" custom-ui="yes"/>
+      <Window name="P-284394-401964" visible="no" x-off="676" y-off="27" x-size="760" y-size="565" custom-ui="no"/>
       <Window name="P-284394-284432" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284394-284434" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-284394-284435" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
@@ -4880,8 +4890,6 @@
       <Window name="P-58-68" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-74" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
       <Window name="P-58-75" visible="no" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="no"/>
-      <Window name="P-187864-508196" visible="no" x-off="575" y-off="426" x-size="608" y-size="416" custom-ui="yes"/>
-      <Window name="P-559-508222" visible="no" x-off="774" y-off="426" x-size="608" y-size="416" custom-ui="yes"/>
       <GUIObjectState>
         <Object id="route 28" color="64677:42885:49059"/>
         <Object id="rtav 28" height="64" visible="1"/>
