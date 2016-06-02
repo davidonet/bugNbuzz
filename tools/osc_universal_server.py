@@ -12,7 +12,6 @@ class MyServer(ServerThread):
 		print "received message '%s'" % path
 		print args
 
-
 try:
     server = MyServer()
 except ServerError, err:

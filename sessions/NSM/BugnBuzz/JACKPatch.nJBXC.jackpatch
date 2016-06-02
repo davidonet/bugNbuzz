@@ -1,5 +1,3 @@
-PulseAudio JACK Sink:front-left          |> firewire_pcm:000a3501c6742fd9_pbk_analog-1_out
-PulseAudio JACK Sink:front-right         |> firewire_pcm:000a3501c6742fd9_pbk_analog-2_out
 ardour:Audio 1/audio_out 1               |> sooperlooper:loop0_in_1
 ardour:Audio 1/audio_out 1               |> sooperlooper:loop1_in_1
 ardour:Audio 1/audio_out 1               |> sooperlooper:loop2_in_1
@@ -164,30 +162,28 @@ ardour:LOOP3/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP3/audio_out 2                 |> ardour:Master/audio_in 2
 ardour:LOOP4/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP4/audio_out 2                 |> ardour:Master/audio_in 2
-ardour:Master/audio_out 1                |> firewire_pcm:000a3501c6742fd9_pbk_analog-1_out
-ardour:Master/audio_out 2                |> firewire_pcm:000a3501c6742fd9_pbk_analog-2_out
+ardour:Master/audio_out 1                |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
+ardour:Master/audio_out 2                |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
 ardour:mp3/audio_out 1                   |> ardour:Master/audio_in 1
 ardour:mp3/audio_out 2                   |> ardour:Master/audio_in 2
-firewire_pcm:000a3501c6742fd9_cap_analog-1_in |> PulseAudio JACK Source:front-left
-firewire_pcm:000a3501c6742fd9_cap_analog-1_in |> ardour:Audio 1/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-1_in |> ardour:LTC-in
-firewire_pcm:000a3501c6742fd9_cap_analog-2_in |> PulseAudio JACK Source:front-right
-firewire_pcm:000a3501c6742fd9_cap_analog-2_in |> ardour:IN Piezzo 1/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-2_in |> ardour:IN Piezzo Synth 1/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-3_in |> ardour:IN Piezzo 2/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-3_in |> ardour:IN Piezzo Synth 2/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-4_in |> ardour:IN Piezzo 3/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-4_in |> ardour:IN Piezzo Synth 3/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-5_in |> ardour:IN Piezzo 4/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-5_in |> ardour:IN Piezzo Synth 4/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-6_in |> ardour:IN Piezzo 5/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-6_in |> ardour:IN Piezzo Synth 5/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo 6/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-7_in |> ardour:IN Piezzo Synth 6/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo 7/audio_in 1
-firewire_pcm:000a3501c6742fd9_cap_analog-8_in |> ardour:IN Piezzo Synth 7/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:Audio 1/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:LTC-in
+firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:IN Piezzo 1/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:IN Piezzo Synth 1/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-3_in |> ardour:IN Piezzo 2/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-3_in |> ardour:IN Piezzo Synth 2/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-4_in |> ardour:IN Piezzo 3/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-4_in |> ardour:IN Piezzo Synth 3/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-5_in |> ardour:IN Piezzo 4/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-5_in |> ardour:IN Piezzo Synth 4/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:IN Piezzo 5/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:IN Piezzo Synth 5/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:IN Piezzo 6/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:IN Piezzo Synth 6/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:IN Piezzo 7/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:IN Piezzo Synth 7/audio_in 1
 madjack:left                             |> ardour:mp3/audio_in 1
 madjack:right                            |> ardour:mp3/audio_in 2
 sooperlooper:loop0_out_1                 |> ardour:Audio 9/audio_in 1
