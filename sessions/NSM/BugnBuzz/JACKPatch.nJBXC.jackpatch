@@ -162,8 +162,12 @@ ardour:LOOP3/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP3/audio_out 2                 |> ardour:Master/audio_in 2
 ardour:LOOP4/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP4/audio_out 2                 |> ardour:Master/audio_in 2
+ardour:Master/audio_out 1                |> ardour:Monitor/audio_in 1
 ardour:Master/audio_out 1                |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
+ardour:Master/audio_out 2                |> ardour:Monitor/audio_in 2
 ardour:Master/audio_out 2                |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
+ardour:Monitor/audio_out 1               |> firewire_pcm:000a350196e1d168_pbk_phones-L_out
+ardour:Monitor/audio_out 2               |> firewire_pcm:000a350196e1d168_pbk_phones-R_out
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
 ardour:mp3/audio_out 1                   |> ardour:Master/audio_in 1
@@ -184,8 +188,6 @@ firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:IN Piezzo 6/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:IN Piezzo Synth 6/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:IN Piezzo 7/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:IN Piezzo Synth 7/audio_in 1
-madjack:left                             |> ardour:mp3/audio_in 1
-madjack:right                            |> ardour:mp3/audio_in 2
 sooperlooper:loop0_out_1                 |> ardour:Audio 9/audio_in 1
 sooperlooper:loop0_out_2                 |> ardour:Audio 10/audio_in 1
 sooperlooper:loop0_out_3                 |> ardour:Audio 11/audio_in 1
