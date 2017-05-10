@@ -26,7 +26,7 @@ class MyServer(ServerThread):
         self.ledState = [0] * 27
         self.loopnum = -1
         self.frame = 0
-        self.allPaused = False  
+        self.allPaused = False
         self.ts = time()
 
         try:
@@ -117,21 +117,21 @@ class MyServer(ServerThread):
             self.buttons = args
             self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
             self.stdscr.refresh()
-            if self.buttons[15] == 0 or self.buttons[7] == 0:
+            if self.buttons[13] == 0 or self.buttons[7] == 0:
                 self.loopRecPlay()
             if self.buttons[14] == 0 or self.buttons[6] == 0:
                 self.loopStop()
-            if self.buttons[13] == 0:
+            if self.buttons[15] == 0:
                 self.loopUndo()
             if self.buttons[12] == 0:
                 self.loopSelect(-1)
-            if self.buttons[8] == 0:
-                self.loopSelect(3)
-            if self.buttons[9] == 0:
-                self.loopSelect(2)
-            if self.buttons[10] == 0:
-                self.loopSelect(1)
             if self.buttons[11] == 0:
+                self.loopSelect(3)
+            if self.buttons[10] == 0:
+                self.loopSelect(2)
+            if self.buttons[9] == 0:
+                self.loopSelect(1)
+            if self.buttons[8] == 0:
                 self.loopSelect(0)
         else:
                 # Just to visualize the debouncing
