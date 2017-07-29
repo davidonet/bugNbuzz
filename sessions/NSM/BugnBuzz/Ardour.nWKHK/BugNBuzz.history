@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UndoHistory>
   <UndoTransaction tv-sec="1464296879" tv-usec="4440828" name="ajouter un repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations/>
       <Locations>
         <Location id="491695" name="mark1" start="46858240" end="46858240" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection/>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296882" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="46858240" end="46858240" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
@@ -27,21 +17,9 @@
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296882" tv-usec="4440828" name="ajouter un repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
@@ -49,22 +27,10 @@
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49348608" end="49348608" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296889" tv-usec="4440828" name="ajouter un changement de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -75,21 +41,9 @@
         <Tempo start="520|3|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296894" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -101,21 +55,9 @@
         <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296899" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49348608" end="49348608" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
@@ -125,21 +67,9 @@
         <Location id="491703" name="mark2" start="49524736" end="49524736" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296906" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -150,22 +80,10 @@
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
         <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296908" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -176,22 +94,10 @@
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
         <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296914" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -202,22 +108,10 @@
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
         <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="4096" left-frame="46415872" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296918" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -228,22 +122,10 @@
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
         <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
       </TempoMap>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296924" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49524736" end="49524736" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
@@ -253,21 +135,9 @@
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296927" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
@@ -276,22 +146,10 @@
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="512" left-frame="49199616" y-origin="0,000000">
-        <Selection>
-          <Marker id="491703" start="yes"/>
-        </Selection>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296935" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
@@ -301,21 +159,9 @@
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297416" tv-usec="4440828" name="supprimer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="0" end="0" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
         <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
@@ -324,21 +170,9 @@
         <Location id="491695" name="mark1" start="0" end="0" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297418" tv-usec="4440828" name="supprimer le changement de tempo">
-    <MementoCommand obj-id="28" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -349,35 +183,13 @@
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
       </TempoMap>
     </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297421" tv-usec="4440828" name="supprimer le repère">
-    <MementoCommand obj-id="14" type-name="ARDOUR::Locations">
+    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
         <Location id="491695" name="mark1" start="0" end="0" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
       </Locations>
       <Locations/>
-    </MementoCommand>
-    <MementoCommand obj-id="19" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection>
-          <Marker id="491695" start="yes"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="65536" left-frame="0" y-origin="0,000000">
-        <Selection/>
-      </SelectionMemento>
     </MementoCommand>
   </UndoTransaction>
 </UndoHistory>

@@ -1,0 +1,18 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <https://code.google.com/p/lkjb-plugins/luftikus> ;
+	state:state [
+		<urn:juce:stateBinary> """VkMyIQEBAAA8TFVGVElLVVNEQVRBIEdhaW5fMTBfSHo9IjAuNDk0OTk5OTc0OTY2MDQ5MTk0MzQi
+IEdhaW5fNDBfSHo9IjAuMjk1MDAwMDE2Njg5MzAwNTM3MTEiIEdhaW5fMTYwX0h6PSIwLjQzMDAw
+MDAwNzE1MjU1NzM3MzA1IiBHYWluXzY0MF9Iej0iMC41IiBHYWluXzItNV9rSHo9IjAuNSIgR2Fp
+bl9IaWdoPSIwIiBUeXBlX0hpZ2g9IjAiIEtlZXBfR2Fpbj0iMCIgQW5hbG9nPSIwIiBNYXN0ZXJp
+bmc9IjAiIE1hc3RlclZvbD0iMC41IiB0b29sdGlwcz0iMSIvPgA="""^^xsd:base64Binary
+	] .

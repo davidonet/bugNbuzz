@@ -1,0 +1,1031 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <http://kxstudio.sf.net/carla/plugins/carlapatchbay> ;
+	state:state [
+		<http://kxstudio.sf.net/ns/carla/chunk> """<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+  <LADSPA_PATH>/home/cieconcordance/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa</LADSPA_PATH>
+  <DSSI_PATH>/home/cieconcordance/.dssi:/usr/lib/dssi:/usr/local/lib/dssi</DSSI_PATH>
+  <LV2_PATH>/home/cieconcordance/.lv2:/usr/lib/lv2:/usr/local/lib/lv2</LV2_PATH>
+  <VST2_PATH>/home/cieconcordance/.vst:/usr/lib/vst:/usr/local/lib/vst</VST2_PATH>
+  <VST3_PATH>/home/cieconcordance/.vst3:/usr/lib/vst3:/usr/local/lib/vst3</VST3_PATH>
+  <GIG_PATH>/home/cieconcordance/.sounds/gig:/usr/share/sounds/gig</GIG_PATH>
+  <SF2_PATH>/home/cieconcordance/.sounds/sf2:/usr/share/sounds/sf2</SF2_PATH>
+  <SFZ_PATH>/home/cieconcordance/.sounds/sfz:/usr/share/sounds/sfz</SFZ_PATH>
+ </EngineSettings>
+
+ <!-- Onset Trigger - Bassdrum Detection Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Onset Trigger - Bassdrum Detection Mono</Name>
+   <URI>http://gareus.org/oss/lv2/onsettrigger#bassdrum_mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Signal Level Theshold [dBFS, RMS]</Name>
+    <Symbol>threshold</Symbol>
+    <Value>-64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Midi Note</Name>
+    <Symbol>midinote</Symbol>
+    <MidiCC>20</MidiCC>
+    <MidiChannel>1</MidiChannel>
+    <Value>74</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Note Duration [ms]</Name>
+    <Symbol>mididuration</Symbol>
+    <Value>100.900001525879</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Midi Velocity Minimum</Name>
+    <Symbol>velocity_min</Symbol>
+    <Value>16</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Midi Velocity Scale Factor</Name>
+    <Symbol>velocity_scale</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Midi Velocity Exponent</Name>
+    <Symbol>velocity_exponent</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Filter Frequency (advanced)</Name>
+    <Symbol>filter_freq</Symbol>
+    <Value>178.300003051758</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter Bandwidth (advanced)</Name>
+    <Symbol>filter_bandwidth</Symbol>
+    <Value>120</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Note2CC -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Note2CC</Name>
+   <URI>http://gareus.org/oss/lv2/midifilter#notetocc</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1e1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Operation Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>CC Parameter</Name>
+    <Symbol>param</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Active Key (midi-note)</Name>
+    <Symbol>key</Symbol>
+    <Value>127</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Noize Mak3r -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Noize Mak3r</Name>
+   <URI>http://kunz.corrupt.ch/products/tal-noisemaker</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.331978</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1e5</Options>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>unused</Name>
+    <Symbol>unused</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>volume</Name>
+    <Symbol>volume</Symbol>
+    <Value>0.316000014543533</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>filtertype</Name>
+    <Symbol>filtertype</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>resonance</Name>
+    <Symbol>resonance</Symbol>
+    <Value>0.280000001192093</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>keyfollow</Name>
+    <Symbol>keyfollow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>filtercontour</Name>
+    <Symbol>filtercontour</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>filterattack</Name>
+    <Symbol>filterattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>filterdecay</Name>
+    <Symbol>filterdecay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>filtersustain</Name>
+    <Symbol>filtersustain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>filterrelease</Name>
+    <Symbol>filterrelease</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>ampattack</Name>
+    <Symbol>ampattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>ampdecay</Name>
+    <Symbol>ampdecay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>ampsustain</Name>
+    <Symbol>ampsustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>amprelease</Name>
+    <Symbol>amprelease</Symbol>
+    <Value>0.304000020027161</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>osc1volume</Name>
+    <Symbol>osc1volume</Symbol>
+    <Value>0.60400003194809</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>osc2volume</Name>
+    <Symbol>osc2volume</Symbol>
+    <Value>0.632000029087067</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>osc3volume</Name>
+    <Symbol>osc3volume</Symbol>
+    <Value>0.800000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>oscmastertune</Name>
+    <Symbol>oscmastertune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>osc1tune</Name>
+    <Symbol>osc1tune</Symbol>
+    <Value>0.494000017642975</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>osc2tune</Name>
+    <Symbol>osc2tune</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>osc1finetune</Name>
+    <Symbol>osc1finetune</Symbol>
+    <Value>0.376000016927719</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>osc2finetune</Name>
+    <Symbol>osc2finetune</Symbol>
+    <Value>0.628000020980835</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>osc1waveform</Name>
+    <Symbol>osc1waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>osc2waveform</Name>
+    <Symbol>osc2waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>oscsync</Name>
+    <Symbol>oscsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>lfo1waveform</Name>
+    <Symbol>lfo1waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>lfo2waveform</Name>
+    <Symbol>lfo2waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>lfo1rate</Name>
+    <Symbol>lfo1rate</Symbol>
+    <Value>0.644000053405762</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>lfo2rate</Name>
+    <Symbol>lfo2rate</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>lfo1amount</Name>
+    <Symbol>lfo1amount</Symbol>
+    <Value>0.584000051021576</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>lfo2amount</Name>
+    <Symbol>lfo2amount</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>lfo1destination</Name>
+    <Symbol>lfo1destination</Symbol>
+    <Value>0.428571432828903</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>lfo2destination</Name>
+    <Symbol>lfo2destination</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>lfo1phase</Name>
+    <Symbol>lfo1phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>lfo2phase</Name>
+    <Symbol>lfo2phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>osc2fm</Name>
+    <Symbol>osc2fm</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>osc2phase</Name>
+    <Symbol>osc2phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>osc1pw</Name>
+    <Symbol>osc1pw</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>osc1phase</Name>
+    <Symbol>osc1phase</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>transpose</Name>
+    <Symbol>transpose</Symbol>
+    <Value>0.728000044822693</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>freeadattack</Name>
+    <Symbol>freeadattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>freeaddecay</Name>
+    <Symbol>freeaddecay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>freeadamount</Name>
+    <Symbol>freeadamount</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>freeaddestination</Name>
+    <Symbol>freeaddestination</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>lfo1sync</Name>
+    <Symbol>lfo1sync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>lfo1keytrigger</Name>
+    <Symbol>lfo1keytrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>lfo2sync</Name>
+    <Symbol>lfo2sync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>lfo2keytrigger</Name>
+    <Symbol>lfo2keytrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>0.240000009536743</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>portamentomode</Name>
+    <Symbol>portamentomode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>voices</Name>
+    <Symbol>voices</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>velocityvolume</Name>
+    <Symbol>velocityvolume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>velocitycontour</Name>
+    <Symbol>velocitycontour</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>velocitycutoff</Name>
+    <Symbol>velocitycutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>pitchwheelcutoff</Name>
+    <Symbol>pitchwheelcutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>pitchwheelpitch</Name>
+    <Symbol>pitchwheelpitch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>ringmodulation</Name>
+    <Symbol>ringmodulation</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>chorus1enable</Name>
+    <Symbol>chorus1enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>chorus2enable</Name>
+    <Symbol>chorus2enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>reverbwet</Name>
+    <Symbol>reverbwet</Symbol>
+    <Value>0.772000014781952</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>reverbdecay</Name>
+    <Symbol>reverbdecay</Symbol>
+    <Value>0.208000004291534</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>reverbpredelay</Name>
+    <Symbol>reverbpredelay</Symbol>
+    <Value>0.496000021696091</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>reverbhighcut</Name>
+    <Symbol>reverbhighcut</Symbol>
+    <Value>0.552000045776367</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>reverblowcut</Name>
+    <Symbol>reverblowcut</Symbol>
+    <Value>0.592000007629395</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>oscbitcrusher</Name>
+    <Symbol>oscbitcrusher</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>highpass</Name>
+    <Symbol>highpass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>detune</Name>
+    <Symbol>detune</Symbol>
+    <Value>0.972000062465668</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>vintagenoise</Name>
+    <Symbol>vintagenoise</Symbol>
+    <Value>0.148000001907349</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Port 70</Name>
+    <Symbol>lv2_port_70</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>unused</Name>
+    <Symbol>unused_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>envelopeeditordest1</Name>
+    <Symbol>envelopeeditordest1</Symbol>
+    <Value>0.142857149243355</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>envelopeeditorspeed</Name>
+    <Symbol>envelopeeditorspeed</Symbol>
+    <Value>0.400000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>envelopeeditoramount</Name>
+    <Symbol>envelopeeditoramount</Symbol>
+    <Value>0.724000036716461</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>envelopeoneshot</Name>
+    <Symbol>envelopeoneshot</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>envelopefixtempo</Name>
+    <Symbol>envelopefixtempo</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Port 77</Name>
+    <Symbol>lv2_port_77</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Port 78</Name>
+    <Symbol>lv2_port_78</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Port 79</Name>
+    <Symbol>lv2_port_79</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>Port 80</Name>
+    <Symbol>lv2_port_80</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>Port 81</Name>
+    <Symbol>lv2_port_81</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>filterdrive</Name>
+    <Symbol>filterdrive</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>delaywet</Name>
+    <Symbol>delaywet</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>delaytime</Name>
+    <Symbol>delaytime</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>delaysync</Name>
+    <Symbol>delaysync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>delayfactorl</Name>
+    <Symbol>delayfactorl</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>delayfactorr</Name>
+    <Symbol>delayfactorr</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>delayhighshelf</Name>
+    <Symbol>delayhighshelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>delaylowshelf</Name>
+    <Symbol>delaylowshelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>delayfeedback</Name>
+    <Symbol>delayfeedback</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Port 91</Name>
+    <Symbol>lv2_port_91</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Port 92</Name>
+    <Symbol>lv2_port_92</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:juce:stateString</Key>
+    <Value>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;tal curprogram=&quot;9&quot; version=&quot;1.6999999999999999556&quot;&gt;
+  &lt;programs&gt;
+    &lt;program programname=&quot;ARP Danger Dance TUC&quot; volume=&quot;0.3160000145435333252&quot;
+             filtertype=&quot;0&quot; cutoff=&quot;0&quot; resonance=&quot;0.28000000119209289551&quot;
+             osc1volume=&quot;0.60400003194808959961&quot; osc2volume=&quot;0.63200002908706665039&quot;
+             osc3volume=&quot;0.80000001192092895508&quot; osc1waveform=&quot;0&quot; osc2waveform=&quot;0&quot;
+             oscsync=&quot;0&quot; oscmastertune=&quot;0.5&quot; osc1tune=&quot;0.49400001764297485352&quot;
+             osc2tune=&quot;0.50800001621246337891&quot; osc1finetune=&quot;0.37600001692771911621&quot;
+             osc2finetune=&quot;0.62800002098083496094&quot; portamento=&quot;0.24000000953674316406&quot;
+             keyfollow=&quot;0&quot; filtercontour=&quot;0.5&quot; filterattack=&quot;0&quot; filterdecay=&quot;0&quot;
+             filtersustain=&quot;0&quot; filterrelease=&quot;0&quot; ampattack=&quot;0&quot; ampdecay=&quot;0&quot;
+             ampsustain=&quot;1&quot; amprelease=&quot;0.30400002002716064453&quot; voices=&quot;0&quot;
+             portamentomode=&quot;0.5&quot; lfo1waveform=&quot;0&quot; lfo2waveform=&quot;0&quot; lfo1rate=&quot;0.64400005340576171875&quot;
+             lfo2rate=&quot;0&quot; lfo1amount=&quot;0.58400005102157592773&quot; lfo2amount=&quot;0&quot;
+             lfo1destination=&quot;0.42857143282890319824&quot; lfo2destination=&quot;0&quot;
+             lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.5&quot; osc2fm=&quot;0&quot; osc1phase=&quot;0.5&quot;
+             osc2phase=&quot;0&quot; transpose=&quot;0.72800004482269287109&quot; freeadattack=&quot;0&quot;
+             freeaddecay=&quot;0&quot; freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot; lfo1sync=&quot;0&quot;
+             lfo1keytrigger=&quot;0&quot; lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;0&quot; velocityvolume=&quot;0&quot;
+             velocitycontour=&quot;0&quot; velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0&quot; pitchwheelpitch=&quot;1&quot;
+             highpass=&quot;0&quot; detune=&quot;0.97200006246566772461&quot; vintagenoise=&quot;0.14800000190734863281&quot;
+             ringmodulation=&quot;0&quot; chorus1enable=&quot;0&quot; chorus2enable=&quot;1&quot; reverbwet=&quot;0.7720000147819519043&quot;
+             reverbdecay=&quot;0.20800000429153442383&quot; reverbpredelay=&quot;0.49600002169609069824&quot;
+             reverbhighcut=&quot;0.5520000457763671875&quot; reverblowcut=&quot;0.59200000762939453125&quot;
+             oscbitcrusher=&quot;1&quot; filterdrive=&quot;0&quot; delaywet=&quot;0&quot; delaytime=&quot;0.5&quot;
+             delaysync=&quot;0&quot; delayfactorl=&quot;0&quot; delayfactorr=&quot;0&quot; delayhighshelf=&quot;0&quot;
+             delaylowshelf=&quot;0&quot; delayfeedback=&quot;0.5&quot; envelopeeditordest1=&quot;0.14285714924335479736&quot;
+             envelopeeditorspeed=&quot;0.40000000596046447754&quot; envelopeeditoramount=&quot;0.72400003671646118164&quot;
+             envelopeoneshot=&quot;0&quot; envelopefixtempo=&quot;0&quot; tab1open=&quot;1&quot; tab2open=&quot;0&quot;
+             tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
+      &lt;splinePoints&gt;
+        &lt;splinePoint isStartPoint=&quot;1&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0&quot; centerPointY=&quot;1&quot;
+                     controlPointLeftX=&quot;0&quot; controlPointLeftY=&quot;1&quot; controlPointRightX=&quot;0.10000000149011611938&quot;
+                     controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.11666666716337203979&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.046296298503875732422&quot;
+                     controlPointLeftY=&quot;1&quot; controlPointRightX=&quot;0.21666669845581054688&quot;
+                     controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.12407407164573669434&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.046296291053295135498&quot;
+                     controlPointLeftY=&quot;0&quot; controlPointRightX=&quot;0.22407409548759460449&quot;
+                     controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.24629630148410797119&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.14629630744457244873&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.3462963104248046875&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.25&quot; centerPointY=&quot;1&quot;
+                     controlPointLeftX=&quot;0.15000000596046447754&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.35000002384185791016&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.36666667461395263672&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.26666668057441711426&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.46666666865348815918&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.37592592835426330566&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.2759259343147277832&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.47592592239379882812&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.49629628658294677734&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.39629629254341125488&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.59629625082015991211&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.49814814329147338867&quot;
+                     centerPointY=&quot;0.99500000476837158203&quot; controlPointLeftX=&quot;0.39814814925193786621&quot;
+                     controlPointLeftY=&quot;0.99500000476837158203&quot; controlPointRightX=&quot;0.60555553436279296875&quot;
+                     controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.56296294927597045898&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.46296292543411254883&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.66296297311782836914&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.56666666269302368164&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.46666663885116577148&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.6666666865348815918&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.62037038803100585938&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.52037036418914794922&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.72037041187286376953&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.62407410144805908203&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.52407407760620117188&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.72407412528991699219&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.68518519401550292969&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.58518517017364501953&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.78518521785736083984&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.68888890743255615234&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.58888888359069824219&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.7888889312744140625&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.75&quot; centerPointY=&quot;0.0049999952316284179688&quot;
+                     controlPointLeftX=&quot;0.64999997615814208984&quot; controlPointLeftY=&quot;0.0049999952316284179688&quot;
+                     controlPointRightX=&quot;0.85000002384185791016&quot; controlPointRightY=&quot;0.0049999952316284179688&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.75&quot; centerPointY=&quot;1&quot;
+                     controlPointLeftX=&quot;0.64999997615814208984&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.85000002384185791016&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.79074072837829589844&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.69074070453643798828&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.89074075222015380859&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.79444444179534912109&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.69444441795349121094&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.89444446563720703125&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.83703702688217163086&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.7370370030403137207&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.93703705072402954102&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.83888888359069824219&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.73888885974884033203&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.93888890743255615234&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.87037038803100585938&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.77037036418914794922&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.942592620849609375&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.87037038803100585938&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.77037036418914794922&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.94444447755813598633&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.91111111640930175781&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.81111109256744384766&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;1&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.91296297311782836914&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.81296294927597045898&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.9740740656852722168&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.942592620849609375&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.84259259700775146484&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;0.98148149251937866211&quot; controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.95555555820465087891&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.85555553436279296875&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;0.9740740656852722168&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.99629628658294677734&quot;
+                     centerPointY=&quot;0&quot; controlPointLeftX=&quot;0.89629626274108886719&quot; controlPointLeftY=&quot;0&quot;
+                     controlPointRightX=&quot;1&quot; controlPointRightY=&quot;0&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;1&quot; centerPointX=&quot;1&quot; centerPointY=&quot;1&quot;
+                     controlPointLeftX=&quot;0.89999997615814208984&quot; controlPointLeftY=&quot;1&quot;
+                     controlPointRightX=&quot;1&quot; controlPointRightY=&quot;1&quot;/&gt;
+      &lt;/splinePoints&gt;
+    &lt;/program&gt;
+  &lt;/programs&gt;
+&lt;/tal&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Pattern -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>MIDI Pattern</Name>
+   <Label>midipattern</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Time Signature</Name>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Measures</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Default Length</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Quantize</Name>
+    <Value>4</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/chunk</Type>
+    <Key>State</Key>
+    <Value>
+0:3:0x90:072:100
+96:3:0x80:072:100
+96:3:0x90:074:100
+192:3:0x80:074:100
+192:3:0x90:076:100
+288:3:0x80:076:100
+288:3:0x90:074:100
+384:3:0x80:074:100
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Onset Trigger - Bassdrum Detection Mono:Audio Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:events-out</Source>
+   <Target>Note2CC:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Onset Trigger - Bassdrum Detection Mono:events-out</Source>
+   <Target>Noize Mak3r:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Note2CC:events-out</Source>
+   <Target>Onset Trigger - Bassdrum Detection Mono:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Noize Mak3r:Audio Output 1</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Noize Mak3r:Audio Output 2</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Connection>
+   <Source>MIDI Pattern:events-out</Source>
+   <Target>Note2CC:events-in</Target>
+  </Connection>
+ </Patchbay>
+</CARLA-PROJECT>
+"""
+	] .
