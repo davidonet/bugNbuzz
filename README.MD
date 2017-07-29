@@ -1,10 +1,10 @@
 Bug'n'buzz OSC ports :
 
-Sooperlooper receive : 9951
+Sooperlooper receive : 192.168.1.10:9951
 
-osc_sooperlooper_test.py : 192.168.1.108000
+osc_sooperlooper_test.py : 192.168.1.10:8000
 
-Ardour receive : 3819
+Ardour receive : 192.168.1.10:3819
 
 X-OSC : 192.168.1.30:9000
 
