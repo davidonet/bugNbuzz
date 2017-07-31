@@ -47,7 +47,7 @@
     <Index>1</Index>
     <Name>Signal Level Theshold [dBFS, RMS]</Name>
     <Symbol>threshold</Symbol>
-    <Value>-76</Value>
+    <Value>-69.8160018920898</Value>
    </Parameter>
 
    <Parameter>
@@ -56,7 +56,7 @@
     <Symbol>midinote</Symbol>
     <MidiCC>20</MidiCC>
     <MidiChannel>1</MidiChannel>
-    <Value>26</Value>
+    <Value>75</Value>
    </Parameter>
 
    <Parameter>
@@ -163,7 +163,7 @@
 
   <Data>
    <Active>Yes</Active>
-   <Volume>0.254</Volume>
+   <Volume>0.4445</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x1e5</Options>
 
@@ -178,7 +178,7 @@
     <Index>2</Index>
     <Name>volume</Name>
     <Symbol>volume</Symbol>
-    <Value>0.300000011920929</Value>
+    <Value>0.527999997138977</Value>
    </Parameter>
 
    <Parameter>
@@ -192,28 +192,28 @@
     <Index>4</Index>
     <Name>cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>1</Value>
+    <Value>0.34400001168251</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
     <Name>resonance</Name>
     <Symbol>resonance</Symbol>
-    <Value>0</Value>
+    <Value>0.496000021696091</Value>
    </Parameter>
 
    <Parameter>
     <Index>6</Index>
     <Name>keyfollow</Name>
     <Symbol>keyfollow</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>filtercontour</Name>
     <Symbol>filtercontour</Symbol>
-    <Value>0.48800003528595</Value>
+    <Value>0.624000012874603</Value>
    </Parameter>
 
    <Parameter>
@@ -227,7 +227,7 @@
     <Index>9</Index>
     <Name>filterdecay</Name>
     <Symbol>filterdecay</Symbol>
-    <Value>0.532000005245209</Value>
+    <Value>0.480000019073486</Value>
    </Parameter>
 
    <Parameter>
@@ -241,7 +241,7 @@
     <Index>11</Index>
     <Name>filterrelease</Name>
     <Symbol>filterrelease</Symbol>
-    <Value>0</Value>
+    <Value>0.404000014066696</Value>
    </Parameter>
 
    <Parameter>
@@ -255,42 +255,42 @@
     <Index>13</Index>
     <Name>ampdecay</Name>
     <Symbol>ampdecay</Symbol>
-    <Value>0.76800000667572</Value>
+    <Value>0.392000019550323</Value>
    </Parameter>
 
    <Parameter>
     <Index>14</Index>
     <Name>ampsustain</Name>
     <Symbol>ampsustain</Symbol>
-    <Value>0</Value>
+    <Value>0.672000050544739</Value>
    </Parameter>
 
    <Parameter>
     <Index>15</Index>
     <Name>amprelease</Name>
     <Symbol>amprelease</Symbol>
-    <Value>0.568000018596649</Value>
+    <Value>0.144000008702278</Value>
    </Parameter>
 
    <Parameter>
     <Index>16</Index>
     <Name>osc1volume</Name>
     <Symbol>osc1volume</Symbol>
-    <Value>0</Value>
+    <Value>0.800000011920929</Value>
    </Parameter>
 
    <Parameter>
     <Index>17</Index>
     <Name>osc2volume</Name>
     <Symbol>osc2volume</Symbol>
-    <Value>0.828000068664551</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>18</Index>
     <Name>osc3volume</Name>
     <Symbol>osc3volume</Symbol>
-    <Value>0</Value>
+    <Value>0.800000011920929</Value>
    </Parameter>
 
    <Parameter>
@@ -311,35 +311,35 @@
     <Index>21</Index>
     <Name>osc2tune</Name>
     <Symbol>osc2tune</Symbol>
-    <Value>1</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>22</Index>
     <Name>osc1finetune</Name>
     <Symbol>osc1finetune</Symbol>
-    <Value>0.5</Value>
+    <Value>0.472000032663345</Value>
    </Parameter>
 
    <Parameter>
     <Index>23</Index>
     <Name>osc2finetune</Name>
     <Symbol>osc2finetune</Symbol>
-    <Value>0.5</Value>
+    <Value>0.527999997138977</Value>
    </Parameter>
 
    <Parameter>
     <Index>24</Index>
     <Name>osc1waveform</Name>
     <Symbol>osc1waveform</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>25</Index>
     <Name>osc2waveform</Name>
     <Symbol>osc2waveform</Symbol>
-    <Value>0.75</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -353,7 +353,7 @@
     <Index>27</Index>
     <Name>lfo1waveform</Name>
     <Symbol>lfo1waveform</Symbol>
-    <Value>0.984000027179718</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -367,42 +367,42 @@
     <Index>29</Index>
     <Name>lfo1rate</Name>
     <Symbol>lfo1rate</Symbol>
-    <Value>0.600000023841858</Value>
+    <Value>0.204000011086464</Value>
    </Parameter>
 
    <Parameter>
     <Index>30</Index>
     <Name>lfo2rate</Name>
     <Symbol>lfo2rate</Symbol>
-    <Value>0</Value>
+    <Value>0.332000017166138</Value>
    </Parameter>
 
    <Parameter>
     <Index>31</Index>
     <Name>lfo1amount</Name>
     <Symbol>lfo1amount</Symbol>
-    <Value>0.860000014305115</Value>
+    <Value>0.52400004863739</Value>
    </Parameter>
 
    <Parameter>
     <Index>32</Index>
     <Name>lfo2amount</Name>
     <Symbol>lfo2amount</Symbol>
-    <Value>0.5</Value>
+    <Value>0.368000030517578</Value>
    </Parameter>
 
    <Parameter>
     <Index>33</Index>
     <Name>lfo1destination</Name>
     <Symbol>lfo1destination</Symbol>
-    <Value>0.428571432828903</Value>
+    <Value>0.28571429848671</Value>
    </Parameter>
 
    <Parameter>
     <Index>34</Index>
     <Name>lfo2destination</Name>
     <Symbol>lfo2destination</Symbol>
-    <Value>0</Value>
+    <Value>0.142857149243355</Value>
    </Parameter>
 
    <Parameter>
@@ -493,7 +493,7 @@
     <Index>47</Index>
     <Name>lfo1keytrigger</Name>
     <Symbol>lfo1keytrigger</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -507,7 +507,7 @@
     <Index>49</Index>
     <Name>lfo2keytrigger</Name>
     <Symbol>lfo2keytrigger</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -528,14 +528,14 @@
     <Index>52</Index>
     <Name>voices</Name>
     <Symbol>voices</Symbol>
-    <Value>0</Value>
+    <Value>0.600000023841858</Value>
    </Parameter>
 
    <Parameter>
     <Index>53</Index>
     <Name>velocityvolume</Name>
     <Symbol>velocityvolume</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -556,7 +556,7 @@
     <Index>56</Index>
     <Name>pitchwheelcutoff</Name>
     <Symbol>pitchwheelcutoff</Symbol>
-    <Value>0</Value>
+    <Value>0.0840000063180923</Value>
    </Parameter>
 
    <Parameter>
@@ -577,7 +577,7 @@
     <Index>59</Index>
     <Name>chorus1enable</Name>
     <Symbol>chorus1enable</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -591,14 +591,14 @@
     <Index>61</Index>
     <Name>reverbwet</Name>
     <Symbol>reverbwet</Symbol>
-    <Value>0</Value>
+    <Value>0.26800000667572</Value>
    </Parameter>
 
    <Parameter>
     <Index>62</Index>
     <Name>reverbdecay</Name>
     <Symbol>reverbdecay</Symbol>
-    <Value>0.5</Value>
+    <Value>0.712000012397766</Value>
    </Parameter>
 
    <Parameter>
@@ -640,7 +640,7 @@
     <Index>68</Index>
     <Name>detune</Name>
     <Symbol>detune</Symbol>
-    <Value>0</Value>
+    <Value>0.376000016927719</Value>
    </Parameter>
 
    <Parameter>
@@ -668,14 +668,14 @@
     <Index>72</Index>
     <Name>envelopeeditordest1</Name>
     <Symbol>envelopeeditordest1</Symbol>
-    <Value>0.428571432828903</Value>
+    <Value>0.28571429848671</Value>
    </Parameter>
 
    <Parameter>
     <Index>73</Index>
     <Name>envelopeeditorspeed</Name>
     <Symbol>envelopeeditorspeed</Symbol>
-    <Value>0.400000005960464</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -696,7 +696,7 @@
     <Index>76</Index>
     <Name>envelopefixtempo</Name>
     <Symbol>envelopefixtempo</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -745,21 +745,21 @@
     <Index>83</Index>
     <Name>delaywet</Name>
     <Symbol>delaywet</Symbol>
-    <Value>0.456000030040741</Value>
+    <Value>0.108000002801418</Value>
    </Parameter>
 
    <Parameter>
     <Index>84</Index>
     <Name>delaytime</Name>
     <Symbol>delaytime</Symbol>
-    <Value>0.216000005602837</Value>
+    <Value>0.808000028133392</Value>
    </Parameter>
 
    <Parameter>
     <Index>85</Index>
     <Name>delaysync</Name>
     <Symbol>delaysync</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -780,21 +780,21 @@
     <Index>88</Index>
     <Name>delayhighshelf</Name>
     <Symbol>delayhighshelf</Symbol>
-    <Value>0.364000022411346</Value>
+    <Value>0.60400003194809</Value>
    </Parameter>
 
    <Parameter>
     <Index>89</Index>
     <Name>delaylowshelf</Name>
     <Symbol>delaylowshelf</Symbol>
-    <Value>0.096000000834465</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>90</Index>
     <Name>delayfeedback</Name>
     <Symbol>delayfeedback</Symbol>
-    <Value>0.388000011444092</Value>
+    <Value>0.0880000069737434</Value>
    </Parameter>
 
    <Parameter>
@@ -819,38 +819,44 @@
 
 &lt;tal curprogram=&quot;0&quot; version=&quot;1.6999999999999999556&quot;&gt;
   &lt;programs&gt;
-    &lt;program programname=&quot;FX Another World TAL&quot; volume=&quot;0.30000001192092895508&quot;
-             filtertype=&quot;0&quot; cutoff=&quot;1&quot; resonance=&quot;0&quot; osc1volume=&quot;0&quot; osc2volume=&quot;0.82800006866455078125&quot;
-             osc3volume=&quot;0&quot; osc1waveform=&quot;1&quot; osc2waveform=&quot;0.75&quot; oscsync=&quot;0&quot;
-             oscmastertune=&quot;0.5&quot; osc1tune=&quot;0.25&quot; osc2tune=&quot;1&quot; osc1finetune=&quot;0.5&quot;
-             osc2finetune=&quot;0.5&quot; portamento=&quot;0&quot; keyfollow=&quot;0&quot; filtercontour=&quot;0.48800003528594970703&quot;
-             filterattack=&quot;0&quot; filterdecay=&quot;0.53200000524520874023&quot; filtersustain=&quot;0&quot;
-             filterrelease=&quot;0&quot; ampattack=&quot;0&quot; ampdecay=&quot;0.76800000667572021484&quot;
-             ampsustain=&quot;0&quot; amprelease=&quot;0.56800001859664916992&quot; voices=&quot;0&quot;
-             portamentomode=&quot;0&quot; lfo1waveform=&quot;0.98400002717971801758&quot; lfo2waveform=&quot;0&quot;
-             lfo1rate=&quot;0.60000002384185791016&quot; lfo2rate=&quot;0&quot; lfo1amount=&quot;0.86000001430511474609&quot;
-             lfo2amount=&quot;0.5&quot; lfo1destination=&quot;0.42857143282890319824&quot; lfo2destination=&quot;0&quot;
-             lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.5&quot; osc2fm=&quot;0&quot; osc1phase=&quot;0.5&quot;
-             osc2phase=&quot;0&quot; transpose=&quot;1&quot; freeadattack=&quot;0&quot; freeaddecay=&quot;0&quot;
-             freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot; lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;1&quot;
-             lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;0&quot; velocityvolume=&quot;0&quot; velocitycontour=&quot;0&quot;
-             velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0&quot; pitchwheelpitch=&quot;0&quot; highpass=&quot;0&quot;
-             detune=&quot;0&quot; vintagenoise=&quot;0&quot; ringmodulation=&quot;0&quot; chorus1enable=&quot;1&quot;
-             chorus2enable=&quot;0&quot; reverbwet=&quot;0&quot; reverbdecay=&quot;0.5&quot; reverbpredelay=&quot;0&quot;
-             reverbhighcut=&quot;0&quot; reverblowcut=&quot;1&quot; oscbitcrusher=&quot;1&quot; filterdrive=&quot;0&quot;
-             delaywet=&quot;0.4560000300407409668&quot; delaytime=&quot;0.21600000560283660889&quot;
-             delaysync=&quot;0&quot; delayfactorl=&quot;1&quot; delayfactorr=&quot;0&quot; delayhighshelf=&quot;0.36400002241134643555&quot;
-             delaylowshelf=&quot;0.096000000834465026855&quot; delayfeedback=&quot;0.38800001144409179688&quot;
-             envelopeeditordest1=&quot;0.42857143282890319824&quot; envelopeeditorspeed=&quot;0.40000000596046447754&quot;
-             envelopeeditoramount=&quot;1&quot; envelopeoneshot=&quot;1&quot; envelopefixtempo=&quot;0&quot;
-             tab1open=&quot;1&quot; tab2open=&quot;0&quot; tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
+    &lt;program programname=&quot;KB E-Piano TAL&quot; volume=&quot;0.52799999713897705078&quot;
+             filtertype=&quot;0&quot; cutoff=&quot;0.34400001168251037598&quot; resonance=&quot;0.49600002169609069824&quot;
+             osc1volume=&quot;0.80000001192092895508&quot; osc2volume=&quot;0&quot; osc3volume=&quot;0.80000001192092895508&quot;
+             osc1waveform=&quot;0&quot; osc2waveform=&quot;0&quot; oscsync=&quot;0&quot; oscmastertune=&quot;0.5&quot;
+             osc1tune=&quot;0.25&quot; osc2tune=&quot;0.5&quot; osc1finetune=&quot;0.47200003266334533691&quot;
+             osc2finetune=&quot;0.52799999713897705078&quot; portamento=&quot;0&quot; keyfollow=&quot;1&quot;
+             filtercontour=&quot;0.62400001287460327148&quot; filterattack=&quot;0&quot; filterdecay=&quot;0.48000001907348632812&quot;
+             filtersustain=&quot;0&quot; filterrelease=&quot;0.40400001406669616699&quot; ampattack=&quot;0&quot;
+             ampdecay=&quot;0.39200001955032348633&quot; ampsustain=&quot;0.67200005054473876953&quot;
+             amprelease=&quot;0.14400000870227813721&quot; voices=&quot;0.60000002384185791016&quot;
+             portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot; lfo2waveform=&quot;0&quot; lfo1rate=&quot;0.20400001108646392822&quot;
+             lfo2rate=&quot;0.33200001716613769531&quot; lfo1amount=&quot;0.52400004863739013672&quot;
+             lfo2amount=&quot;0.368000030517578125&quot; lfo1destination=&quot;0.28571429848670959473&quot;
+             lfo2destination=&quot;0.14285714924335479736&quot; lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot;
+             osc1pw=&quot;0.5&quot; osc2fm=&quot;0&quot; osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;1&quot;
+             freeadattack=&quot;0&quot; freeaddecay=&quot;0&quot; freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot;
+             lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;0&quot; lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;1&quot;
+             velocityvolume=&quot;1&quot; velocitycontour=&quot;0&quot; velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0.084000006318092346191&quot;
+             pitchwheelpitch=&quot;0&quot; highpass=&quot;0&quot; detune=&quot;0.37600001692771911621&quot;
+             vintagenoise=&quot;0&quot; ringmodulation=&quot;0&quot; chorus1enable=&quot;0&quot; chorus2enable=&quot;0&quot;
+             reverbwet=&quot;0.26800000667572021484&quot; reverbdecay=&quot;0.71200001239776611328&quot;
+             reverbpredelay=&quot;0&quot; reverbhighcut=&quot;0&quot; reverblowcut=&quot;1&quot; oscbitcrusher=&quot;1&quot;
+             filterdrive=&quot;0&quot; delaywet=&quot;0.10800000280141830444&quot; delaytime=&quot;0.80800002813339233398&quot;
+             delaysync=&quot;1&quot; delayfactorl=&quot;1&quot; delayfactorr=&quot;0&quot; delayhighshelf=&quot;0.60400003194808959961&quot;
+             delaylowshelf=&quot;0&quot; delayfeedback=&quot;0.088000006973743438721&quot; envelopeeditordest1=&quot;0.28571429848670959473&quot;
+             envelopeeditorspeed=&quot;1&quot; envelopeeditoramount=&quot;1&quot; envelopeoneshot=&quot;1&quot;
+             envelopefixtempo=&quot;1&quot; tab1open=&quot;1&quot; tab2open=&quot;0&quot; tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
       &lt;splinePoints&gt;
-        &lt;splinePoint isStartPoint=&quot;1&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0&quot; centerPointY=&quot;0&quot;
-                     controlPointLeftX=&quot;0&quot; controlPointLeftY=&quot;0&quot; controlPointRightX=&quot;0.10000000149011611938&quot;
-                     controlPointRightY=&quot;0&quot;/&gt;
-        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.29629629850387573242&quot;
-                     centerPointY=&quot;0.5&quot; controlPointLeftX=&quot;0.25555557012557983398&quot;
-                     controlPointLeftY=&quot;0.5&quot; controlPointRightX=&quot;0.39629644155502319336&quot;
+        &lt;splinePoint isStartPoint=&quot;1&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0&quot; centerPointY=&quot;1&quot;
+                     controlPointLeftX=&quot;0&quot; controlPointLeftY=&quot;1&quot; controlPointRightX=&quot;0.10000000149011611938&quot;
+                     controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.15370370447635650635&quot;
+                     centerPointY=&quot;1&quot; controlPointLeftX=&quot;0.083333335816860198975&quot;
+                     controlPointLeftY=&quot;1&quot; controlPointRightX=&quot;0.25370371341705322266&quot;
+                     controlPointRightY=&quot;1&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0.15740740299224853516&quot;
+                     centerPointY=&quot;0.5&quot; controlPointLeftX=&quot;0.1277777552604675293&quot;
+                     controlPointLeftY=&quot;0.61000001430511474609&quot; controlPointRightX=&quot;0.25740736722946166992&quot;
                      controlPointRightY=&quot;0.5&quot;/&gt;
         &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;1&quot; centerPointX=&quot;1&quot; centerPointY=&quot;0.5&quot;
                      controlPointLeftX=&quot;0.89999997615814208984&quot; controlPointLeftY=&quot;0.5&quot;
@@ -899,35 +905,35 @@
    <Parameter>
     <Index>3</Index>
     <Name>Quantize</Name>
-    <Value>1</Value>
+    <Value>4</Value>
    </Parameter>
 
    <CustomData>
     <Type>http://kxstudio.sf.net/ns/carla/chunk</Type>
     <Key>State</Key>
     <Value>
-0:3:0x90:024:100
-96:3:0x80:024:100
-96:3:0x90:069:100
-192:3:0x80:069:100
-192:3:0x90:061:100
-288:3:0x90:026:100
-288:3:0x80:061:100
-384:3:0x80:026:100
-384:3:0x90:068:100
-480:3:0x90:026:100
-480:3:0x80:068:100
-576:3:0x80:026:100
-576:3:0x90:089:100
-672:3:0x80:089:100
-672:3:0x90:069:100
-768:3:0x90:095:100
-768:3:0x80:069:100
-851:3:0x90:029:100
-852:3:0x80:095:100
-863:3:0x80:029:100
-864:3:0x90:062:100
-972:3:0x80:062:100
+0:3:0x90:072:100
+96:3:0x80:072:100
+96:3:0x90:073:100
+192:3:0x80:073:100
+192:3:0x90:075:100
+264:3:0x80:075:100
+264:3:0x90:075:100
+288:3:0x80:075:100
+288:3:0x90:073:100
+384:3:0x80:073:100
+384:3:0x90:075:100
+480:3:0x80:075:100
+480:3:0x90:079:100
+576:3:0x80:079:100
+576:3:0x90:075:100
+672:3:0x80:075:100
+672:3:0x90:079:100
+768:3:0x80:079:100
+768:3:0x90:084:100
+864:3:0x80:084:100
+864:3:0x90:079:100
+960:3:0x80:079:100
 
     </Value>
    </CustomData>

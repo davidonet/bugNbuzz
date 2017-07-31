@@ -21,7 +21,9 @@ ardour:LOOP4/audio_out 2                 |> ardour:Master/audio_in 2
 ardour:Master/audio_out 1                |> system:playback_1
 ardour:Master/audio_out 2                |> system:playback_2
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:common_in_1
+ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop0_in_1
 ardour:PiezzCrav/audio_out 2             |> sooperlooper:common_in_2
+ardour:PiezzCrav/audio_out 2             |> sooperlooper:loop0_in_2
 ardour:Piezzo Cuisse/audio_out 1         |> sooperlooper:common_in_1
 ardour:Piezzo Cuisse/audio_out 2         |> sooperlooper:common_in_2
 ardour:Table1/audio_out 1                |> sooperlooper:common_in_1
@@ -53,6 +55,8 @@ ardour:Table4Audio/audio_out 2           |> ardour:Table4/audio_in 2
 ardour:Table4Synth/audio_out 1           |> ardour:Table4/audio_in 3
 ardour:Table4Synth/audio_out 2           |> ardour:Table4/audio_in 4
 ardour:Voix/audio_out 1                  |> sooperlooper:common_in_1
+ardour:Voix/audio_out 1                  |> sooperlooper:loop0_in_1
+ardour:Voix/audio_out 2                  |> sooperlooper:loop0_in_2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
 sooperlooper:loop0_out_1                 |> ardour:LOOP1/audio_in 1
@@ -63,6 +67,7 @@ sooperlooper:loop2_out_1                 |> ardour:LOOP3/audio_in 1
 sooperlooper:loop2_out_2                 |> ardour:LOOP3/audio_in 2
 sooperlooper:loop3_out_1                 |> ardour:LOOP4/audio_in 1
 sooperlooper:loop3_out_2                 |> ardour:LOOP4/audio_in 2
+system:capture_1                         |> ardour:CravateAudio/audio_in 1
+system:capture_1                         |> ardour:CravateSynth/audio_in 1
 system:capture_1                         |> ardour:LTC-in
-system:capture_1                         |> ardour:Table2Audio/audio_in 1
-system:capture_1                         |> ardour:Table2Synth/audio_in 1
+system:capture_2                         |> ardour:Voix/audio_in 1

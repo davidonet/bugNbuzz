@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1204981" name-counter="1" event-counter="103130" vca-counter="1">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1213856" name-counter="1" event-counter="119623" vca-counter="1">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -71,7 +71,7 @@
   <Sources/>
   <Regions/>
   <Selection>
-    <StripableAutomationControl stripable="1111110" control="0" order="1"/>
+    <StripableAutomationControl stripable="187864" control="0" order="6"/>
   </Selection>
   <Locations/>
   <Bundles/>
@@ -1356,13 +1356,15 @@
       <IO name="Table2" id="465" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table2/audio_out 1">
           <Connection other="sooperlooper:common_in_1"/>
+          <Connection other="sooperlooper:loop0_in_1"/>
         </Port>
         <Port type="audio" name="Table2/audio_out 2">
           <Connection other="sooperlooper:common_in_2"/>
+          <Connection other="sooperlooper:loop0_in_2"/>
         </Port>
       </IO>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
-      <Controllable name="mute" id="449" flags="Toggle" value="1"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
+      <Controllable name="mute" id="449" flags="Toggle" value="0"/>
       <Controllable name="phase" id="1082960" flags="Toggle" value="0" phase-invert="0000"/>
       <Automation>
         <AutomationList automation-id="gain" id="1082951" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
@@ -1424,11 +1426,11 @@
         </OutputMap-0>
         <ThruMap/>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
-          <Port symbol="xfade" value="1"/>
+          <Port symbol="xfade" value="0.63917523622512817"/>
           <Port symbol="shape" value="0.59842497110366821"/>
           <Port symbol="mode" value="0"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="1" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.63917523622512817" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.59842497110366821" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0" parameter="2" symbol="mode"/>
       </Processor>
@@ -1462,7 +1464,7 @@
         <Automation>
           <AutomationList automation-id="gain" id="1082951" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
-        <Controllable name="gaincontrol" id="468" flags="GainLike" value="0.17134831845760345"/>
+        <Controllable name="gaincontrol" id="468" flags="GainLike" value="0.72154402732849121"/>
       </Processor>
       <Processor id="472" name="meter-Audio 6" active="1" user-latency="0" type="meter"/>
       <Processor id="473" name="Table2" active="1" user-latency="0" own-input="1" own-output="0" output="Table2" type="main-outs" role="Main">
@@ -2567,9 +2569,7 @@
       <Controllable name="solo-iso" id="1085740" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085742" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table1Audio" id="187927" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table1Audio/audio_in 1">
-          <Connection other="system:capture_1"/>
-        </Port>
+        <Port type="audio" name="Table1Audio/audio_in 1"/>
       </IO>
       <IO name="Table1Audio" id="187928" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table1Audio/audio_out 1">
@@ -2675,7 +2675,9 @@
       <Controllable name="solo-iso" id="1085824" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085826" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table2Audio" id="187967" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table2Audio/audio_in 1"/>
+        <Port type="audio" name="Table2Audio/audio_in 1">
+          <Connection other="system:capture_1"/>
+        </Port>
       </IO>
       <IO name="Table2Audio" id="187968" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table2Audio/audio_out 1">
@@ -2721,6 +2723,153 @@
           <AutomationList automation-id="trim" id="1085815" default="1" min-yval="0.10000000149011612" max-yval="10" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
         <Controllable name="trimcontrol" id="187973" flags="" value="1.5848941802978516"/>
+      </Processor>
+      <Processor id="1205083" name="a-Reverb" active="1" user-latency="0" type="lv2" unique-id="urn:ardour:a-reverb" count="1" custom="0">
+        <Automation>
+          <AutomationList automation-id="parameter-4" id="1205084" default="0.30000001192092896" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-5" id="1205086" default="0.5" min-yval="0.5" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-6" id="1205088" default="1" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
+        </Automation>
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
+          <Port symbol="blend" value="0.30000001192092896"/>
+          <Port symbol="roomsz" value="0.86339998245239258"/>
+          <Port symbol="enable" value="0"/>
+        </lv2>
+        <Controllable name="Blend" id="1205085" flags="" value="0.30000001192092896" parameter="4" symbol="blend"/>
+        <Controllable name="Room Size" id="1205087" flags="" value="0.86339998245239258" parameter="5" symbol="roomsz"/>
+        <Controllable name="Enable" id="1205089" flags="Toggle" value="0" parameter="6" symbol="enable"/>
+      </Processor>
+      <Processor id="1205096" name="Tal-Reverb-III" active="0" user-latency="0" type="lv2" unique-id="urn:juce:TalReverb3" count="1" custom="0">
+        <Automation>
+          <AutomationList automation-id="parameter-0" id="1205097" default="0" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-5" id="1205099" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-6" id="1205101" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-7" id="1205103" default="0.26600000262260437" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1205105" default="0.34000000357627869" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1205107" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-10" id="1205109" default="0.75599998235702515" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-11" id="1205111" default="0.24799999594688416" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-12" id="1205113" default="1" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-13" id="1205115" default="1" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-14" id="1205117" default="1" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+        </Automation>
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" state-dir="state1">
+          <Port symbol="lv2_freewheel" value="0"/>
+          <Port symbol="unused" value="0"/>
+          <Port symbol="dry" value="0.5"/>
+          <Port symbol="wet" value="0.49000000953674316"/>
+          <Port symbol="room_size" value="0.21600000560283661"/>
+          <Port symbol="pre_delay" value="0"/>
+          <Port symbol="low_shelf_gain" value="0.57600003480911255"/>
+          <Port symbol="high_shelf_gain" value="0.40400001406669617"/>
+          <Port symbol="stereo" value="1"/>
+          <Port symbol="stereo_input" value="0"/>
+          <Port symbol="power" value="1"/>
+        </lv2>
+        <Controllable name="hidden" id="1205098" flags="Toggle" value="0" parameter="0" symbol="lv2_freewheel"/>
+        <Controllable name="unused" id="1205100" flags="" value="0" parameter="5" symbol="unused"/>
+        <Controllable name="dry" id="1205102" flags="" value="0.5" parameter="6" symbol="dry"/>
+        <Controllable name="wet" id="1205104" flags="" value="0.49000000953674316" parameter="7" symbol="wet"/>
+        <Controllable name="room size" id="1205106" flags="" value="0.21600000560283661" parameter="8" symbol="room_size"/>
+        <Controllable name="pre delay" id="1205108" flags="" value="0" parameter="9" symbol="pre_delay"/>
+        <Controllable name="low shelf gain" id="1205110" flags="" value="0.57600003480911255" parameter="10" symbol="low_shelf_gain"/>
+        <Controllable name="high shelf gain" id="1205112" flags="" value="0.40400001406669617" parameter="11" symbol="high_shelf_gain"/>
+        <Controllable name="stereo" id="1205114" flags="" value="1" parameter="12" symbol="stereo"/>
+        <Controllable name="stereo input" id="1205116" flags="" value="0" parameter="13" symbol="stereo_input"/>
+        <Controllable name="power" id="1205118" flags="" value="1" parameter="14" symbol="power"/>
+      </Processor>
+      <Processor id="1205123" name="Tal-Reverb" active="1" user-latency="0" type="lv2" unique-id="urn:juce:TalReverb" count="1" custom="0">
+        <Automation>
+          <AutomationList automation-id="parameter-0" id="1205124" default="0" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-5" id="1205126" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-6" id="1205128" default="0.8529999852180481" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-7" id="1205130" default="0.38699999451637268" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1205132" default="0.5559999942779541" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1205134" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-10" id="1205136" default="1" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-11" id="1205138" default="0.21600000560283661" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-12" id="1205140" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-13" id="1205142" default="1" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+        </Automation>
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" state-dir="state1">
+          <Port symbol="lv2_freewheel" value="0"/>
+          <Port symbol="unused" value="0"/>
+          <Port symbol="dry" value="0.7850000262260437"/>
+          <Port symbol="wet" value="0.38699999451637268"/>
+          <Port symbol="room_size" value="0.5559999942779541"/>
+          <Port symbol="pre_delay" value="0.29600000381469727"/>
+          <Port symbol="high_cut" value="0.7720000147819519"/>
+          <Port symbol="low_cut" value="0.13199999928474426"/>
+          <Port symbol="damp" value="0.21600000560283661"/>
+          <Port symbol="stereo" value="1"/>
+        </lv2>
+        <Controllable name="hidden" id="1205125" flags="Toggle" value="0" parameter="0" symbol="lv2_freewheel"/>
+        <Controllable name="unused" id="1205127" flags="" value="0" parameter="5" symbol="unused"/>
+        <Controllable name="Dry" id="1205129" flags="" value="0.7850000262260437" parameter="6" symbol="dry"/>
+        <Controllable name="Wet" id="1205131" flags="" value="0.38699999451637268" parameter="7" symbol="wet"/>
+        <Controllable name="Room Size" id="1205133" flags="" value="0.5559999942779541" parameter="8" symbol="room_size"/>
+        <Controllable name="Pre Delay" id="1205135" flags="" value="0.29600000381469727" parameter="9" symbol="pre_delay"/>
+        <Controllable name="High Cut" id="1205137" flags="" value="0.7720000147819519" parameter="10" symbol="high_cut"/>
+        <Controllable name="Low Cut" id="1205139" flags="" value="0.13199999928474426" parameter="11" symbol="low_cut"/>
+        <Controllable name="Damp" id="1205141" flags="" value="0.21600000560283661" parameter="12" symbol="damp"/>
+        <Controllable name="Stereo" id="1205143" flags="" value="1" parameter="13" symbol="stereo"/>
       </Processor>
       <Processor id="188408" name="Monitor" active="0" user-latency="0" own-input="1" own-output="1" type="intsend" role="Listen" selfdestruct="0" target="58" allow-feedback="0">
         <Automation>
@@ -3185,7 +3334,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state78">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state80">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3316,7 +3465,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state111">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state112">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3504,7 +3653,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state120">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state121">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3692,7 +3841,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state115">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state117">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -5259,7 +5408,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state30">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state31">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -5700,16 +5849,16 @@
         <ThruMap>
           <Channelmap type="audio" from="0" to="0"/>
         </ThruMap>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state3">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" state-dir="state5">
           <Port symbol="lv2_freewheel" value="0"/>
           <Port symbol="time_signature" value="3"/>
-          <Port symbol="measures" value="4"/>
+          <Port symbol="measures" value="8"/>
           <Port symbol="default_length" value="4"/>
           <Port symbol="quantize" value="4"/>
         </lv2>
         <Controllable name="hidden" id="1111466" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
         <Controllable name="Time Signature" id="1111468" flags="" value="3" parameter="3" symbol="time_signature"/>
-        <Controllable name="Measures" id="1111470" flags="" value="4" parameter="4" symbol="measures"/>
+        <Controllable name="Measures" id="1111470" flags="" value="8" parameter="4" symbol="measures"/>
         <Controllable name="Default Length" id="1111472" flags="" value="4" parameter="5" symbol="default_length"/>
         <Controllable name="Quantize" id="1111474" flags="" value="4" parameter="6" symbol="quantize"/>
       </Processor>
@@ -5738,10 +5887,74 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state29">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state34">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
+      </Processor>
+      <Processor id="1205052" name="MDA ePiano" active="1" user-latency="0" type="lv2" unique-id="http://drobilla.net/plugins/mda/EPiano" count="1" custom="0">
+        <Automation>
+          <AutomationList automation-id="parameter-0" id="1205053" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-1" id="1205055" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-2" id="1205057" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-3" id="1205059" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-4" id="1205061" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-5" id="1205063" default="0.64999997615814209" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-6" id="1205065" default="0.25" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-7" id="1205067" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1205069" default="1" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1205071" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-10" id="1205073" default="0.14599999785423279" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-11" id="1205075" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+        </Automation>
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="midi" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput>
+          <Channels type="audio" count="2"/>
+        </PresetOutput>
+        <InputMap-0>
+          <Channelmap type="midi" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
+          <Port symbol="env_decay" value="0.6597931981086731"/>
+          <Port symbol="env_release" value="0.5"/>
+          <Port symbol="hardness" value="0.61340171098709106"/>
+          <Port symbol="treble_boost" value="0.5"/>
+          <Port symbol="modulation" value="0.81443238258361816"/>
+          <Port symbol="lfo_rate" value="0.6551545262336731"/>
+          <Port symbol="vel_sense" value="0.25"/>
+          <Port symbol="stereo_width" value="0.79381394386291504"/>
+          <Port symbol="polyphonic" value="1"/>
+          <Port symbol="fine_tuning" value="0.5"/>
+          <Port symbol="random_tuning" value="0.14599999785423279"/>
+          <Port symbol="overdrive" value="0.67010289430618286"/>
+        </lv2>
+        <Controllable name="Envelope Decay" id="1205054" flags="" value="0.6597931981086731" parameter="0" symbol="env_decay"/>
+        <Controllable name="Envelope Release" id="1205056" flags="" value="0.5" parameter="1" symbol="env_release"/>
+        <Controllable name="Hardness" id="1205058" flags="" value="0.61340171098709106" parameter="2" symbol="hardness"/>
+        <Controllable name="Treble Boost" id="1205060" flags="" value="0.5" parameter="3" symbol="treble_boost"/>
+        <Controllable name="Modulation" id="1205062" flags="" value="0.81443238258361816" parameter="4" symbol="modulation"/>
+        <Controllable name="LFO Rate" id="1205064" flags="" value="0.6551545262336731" parameter="5" symbol="lfo_rate"/>
+        <Controllable name="Velocity Sense" id="1205066" flags="" value="0.25" parameter="6" symbol="vel_sense"/>
+        <Controllable name="Stereo Width" id="1205068" flags="" value="0.79381394386291504" parameter="7" symbol="stereo_width"/>
+        <Controllable name="Polyphonic" id="1205070" flags="Toggle" value="1" parameter="8" symbol="polyphonic"/>
+        <Controllable name="Fine Tuning" id="1205072" flags="" value="0.5" parameter="9" symbol="fine_tuning"/>
+        <Controllable name="Random Tuning" id="1205074" flags="" value="0.14599999785423279" parameter="10" symbol="random_tuning"/>
+        <Controllable name="Overdrive" id="1205076" flags="" value="0.67010289430618286" parameter="11" symbol="overdrive"/>
       </Processor>
       <Processor id="1111169" name="Monitor" active="0" user-latency="0" own-input="1" own-output="1" type="intsend" role="Listen" selfdestruct="0" target="58" allow-feedback="0">
         <Automation>
