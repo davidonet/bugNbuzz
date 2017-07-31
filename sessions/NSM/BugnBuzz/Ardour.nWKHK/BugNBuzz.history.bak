@@ -30,7 +30,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296889" tv-usec="4440828" name="ajouter un changement de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -43,7 +43,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296894" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -69,7 +69,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296906" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -83,7 +83,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296908" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -97,7 +97,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296914" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -111,7 +111,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296918" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -172,7 +172,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297418" tv-usec="4440828" name="supprimer le changement de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>

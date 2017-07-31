@@ -33,7 +33,9 @@ ardour:Table1Audio/audio_out 2           |> ardour:Table1/audio_in 2
 ardour:Table1Synth/audio_out 1           |> ardour:Table1/audio_in 3
 ardour:Table1Synth/audio_out 2           |> ardour:Table1/audio_in 4
 ardour:Table2/audio_out 1                |> sooperlooper:common_in_1
+ardour:Table2/audio_out 1                |> sooperlooper:loop0_in_1
 ardour:Table2/audio_out 2                |> sooperlooper:common_in_2
+ardour:Table2/audio_out 2                |> sooperlooper:loop0_in_2
 ardour:Table2Audio/audio_out 1           |> ardour:Table2/audio_in 1
 ardour:Table2Audio/audio_out 2           |> ardour:Table2/audio_in 2
 ardour:Table2Synth/audio_out 1           |> ardour:Table2/audio_in 3
@@ -62,5 +64,5 @@ sooperlooper:loop2_out_2                 |> ardour:LOOP3/audio_in 2
 sooperlooper:loop3_out_1                 |> ardour:LOOP4/audio_in 1
 sooperlooper:loop3_out_2                 |> ardour:LOOP4/audio_in 2
 system:capture_1                         |> ardour:LTC-in
-system:capture_1                         |> ardour:Table1Audio/audio_in 1
-system:capture_1                         |> ardour:Table1Synth/audio_in 1
+system:capture_1                         |> ardour:Table2Audio/audio_in 1
+system:capture_1                         |> ardour:Table2Synth/audio_in 1

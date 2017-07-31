@@ -47,7 +47,7 @@
     <Index>1</Index>
     <Name>Signal Level Theshold [dBFS, RMS]</Name>
     <Symbol>threshold</Symbol>
-    <Value>-80</Value>
+    <Value>-76</Value>
    </Parameter>
 
    <Parameter>
@@ -56,7 +56,7 @@
     <Symbol>midinote</Symbol>
     <MidiCC>20</MidiCC>
     <MidiChannel>1</MidiChannel>
-    <Value>69</Value>
+    <Value>89</Value>
    </Parameter>
 
    <Parameter>
@@ -103,7 +103,7 @@
   </Data>
  </Plugin>
 
- <!-- Note2CC -->
+ <!-- MIDI Note to CC -->
  <Plugin>
   <Info>
    <Type>LV2</Type>
@@ -143,6 +143,13 @@
     <Symbol>key</Symbol>
     <Value>127</Value>
    </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Ignore Note Off</Name>
+    <Symbol>nooff</Symbol>
+    <Value>1</Value>
+   </Parameter>
   </Data>
  </Plugin>
 
@@ -161,644 +168,644 @@
    <Options>0x1e5</Options>
 
    <Parameter>
-    <Index>2</Index>
+    <Index>1</Index>
     <Name>unused</Name>
     <Symbol>unused</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>3</Index>
+    <Index>2</Index>
     <Name>volume</Name>
     <Symbol>volume</Symbol>
     <Value>0.300000011920929</Value>
    </Parameter>
 
    <Parameter>
-    <Index>4</Index>
+    <Index>3</Index>
     <Name>filtertype</Name>
     <Symbol>filtertype</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>5</Index>
+    <Index>4</Index>
     <Name>cutoff</Name>
     <Symbol>cutoff</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>6</Index>
+    <Index>5</Index>
     <Name>resonance</Name>
     <Symbol>resonance</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>7</Index>
+    <Index>6</Index>
     <Name>keyfollow</Name>
     <Symbol>keyfollow</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>8</Index>
+    <Index>7</Index>
     <Name>filtercontour</Name>
     <Symbol>filtercontour</Symbol>
     <Value>0.48800003528595</Value>
    </Parameter>
 
    <Parameter>
-    <Index>9</Index>
+    <Index>8</Index>
     <Name>filterattack</Name>
     <Symbol>filterattack</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>10</Index>
+    <Index>9</Index>
     <Name>filterdecay</Name>
     <Symbol>filterdecay</Symbol>
     <Value>0.532000005245209</Value>
    </Parameter>
 
    <Parameter>
-    <Index>11</Index>
+    <Index>10</Index>
     <Name>filtersustain</Name>
     <Symbol>filtersustain</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>12</Index>
+    <Index>11</Index>
     <Name>filterrelease</Name>
     <Symbol>filterrelease</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>13</Index>
+    <Index>12</Index>
     <Name>ampattack</Name>
     <Symbol>ampattack</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>14</Index>
+    <Index>13</Index>
     <Name>ampdecay</Name>
     <Symbol>ampdecay</Symbol>
     <Value>0.76800000667572</Value>
    </Parameter>
 
    <Parameter>
-    <Index>15</Index>
+    <Index>14</Index>
     <Name>ampsustain</Name>
     <Symbol>ampsustain</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>16</Index>
+    <Index>15</Index>
     <Name>amprelease</Name>
     <Symbol>amprelease</Symbol>
     <Value>0.568000018596649</Value>
    </Parameter>
 
    <Parameter>
-    <Index>17</Index>
+    <Index>16</Index>
     <Name>osc1volume</Name>
     <Symbol>osc1volume</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>18</Index>
+    <Index>17</Index>
     <Name>osc2volume</Name>
     <Symbol>osc2volume</Symbol>
     <Value>0.828000068664551</Value>
    </Parameter>
 
    <Parameter>
-    <Index>19</Index>
+    <Index>18</Index>
     <Name>osc3volume</Name>
     <Symbol>osc3volume</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>20</Index>
+    <Index>19</Index>
     <Name>oscmastertune</Name>
     <Symbol>oscmastertune</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>21</Index>
+    <Index>20</Index>
     <Name>osc1tune</Name>
     <Symbol>osc1tune</Symbol>
     <Value>0.25</Value>
    </Parameter>
 
    <Parameter>
-    <Index>22</Index>
+    <Index>21</Index>
     <Name>osc2tune</Name>
     <Symbol>osc2tune</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>23</Index>
+    <Index>22</Index>
     <Name>osc1finetune</Name>
     <Symbol>osc1finetune</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>24</Index>
+    <Index>23</Index>
     <Name>osc2finetune</Name>
     <Symbol>osc2finetune</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>25</Index>
+    <Index>24</Index>
     <Name>osc1waveform</Name>
     <Symbol>osc1waveform</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>26</Index>
+    <Index>25</Index>
     <Name>osc2waveform</Name>
     <Symbol>osc2waveform</Symbol>
     <Value>0.75</Value>
    </Parameter>
 
    <Parameter>
-    <Index>27</Index>
+    <Index>26</Index>
     <Name>oscsync</Name>
     <Symbol>oscsync</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>28</Index>
+    <Index>27</Index>
     <Name>lfo1waveform</Name>
     <Symbol>lfo1waveform</Symbol>
     <Value>0.984000027179718</Value>
    </Parameter>
 
    <Parameter>
-    <Index>29</Index>
+    <Index>28</Index>
     <Name>lfo2waveform</Name>
     <Symbol>lfo2waveform</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>30</Index>
+    <Index>29</Index>
     <Name>lfo1rate</Name>
     <Symbol>lfo1rate</Symbol>
     <Value>0.600000023841858</Value>
    </Parameter>
 
    <Parameter>
-    <Index>31</Index>
+    <Index>30</Index>
     <Name>lfo2rate</Name>
     <Symbol>lfo2rate</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>32</Index>
+    <Index>31</Index>
     <Name>lfo1amount</Name>
     <Symbol>lfo1amount</Symbol>
     <Value>0.860000014305115</Value>
    </Parameter>
 
    <Parameter>
-    <Index>33</Index>
+    <Index>32</Index>
     <Name>lfo2amount</Name>
     <Symbol>lfo2amount</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>34</Index>
+    <Index>33</Index>
     <Name>lfo1destination</Name>
     <Symbol>lfo1destination</Symbol>
     <Value>0.428571432828903</Value>
    </Parameter>
 
    <Parameter>
-    <Index>35</Index>
+    <Index>34</Index>
     <Name>lfo2destination</Name>
     <Symbol>lfo2destination</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>36</Index>
+    <Index>35</Index>
     <Name>lfo1phase</Name>
     <Symbol>lfo1phase</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>37</Index>
+    <Index>36</Index>
     <Name>lfo2phase</Name>
     <Symbol>lfo2phase</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>38</Index>
+    <Index>37</Index>
     <Name>osc2fm</Name>
     <Symbol>osc2fm</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>39</Index>
+    <Index>38</Index>
     <Name>osc2phase</Name>
     <Symbol>osc2phase</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>40</Index>
+    <Index>39</Index>
     <Name>osc1pw</Name>
     <Symbol>osc1pw</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>41</Index>
+    <Index>40</Index>
     <Name>osc1phase</Name>
     <Symbol>osc1phase</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>42</Index>
+    <Index>41</Index>
     <Name>transpose</Name>
     <Symbol>transpose</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>43</Index>
+    <Index>42</Index>
     <Name>freeadattack</Name>
     <Symbol>freeadattack</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>44</Index>
+    <Index>43</Index>
     <Name>freeaddecay</Name>
     <Symbol>freeaddecay</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>45</Index>
+    <Index>44</Index>
     <Name>freeadamount</Name>
     <Symbol>freeadamount</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>46</Index>
+    <Index>45</Index>
     <Name>freeaddestination</Name>
     <Symbol>freeaddestination</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>47</Index>
+    <Index>46</Index>
     <Name>lfo1sync</Name>
     <Symbol>lfo1sync</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>48</Index>
+    <Index>47</Index>
     <Name>lfo1keytrigger</Name>
     <Symbol>lfo1keytrigger</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>49</Index>
+    <Index>48</Index>
     <Name>lfo2sync</Name>
     <Symbol>lfo2sync</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>50</Index>
+    <Index>49</Index>
     <Name>lfo2keytrigger</Name>
     <Symbol>lfo2keytrigger</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>51</Index>
+    <Index>50</Index>
     <Name>portamento</Name>
     <Symbol>portamento</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>52</Index>
+    <Index>51</Index>
     <Name>portamentomode</Name>
     <Symbol>portamentomode</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>53</Index>
+    <Index>52</Index>
     <Name>voices</Name>
     <Symbol>voices</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>54</Index>
+    <Index>53</Index>
     <Name>velocityvolume</Name>
     <Symbol>velocityvolume</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>55</Index>
+    <Index>54</Index>
     <Name>velocitycontour</Name>
     <Symbol>velocitycontour</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>56</Index>
+    <Index>55</Index>
     <Name>velocitycutoff</Name>
     <Symbol>velocitycutoff</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>57</Index>
+    <Index>56</Index>
     <Name>pitchwheelcutoff</Name>
     <Symbol>pitchwheelcutoff</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>58</Index>
+    <Index>57</Index>
     <Name>pitchwheelpitch</Name>
     <Symbol>pitchwheelpitch</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>59</Index>
+    <Index>58</Index>
     <Name>ringmodulation</Name>
     <Symbol>ringmodulation</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>60</Index>
+    <Index>59</Index>
     <Name>chorus1enable</Name>
     <Symbol>chorus1enable</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>61</Index>
+    <Index>60</Index>
     <Name>chorus2enable</Name>
     <Symbol>chorus2enable</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>62</Index>
+    <Index>61</Index>
     <Name>reverbwet</Name>
     <Symbol>reverbwet</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>63</Index>
+    <Index>62</Index>
     <Name>reverbdecay</Name>
     <Symbol>reverbdecay</Symbol>
     <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>64</Index>
+    <Index>63</Index>
     <Name>reverbpredelay</Name>
     <Symbol>reverbpredelay</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>65</Index>
+    <Index>64</Index>
     <Name>reverbhighcut</Name>
     <Symbol>reverbhighcut</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>66</Index>
+    <Index>65</Index>
     <Name>reverblowcut</Name>
     <Symbol>reverblowcut</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>67</Index>
+    <Index>66</Index>
     <Name>oscbitcrusher</Name>
     <Symbol>oscbitcrusher</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>68</Index>
+    <Index>67</Index>
     <Name>highpass</Name>
     <Symbol>highpass</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>69</Index>
+    <Index>68</Index>
     <Name>detune</Name>
     <Symbol>detune</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>70</Index>
+    <Index>69</Index>
     <Name>vintagenoise</Name>
     <Symbol>vintagenoise</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>71</Index>
+    <Index>70</Index>
     <Name>Port 70</Name>
     <Symbol>lv2_port_70</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>72</Index>
+    <Index>71</Index>
     <Name>unused</Name>
     <Symbol>unused_2</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>73</Index>
+    <Index>72</Index>
     <Name>envelopeeditordest1</Name>
     <Symbol>envelopeeditordest1</Symbol>
     <Value>0.428571432828903</Value>
    </Parameter>
 
    <Parameter>
-    <Index>74</Index>
+    <Index>73</Index>
     <Name>envelopeeditorspeed</Name>
     <Symbol>envelopeeditorspeed</Symbol>
     <Value>0.400000005960464</Value>
    </Parameter>
 
    <Parameter>
-    <Index>75</Index>
+    <Index>74</Index>
     <Name>envelopeeditoramount</Name>
     <Symbol>envelopeeditoramount</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>76</Index>
+    <Index>75</Index>
     <Name>envelopeoneshot</Name>
     <Symbol>envelopeoneshot</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>77</Index>
+    <Index>76</Index>
     <Name>envelopefixtempo</Name>
     <Symbol>envelopefixtempo</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>78</Index>
+    <Index>77</Index>
     <Name>Port 77</Name>
     <Symbol>lv2_port_77</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>79</Index>
+    <Index>78</Index>
     <Name>Port 78</Name>
     <Symbol>lv2_port_78</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>80</Index>
+    <Index>79</Index>
     <Name>Port 79</Name>
     <Symbol>lv2_port_79</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>81</Index>
+    <Index>80</Index>
     <Name>Port 80</Name>
     <Symbol>lv2_port_80</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>82</Index>
+    <Index>81</Index>
     <Name>Port 81</Name>
     <Symbol>lv2_port_81</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>83</Index>
+    <Index>82</Index>
     <Name>filterdrive</Name>
     <Symbol>filterdrive</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>84</Index>
+    <Index>83</Index>
     <Name>delaywet</Name>
     <Symbol>delaywet</Symbol>
     <Value>0.456000030040741</Value>
    </Parameter>
 
    <Parameter>
-    <Index>85</Index>
+    <Index>84</Index>
     <Name>delaytime</Name>
     <Symbol>delaytime</Symbol>
     <Value>0.216000005602837</Value>
    </Parameter>
 
    <Parameter>
-    <Index>86</Index>
+    <Index>85</Index>
     <Name>delaysync</Name>
     <Symbol>delaysync</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>87</Index>
+    <Index>86</Index>
     <Name>delayfactorl</Name>
     <Symbol>delayfactorl</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>88</Index>
+    <Index>87</Index>
     <Name>delayfactorr</Name>
     <Symbol>delayfactorr</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>89</Index>
+    <Index>88</Index>
     <Name>delayhighshelf</Name>
     <Symbol>delayhighshelf</Symbol>
     <Value>0.364000022411346</Value>
    </Parameter>
 
    <Parameter>
-    <Index>90</Index>
+    <Index>89</Index>
     <Name>delaylowshelf</Name>
     <Symbol>delaylowshelf</Symbol>
     <Value>0.096000000834465</Value>
    </Parameter>
 
    <Parameter>
-    <Index>91</Index>
+    <Index>90</Index>
     <Name>delayfeedback</Name>
     <Symbol>delayfeedback</Symbol>
     <Value>0.388000011444092</Value>
    </Parameter>
 
    <Parameter>
-    <Index>92</Index>
+    <Index>91</Index>
     <Name>Port 91</Name>
     <Symbol>lv2_port_91</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>93</Index>
+    <Index>92</Index>
     <Name>Port 92</Name>
     <Symbol>lv2_port_92</Symbol>
     <Value>0</Value>
