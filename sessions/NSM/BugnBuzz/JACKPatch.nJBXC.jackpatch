@@ -1,13 +1,15 @@
-ardour:CravateAudio/audio_out 1          |> ardour:Piezzo cavate/audio_in 1
-ardour:CravateAudio/audio_out 2          |> ardour:Piezzo cavate/audio_in 2
-ardour:CravateSynth/audio_out 1          |> ardour:Piezzo cavate/audio_in 3
-ardour:CravateSynth/audio_out 2          |> ardour:Piezzo cavate/audio_in 4
+ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
+ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
+ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3
+ardour:CravateSynth/audio_out 2          |> ardour:PiezzCrav/audio_in 4
 ardour:CuisseAudio/audio_out 1           |> ardour:Piezzo Cuisse/audio_in 1
 ardour:CuisseAudio/audio_out 2           |> ardour:Piezzo Cuisse/audio_in 2
 ardour:CuisseSynth/audio_out 1           |> ardour:Piezzo Cuisse/audio_in 3
 ardour:CuisseSynth/audio_out 2           |> ardour:Piezzo Cuisse/audio_in 4
 ardour:DPA/audio_out 1                   |> sooperlooper:common_in_1
 ardour:DPA/audio_out 2                   |> sooperlooper:common_in_2
+ardour:EARS/audio_out 1                  |> system:playback_3
+ardour:EARS/audio_out 2                  |> system:playback_4
 ardour:LOOP1/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP1/audio_out 2                 |> ardour:Master/audio_in 2
 ardour:LOOP2/audio_out 1                 |> ardour:Master/audio_in 1
@@ -16,14 +18,16 @@ ardour:LOOP3/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP3/audio_out 2                 |> ardour:Master/audio_in 2
 ardour:LOOP4/audio_out 1                 |> ardour:Master/audio_in 1
 ardour:LOOP4/audio_out 2                 |> ardour:Master/audio_in 2
-ardour:Master/audio_out 1                |> ardour:Monitor/audio_in 1
-ardour:Master/audio_out 2                |> ardour:Monitor/audio_in 2
+ardour:Master/audio_out 1                |> system:playback_1
+ardour:Master/audio_out 2                |> system:playback_2
+ardour:PiezzCrav/audio_out 1             |> sooperlooper:common_in_1
+ardour:PiezzCrav/audio_out 2             |> sooperlooper:common_in_2
 ardour:Piezzo Cuisse/audio_out 1         |> sooperlooper:common_in_1
 ardour:Piezzo Cuisse/audio_out 2         |> sooperlooper:common_in_2
-ardour:Piezzo cavate/audio_out 1         |> sooperlooper:common_in_1
-ardour:Piezzo cavate/audio_out 2         |> sooperlooper:common_in_2
 ardour:Table1/audio_out 1                |> sooperlooper:common_in_1
+ardour:Table1/audio_out 1                |> sooperlooper:loop0_in_1
 ardour:Table1/audio_out 2                |> sooperlooper:common_in_2
+ardour:Table1/audio_out 2                |> sooperlooper:loop0_in_2
 ardour:Table1Audio/audio_out 1           |> ardour:Table1/audio_in 1
 ardour:Table1Audio/audio_out 2           |> ardour:Table1/audio_in 2
 ardour:Table1Synth/audio_out 1           |> ardour:Table1/audio_in 3
@@ -47,7 +51,6 @@ ardour:Table4Audio/audio_out 2           |> ardour:Table4/audio_in 2
 ardour:Table4Synth/audio_out 1           |> ardour:Table4/audio_in 3
 ardour:Table4Synth/audio_out 2           |> ardour:Table4/audio_in 4
 ardour:Voix/audio_out 1                  |> sooperlooper:common_in_1
-ardour:Voix/audio_out 2                  |> sooperlooper:common_in_2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
 sooperlooper:loop0_out_1                 |> ardour:LOOP1/audio_in 1
@@ -59,3 +62,5 @@ sooperlooper:loop2_out_2                 |> ardour:LOOP3/audio_in 2
 sooperlooper:loop3_out_1                 |> ardour:LOOP4/audio_in 1
 sooperlooper:loop3_out_2                 |> ardour:LOOP4/audio_in 2
 system:capture_1                         |> ardour:LTC-in
+system:capture_1                         |> ardour:Table1Audio/audio_in 1
+system:capture_1                         |> ardour:Table1Synth/audio_in 1
