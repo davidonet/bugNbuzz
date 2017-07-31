@@ -132,9 +132,13 @@ sooperlooper:loop3_out_1                 |> ardour:Loop4 VX/audio_in 1
 sooperlooper:loop3_out_2                 |> ardour:Loop4 DPA/audio_in 1
 sooperlooper:loop3_out_3                 |> ardour:Loop4Piezz/audio_in 1
 sooperlooper:loop3_out_4                 |> ardour:Loop4Piezz/audio_in 2
+system:capture_1                         |> ardour:CravateSynth/audio_in 1
+system:capture_1                         |> ardour:CuisseSynth/audio_in 1
 system:capture_1                         |> ardour:LTC-in
 system:capture_1                         |> ardour:Table1Audio/audio_in 1
 system:capture_1                         |> ardour:Table1Synth/audio_in 1
 system:capture_1                         |> ardour:Table2Synth/audio_in 1
+system:capture_1                         |> ardour:Table3Audio/audio_in 1
 system:capture_1                         |> ardour:Table3Synth/audio_in 1
+system:capture_1                         |> ardour:Table4Synth/audio_in 1
 system:capture_2                         |> ardour:Voix/audio_in 1
