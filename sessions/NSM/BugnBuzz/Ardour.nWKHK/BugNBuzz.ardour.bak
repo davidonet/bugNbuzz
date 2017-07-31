@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1213856" name-counter="1" event-counter="119623" vca-counter="1">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1222565" name-counter="1" event-counter="121110" vca-counter="1">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -3334,7 +3334,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state80">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state81">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3465,7 +3465,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state112">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state113">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3653,7 +3653,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state121">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state122">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -3841,7 +3841,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state117">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state118">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -5408,7 +5408,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state31">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state32">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -5802,7 +5802,7 @@
       </Automation>
       <Pannable>
         <Controllable name="pan-azimuth" id="1111140" flags="" value="0.5"/>
-        <Controllable name="pan-width" id="1111141" flags="" value="1"/>
+        <Controllable name="pan-width" id="1111141" flags="" value="0.46067416667938232"/>
         <Controllable name="pan-elevation" id="1111142" flags="" value="0"/>
         <Controllable name="pan-frontback" id="1111143" flags="" value="0"/>
         <Controllable name="pan-lfe" id="1111144" flags="" value="0"/>
@@ -5887,7 +5887,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state34">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state35">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -5963,7 +5963,7 @@
         <PannerShell bypassed="1" user-panner="" linked-to-route="1"/>
         <Pannable>
           <Controllable name="pan-azimuth" id="1111140" flags="" value="0.5"/>
-          <Controllable name="pan-width" id="1111141" flags="" value="1"/>
+          <Controllable name="pan-width" id="1111141" flags="" value="0.46067416667938232"/>
           <Controllable name="pan-elevation" id="1111142" flags="" value="0"/>
           <Controllable name="pan-frontback" id="1111143" flags="" value="0"/>
           <Controllable name="pan-lfe" id="1111144" flags="" value="0"/>
@@ -5993,7 +5993,7 @@
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
         <Pannable>
           <Controllable name="pan-azimuth" id="1111140" flags="" value="0.5"/>
-          <Controllable name="pan-width" id="1111141" flags="" value="1"/>
+          <Controllable name="pan-width" id="1111141" flags="" value="0.46067416667938232"/>
           <Controllable name="pan-elevation" id="1111142" flags="" value="0"/>
           <Controllable name="pan-frontback" id="1111143" flags="" value="0"/>
           <Controllable name="pan-lfe" id="1111144" flags="" value="0"/>
@@ -7107,14 +7107,14 @@
     </Processor>
   </Click>
   <LTC-In>
-    <IO name="LTC In" id="48" direction="Input" default-type="audio" user-latency="0">
+    <IO name="LTC In" id="47" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
         <Connection other="system:capture_1"/>
       </Port>
     </IO>
   </LTC-In>
   <LTC-Out>
-    <IO name="LTC Out" id="49" direction="Output" default-type="audio" user-latency="0">
+    <IO name="LTC Out" id="48" direction="Output" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-out"/>
     </IO>
   </LTC-Out>
@@ -7149,7 +7149,7 @@
       <Window name="add-routes" visible="0" x-off="-1" y-off="-1" x-size="439" y-size="339"/>
       <Window name="add-video" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="inspector" visible="0" x-off="231" y-off="25" x-size="620" y-size="370"/>
-      <Window name="audio-midi-setup" visible="0" x-off="267" y-off="0" x-size="658" y-size="430"/>
+      <Window name="audio-midi-setup" visible="0" x-off="278" y-off="0" x-size="658" y-size="430"/>
       <Window name="video-export" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="script-manager" visible="0" x-off="945" y-off="1" x-size="367" y-size="352"/>
       <Window name="bundle-manager" visible="0" x-off="204" y-off="97" x-size="480" y-size="240"/>
@@ -7405,12 +7405,18 @@
       <Window name="PM-187936-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-187944-187979" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-187944-187974" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187944-1205083" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187944-1205096" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187944-1205123" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-187944-188408" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-187944-187971" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-187944-187975" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-187944-187976" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="PM-187979-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-187974-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1205083-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1205096-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1205123-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-188408-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-187971-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-187975-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
@@ -7497,7 +7503,7 @@
       <Window name="P-1111110-1111131" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1111110-1112394" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1111110-1112406" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-1111110-1112410" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-1111110-1205052" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1111110-1111169" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1111110-1111134" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1111110-1111137" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
@@ -7506,7 +7512,7 @@
       <Window name="PM-1111131-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-1112394-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-1112406-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-1112410-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1205052-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-1111169-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-1111134-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-1111137-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
@@ -8436,6 +8442,9 @@
         <Object id="strip 187944" visible="1" strip-width="Narrow">
           <Object id="processor 187971"/>
           <Object id="processor 766158"/>
+          <Object id="processor 1205083"/>
+          <Object id="processor 1205096"/>
+          <Object id="processor 1205123"/>
         </Object>
         <Object id="strip 187984" visible="1" strip-width="Narrow">
           <Object id="processor 188011"/>
@@ -8698,6 +8707,7 @@
           <Object id="processor 1112406"/>
           <Object id="processor 1112410"/>
           <Object id="processor 1111134"/>
+          <Object id="processor 1205052"/>
         </Object>
         <Object id="strip 1111238" visible="1">
           <Object id="processor 1112621"/>
