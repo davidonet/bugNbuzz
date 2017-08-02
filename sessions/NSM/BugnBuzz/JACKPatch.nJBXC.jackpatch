@@ -1,3 +1,5 @@
+Mixxx:out_70                             |> ardour:Zik/audio_in 1
+Mixxx:out_71                             |> ardour:Zik/audio_in 2
 ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
 ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
 ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3
@@ -118,6 +120,8 @@ ardour:Voix/audio_out 1                  |> sooperlooper:loop0_in_1
 ardour:Voix/audio_out 1                  |> sooperlooper:loop1_in_1
 ardour:Voix/audio_out 1                  |> sooperlooper:loop2_in_1
 ardour:Voix/audio_out 1                  |> sooperlooper:loop3_in_1
+ardour:Zik/audio_out 1                   |> ardour:Master/audio_in 1
+ardour:Zik/audio_out 2                   |> ardour:Master/audio_in 2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:LTC-in

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1259769" name-counter="2" event-counter="228407" vca-counter="1">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1265139" name-counter="2" event-counter="228437" vca-counter="1">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -71,7 +71,7 @@
   <Sources/>
   <Regions/>
   <Selection>
-    <StripableAutomationControl stripable="1110854" control="0" order="57"/>
+    <StripableAutomationControl stripable="1226791" control="0" order="4"/>
   </Selection>
   <Locations/>
   <Bundles/>
@@ -84,13 +84,13 @@
       <Controllable name="solo-safe" id="1082317" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Master" id="47" direction="Input" default-type="audio" user-latency="0">
         <Port type="audio" name="Master/audio_in 1">
-          <Connection other="LOOP1/audio_out 1"/>
+          <Connection other="LOOP 1/audio_out 1"/>
           <Connection other="LOOP2/audio_out 1"/>
           <Connection other="LOOP3/audio_out 1"/>
           <Connection other="LOOP4/audio_out 1"/>
         </Port>
         <Port type="audio" name="Master/audio_in 2">
-          <Connection other="LOOP1/audio_out 2"/>
+          <Connection other="LOOP 1/audio_out 2"/>
           <Connection other="LOOP2/audio_out 2"/>
           <Connection other="LOOP3/audio_out 2"/>
           <Connection other="LOOP4/audio_out 2"/>
@@ -1961,28 +1961,28 @@
       <Controllable name="rec-enable" id="1083140" flags="Toggle,RealTime" value="0"/>
       <Diskstream flags="Recordable" playlist="Table4" name="Table4" id="553" speed="1" capture-alignment="Automatic" record-safe="0" channels="4"/>
     </Route>
-    <Route id="2269" name="LOOP1" default-type="audio" strict-io="0" active="1" denormal-protection="0" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1">
+    <Route id="2269" name="LOOP 1" default-type="audio" strict-io="0" active="1" denormal-protection="0" meter-point="MeterPostFader" meter-type="MeterPeak" route-group="Loop1">
       <PresentationInfo order="9" flags="OrderSet" color="2322323711"/>
       <Controllable name="solo" id="2271" flags="Toggle" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
       <Controllable name="solo-iso" id="1083196" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1083198" flags="Toggle" value="0" solo-safe="0"/>
-      <IO name="LOOP1" id="2288" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="LOOP1/audio_in 1">
+      <IO name="LOOP 1" id="2288" direction="Input" default-type="audio" user-latency="0">
+        <Port type="audio" name="LOOP 1/audio_in 1">
           <Connection other="Loop1 DPA/audio_out 1"/>
           <Connection other="Loop1 VX/audio_out 1"/>
           <Connection other="Loop1Piezz/audio_out 1"/>
         </Port>
-        <Port type="audio" name="LOOP1/audio_in 2">
+        <Port type="audio" name="LOOP 1/audio_in 2">
           <Connection other="Loop1 DPA/audio_out 2"/>
           <Connection other="Loop1 VX/audio_out 2"/>
           <Connection other="Loop1Piezz/audio_out 2"/>
         </Port>
       </IO>
-      <IO name="LOOP1" id="2289" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="LOOP1/audio_out 1">
+      <IO name="LOOP 1" id="2289" direction="Output" default-type="audio" user-latency="0">
+        <Port type="audio" name="LOOP 1/audio_out 1">
           <Connection other="Master/audio_in 1"/>
         </Port>
-        <Port type="audio" name="LOOP1/audio_out 2">
+        <Port type="audio" name="LOOP 1/audio_out 2">
           <Connection other="Master/audio_in 2"/>
         </Port>
       </IO>
@@ -1999,17 +1999,17 @@
         <AutomationList automation-id="phase" id="1083193" default="0" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
       </Automation>
       <Pannable>
-        <Controllable name="pan-azimuth" id="1130584" flags="" value="0.49722221493721008"/>
-        <Controllable name="pan-width" id="1130588" flags="" value="0.99444442987442017"/>
-        <Controllable name="pan-elevation" id="1130586" flags="" value="0"/>
-        <Controllable name="pan-frontback" id="1130590" flags="" value="0"/>
-        <Controllable name="pan-lfe" id="1130592" flags="" value="0"/>
+        <Controllable name="pan-azimuth" id="1259774" flags="" value="0.5"/>
+        <Controllable name="pan-width" id="1259778" flags="" value="1"/>
+        <Controllable name="pan-elevation" id="1259776" flags="" value="0"/>
+        <Controllable name="pan-frontback" id="1259780" flags="" value="0"/>
+        <Controllable name="pan-lfe" id="1259782" flags="" value="0"/>
         <Automation>
-          <AutomationList automation-id="pan-azimuth" id="1130583" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="pan-elevation" id="1130585" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="pan-width" id="1130587" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="pan-frontback" id="1130589" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="pan-lfe" id="1130591" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="pan-azimuth" id="1259773" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="pan-elevation" id="1259775" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="pan-width" id="1259777" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="pan-frontback" id="1259779" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="pan-lfe" id="1259781" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
       </Pannable>
       <Processor id="2300" name="return 2" active="1" user-latency="0" own-input="1" own-output="1" type="intreturn" bitslot="1">
@@ -2023,7 +2023,7 @@
         </Automation>
         <Controllable name="trimcontrol" id="2295" flags="GainLike" value="1"/>
       </Processor>
-      <Processor id="1130593" name="EARS" active="1" user-latency="0" own-input="1" own-output="1" type="intsend" role="Aux" bitslot="2" selfdestruct="0" target="1130493" allow-feedback="0">
+      <Processor id="1259783" name="EARS" active="1" user-latency="0" own-input="1" own-output="1" type="intsend" role="Aux" bitslot="1" selfdestruct="0" target="1130493" allow-feedback="0">
         <Automation>
           <AutomationList automation-id="gain" id="1130573" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
@@ -2031,17 +2031,17 @@
           <Panner uri="http://ardour.org/plugin/panner_2in2out" type="Equal Power Stereo"/>
         </PannerShell>
         <Pannable>
-          <Controllable name="pan-azimuth" id="1130584" flags="" value="0.49722221493721008"/>
-          <Controllable name="pan-width" id="1130588" flags="" value="0.99444442987442017"/>
-          <Controllable name="pan-elevation" id="1130586" flags="" value="0"/>
-          <Controllable name="pan-frontback" id="1130590" flags="" value="0"/>
-          <Controllable name="pan-lfe" id="1130592" flags="" value="0"/>
+          <Controllable name="pan-azimuth" id="1259774" flags="" value="0.5"/>
+          <Controllable name="pan-width" id="1259778" flags="" value="1"/>
+          <Controllable name="pan-elevation" id="1259776" flags="" value="0"/>
+          <Controllable name="pan-frontback" id="1259780" flags="" value="0"/>
+          <Controllable name="pan-lfe" id="1259782" flags="" value="0"/>
           <Automation>
-            <AutomationList automation-id="pan-azimuth" id="1130583" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-elevation" id="1130585" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-width" id="1130587" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-frontback" id="1130589" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-lfe" id="1130591" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-azimuth" id="1259773" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-elevation" id="1259775" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-width" id="1259777" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-frontback" id="1259779" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-lfe" id="1259781" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
           </Automation>
         </Pannable>
         <Processor id="1130575" name="Amp" active="1" user-latency="0" type="amp">
@@ -2058,20 +2058,20 @@
         <Controllable name="gaincontrol" id="2292" flags="GainLike" value="0.9985465407371521"/>
       </Processor>
       <Processor id="2296" name="meter-Bus 1" active="1" user-latency="0" type="meter"/>
-      <Processor id="2297" name="LOOP1" active="1" user-latency="0" own-input="1" own-output="0" output="LOOP1" type="main-outs" role="Main">
+      <Processor id="2297" name="LOOP 1" active="1" user-latency="0" own-input="1" own-output="0" output="LOOP 1" type="main-outs" role="Main">
         <PannerShell bypassed="1" user-panner="" linked-to-route="1"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="1130584" flags="" value="0.49722221493721008"/>
-          <Controllable name="pan-width" id="1130588" flags="" value="0.99444442987442017"/>
-          <Controllable name="pan-elevation" id="1130586" flags="" value="0"/>
-          <Controllable name="pan-frontback" id="1130590" flags="" value="0"/>
-          <Controllable name="pan-lfe" id="1130592" flags="" value="0"/>
+          <Controllable name="pan-azimuth" id="1259774" flags="" value="0.5"/>
+          <Controllable name="pan-width" id="1259778" flags="" value="1"/>
+          <Controllable name="pan-elevation" id="1259776" flags="" value="0"/>
+          <Controllable name="pan-frontback" id="1259780" flags="" value="0"/>
+          <Controllable name="pan-lfe" id="1259782" flags="" value="0"/>
           <Automation>
-            <AutomationList automation-id="pan-azimuth" id="1130583" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-elevation" id="1130585" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-width" id="1130587" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-frontback" id="1130589" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-lfe" id="1130591" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-azimuth" id="1259773" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-elevation" id="1259775" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-width" id="1259777" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-frontback" id="1259779" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-lfe" id="1259781" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
           </Automation>
         </Pannable>
       </Processor>
@@ -2081,17 +2081,17 @@
         </Automation>
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
         <Pannable>
-          <Controllable name="pan-azimuth" id="1130584" flags="" value="0.49722221493721008"/>
-          <Controllable name="pan-width" id="1130588" flags="" value="0.99444442987442017"/>
-          <Controllable name="pan-elevation" id="1130586" flags="" value="0"/>
-          <Controllable name="pan-frontback" id="1130590" flags="" value="0"/>
-          <Controllable name="pan-lfe" id="1130592" flags="" value="0"/>
+          <Controllable name="pan-azimuth" id="1259774" flags="" value="0.5"/>
+          <Controllable name="pan-width" id="1259778" flags="" value="1"/>
+          <Controllable name="pan-elevation" id="1259776" flags="" value="0"/>
+          <Controllable name="pan-frontback" id="1259780" flags="" value="0"/>
+          <Controllable name="pan-lfe" id="1259782" flags="" value="0"/>
           <Automation>
-            <AutomationList automation-id="pan-azimuth" id="1130583" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-elevation" id="1130585" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-width" id="1130587" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-frontback" id="1130589" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-            <AutomationList automation-id="pan-lfe" id="1130591" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-azimuth" id="1259773" default="0.5" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-elevation" id="1259775" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-width" id="1259777" default="0" min-yval="-1" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-frontback" id="1259779" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+            <AutomationList automation-id="pan-lfe" id="1259781" default="0" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
           </Automation>
         </Pannable>
         <Processor id="2415" name="Amp" active="0" user-latency="0" type="amp">
@@ -6874,10 +6874,10 @@
       </IO>
       <IO name="Loop1 VX" id="1226820" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 VX/audio_out 1">
-          <Connection other="LOOP1/audio_in 1"/>
+          <Connection other="LOOP 1/audio_in 1"/>
         </Port>
         <Port type="audio" name="Loop1 VX/audio_out 2">
-          <Connection other="LOOP1/audio_in 2"/>
+          <Connection other="LOOP 1/audio_in 2"/>
         </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
@@ -6981,10 +6981,10 @@
       </IO>
       <IO name="Loop1 DPA" id="1226862" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 DPA/audio_out 1">
-          <Connection other="LOOP1/audio_in 1"/>
+          <Connection other="LOOP 1/audio_in 1"/>
         </Port>
         <Port type="audio" name="Loop1 DPA/audio_out 2">
-          <Connection other="LOOP1/audio_in 2"/>
+          <Connection other="LOOP 1/audio_in 2"/>
         </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
@@ -7190,7 +7190,7 @@
         <Automation>
           <AutomationList automation-id="gain" id="1226928" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
-        <Controllable name="gaincontrol" id="1226929" flags="GainLike" value="1"/>
+        <Controllable name="gaincontrol" id="1226929" flags="GainLike" value="0.94406086206436157"/>
       </Processor>
       <Processor id="1226957" name="meter-Loop2vx 1" active="1" user-latency="0" type="meter"/>
       <Processor id="1226958" name="Loop2 VX" active="1" user-latency="0" own-input="1" own-output="0" output="Loop2 VX" type="main-outs" role="Main">
@@ -7788,10 +7788,10 @@
       </IO>
       <IO name="Loop1Piezz" id="1227382" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1Piezz/audio_out 1">
-          <Connection other="LOOP1/audio_in 1"/>
+          <Connection other="LOOP 1/audio_in 1"/>
         </Port>
         <Port type="audio" name="Loop1Piezz/audio_out 2">
-          <Connection other="LOOP1/audio_in 2"/>
+          <Connection other="LOOP 1/audio_in 2"/>
         </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
@@ -8249,14 +8249,14 @@
     </Processor>
   </Click>
   <LTC-In>
-    <IO name="LTC In" id="47" direction="Input" default-type="audio" user-latency="0">
+    <IO name="LTC In" id="48" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
         <Connection other="firewire_pcm:000a350196e1d168_cap_analog-1_in"/>
       </Port>
     </IO>
   </LTC-In>
   <LTC-Out>
-    <IO name="LTC Out" id="48" direction="Output" default-type="audio" user-latency="0">
+    <IO name="LTC Out" id="49" direction="Output" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-out"/>
     </IO>
   </LTC-Out>
@@ -8272,9 +8272,9 @@
     <Protocol name="Ableton Push 2" active="0"/>
     <Protocol name="Wiimote" active="0"/>
     <Protocol name="Mackie" active="0"/>
-    <Protocol name="Open Sound Control (OSC)" feedback="8403" debugmode="2" address-only="0" remote-port="8000" banksize="8" striptypes="159" gainmode="0" send-page-size="0" plug-page-size="0" active="1">
+    <Protocol name="Open Sound Control (OSC)" feedback="8403" debugmode="2" address-only="0" remote-port="8000" banksize="8" striptypes="767" gainmode="0" send-page-size="0" plug-page-size="0" active="1">
       <Configurations>
-        <Configuration url="osc.udp://127.0.0.1:8080/" bank-size="8" strip-types="159" feedback="8403" gainmode="0" send-page-size="0" plug-page-size="0" no-clear="0" cue="0" aux="0"/>
+        <Configuration url="osc.udp://127.0.0.1:8080/" bank-size="8" strip-types="0" feedback="8403" gainmode="0" send-page-size="0" plug-page-size="0" no-clear="0" cue="0" aux="0"/>
       </Configurations>
     </Protocol>
     <Protocol name="Generic MIDI" feedback="1" feedback-interval="10000" threshold="15" motorized="0" binding="Korg nanoKONTROL w/Master" active="1">
