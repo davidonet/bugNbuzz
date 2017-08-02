@@ -56,7 +56,7 @@
     <Symbol>midinote</Symbol>
     <MidiCC>20</MidiCC>
     <MidiChannel>1</MidiChannel>
-    <Value>55</Value>
+    <Value>48</Value>
    </Parameter>
 
    <Parameter>

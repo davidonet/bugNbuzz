@@ -47,7 +47,7 @@
     <Index>1</Index>
     <Name>Signal Level Theshold [dBFS, RMS]</Name>
     <Symbol>threshold</Symbol>
-    <Value>-58.4000015258789</Value>
+    <Value>-64</Value>
    </Parameter>
 
    <Parameter>
@@ -56,7 +56,7 @@
     <Symbol>midinote</Symbol>
     <MidiCC>20</MidiCC>
     <MidiChannel>1</MidiChannel>
-    <Value>48</Value>
+    <Value>50</Value>
    </Parameter>
 
    <Parameter>
@@ -91,7 +91,7 @@
     <Index>7</Index>
     <Name>Filter Frequency (advanced)</Name>
     <Symbol>filter_freq</Symbol>
-    <Value>207.199996948242</Value>
+    <Value>178.199996948242</Value>
    </Parameter>
 
    <Parameter>
