@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1305160" name-counter="2" event-counter="478685" vca-counter="2">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1305160" name-counter="2" event-counter="478729" vca-counter="2">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -8523,7 +8523,7 @@
         <Automation>
           <AutomationList automation-id="gain" id="1265145" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
-        <Controllable name="gaincontrol" id="1265146" flags="GainLike" value="0.12950512766838074"/>
+        <Controllable name="gaincontrol" id="1265146" flags="GainLike" value="0.04177536815404892"/>
       </Processor>
       <Processor id="1265175" name="Zik" active="1" user-latency="0" own-input="1" own-output="0" output="Zik" type="main-outs" role="Main">
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
