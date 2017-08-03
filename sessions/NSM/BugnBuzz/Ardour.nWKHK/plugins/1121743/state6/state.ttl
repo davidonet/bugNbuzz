@@ -1,0 +1,24 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <http://kxstudio.sf.net/carla/plugins/midipattern> ;
+	state:state [
+		<http://kxstudio.sf.net/ns/carla/chunk> """0:3:0x90:070:100
+96:3:0x90:089:100
+96:3:0x80:070:100
+192:3:0x80:089:100
+192:3:0x90:079:100
+240:3:0x80:079:100
+240:3:0x90:059:100
+288:3:0x90:092:100
+288:3:0x80:059:100
+384:3:0x80:092:100
+"""
+	] .
