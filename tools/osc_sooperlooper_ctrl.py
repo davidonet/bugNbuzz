@@ -4,15 +4,30 @@
 
 from time import time, sleep
 from liblo import *
+import liblo
 import curses
 import sys
 import signal
 import colorsys
 
-try:
-    import touch2bug
-except ImportError:
-    print('touch2bug import failed')
+
+#### Define IPs ####
+ip_sooploop = "localhost", 9951
+ip_xosc =  "192.168.1.30", 9000 #"169.254.1.1", 9000
+
+
+#### let possible to change XOSC's ip for testing purposes ####
+# not work....
+#if len(sys.argv) == 3:
+#	ip_xosc = str(sys.argv[1]), int(sys.argv[2])
+
+
+#### No more used ####
+#
+#try:
+#    import touch2bug
+#except ImportError:
+#    print('touch2bug import failed')
 
 
 class MyServer(ServerThread):
@@ -30,13 +45,13 @@ class MyServer(ServerThread):
         self.ts = time()
 
         try:
-            self.sooperlooper = Address("localhost", 9951)
-            self.ardour = Address("localhost", 3819)
+            self.sooperlooper = Address(*ip_sooploop)
+#            self.ardour = Address("localhost", 3819)
             #self.ardour = Address("localhost", 1337)
-            self.jacket = Address("192.168.1.30", 9000)  # in router config
-            self.carla = Address("localhost", 17001)
-            self.madjack = Address("localhost", 10000)
-        except liblo.AddressError as err:
+            self.jacket = Address(*ip_xosc)  # in router config
+#            self.carla = Address("localhost", 17001)
+#            self.madjack = Address("localhost", 10000)
+        except AddressError as err:
             print(err)
             sys.exit()
 
