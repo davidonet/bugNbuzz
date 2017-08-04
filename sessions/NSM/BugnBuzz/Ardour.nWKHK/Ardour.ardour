@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1305159" name-counter="2" event-counter="478633" vca-counter="2">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1310130" name-counter="2" event-counter="478737" vca-counter="2">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -84,6 +84,7 @@
   </Sources>
   <Regions>
     <Region name="REC-1" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="49408288" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304908" type="audio" first-edit="nothing" source-0="1304860" source-1="1304862" master-source-0="1304860" master-source-1="1304862" channels="2"/>
+    <Region name="REC-1.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="49408288" position="524288" beat="21.845333333333336" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304916" type="audio" first-edit="nothing" source-0="1304860" source-1="1304862" master-source-0="1304860" master-source-1="1304862" channels="2"/>
     <Region name="REC-2" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="4852896" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304944" type="audio" first-edit="nothing" source-0="1304931" source-1="1304933" master-source-0="1304931" master-source-1="1304933" channels="2"/>
     <Region name="REC-2.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="4852896" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="1" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304952" type="audio" first-edit="nothing" source-0="1304931" source-1="1304933" master-source-0="1304931" master-source-1="1304933" channels="2"/>
     <Region name="REC-3" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="2929440" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304990" type="audio" first-edit="nothing" source-0="1304966" source-1="1304968" master-source-0="1304966" master-source-1="1304968" channels="2"/>
@@ -94,7 +95,7 @@
   </Regions>
   <Selection/>
   <Locations>
-    <Location id="1304929" name="session" start="0" end="144560671" flags="IsSessionRange" locked="0" position-lock-style="AudioTime"/>
+    <Location id="1304929" name="session" start="0" end="366504224" flags="IsSessionRange" locked="0" position-lock-style="AudioTime"/>
   </Locations>
   <Bundles/>
   <VCAManager>
@@ -243,9 +244,9 @@
           <Port symbol="LPfreq" value="20000"/>
           <Port symbol="LPQ" value="1"/>
           <Port symbol="LSsec" value="1"/>
-          <Port symbol="LSfreq" value="114.53143310546875"/>
+          <Port symbol="LSfreq" value="73.36749267578125"/>
           <Port symbol="LSq" value="1"/>
-          <Port symbol="LSgain" value="2"/>
+          <Port symbol="LSgain" value="1.6000003814697266"/>
           <Port symbol="sec1" value="1"/>
           <Port symbol="freq1" value="131.2608642578125"/>
           <Port symbol="q1" value="0.22793063521385193"/>
@@ -277,9 +278,9 @@
         <Controllable name="Lowpass Frequency" id="1254164" flags="" value="20000" parameter="10" symbol="LPfreq"/>
         <Controllable name="LowPass Resonance" id="1254166" flags="" value="1" parameter="11" symbol="LPQ"/>
         <Controllable name="Lowshelf" id="1254168" flags="Toggle" value="1" parameter="12" symbol="LSsec"/>
-        <Controllable name="Lowshelf Frequency" id="1254170" flags="" value="114.53143310546875" parameter="13" symbol="LSfreq"/>
+        <Controllable name="Lowshelf Frequency" id="1254170" flags="" value="73.36749267578125" parameter="13" symbol="LSfreq"/>
         <Controllable name="Lowshelf Bandwidth" id="1254172" flags="" value="1" parameter="14" symbol="LSq"/>
-        <Controllable name="Lowshelf Gain" id="1254174" flags="" value="2" parameter="15" symbol="LSgain"/>
+        <Controllable name="Lowshelf Gain" id="1254174" flags="" value="1.6000003814697266" parameter="15" symbol="LSgain"/>
         <Controllable name="Section 1" id="1254176" flags="Toggle" value="1" parameter="16" symbol="sec1"/>
         <Controllable name="Frequency 1" id="1254178" flags="" value="131.2608642578125" parameter="17" symbol="freq1"/>
         <Controllable name="Bandwidth 1" id="1254180" flags="" value="0.22793063521385193" parameter="18" symbol="q1"/>
@@ -398,12 +399,7 @@
         </Port>
       </IO>
       <IO name="Voix" id="275" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Voix/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_1"/>
-          <Connection other="sooperlooper:loop1_in_1"/>
-          <Connection other="sooperlooper:loop2_in_1"/>
-          <Connection other="sooperlooper:loop3_in_1"/>
-        </Port>
+        <Port type="audio" name="Voix/audio_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="259" flags="Toggle" value="1"/>
@@ -694,12 +690,7 @@
         </Port>
       </IO>
       <IO name="DPA" id="313" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="DPA/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_2"/>
-          <Connection other="sooperlooper:loop1_in_2"/>
-          <Connection other="sooperlooper:loop2_in_2"/>
-          <Connection other="sooperlooper:loop3_in_2"/>
-        </Port>
+        <Port type="audio" name="DPA/audio_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="297" flags="Toggle" value="1"/>
@@ -934,18 +925,8 @@
         </Port>
       </IO>
       <IO name="PiezzCrav" id="351" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="PiezzCrav/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="PiezzCrav/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="PiezzCrav/audio_out 1"/>
+        <Port type="audio" name="PiezzCrav/audio_out 2"/>
         <Port type="midi" name="PiezzCrav/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -1095,18 +1076,8 @@
         </Port>
       </IO>
       <IO name="Piezzo Cuisse" id="389" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Piezzo Cuisse/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="Piezzo Cuisse/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="Piezzo Cuisse/audio_out 1"/>
+        <Port type="audio" name="Piezzo Cuisse/audio_out 2"/>
         <Port type="midi" name="Piezzo Cuisse/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -1256,18 +1227,8 @@
         </Port>
       </IO>
       <IO name="Table1" id="427" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table1/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="Table1/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="Table1/audio_out 1"/>
+        <Port type="audio" name="Table1/audio_out 2"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="411" flags="Toggle" value="1"/>
@@ -1416,18 +1377,8 @@
         </Port>
       </IO>
       <IO name="Table2" id="465" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table2/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="Table2/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="Table2/audio_out 1"/>
+        <Port type="audio" name="Table2/audio_out 2"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="449" flags="Toggle" value="1"/>
@@ -1576,18 +1527,8 @@
         </Port>
       </IO>
       <IO name="Table3" id="503" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table3/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="Table3/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="Table3/audio_out 1"/>
+        <Port type="audio" name="Table3/audio_out 2"/>
         <Port type="midi" name="Table3/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -1737,18 +1678,8 @@
         </Port>
       </IO>
       <IO name="Table4" id="541" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table4/audio_out 1">
-          <Connection other="sooperlooper:loop0_in_3"/>
-          <Connection other="sooperlooper:loop1_in_3"/>
-          <Connection other="sooperlooper:loop2_in_3"/>
-          <Connection other="sooperlooper:loop3_in_3"/>
-        </Port>
-        <Port type="audio" name="Table4/audio_out 2">
-          <Connection other="sooperlooper:loop0_in_4"/>
-          <Connection other="sooperlooper:loop1_in_4"/>
-          <Connection other="sooperlooper:loop2_in_4"/>
-          <Connection other="sooperlooper:loop3_in_4"/>
-        </Port>
+        <Port type="audio" name="Table4/audio_out 1"/>
+        <Port type="audio" name="Table4/audio_out 2"/>
         <Port type="midi" name="Table4/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -1980,7 +1911,7 @@
         <Automation>
           <AutomationList automation-id="gain" id="1083185" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
-        <Controllable name="gaincontrol" id="2292" flags="GainLike" value="0.99999958216027318">
+        <Controllable name="gaincontrol" id="2292" flags="GainLike" value="0.99999958276748657">
           <masters>
             <master id="1304901" val-ctrl="0.9985465407371521" val-master="1"/>
           </masters>
@@ -3938,8 +3869,8 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-8" id="1301282" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-9" id="1301284" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1307422" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1307424" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -4397,8 +4328,8 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-8" id="1301548" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-9" id="1301550" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1307688" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1307690" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -6904,9 +6835,7 @@
       <Controllable name="solo-iso" id="1226805" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226807" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1 VX" id="1226819" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1 VX/audio_in 1">
-          <Connection other="sooperlooper:loop0_out_1"/>
-        </Port>
+        <Port type="audio" name="Loop1 VX/audio_in 1"/>
       </IO>
       <IO name="Loop1 VX" id="1226820" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 VX/audio_out 1">
@@ -7192,9 +7121,7 @@
       <Controllable name="solo-iso" id="1226847" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226849" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1 DPA" id="1226861" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1 DPA/audio_in 1">
-          <Connection other="sooperlooper:loop0_out_2"/>
-        </Port>
+        <Port type="audio" name="Loop1 DPA/audio_in 1"/>
       </IO>
       <IO name="Loop1 DPA" id="1226862" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 DPA/audio_out 1">
@@ -7299,9 +7226,7 @@
       <Controllable name="solo-iso" id="1226939" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226941" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2 VX" id="1226953" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2 VX/audio_in 1">
-          <Connection other="sooperlooper:loop1_out_1"/>
-        </Port>
+        <Port type="audio" name="Loop2 VX/audio_in 1"/>
       </IO>
       <IO name="Loop2 VX" id="1226954" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2 VX/audio_out 1">
@@ -7461,9 +7386,7 @@
       <Controllable name="solo-iso" id="1226981" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226983" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2 DPA" id="1226995" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2 DPA/audio_in 1">
-          <Connection other="sooperlooper:loop1_out_2"/>
-        </Port>
+        <Port type="audio" name="Loop2 DPA/audio_in 1"/>
       </IO>
       <IO name="Loop2 DPA" id="1226996" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2 DPA/audio_out 1">
@@ -7568,9 +7491,7 @@
       <Controllable name="solo-iso" id="1227073" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227075" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3 VX" id="1227087" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3 VX/audio_in 1">
-          <Connection other="sooperlooper:loop2_out_1"/>
-        </Port>
+        <Port type="audio" name="Loop3 VX/audio_in 1"/>
       </IO>
       <IO name="Loop3 VX" id="1227088" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3 VX/audio_out 1">
@@ -7675,9 +7596,7 @@
       <Controllable name="solo-iso" id="1227115" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227117" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3 DPA" id="1227129" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3 DPA/audio_in 1">
-          <Connection other="sooperlooper:loop2_out_2"/>
-        </Port>
+        <Port type="audio" name="Loop3 DPA/audio_in 1"/>
       </IO>
       <IO name="Loop3 DPA" id="1227130" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3 DPA/audio_out 1">
@@ -7782,9 +7701,7 @@
       <Controllable name="solo-iso" id="1227207" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227209" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4 VX" id="1227221" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4 VX/audio_in 1">
-          <Connection other="sooperlooper:loop3_out_1"/>
-        </Port>
+        <Port type="audio" name="Loop4 VX/audio_in 1"/>
       </IO>
       <IO name="Loop4 VX" id="1227222" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4 VX/audio_out 1">
@@ -7921,9 +7838,7 @@
       <Controllable name="solo-iso" id="1227249" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227251" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4 DPA" id="1227263" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4 DPA/audio_in 1">
-          <Connection other="sooperlooper:loop3_out_2"/>
-        </Port>
+        <Port type="audio" name="Loop4 DPA/audio_in 1"/>
       </IO>
       <IO name="Loop4 DPA" id="1227264" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4 DPA/audio_out 1">
@@ -8028,12 +7943,8 @@
       <Controllable name="solo-iso" id="1227367" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227369" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1Piezz" id="1227381" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1Piezz/audio_in 1">
-          <Connection other="sooperlooper:loop0_out_3"/>
-        </Port>
-        <Port type="audio" name="Loop1Piezz/audio_in 2">
-          <Connection other="sooperlooper:loop0_out_4"/>
-        </Port>
+        <Port type="audio" name="Loop1Piezz/audio_in 1"/>
+        <Port type="audio" name="Loop1Piezz/audio_in 2"/>
       </IO>
       <IO name="Loop1Piezz" id="1227382" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1Piezz/audio_out 1">
@@ -8138,12 +8049,8 @@
       <Controllable name="solo-iso" id="1227435" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227437" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2Piezz" id="1227449" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2Piezz/audio_in 1">
-          <Connection other="sooperlooper:loop1_out_3"/>
-        </Port>
-        <Port type="audio" name="Loop2Piezz/audio_in 2">
-          <Connection other="sooperlooper:loop1_out_4"/>
-        </Port>
+        <Port type="audio" name="Loop2Piezz/audio_in 1"/>
+        <Port type="audio" name="Loop2Piezz/audio_in 2"/>
       </IO>
       <IO name="Loop2Piezz" id="1227450" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2Piezz/audio_out 1">
@@ -8248,12 +8155,8 @@
       <Controllable name="solo-iso" id="1227503" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227505" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3Piezz" id="1227517" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3Piezz/audio_in 1">
-          <Connection other="sooperlooper:loop2_out_3"/>
-        </Port>
-        <Port type="audio" name="Loop3Piezz/audio_in 2">
-          <Connection other="sooperlooper:loop2_out_4"/>
-        </Port>
+        <Port type="audio" name="Loop3Piezz/audio_in 1"/>
+        <Port type="audio" name="Loop3Piezz/audio_in 2"/>
       </IO>
       <IO name="Loop3Piezz" id="1227518" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3Piezz/audio_out 1">
@@ -8358,12 +8261,8 @@
       <Controllable name="solo-iso" id="1227571" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227573" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4Piezz" id="1227585" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4Piezz/audio_in 1">
-          <Connection other="sooperlooper:loop3_out_3"/>
-        </Port>
-        <Port type="audio" name="Loop4Piezz/audio_in 2">
-          <Connection other="sooperlooper:loop3_out_4"/>
-        </Port>
+        <Port type="audio" name="Loop4Piezz/audio_in 1"/>
+        <Port type="audio" name="Loop4Piezz/audio_in 2"/>
       </IO>
       <IO name="Loop4Piezz" id="1227586" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4Piezz/audio_out 1">
@@ -8462,14 +8361,18 @@
       </Processor>
       <Slavable/>
     </Route>
-    <Route id="1265142" name="Zik" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" meter-type="MeterPeak" saved-meter-point="MeterPostFader" mode="Normal">
+    <Route id="1265142" name="Zik" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterInput" meter-type="MeterPeak" saved-meter-point="MeterPostFader" mode="Normal">
       <PresentationInfo order="38" flags="AudioTrack,OrderSet" color="3849496319"/>
       <Controllable name="solo" id="1265150" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
       <Controllable name="solo-iso" id="1265156" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1265158" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Zik" id="1265170" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Zik/audio_in 1"/>
-        <Port type="audio" name="Zik/audio_in 2"/>
+        <Port type="audio" name="Zik/audio_in 1">
+          <Connection other="PulseAudio JACK Sink:front-left"/>
+        </Port>
+        <Port type="audio" name="Zik/audio_in 2">
+          <Connection other="PulseAudio JACK Sink:front-right"/>
+        </Port>
       </IO>
       <IO name="Zik" id="1265171" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Zik/audio_out 1">
@@ -8479,8 +8382,8 @@
           <Connection other="Master/audio_in 2"/>
         </Port>
       </IO>
-      <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
-      <Controllable name="mute" id="1265152" flags="Toggle,RealTime" value="1"/>
+      <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
+      <Controllable name="mute" id="1265152" flags="Toggle,RealTime" value="0"/>
       <Controllable name="phase" id="1265154" flags="Toggle" value="0" phase-invert="00"/>
       <Automation>
         <AutomationList automation-id="gain" id="1265145" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
@@ -8514,13 +8417,13 @@
         </Automation>
         <Controllable name="trimcontrol" id="1265148" flags="GainLike" value="0.83176374435424805"/>
       </Processor>
+      <Processor id="1265174" name="meter-Zik" active="1" user-latency="0" type="meter"/>
       <Processor id="1265172" name="Amp" active="1" user-latency="0" type="amp">
         <Automation>
           <AutomationList automation-id="gain" id="1265145" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
-        <Controllable name="gaincontrol" id="1265146" flags="GainLike" value="0.21191520988941193"/>
+        <Controllable name="gaincontrol" id="1265146" flags="GainLike" value="0.04177536815404892"/>
       </Processor>
-      <Processor id="1265174" name="meter-Zik" active="1" user-latency="0" type="meter"/>
       <Processor id="1265175" name="Zik" active="1" user-latency="0" own-input="1" own-output="0" output="Zik" type="main-outs" role="Main">
         <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
         <Pannable>
@@ -8692,38 +8595,7 @@
     <Playlist id="78780" name="Audio.1" type="audio" orig-track-id="78741" shared-with-ids="" frozen="0" combine-ops="0"/>
     <Playlist id="1265184" name="Zik.1" type="audio" orig-track-id="1265142" shared-with-ids="" frozen="0" combine-ops="0"/>
     <Playlist id="1304857" name="REC.1" type="audio" orig-track-id="1304815" shared-with-ids="" frozen="0" combine-ops="0">
-      <Region name="REC-1.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="49408288" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1304916" type="audio" first-edit="nothing" source-0="1304860" source-1="1304862" master-source-0="1304860" master-source-1="1304862" channels="2">
-        <Envelope default="yes"/>
-        <FadeIn>
-          <AutomationList automation-id="fadein" id="1304917" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
-            <events>0 1.0000000116860974e-07
-64 1
-</events>
-          </AutomationList>
-        </FadeIn>
-        <InverseFadeIn>
-          <AutomationList automation-id="fadein" id="1304918" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
-            <events>0 1
-64 1.0000000116860974e-07
-</events>
-          </AutomationList>
-        </InverseFadeIn>
-        <FadeOut>
-          <AutomationList automation-id="fadeout" id="1304919" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
-            <events>0 1
-64 1.0000000116860974e-07
-</events>
-          </AutomationList>
-        </FadeOut>
-        <InverseFadeOut>
-          <AutomationList automation-id="fadeout" id="1304920" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
-            <events>0 1.0000000116860974e-07
-64 1
-</events>
-          </AutomationList>
-        </InverseFadeOut>
-      </Region>
-      <Region name="REC-4.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="144560672" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="1" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305035" type="audio" first-edit="nothing" source-0="1305012" source-1="1305014" master-source-0="1305012" master-source-1="1305014" channels="2">
+      <Region name="REC-4.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="144560672" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305035" type="audio" first-edit="nothing" source-0="1305012" source-1="1305014" master-source-0="1305012" master-source-1="1305014" channels="2">
         <Envelope default="yes"/>
         <FadeIn>
           <AutomationList automation-id="fadein" id="1305036" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
@@ -8754,7 +8626,7 @@
           </AutomationList>
         </InverseFadeOut>
       </Region>
-      <Region name="REC-5.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="96796960" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="2" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305071" type="audio" first-edit="nothing" source-0="1305049" source-1="1305052" master-source-0="1305049" master-source-1="1305052" channels="2">
+      <Region name="REC-5.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="96796960" position="149159936" beat="6214.9973333333328" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="1" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305071" type="audio" first-edit="nothing" source-0="1305049" source-1="1305052" master-source-0="1305049" master-source-1="1305052" channels="2">
         <Envelope default="yes"/>
         <FadeIn>
           <AutomationList automation-id="fadein" id="1305072" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
@@ -8785,7 +8657,7 @@
           </AutomationList>
         </InverseFadeOut>
       </Region>
-      <Region name="REC-6.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="100165920" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="3" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305138" type="audio" first-edit="nothing" source-0="1305085" source-1="1305087" master-source-0="1305085" master-source-1="1305087" channels="2">
+      <Region name="REC-6.1" muted="0" opaque="1" locked="0" video-locked="0" automatic="0" whole-file="0" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="100165920" position="266338304" beat="11097.429333333333" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="2" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1305138" type="audio" first-edit="nothing" source-0="1305085" source-1="1305087" master-source-0="1305085" master-source-1="1305087" channels="2">
         <Envelope default="yes"/>
         <FadeIn>
           <AutomationList automation-id="fadein" id="1305139" default="1" min-yval="0" max-yval="2" interpolation-style="Curved" state="Off" style="Absolute">
@@ -8841,14 +8713,14 @@
     </Processor>
   </Click>
   <LTC-In>
-    <IO name="LTC In" id="47" direction="Input" default-type="audio" user-latency="0">
+    <IO name="LTC In" id="48" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
         <Connection other="firewire_pcm:000a350196e1d168_cap_analog-1_in"/>
       </Port>
     </IO>
   </LTC-In>
   <LTC-Out>
-    <IO name="LTC Out" id="48" direction="Output" default-type="audio" user-latency="0">
+    <IO name="LTC Out" id="49" direction="Output" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-out"/>
     </IO>
   </LTC-Out>
@@ -10784,6 +10656,27 @@
         <Object id="vtv 1304897" height="68"/>
       </GUIObjectState>
     </UI>
+    <ExportRevision revision="1"/>
+    <RegionExportProfile>
+      <ExportTimespan format="Timecode">
+        <Range id="1305243"/>
+      </ExportTimespan>
+      <ExportChannelConfiguration split="0" channels="2" region-processing="Fades">
+        <Channel number="1"/>
+        <Channel number="2"/>
+      </ExportChannelConfiguration>
+      <ExportFormat id="fd73f19e-c0fb-4e72-906d-a25625b752b2"/>
+      <ExportFilename>
+        <Folder relative="1" path="/export"/>
+        <Field name="label" enabled="1" value="Filage1"/>
+        <Field name="session" enabled="0"/>
+        <Field name="snapshot" enabled="0"/>
+        <Field name="timespan" enabled="1"/>
+        <Field name="revision" enabled="0"/>
+        <Field name="time" enabled="0" value="T_None"/>
+        <Field name="date" enabled="0" value="D_None"/>
+      </ExportFilename>
+    </RegionExportProfile>
     <Videomonitor active="0"/>
   </Extra>
   <Script lua="Lua 5.3">c2NyaXB0cyA9IHt9IA==</Script>
