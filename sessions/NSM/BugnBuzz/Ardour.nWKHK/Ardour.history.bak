@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UndoHistory>
-  <UndoTransaction tv-sec="1464296908" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-    </MementoCommand>
-  </UndoTransaction>
   <UndoTransaction tv-sec="1464296914" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -29,7 +15,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464296918" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -90,7 +76,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297418" tv-usec="4440828" name="supprimer le changement de tempo">
-    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -153,18 +139,6 @@
         <beat from="0" to="6946.8159999999998"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305138"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305138"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790052" tv-usec="187422" name="Déplacer la région">
     <StatefulDiffCommand obj-id="1305138" type-name="ARDOUR::AudioRegion">
@@ -173,18 +147,6 @@
         <beat from="6946.8159999999998" to="11097.429333333333"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305138"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305138"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790055" tv-usec="142760" name="Déplacer la région">
     <StatefulDiffCommand obj-id="1305071" type-name="ARDOUR::AudioRegion">
@@ -193,18 +155,6 @@
         <beat from="0" to="6214.9973333333328"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305071"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305071"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790059" tv-usec="8105" name="Déplacer la région">
     <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
@@ -213,18 +163,6 @@
         <beat from="0" to="2501.2906666666668"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305035"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2372">
-        <Selection>
-          <Region id="1305035"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790062" tv-usec="534700" name="Déplacer la région">
     <StatefulDiffCommand obj-id="1304916" type-name="ARDOUR::AudioRegion">
@@ -233,18 +171,6 @@
         <beat from="0" to="21.845333333333336"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection>
-          <Region id="1304916"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection>
-          <Region id="1304916"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790065" tv-usec="991137" name="effacer objets">
     <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
@@ -269,16 +195,6 @@
         </Regions>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection>
-          <Region id="1304916"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection/>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1501790069" tv-usec="675654" name="Déplacer la région">
     <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
@@ -287,17 +203,5 @@
         <beat from="2501.2906666666668" to="0"/>
       </Changes>
     </StatefulDiffCommand>
-    <MementoCommand obj-id="42" type-name="SelectionMemento">
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection>
-          <Region id="1305035"/>
-        </Selection>
-      </SelectionMemento>
-      <SelectionMemento mouse-mode="MouseObject" zoom="262144" left-frame="0" y-origin="2440">
-        <Selection>
-          <Region id="1305035"/>
-        </Selection>
-      </SelectionMemento>
-    </MementoCommand>
   </UndoTransaction>
 </UndoHistory>

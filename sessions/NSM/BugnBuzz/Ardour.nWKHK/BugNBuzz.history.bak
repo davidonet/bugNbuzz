@@ -1,87 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UndoHistory>
-  <UndoTransaction tv-sec="1464296879" tv-usec="4440828" name="ajouter un repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations/>
-      <Locations>
-        <Location id="491695" name="mark1" start="46858240" end="46858240" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296882" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="46858240" end="46858240" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296882" tv-usec="4440828" name="ajouter un repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49348608" end="49348608" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296889" tv-usec="4440828" name="ajouter un changement de tempo">
-    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-      </TempoMap>
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="520|3|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296894" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="520|3|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296899" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49348608" end="49348608" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49524736" end="49524736" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296906" tv-usec="4440828" name="déplacer le repère de tempo">
-    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-      <TempoMap>
-        <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
-        <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
-        <Tempo start="517|1|0" beats-per-minute="130.000000" note-type="4.000000" movable="yes"/>
-      </TempoMap>
-    </MementoCommand>
-  </UndoTransaction>
   <UndoTransaction tv-sec="1464296908" tv-usec="4440828" name="déplacer le repère de tempo">
     <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
       <TempoMap>
@@ -191,5 +109,113 @@
       </Locations>
       <Locations/>
     </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501768470" tv-usec="374612" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1304916"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501771967" tv-usec="214775" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1305035"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501779937" tv-usec="513699" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1305071"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501785998" tv-usec="781332" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1305138"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790046" tv-usec="236999" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1305138" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="0" to="166723584"/>
+        <beat from="0" to="6946.8159999999998"/>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790052" tv-usec="187422" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1305138" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="166723584" to="266338304"/>
+        <beat from="6946.8159999999998" to="11097.429333333333"/>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790055" tv-usec="142760" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1305071" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="0" to="149159936"/>
+        <beat from="0" to="6214.9973333333328"/>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790059" tv-usec="8105" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="0" to="60030976"/>
+        <beat from="0" to="2501.2906666666668"/>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790062" tv-usec="534700" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1304916" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="0" to="524288"/>
+        <beat from="0" to="21.845333333333336"/>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790065" tv-usec="991137" name="effacer objets">
+    <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <layering-index from="1" to="0"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <StatefulDiffCommand obj-id="1305071" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <layering-index from="2" to="1"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <StatefulDiffCommand obj-id="1305138" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <layering-index from="3" to="2"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Remove id="1304916"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1501790069" tv-usec="675654" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1305035" type-name="ARDOUR::AudioRegion">
+      <Changes>
+        <position from="60030976" to="0"/>
+        <beat from="2501.2906666666668" to="0"/>
+      </Changes>
+    </StatefulDiffCommand>
   </UndoTransaction>
 </UndoHistory>
