@@ -19,7 +19,7 @@ ip_xosc =  "192.168.1.30", 9000 #"169.254.1.1", 9000
 #### let possible to change XOSC's ip for testing purposes ####
 # not work....
 #if len(sys.argv) == 3:
-#	ip_xosc = str(sys.argv[1]), int(sys.argv[2])
+# ip_xosc = str(sys.argv[1]), int(sys.argv[2])
 
 
 #### No more used ####
@@ -46,7 +46,7 @@ class MyServer(ServerThread):
 
         try:
             self.sooperlooper = Address(*ip_sooploop)
-#            self.ardour = Address("localhost", 3819)
+            self.ardour = Address("localhost", 3819)
             #self.ardour = Address("localhost", 1337)
             self.jacket = Address(*ip_xosc)  # in router config
 #            self.carla = Address("localhost", 17001)
@@ -60,7 +60,8 @@ class MyServer(ServerThread):
         self.stdscr.nodelay(False)
         self.stdscr.addstr(
             0, 0, "******************************* SooperLooper ****************************", curses.A_REVERSE)
-        self.stdscr.addstr(4, 0, "All    ", curses.A_REVERSE)
+        self.stdscr.addstr(4, 0, "All ", curses.A_REVERSE)
+        self.stdscr.addstr(4, 20, "Crossfade ", curses.A_REVERSE)
         for l in range(4):
             self.stdscr.addstr(l + 5, 0, "loop " +
                                str(l + 1) + " ", curses.A_REVERSE)
@@ -130,7 +131,7 @@ class MyServer(ServerThread):
         if( 0.1 < (time()-self.ts) ) and (self.buttons != args):
             self.ts = time()
             self.buttons = args
-            self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
+            self.stdscr.addstr(0, 4, "*", curses.A_REVERSE)
             self.stdscr.refresh()
             if self.buttons[13] == 0 or self.buttons[7] == 0:
                 self.loopRecPlay()
@@ -138,6 +139,8 @@ class MyServer(ServerThread):
                 self.loopStop()
             if self.buttons[15] == 0:
                 self.loopUndo()
+            if self.buttons[16] == 0:
+                self.loopReverse()
             if self.buttons[12] == 0:
                 self.loopSelect(-1)
             if self.buttons[11] == 0:
@@ -158,19 +161,27 @@ class MyServer(ServerThread):
         """ Receiving gain value from potentiometer
 
         Attributes:
-            gain: contains 5 values : 0 is all then 1->4 channel
+            potar : contains 1 value : 0->crossfade ; 1->4 channel
 
-        TODO: 	send it back to right software.
-                Don't forget channel 1 is index 0
+        sooperlooper : Don't forget channel 1 is index 0
         """
-        gain = [0, 0, 0, 0, 0]
+        potar = [0, 0, 0, 0, 0]
         for l in range(5):
-            self.stdscr.addstr(l + 4, 30, str(int(100.0 * args[l])) + " % ")
-            gain[l] = args[l]
-            if l != 0:
-                send(self.sooperlooper, "/sl/" + str(l - 1) +
-                     "/set", "wet", float(gain[l]))
+            potar[l] = args[l]
+            self.stdscr.addstr(l + 4, 35, str(int(100.0 * potar[l])) + " % ")
+            if l != 0:              
+                send(self.sooperlooper, "/sl/" + str(l - 1) + 
+                    "/set", "wet", float(potar[l]))
+            else:
+                send(self.ardour, "/strip/plugin/parameter", 3, 1, 1,
+                    float(potar[l] * 2 - 1))
+    
+    
         send(self.jacket, "/outputs/rgb/16", self.ledState)
+
+        """ Add the first crossfade
+      
+        """
         self.stdscr.refresh()
 
 
@@ -197,13 +208,13 @@ class MyServer(ServerThread):
 #        if path_split[1] == "ardour":
 #            ard_path, track, arg = touch2bug.touch2bug("ardour", path, args)
 #            send(self.ardour, ard_path, track, *arg)
-#			
+#   
 #        if path_split[1] == "Carla":
 #            carla_path, arg = touch2bug.touch2bug("carla", path, args)
 #            send(self.carla, carla_path, arg)
 
 
-#		All other
+#  All other
 #        else:
 #            print >> sys.stderr, "received message '" + \
 #                str(path) + "' " + str(args)
@@ -239,7 +250,7 @@ class MyServer(ServerThread):
 
                 Args:
                         loopnum: channel number 0 based index
-                """
+        """
         self.loopnum = loopnum
 
         # Console interface
@@ -251,8 +262,8 @@ class MyServer(ServerThread):
         send(self.sooperlooper, "/sl/set",
              "selected_loop_num", int(self.loopnum))
         if self.loopnum != -1:
-			send(self.sooperlooper, "/sl/-1/set", "dry", 0)
-			send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
+           send(self.sooperlooper, "/sl/-1/set", "dry", 0)
+           send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/set", "dry", 1)
 
     def loopRecPlay(self):
         """ Rec Play Overdub action 
@@ -301,6 +312,12 @@ class MyServer(ServerThread):
                 """
         if -1 != self.loopnum:
             send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "undo")
+
+    def loopReverse(self):
+        """ Reverse action
+        """
+        if -1 != self.loopnum:
+            send(self.sooperlooper, "/sl/" + str(self.loopnum) + "/hit", "reverse")
 
 
 ############ Interactions #############
