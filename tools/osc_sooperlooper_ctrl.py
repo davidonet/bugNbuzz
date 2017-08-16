@@ -131,7 +131,7 @@ class MyServer(ServerThread):
         if( 0.1 < (time()-self.ts) ) and (self.buttons != args):
             self.ts = time()
             self.buttons = args
-            self.stdscr.addstr(0, 4, "*", curses.A_REVERSE)
+            self.stdscr.addstr(0, 0, "*", curses.A_REVERSE)
             self.stdscr.refresh()
             if self.buttons[13] == 0 or self.buttons[7] == 0:
                 self.loopRecPlay()
@@ -139,7 +139,7 @@ class MyServer(ServerThread):
                 self.loopStop()
             if self.buttons[15] == 0:
                 self.loopUndo()
-            if self.buttons[16] == 0:
+            if self.buttons[5] == 0:   ### TODO : ask what's the number of the button !
                 self.loopReverse()
             if self.buttons[12] == 0:
                 self.loopSelect(-1)
@@ -222,7 +222,7 @@ class MyServer(ServerThread):
 ########## osc-x Send methods ###########
 
     def setColor(self, l, c):
-        i = l + 8
+        i = l + 1
         if -1 < c:
             c = colorsys.hsv_to_rgb(c, 1, .1)
             self.ledState[i * 3] = int(c[0] * 150)
