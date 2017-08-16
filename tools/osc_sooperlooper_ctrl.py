@@ -167,14 +167,15 @@ class MyServer(ServerThread):
         """
         potar = [0, 0, 0, 0, 0]
         for l in range(5):
-            potar[l] = args[l]
-            self.stdscr.addstr(l + 4, 35, str(int(100.0 * potar[l])) + " % ")
-            if l != 0:              
-                send(self.sooperlooper, "/sl/" + str(l - 1) + 
-                    "/set", "wet", float(potar[l]))
-            else:
-                send(self.ardour, "/strip/plugin/parameter", 3, 1, 1,
-                    float(potar[l] * 2 - 1))
+            if potar[l] != args[l]:                    
+                potar[l] = args[l]
+                self.stdscr.addstr(l + 4, 35, str(int(100.0 * potar[l])) + " % ")
+                if l != 0:
+                        send(self.sooperlooper, "/sl/" + str(l - 1) + 
+                            "/set", "wet", float(potar[l]))
+                else:
+                    send(self.ardour, "/strip/plugin/parameter", 3, 1, 1,
+                        float(potar[l] * 2 - 1))
     
     
         send(self.jacket, "/outputs/rgb/16", self.ledState)

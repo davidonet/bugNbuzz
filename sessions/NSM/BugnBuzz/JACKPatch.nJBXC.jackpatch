@@ -2,10 +2,8 @@ ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
 ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
 ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3
 ardour:CravateSynth/audio_out 2          |> ardour:PiezzCrav/audio_in 4
-ardour:CuisseAudio/audio_out 1           |> ardour:Piezzo Cuisse/audio_in 1
-ardour:CuisseAudio/audio_out 2           |> ardour:Piezzo Cuisse/audio_in 2
-ardour:CuisseSynth/audio_out 1           |> ardour:Piezzo Cuisse/audio_in 3
-ardour:CuisseSynth/audio_out 2           |> ardour:Piezzo Cuisse/audio_in 4
+ardour:CuisseSynth/audio_out 1           |> ardour:Piezzo Cuisse/audio_in 1
+ardour:CuisseSynth/audio_out 2           |> ardour:Piezzo Cuisse/audio_in 2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop0_in_2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop1_in_2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop2_in_2
@@ -104,18 +102,18 @@ ardour:Table3Audio/audio_out 1           |> ardour:Table3/audio_in 1
 ardour:Table3Audio/audio_out 2           |> ardour:Table3/audio_in 2
 ardour:Table3Synth/audio_out 1           |> ardour:Table3/audio_in 3
 ardour:Table3Synth/audio_out 2           |> ardour:Table3/audio_in 4
-ardour:Table4/audio_out 1                |> sooperlooper:loop0_in_3
-ardour:Table4/audio_out 1                |> sooperlooper:loop1_in_3
-ardour:Table4/audio_out 1                |> sooperlooper:loop2_in_3
-ardour:Table4/audio_out 1                |> sooperlooper:loop3_in_3
-ardour:Table4/audio_out 2                |> sooperlooper:loop0_in_4
-ardour:Table4/audio_out 2                |> sooperlooper:loop1_in_4
-ardour:Table4/audio_out 2                |> sooperlooper:loop2_in_4
-ardour:Table4/audio_out 2                |> sooperlooper:loop3_in_4
-ardour:Table4Audio/audio_out 1           |> ardour:Table4/audio_in 1
-ardour:Table4Audio/audio_out 2           |> ardour:Table4/audio_in 2
-ardour:Table4Synth/audio_out 1           |> ardour:Table4/audio_in 3
-ardour:Table4Synth/audio_out 2           |> ardour:Table4/audio_in 4
+ardour:Table4Audio/audio_out 1           |> ardour:TableBnB/audio_in 1
+ardour:Table4Audio/audio_out 2           |> ardour:TableBnB/audio_in 2
+ardour:Table4Synth/audio_out 1           |> ardour:TableBnB/audio_in 3
+ardour:Table4Synth/audio_out 2           |> ardour:TableBnB/audio_in 4
+ardour:TableBnB/audio_out 1              |> sooperlooper:loop0_in_3
+ardour:TableBnB/audio_out 1              |> sooperlooper:loop1_in_3
+ardour:TableBnB/audio_out 1              |> sooperlooper:loop2_in_3
+ardour:TableBnB/audio_out 1              |> sooperlooper:loop3_in_3
+ardour:TableBnB/audio_out 2              |> sooperlooper:loop0_in_4
+ardour:TableBnB/audio_out 2              |> sooperlooper:loop1_in_4
+ardour:TableBnB/audio_out 2              |> sooperlooper:loop2_in_4
+ardour:TableBnB/audio_out 2              |> sooperlooper:loop3_in_4
 ardour:Voix/audio_out 1                  |> sooperlooper:loop0_in_1
 ardour:Voix/audio_out 1                  |> sooperlooper:loop1_in_1
 ardour:Voix/audio_out 1                  |> sooperlooper:loop2_in_1
