@@ -1,0 +1,79 @@
+	Conduite régie Bug'n'buzz V2
+
+Mise :
+Piles HF !
+Check ON HF tables
+Table 1 & 3 cross -> Audio
+
+------------------------------------------------------------
+TOP                    |            Action
+------------------------------------------------------------
+Adil "c'est partit"    |  Play
+                       |  Cut VCA sortie
+                       |  Boost DPA
+                       |  Unmute Voix, DPA, Cravate
+------------------------------------------------------------
+Adil " OK "            |  Mute Voix, DPA, Cravate
+                       |  No Boost DPA
+                       |  VCA sortie 0dB
+------------------------------------------------------------
+Maud + Adil assis      |  Unmute TableBnB
+------------------------------------------------------------
+Adil prend Touilleur   |  Unmute Cravate
+                       |  Mute TableBnB
+                       |  Cross TableBnB -> Synth
+------------------------------------------------------------
+Adil lache Touilleur   |  Mute Cravate
+------------------------------------------------------------
+Adil prend Voix        |  Crossfade Cravate -> Synth
+                       |  Unmute Voix
+------------------------------------------------------------
+Adil pose Voix         |  Mute Voix
+------------------------------------------------------------
+Adil Touilleur         |
+ENLEVE Touilleur Bouche|  Unmute Cravate
+                       |
+REMET  Touilleur Bouche|  Mute Cravate
+------------------------------------------------------------
+Adil Archet            |  Unmute Cravate -7-9dB
+------------------------------------------------------------
+Pose Archet            |  Mute Cravate
+------------------------------------------------------------
+Adil prend Voix        |  Unmute Voix
+------------------------------------------------------------
+Fin bug, Adil static   |  Unmute Cravate
+------------------------------------------------------------
+Loop Kik / Tata        |  Mute Cravate
+------------------------------------------------------------
+Adil pose Voix         |  Unmute Cuisse
+------------------------------------------------------------
+Loop Kik/snare         |  Mute Cravate & Cuisse
+                       |  Cross Table1 -> Audio
+                       |  Unmute Table1
+------------------------------------------------------------
+Loop Table1 Audio  OK  |  Cross Table1 -> Synthé
+                       |  Table1 + 3-6dB
+------------------------------------------------------------
+Adil pret a loop       |  Table1 -2dB
+------------------------------------------------------------
+Loop Table1 Synth OK   |  Mute Table1
+------------------------------------------------------------
+Adil approche Table2   |  Unmute Table2
+------------------------------------------------------------
+Loop Table2 OK         |  Mute Table2
+                       |  Unmute Voix
+------------------------------------------------------------
+Master baisse,         |  Cross TableBnB -> Synth 
+Arrivée TableBnB       |  Unmute TableBnB
+                       |  Mute Voix
+------------------------------------------------------------
+Adil se leve avec verre|  Mute TableBnB
+                       |  DPA -10dB
+                       |  Unmute DPA
+------------------------------------------------------------
+Adil pose verre Table4 |  Unmute Table4
+                       |  Mute DPA
+------------------------------------------------------------
+Adil tousse voix       |  Mute Table4
+------------------------------------------------------------
+FIN

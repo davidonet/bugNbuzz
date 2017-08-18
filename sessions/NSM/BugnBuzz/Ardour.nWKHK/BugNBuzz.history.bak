@@ -1,41 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <UndoHistory>
-  <UndoTransaction tv-sec="1464296924" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49524736" end="49524736" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296927" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
-  <UndoTransaction tv-sec="1464296935" tv-usec="4440828" name="déplacer le repère">
-    <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
-      <Locations>
-        <Location id="491695" name="mark1" start="6619136" end="6619136" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-      <Locations>
-        <Location id="491695" name="mark1" start="0" end="0" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-        <Location id="491703" name="mark2" start="49536512" end="49536512" flags="IsMark" locked="no" position-lock-style="AudioTime"/>
-      </Locations>
-    </MementoCommand>
-  </UndoTransaction>
   <UndoTransaction tv-sec="1464297416" tv-usec="4440828" name="supprimer le repère">
     <MementoCommand obj-id="34" type-name="ARDOUR::Locations">
       <Locations>
@@ -48,7 +12,7 @@
     </MementoCommand>
   </UndoTransaction>
   <UndoTransaction tv-sec="1464297418" tv-usec="4440828" name="supprimer le changement de tempo">
-    <MementoCommand obj-id="54" type-name="ARDOUR::TempoMap">
+    <MementoCommand obj-id="53" type-name="ARDOUR::TempoMap">
       <TempoMap>
         <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
         <Meter start="1|1|0" note-type="4.000000" divisions-per-bar="4.000000" movable="no"/>
@@ -201,6 +165,29 @@
           <Add id="1402581"/>
         </Regions>
       </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1502894775" tv-usec="115110" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1415721"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1502966173" tv-usec="106710" name="Capturer">
+    <StatefulDiffCommand obj-id="1304857" type-name="ARDOUR::AudioPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1423064"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1502966193" tv-usec="986932" name="Déplacer la région">
+    <StatefulDiffCommand obj-id="1423064" type-name="ARDOUR::AudioRegion">
+      <Changes/>
     </StatefulDiffCommand>
   </UndoTransaction>
 </UndoHistory>

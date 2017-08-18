@@ -7,7 +7,7 @@ from liblo import *
 import colorsys
 target = Address("192.168.1.30", 9000)
 
-l = 1
+l = 16
 e = [0] * (l * 3)
 
 while True:
