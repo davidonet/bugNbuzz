@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1499954" name-counter="4" event-counter="1700578" vca-counter="2">
+=======
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1483890" name-counter="4" event-counter="1700522" vca-counter="2">
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -115,9 +119,13 @@
     <Region name="REC-20" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="157926896" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1423056" type="audio" first-edit="nothing" source-0="1421090" source-1="1421092" master-source-0="1421090" master-source-1="1421092" channels="2"/>
     <Region name="REC-21" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="93301280" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1467805" type="audio" first-edit="nothing" source-0="1466073" source-1="1466075" master-source-0="1466073" master-source-1="1466075" channels="2"/>
   </Regions>
+<<<<<<< HEAD
   <Selection>
     <StripableAutomationControl stripable="369" control="0" order="2"/>
   </Selection>
+=======
+  <Selection/>
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
   <Locations>
     <Location id="1304929" name="session" start="0" end="366504224" flags="IsSessionRange" locked="0" position-lock-style="AudioTime"/>
     <Location id="1415361" name="décrochage (xrun)" start="83155840" end="83155840" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
@@ -2095,12 +2103,10 @@
         <Port type="audio" name="Master/audio_out 1">
           <Connection other="Monitor/audio_in 1"/>
           <Connection other="REC/audio_in 1"/>
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-1_out"/>
         </Port>
         <Port type="audio" name="Master/audio_out 2">
           <Connection other="Monitor/audio_in 2"/>
           <Connection other="REC/audio_in 2"/>
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-2_out"/>
         </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
@@ -2301,12 +2307,8 @@
         </Port>
       </IO>
       <IO name="Monitor" id="67" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Monitor/audio_out 1">
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_phones-L_out"/>
-        </Port>
-        <Port type="audio" name="Monitor/audio_out 2">
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_phones-R_out"/>
-        </Port>
+        <Port type="audio" name="Monitor/audio_out 1"/>
+        <Port type="audio" name="Monitor/audio_out 2"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
       <Controllable name="mute" id="62" flags="Toggle" value="0"/>
@@ -2351,9 +2353,7 @@
       <Controllable name="solo-iso" id="1082420" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1082422" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Voix" id="274" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Voix/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-1_in"/>
-        </Port>
+        <Port type="audio" name="Voix/audio_in 1"/>
       </IO>
       <IO name="Voix" id="275" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Voix/audio_out 1">
@@ -2647,9 +2647,7 @@
       <Controllable name="solo-iso" id="1082650" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1082652" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="DPA" id="312" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="DPA/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-3_in"/>
-        </Port>
+        <Port type="audio" name="DPA/audio_in 1"/>
       </IO>
       <IO name="DPA" id="313" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="DPA/audio_out 1">
@@ -4422,9 +4420,7 @@
       <Controllable name="solo-iso" id="1085598" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085600" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="CravateAudio" id="187847" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="CravateAudio/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-2_in"/>
-        </Port>
+        <Port type="audio" name="CravateAudio/audio_in 1"/>
       </IO>
       <IO name="CravateAudio" id="187848" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="CravateAudio/audio_out 1">
@@ -4808,9 +4804,7 @@
       <Controllable name="solo-iso" id="1085658" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085660" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="CuisseAudio" id="187887" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="CuisseAudio/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-4_in"/>
-        </Port>
+        <Port type="audio" name="CuisseAudio/audio_in 1"/>
       </IO>
       <IO name="CuisseAudio" id="187888" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="CuisseAudio/audio_out 1"/>
@@ -4911,9 +4905,7 @@
       <Controllable name="solo-iso" id="1085740" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085742" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table1Audio" id="187927" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table1Audio/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-5_in"/>
-        </Port>
+        <Port type="audio" name="Table1Audio/audio_in 1"/>
       </IO>
       <IO name="Table1Audio" id="187928" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table1Audio/audio_out 1">
@@ -5199,9 +5191,7 @@
       <Controllable name="solo-iso" id="1085824" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085826" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table2Audio" id="187967" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table2Audio/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-6_in"/>
-        </Port>
+        <Port type="audio" name="Table2Audio/audio_in 1"/>
       </IO>
       <IO name="Table2Audio" id="187968" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table2Audio/audio_out 1">
@@ -5419,9 +5409,7 @@
       <Controllable name="solo-iso" id="1085908" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085910" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="TableBnB FX" id="188007" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="TableBnB FX/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-7_in"/>
-        </Port>
+        <Port type="audio" name="TableBnB FX/audio_in 1"/>
       </IO>
       <IO name="TableBnB FX" id="188008" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="TableBnB FX/audio_out 1">
@@ -5728,9 +5716,7 @@
       <Controllable name="solo-iso" id="1085968" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1085970" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="TableBnB Audio" id="188047" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="TableBnB Audio/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-7_in"/>
-        </Port>
+        <Port type="audio" name="TableBnB Audio/audio_in 1"/>
       </IO>
       <IO name="TableBnB Audio" id="188048" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="TableBnB Audio/audio_out 1">
@@ -5835,9 +5821,7 @@
       <Controllable name="solo-iso" id="1110790" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1110791" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="CravateSynth" id="1110727" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="CravateSynth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-2_in"/>
-        </Port>
+        <Port type="audio" name="CravateSynth/audio_in 1"/>
       </IO>
       <IO name="CravateSynth" id="1110728" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="CravateSynth/audio_out 1">
@@ -5893,8 +5877,13 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+<<<<<<< HEAD
           <AutomationList automation-id="parameter-8" id="1496209" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-9" id="1496211" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+=======
+          <AutomationList automation-id="parameter-8" id="1480145" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1480147" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -6294,9 +6283,7 @@
       <Controllable name="solo-iso" id="1110918" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1110919" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="CuisseSynth" id="1110855" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="CuisseSynth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-4_in"/>
-        </Port>
+        <Port type="audio" name="CuisseSynth/audio_in 1"/>
       </IO>
       <IO name="CuisseSynth" id="1110856" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="CuisseSynth/audio_out 1">
@@ -6352,8 +6339,13 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
+<<<<<<< HEAD
           <AutomationList automation-id="parameter-8" id="1496475" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-9" id="1496477" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+=======
+          <AutomationList automation-id="parameter-8" id="1480411" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1480413" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -6660,9 +6652,7 @@
       <Controllable name="solo-iso" id="1111046" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1111047" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table1Synth" id="1110983" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table1Synth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-5_in"/>
-        </Port>
+        <Port type="audio" name="Table1Synth/audio_in 1"/>
       </IO>
       <IO name="Table1Synth" id="1110984" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table1Synth/audio_out 1">
@@ -7196,9 +7186,7 @@
       <Controllable name="solo-iso" id="1111174" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1111175" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table2Synth" id="1111111" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table2Synth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-6_in"/>
-        </Port>
+        <Port type="audio" name="Table2Synth/audio_in 1"/>
       </IO>
       <IO name="Table2Synth" id="1111112" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table2Synth/audio_out 1">
@@ -7832,9 +7820,7 @@
       <Controllable name="solo-iso" id="1111302" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1111303" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table3Synth" id="1111239" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table3Synth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-7_in"/>
-        </Port>
+        <Port type="audio" name="Table3Synth/audio_in 1"/>
       </IO>
       <IO name="Table3Synth" id="1111240" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table3Synth/audio_out 1">
@@ -8311,9 +8297,7 @@
       <Controllable name="solo-iso" id="1111430" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1111431" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Table4Synth" id="1111367" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table4Synth/audio_in 1">
-          <Connection other="firewire_pcm:000a350196e1d168_cap_analog-8_in"/>
-        </Port>
+        <Port type="audio" name="Table4Synth/audio_in 1"/>
       </IO>
       <IO name="Table4Synth" id="1111368" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Table4Synth/audio_out 1">
@@ -8794,12 +8778,8 @@
         <Port type="audio" name="EARS/audio_in 2"/>
       </IO>
       <IO name="EARS" id="1130522" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="EARS/audio_out 1">
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-3_out"/>
-        </Port>
-        <Port type="audio" name="EARS/audio_out 2">
-          <Connection other="firewire_pcm:000a350196e1d168_pbk_analog-4_out"/>
-        </Port>
+        <Port type="audio" name="EARS/audio_out 1"/>
+        <Port type="audio" name="EARS/audio_out 2"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
       <Controllable name="mute" id="1130503" flags="Toggle,RealTime" value="0"/>
@@ -11284,7 +11264,7 @@
   <LTC-In>
     <IO name="LTC In" id="47" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
-        <Connection other="firewire_pcm:000a350196e1d168_cap_analog-1_in"/>
+        <Connection other="system:capture_1"/>
       </Port>
     </IO>
   </LTC-In>
@@ -11349,7 +11329,11 @@
       <Window name="add-routes" visible="0" x-off="-1" y-off="-1" x-size="439" y-size="339"/>
       <Window name="add-video" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="inspector" visible="0" x-off="103" y-off="39" x-size="620" y-size="370"/>
+<<<<<<< HEAD
       <Window name="audio-midi-setup" visible="0" x-off="742" y-off="180" x-size="658" y-size="430"/>
+=======
+      <Window name="audio-midi-setup" visible="0" x-off="474" y-off="59" x-size="658" y-size="430"/>
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
       <Window name="video-export" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="script-manager" visible="0" x-off="945" y-off="1" x-size="367" y-size="352"/>
       <Window name="bundle-manager" visible="0" x-off="204" y-off="97" x-size="480" y-size="240"/>
@@ -13291,7 +13275,10 @@
         <Object id="vtv 1454037" height="68"/>
         <Object id="vtv 1461367" height="68"/>
         <Object id="vtv 1470105" height="68"/>
+<<<<<<< HEAD
         <Object id="vtv 1486175" height="68"/>
+=======
+>>>>>>> 0fc33215cf3e5a9eb53cfc89451171fcebfd88ab
       </GUIObjectState>
     </UI>
     <Videomonitor active="0"/>
