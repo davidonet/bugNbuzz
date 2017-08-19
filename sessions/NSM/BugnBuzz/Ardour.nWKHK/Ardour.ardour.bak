@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1475868" name-counter="4" event-counter="1700504" vca-counter="2">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1499963" name-counter="4" event-counter="1704439" vca-counter="2">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -115,7 +115,9 @@
     <Region name="REC-20" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="157926896" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1423056" type="audio" first-edit="nothing" source-0="1421090" source-1="1421092" master-source-0="1421090" master-source-1="1421092" channels="2"/>
     <Region name="REC-21" muted="0" opaque="1" locked="0" video-locked="0" automatic="1" whole-file="1" import="0" external="0" sync-marked="0" left-of-split="0" right-of-split="0" hidden="0" position-locked="0" valid-transients="0" start="0" length="93301280" position="0" beat="0" sync-position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" positional-lock-style="AudioTime" layering-index="0" envelope-active="0" default-fade-in="0" default-fade-out="0" fade-in-active="1" fade-out-active="1" scale-amplitude="1" id="1467805" type="audio" first-edit="nothing" source-0="1466073" source-1="1466075" master-source-0="1466073" master-source-1="1466075" channels="2"/>
   </Regions>
-  <Selection/>
+  <Selection>
+    <StripableAutomationControl stripable="369" control="0" order="2"/>
+  </Selection>
   <Locations>
     <Location id="1304929" name="session" start="0" end="366504224" flags="IsSessionRange" locked="0" position-lock-style="AudioTime"/>
     <Location id="1415361" name="décrochage (xrun)" start="83155840" end="83155840" flags="IsMark" locked="0" position-lock-style="AudioTime"/>
@@ -2056,7 +2058,7 @@
   <VCAManager>
     <VCA name="IN/OUT" number="1">
       <PresentationInfo order="40" flags="VCA,OrderSet" color="3102066175"/>
-      <Controllable name="gaincontrol" id="1304901" flags="GainLike" value="0"/>
+      <Controllable name="gaincontrol" id="1304901" flags="GainLike" value="0.86202740669250488"/>
       <Controllable name="solo" id="1304903" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
       <Controllable name="mute" id="1304905" flags="Toggle,RealTime" value="0"/>
       <Automation>
@@ -2103,7 +2105,7 @@
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
       <Controllable name="mute" id="32" flags="Toggle" value="0"/>
-      <Controllable name="phase" id="1082313" flags="Toggle" value="0" phase-invert="00"/>
+      <Controllable name="phase" id="1082313" flags="Toggle" value="1" phase-invert="01"/>
       <Automation>
         <AutomationList automation-id="gain" id="1082304" default="1" min-yval="0" max-yval="2" interpolation-style="Linear" state="Off" style="Absolute"/>
         <AutomationList automation-id="solo" id="1082308" default="0" min-yval="0" max-yval="1" interpolation-style="Discrete" state="Off" style="Absolute"/>
@@ -2354,7 +2356,12 @@
         </Port>
       </IO>
       <IO name="Voix" id="275" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Voix/audio_out 1"/>
+        <Port type="audio" name="Voix/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_1"/>
+          <Connection other="sooperlooper:loop1_in_1"/>
+          <Connection other="sooperlooper:loop2_in_1"/>
+          <Connection other="sooperlooper:loop3_in_1"/>
+        </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="259" flags="Toggle" value="1"/>
@@ -2645,7 +2652,12 @@
         </Port>
       </IO>
       <IO name="DPA" id="313" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="DPA/audio_out 1"/>
+        <Port type="audio" name="DPA/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_2"/>
+          <Connection other="sooperlooper:loop1_in_2"/>
+          <Connection other="sooperlooper:loop2_in_2"/>
+          <Connection other="sooperlooper:loop3_in_2"/>
+        </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="297" flags="Toggle" value="1"/>
@@ -2880,8 +2892,18 @@
         </Port>
       </IO>
       <IO name="PiezzCrav" id="351" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="PiezzCrav/audio_out 1"/>
-        <Port type="audio" name="PiezzCrav/audio_out 2"/>
+        <Port type="audio" name="PiezzCrav/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="PiezzCrav/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
         <Port type="midi" name="PiezzCrav/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -2948,11 +2970,11 @@
         </OutputMap-0>
         <ThruMap/>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
-          <Port symbol="xfade" value="-1"/>
+          <Port symbol="xfade" value="0.9982907772064209"/>
           <Port symbol="shape" value="0.66028165817260742"/>
           <Port symbol="mode" value="0"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-1" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="0.9982907772064209" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.66028165817260742" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0" parameter="2" symbol="mode"/>
       </Processor>
@@ -3025,8 +3047,18 @@
         </Port>
       </IO>
       <IO name="Piezzo Cuisse" id="389" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Piezzo Cuisse/audio_out 1"/>
-        <Port type="audio" name="Piezzo Cuisse/audio_out 2"/>
+        <Port type="audio" name="Piezzo Cuisse/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="Piezzo Cuisse/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
         <Port type="midi" name="Piezzo Cuisse/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -3140,8 +3172,18 @@
         </Port>
       </IO>
       <IO name="Table1" id="427" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table1/audio_out 1"/>
-        <Port type="audio" name="Table1/audio_out 2"/>
+        <Port type="audio" name="Table1/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="Table1/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="411" flags="Toggle" value="1"/>
@@ -3207,11 +3249,11 @@
         </OutputMap-0>
         <ThruMap/>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
-          <Port symbol="xfade" value="-1"/>
+          <Port symbol="xfade" value="1"/>
           <Port symbol="shape" value="0.59842497110366821"/>
           <Port symbol="mode" value="0"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="-1" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="1" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="0.59842497110366821" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="0" parameter="2" symbol="mode"/>
       </Processor>
@@ -3290,8 +3332,18 @@
         </Port>
       </IO>
       <IO name="Table2" id="465" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table2/audio_out 1"/>
-        <Port type="audio" name="Table2/audio_out 2"/>
+        <Port type="audio" name="Table2/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="Table2/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
       <Controllable name="mute" id="449" flags="Toggle" value="1"/>
@@ -3442,8 +3494,18 @@
         </Port>
       </IO>
       <IO name="TableBnB" id="503" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="TableBnB/audio_out 1"/>
-        <Port type="audio" name="TableBnB/audio_out 2"/>
+        <Port type="audio" name="TableBnB/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="TableBnB/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
         <Port type="midi" name="TableBnB/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -3510,11 +3572,11 @@
         </OutputMap-0>
         <ThruMap/>
         <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1">
-          <Port symbol="xfade" value="1"/>
+          <Port symbol="xfade" value="-1"/>
           <Port symbol="shape" value="1"/>
           <Port symbol="mode" value="1"/>
         </lv2>
-        <Controllable name="Signal A/B" id="84951" flags="" value="1" parameter="0" symbol="xfade"/>
+        <Controllable name="Signal A/B" id="84951" flags="" value="-1" parameter="0" symbol="xfade"/>
         <Controllable name="Shape" id="84953" flags="" value="1" parameter="1" symbol="shape"/>
         <Controllable name="Mode" id="84955" flags="" value="1" parameter="2" symbol="mode"/>
       </Processor>
@@ -3589,8 +3651,18 @@
         </Port>
       </IO>
       <IO name="Table4" id="541" direction="Output" default-type="audio" user-latency="0">
-        <Port type="audio" name="Table4/audio_out 1"/>
-        <Port type="audio" name="Table4/audio_out 2"/>
+        <Port type="audio" name="Table4/audio_out 1">
+          <Connection other="sooperlooper:loop0_in_3"/>
+          <Connection other="sooperlooper:loop1_in_3"/>
+          <Connection other="sooperlooper:loop2_in_3"/>
+          <Connection other="sooperlooper:loop3_in_3"/>
+        </Port>
+        <Port type="audio" name="Table4/audio_out 2">
+          <Connection other="sooperlooper:loop0_in_4"/>
+          <Connection other="sooperlooper:loop1_in_4"/>
+          <Connection other="sooperlooper:loop2_in_4"/>
+          <Connection other="sooperlooper:loop3_in_4"/>
+        </Port>
         <Port type="midi" name="Table4/midi_out 1"/>
       </IO>
       <MuteMaster mute-point="PostFader,Listen,Main" muted="1"/>
@@ -5821,8 +5893,8 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-8" id="1472108" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-9" id="1472110" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1496209" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1496211" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -6280,8 +6352,8 @@
           <AutomationList automation-id="parameter-5" id="1287681" default="16" min-yval="1" max-yval="127" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-6" id="1287683" default="1" min-yval="0" max-yval="4" interpolation-style="Linear" state="Off" style="Absolute"/>
           <AutomationList automation-id="parameter-7" id="1287685" default="0.60000002384185791" min-yval="0" max-yval="1" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-8" id="1472374" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
-          <AutomationList automation-id="parameter-9" id="1472376" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-8" id="1496475" default="60" min-yval="10" max-yval="300" interpolation-style="Linear" state="Off" style="Absolute"/>
+          <AutomationList automation-id="parameter-9" id="1496477" default="40" min-yval="10" max-yval="120" interpolation-style="Linear" state="Off" style="Absolute"/>
         </Automation>
         <ConfiguredInput>
           <Channels type="audio" count="1"/>
@@ -6700,7 +6772,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state140">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state142">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -7273,7 +7345,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state147">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state149">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -7435,7 +7507,7 @@
           <Channelmap type="audio" from="1" to="1"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="http://tytel.org/helm#preset020" last-preset-label="CM Bells" parameter-changed-since-last-preset="1" state-dir="state40">
+        <lv2 last-preset-uri="http://tytel.org/helm#preset020" last-preset-label="CM Bells" parameter-changed-since-last-preset="1" state-dir="state42">
           <Port symbol="lv2_freewheel" value="0"/>
           <Port symbol="amp_attack" value="0.07352941483259201"/>
           <Port symbol="amp_decay" value="0.27941176295280457"/>
@@ -7872,7 +7944,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state142">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state144">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -8351,7 +8423,7 @@
           <Channelmap type="midi" from="0" to="0"/>
         </OutputMap-0>
         <ThruMap/>
-        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state146">
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" state-dir="state148">
           <Port symbol="lv2_freewheel" value="0"/>
         </lv2>
         <Controllable name="hidden" id="284608" flags="Toggle" value="0" parameter="2" symbol="lv2_freewheel"/>
@@ -8824,7 +8896,9 @@
       <Controllable name="solo-iso" id="1226805" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226807" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1 VX" id="1226819" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1 VX/audio_in 1"/>
+        <Port type="audio" name="Loop1 VX/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_1"/>
+        </Port>
       </IO>
       <IO name="Loop1 VX" id="1226820" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 VX/audio_out 1">
@@ -9110,7 +9184,9 @@
       <Controllable name="solo-iso" id="1226847" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226849" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1 DPA" id="1226861" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1 DPA/audio_in 1"/>
+        <Port type="audio" name="Loop1 DPA/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_2"/>
+        </Port>
       </IO>
       <IO name="Loop1 DPA" id="1226862" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1 DPA/audio_out 1">
@@ -9215,7 +9291,9 @@
       <Controllable name="solo-iso" id="1226939" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226941" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2 VX" id="1226953" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2 VX/audio_in 1"/>
+        <Port type="audio" name="Loop2 VX/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_1"/>
+        </Port>
       </IO>
       <IO name="Loop2 VX" id="1226954" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2 VX/audio_out 1">
@@ -9375,7 +9453,9 @@
       <Controllable name="solo-iso" id="1226981" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1226983" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2 DPA" id="1226995" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2 DPA/audio_in 1"/>
+        <Port type="audio" name="Loop2 DPA/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_2"/>
+        </Port>
       </IO>
       <IO name="Loop2 DPA" id="1226996" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2 DPA/audio_out 1">
@@ -9480,7 +9560,9 @@
       <Controllable name="solo-iso" id="1227073" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227075" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3 VX" id="1227087" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3 VX/audio_in 1"/>
+        <Port type="audio" name="Loop3 VX/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_1"/>
+        </Port>
       </IO>
       <IO name="Loop3 VX" id="1227088" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3 VX/audio_out 1">
@@ -9585,7 +9667,9 @@
       <Controllable name="solo-iso" id="1227115" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227117" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3 DPA" id="1227129" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3 DPA/audio_in 1"/>
+        <Port type="audio" name="Loop3 DPA/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_2"/>
+        </Port>
       </IO>
       <IO name="Loop3 DPA" id="1227130" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3 DPA/audio_out 1">
@@ -9690,7 +9774,9 @@
       <Controllable name="solo-iso" id="1227207" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227209" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4 VX" id="1227221" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4 VX/audio_in 1"/>
+        <Port type="audio" name="Loop4 VX/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_1"/>
+        </Port>
       </IO>
       <IO name="Loop4 VX" id="1227222" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4 VX/audio_out 1">
@@ -10121,7 +10207,9 @@
       <Controllable name="solo-iso" id="1227249" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227251" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4 DPA" id="1227263" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4 DPA/audio_in 1"/>
+        <Port type="audio" name="Loop4 DPA/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_2"/>
+        </Port>
       </IO>
       <IO name="Loop4 DPA" id="1227264" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4 DPA/audio_out 1">
@@ -10226,8 +10314,12 @@
       <Controllable name="solo-iso" id="1227367" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227369" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop1Piezz" id="1227381" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop1Piezz/audio_in 1"/>
-        <Port type="audio" name="Loop1Piezz/audio_in 2"/>
+        <Port type="audio" name="Loop1Piezz/audio_in 1">
+          <Connection other="sooperlooper:loop0_out_3"/>
+        </Port>
+        <Port type="audio" name="Loop1Piezz/audio_in 2">
+          <Connection other="sooperlooper:loop0_out_4"/>
+        </Port>
       </IO>
       <IO name="Loop1Piezz" id="1227382" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop1Piezz/audio_out 1">
@@ -10332,8 +10424,12 @@
       <Controllable name="solo-iso" id="1227435" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227437" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop2Piezz" id="1227449" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop2Piezz/audio_in 1"/>
-        <Port type="audio" name="Loop2Piezz/audio_in 2"/>
+        <Port type="audio" name="Loop2Piezz/audio_in 1">
+          <Connection other="sooperlooper:loop1_out_3"/>
+        </Port>
+        <Port type="audio" name="Loop2Piezz/audio_in 2">
+          <Connection other="sooperlooper:loop1_out_4"/>
+        </Port>
       </IO>
       <IO name="Loop2Piezz" id="1227450" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop2Piezz/audio_out 1">
@@ -10438,8 +10534,12 @@
       <Controllable name="solo-iso" id="1227503" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227505" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop3Piezz" id="1227517" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop3Piezz/audio_in 1"/>
-        <Port type="audio" name="Loop3Piezz/audio_in 2"/>
+        <Port type="audio" name="Loop3Piezz/audio_in 1">
+          <Connection other="sooperlooper:loop2_out_3"/>
+        </Port>
+        <Port type="audio" name="Loop3Piezz/audio_in 2">
+          <Connection other="sooperlooper:loop2_out_4"/>
+        </Port>
       </IO>
       <IO name="Loop3Piezz" id="1227518" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop3Piezz/audio_out 1">
@@ -10544,8 +10644,12 @@
       <Controllable name="solo-iso" id="1227571" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1227573" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Loop4Piezz" id="1227585" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Loop4Piezz/audio_in 1"/>
-        <Port type="audio" name="Loop4Piezz/audio_in 2"/>
+        <Port type="audio" name="Loop4Piezz/audio_in 1">
+          <Connection other="sooperlooper:loop3_out_3"/>
+        </Port>
+        <Port type="audio" name="Loop4Piezz/audio_in 2">
+          <Connection other="sooperlooper:loop3_out_4"/>
+        </Port>
       </IO>
       <IO name="Loop4Piezz" id="1227586" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Loop4Piezz/audio_out 1">
@@ -11178,14 +11282,14 @@
     </Processor>
   </Click>
   <LTC-In>
-    <IO name="LTC In" id="48" direction="Input" default-type="audio" user-latency="0">
+    <IO name="LTC In" id="47" direction="Input" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-in">
         <Connection other="firewire_pcm:000a350196e1d168_cap_analog-1_in"/>
       </Port>
     </IO>
   </LTC-In>
   <LTC-Out>
-    <IO name="LTC Out" id="49" direction="Output" default-type="audio" user-latency="0">
+    <IO name="LTC Out" id="48" direction="Output" default-type="audio" user-latency="0">
       <Port type="audio" name="LTC-out"/>
     </IO>
   </LTC-Out>
@@ -11245,7 +11349,7 @@
       <Window name="add-routes" visible="0" x-off="-1" y-off="-1" x-size="439" y-size="339"/>
       <Window name="add-video" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="inspector" visible="0" x-off="103" y-off="39" x-size="620" y-size="370"/>
-      <Window name="audio-midi-setup" visible="0" x-off="556" y-off="62" x-size="658" y-size="430"/>
+      <Window name="audio-midi-setup" visible="0" x-off="435" y-off="0" x-size="658" y-size="430"/>
       <Window name="video-export" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="script-manager" visible="0" x-off="945" y-off="1" x-size="367" y-size="352"/>
       <Window name="bundle-manager" visible="0" x-off="204" y-off="97" x-size="480" y-size="240"/>
@@ -11304,24 +11408,16 @@
       <Window name="PM-49-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-55-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-56-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="P-187984-188019" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-187984-188014" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-187984-1233426" visible="0" x-off="489" y-off="78" x-size="828" y-size="422" custom-ui="0"/>
-      <Window name="P-187984-1233518" visible="0" x-off="471" y-off="183" x-size="865" y-size="213" custom-ui="0"/>
-      <Window name="P-187984-1233497" visible="0" x-off="471" y-off="147" x-size="865" y-size="284" custom-ui="0"/>
-      <Window name="P-187984-188416" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-187984-188011" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-187984-188015" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-187984-188016" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="PM-188019-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-188014-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-1233426-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-1233518-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-1233497-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-188416-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-188011-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-188015-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-188016-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-369-393" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-369-396" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-369-1799" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-369-390" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-369-397" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="PM-393-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-396-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1799-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-390-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-397-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-58-76" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-58-1082277" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-58-81" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
@@ -11372,16 +11468,6 @@
       <Window name="PM-1791-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-352-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-359-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="P-369-393" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-369-396" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-369-1799" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-369-390" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="P-369-397" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
-      <Window name="PM-393-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-396-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-1799-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-390-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
-      <Window name="PM-397-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-407-431" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-407-434" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-407-190805" visible="0" x-off="436" y-off="470" x-size="726" y-size="259" custom-ui="0"/>
@@ -11722,6 +11808,24 @@
       <Window name="PM-188051-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-188055-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="PM-188056-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-187984-188019" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187984-188014" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187984-1233426" visible="0" x-off="489" y-off="78" x-size="828" y-size="422" custom-ui="0"/>
+      <Window name="P-187984-1233518" visible="0" x-off="471" y-off="183" x-size="865" y-size="213" custom-ui="0"/>
+      <Window name="P-187984-1233497" visible="0" x-off="471" y-off="147" x-size="865" y-size="284" custom-ui="0"/>
+      <Window name="P-187984-188416" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187984-188011" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187984-188015" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="P-187984-188016" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
+      <Window name="PM-188019-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-188014-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1233426-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1233518-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-1233497-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-188416-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-188011-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-188015-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="PM-188016-" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="P-1110726-1110745" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1110726-1110747" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="0"/>
       <Window name="P-1110726-1287674" visible="0" x-off="338" y-off="277" x-size="848" y-size="327" custom-ui="0"/>
@@ -13187,6 +13291,8 @@
         <Object id="vtv 1454037" height="68"/>
         <Object id="vtv 1461367" height="68"/>
         <Object id="vtv 1470105" height="68"/>
+        <Object id="vtv 1486175" height="68"/>
+        <Object id="vtv 1494206" height="68"/>
       </GUIObjectState>
     </UI>
     <Videomonitor active="0"/>
