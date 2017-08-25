@@ -43,11 +43,13 @@ ardour:Loop4 VX/audio_out 2              |> ardour:LOOP4/audio_in 2
 ardour:Loop4Piezz/audio_out 1            |> ardour:LOOP4/audio_in 1
 ardour:Loop4Piezz/audio_out 2            |> ardour:LOOP4/audio_in 2
 ardour:Master/audio_out 1                |> ardour:Monitor/audio_in 1
-ardour:Master/audio_out 1                |> ardour:REC/audio_in 1
 ardour:Master/audio_out 1                |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
 ardour:Master/audio_out 2                |> ardour:Monitor/audio_in 2
-ardour:Master/audio_out 2                |> ardour:REC/audio_in 2
 ardour:Master/audio_out 2                |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
+ardour:Master/audio_out 3                |> ardour:Monitor/audio_in 3
+ardour:Master/audio_out 3                |> firewire_pcm:000a350196e1d168_pbk_analog-5_out
+ardour:Master/audio_out 4                |> ardour:Monitor/audio_in 4
+ardour:Master/audio_out 4                |> firewire_pcm:000a350196e1d168_pbk_analog-5_out
 ardour:Monitor/audio_out 1               |> firewire_pcm:000a350196e1d168_pbk_phones-L_out
 ardour:Monitor/audio_out 2               |> firewire_pcm:000a350196e1d168_pbk_phones-R_out
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop0_in_3
