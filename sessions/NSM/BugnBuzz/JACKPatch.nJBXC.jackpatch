@@ -1,5 +1,3 @@
-Mixxx:out_0                              |> ardour:Zik/audio_in 1
-Mixxx:out_1                              |> ardour:Zik/audio_in 2
 ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
 ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
 ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3

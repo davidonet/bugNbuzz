@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1701443" name-counter="4" event-counter="2175892" vca-counter="2">
+<Session version="3002" name="BugNBuzz" sample-rate="48000" end-is-free="1" id-counter="1701443" name-counter="4" event-counter="2176036" vca-counter="2">
   <ProgramVersion created-with="unknown" modified-with="Ardour 1:5.10.0~dfsg-1"/>
   <MIDIPorts>
     <Port name="MIDI Clock in" direction="input"/>
@@ -8841,8 +8841,12 @@
       <Controllable name="solo-iso" id="1265156" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
       <Controllable name="solo-safe" id="1265158" flags="Toggle" value="0" solo-safe="0"/>
       <IO name="Zik" id="1265170" direction="Input" default-type="audio" user-latency="0">
-        <Port type="audio" name="Zik/audio_in 1"/>
-        <Port type="audio" name="Zik/audio_in 2"/>
+        <Port type="audio" name="Zik/audio_in 1">
+          <Connection other="Mixxx:out_0"/>
+        </Port>
+        <Port type="audio" name="Zik/audio_in 2">
+          <Connection other="Mixxx:out_1"/>
+        </Port>
       </IO>
       <IO name="Zik" id="1265171" direction="Output" default-type="audio" user-latency="0">
         <Port type="audio" name="Zik/audio_out 1">
@@ -9494,7 +9498,7 @@
       <Window name="add-routes" visible="0" x-off="-1" y-off="-1" x-size="439" y-size="339"/>
       <Window name="add-video" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="inspector" visible="0" x-off="103" y-off="39" x-size="620" y-size="370"/>
-      <Window name="audio-midi-setup" visible="0" x-off="444" y-off="0" x-size="658" y-size="430"/>
+      <Window name="audio-midi-setup" visible="0" x-off="440" y-off="0" x-size="658" y-size="430"/>
       <Window name="video-export" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
       <Window name="script-manager" visible="0" x-off="945" y-off="1" x-size="367" y-size="352"/>
       <Window name="bundle-manager" visible="0" x-off="204" y-off="97" x-size="480" y-size="240"/>
