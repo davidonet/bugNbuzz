@@ -1,3 +1,5 @@
+Mixxx:out_0                              |> ardour:Zik/audio_in 1
+Mixxx:out_1                              |> ardour:Zik/audio_in 2
 ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
 ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
 ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3
@@ -8,6 +10,8 @@ ardour:DPA/audio_out 1                   |> sooperlooper:loop0_in_2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop1_in_2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop2_in_2
 ardour:DPA/audio_out 1                   |> sooperlooper:loop3_in_2
+ardour:EARS/audio_out 1                  |> firewire_pcm:000a350196e1d168_pbk_analog-3_out
+ardour:EARS/audio_out 2                  |> firewire_pcm:000a350196e1d168_pbk_analog-4_out
 ardour:LOOP 1/audio_out 1                |> ardour:Master/audio_in 1
 ardour:LOOP 1/audio_out 2                |> ardour:Master/audio_in 2
 ardour:LOOP2/audio_out 1                 |> ardour:Master/audio_in 1
@@ -41,9 +45,13 @@ ardour:Loop4 VX/audio_out 2              |> ardour:LOOP4/audio_in 2
 ardour:Loop4Piezz/audio_out 1            |> ardour:LOOP4/audio_in 1
 ardour:Loop4Piezz/audio_out 2            |> ardour:LOOP4/audio_in 2
 ardour:Master/audio_out 1                |> ardour:Monitor/audio_in 1
+ardour:Master/audio_out 1                |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
 ardour:Master/audio_out 2                |> ardour:Monitor/audio_in 2
+ardour:Master/audio_out 2                |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
 ardour:Master/audio_out 3                |> ardour:Monitor/audio_in 3
 ardour:Master/audio_out 4                |> ardour:Monitor/audio_in 4
+ardour:Monitor/audio_out 1               |> firewire_pcm:000a350196e1d168_pbk_phones-L_out
+ardour:Monitor/audio_out 2               |> firewire_pcm:000a350196e1d168_pbk_phones-R_out
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop0_in_3
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop1_in_3
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop2_in_3
@@ -116,6 +124,21 @@ ardour:Zik/audio_out 1                   |> ardour:Master/audio_in 1
 ardour:Zik/audio_out 2                   |> ardour:Master/audio_in 2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
+firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:LTC-in
+firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:Voix/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:CravateAudio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:CravateSynth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-3_in |> ardour:DPA/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-4_in |> ardour:CuisseAudio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-4_in |> ardour:CuisseSynth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-5_in |> ardour:Table1Audio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-5_in |> ardour:Table1Synth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:Table2Audio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:Table2Synth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:Table3Synth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:TableBnB Audio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:Table4Synth/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:TableBnB FX/audio_in 1
 sooperlooper:loop0_out_1                 |> ardour:Loop1 VX/audio_in 1
 sooperlooper:loop0_out_2                 |> ardour:Loop1 DPA/audio_in 1
 sooperlooper:loop0_out_3                 |> ardour:Loop1Piezz/audio_in 1
@@ -132,4 +155,3 @@ sooperlooper:loop3_out_1                 |> ardour:Loop4 VX/audio_in 1
 sooperlooper:loop3_out_2                 |> ardour:Loop4 DPA/audio_in 1
 sooperlooper:loop3_out_3                 |> ardour:Loop4Piezz/audio_in 1
 sooperlooper:loop3_out_4                 |> ardour:Loop4Piezz/audio_in 2
-system:capture_1                         |> ardour:LTC-in
