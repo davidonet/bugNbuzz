@@ -1,9 +1,9 @@
 1 Voix        Sen ew300
-2 PiezzCrav   Sen Xs
+2 PiezzCrav   Audiopho 2
 3 DPA         AKG Out1 
 4 PiezzCuiss  AKG Out2
 5 Table1	  Audiopho 1
-6 Table2      Audiopho 2
+6 Table2      
 7 Table3      Audiopho 3
 8 Table4      Audiopho 4
 
