@@ -23,12 +23,12 @@ Adil prend Touilleur   |  Unmute Cravate
                        |  Mute TableBnB
                        |  Cross TableBnB -> Synth
 ------------------------------------------------------------
-Adil lache Touilleur   |  Mute Cravate
+Adil lache Touilleur   |  
 ------------------------------------------------------------
-Adil prend Voix        |  Crossfade Cravate -> Synth
+Adil prend Voix        |  Adil Crossfade Cravate -> Synth
                        |  Unmute Voix
 ------------------------------------------------------------
-Adil pose Voix         |  Mute Voix
+Adil pose Voix         |  Mute Voix & Cravate
 ------------------------------------------------------------
 Adil Touilleur         |
 ENLEVE Touilleur Bouche|  Unmute Cravate
@@ -52,16 +52,11 @@ Loop Kik/snare         |  Mute Cravate & Cuisse
                        |  Unmute Table1
 ------------------------------------------------------------
 Loop Table1 Audio  OK  |  Cross Table1 -> Synthé
-                       |  Table1 + 3-6dB
+   Adil redresse       |  Table1 + 3-6dB
 ------------------------------------------------------------
 Adil pret a loop       |  Table1 -2dB
 ------------------------------------------------------------
-Loop Table1 Synth OK   |  Mute Table1
-------------------------------------------------------------
-Adil approche Table2   |  Unmute Table2
-------------------------------------------------------------
-Loop Table2 OK         |  Mute Table2
-                       |  Unmute Voix
+OroPassi Loop     OK   |  Mute Table1
 ------------------------------------------------------------
 Master baisse,         |  Cross TableBnB -> Synth 
 Arrivée TableBnB       |  Unmute TableBnB

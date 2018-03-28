@@ -1,3 +1,5 @@
+PulseAudio JACK Sink:front-left          |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
+PulseAudio JACK Sink:front-right         |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
 ardour:CravateAudio/audio_out 1          |> ardour:PiezzCrav/audio_in 1
 ardour:CravateAudio/audio_out 2          |> ardour:PiezzCrav/audio_in 2
 ardour:CravateSynth/audio_out 1          |> ardour:PiezzCrav/audio_in 3
@@ -46,8 +48,6 @@ ardour:Master/audio_out 1                |> ardour:Monitor/audio_in 1
 ardour:Master/audio_out 1                |> firewire_pcm:000a350196e1d168_pbk_analog-1_out
 ardour:Master/audio_out 2                |> ardour:Monitor/audio_in 2
 ardour:Master/audio_out 2                |> firewire_pcm:000a350196e1d168_pbk_analog-2_out
-ardour:Master/audio_out 3                |> ardour:Monitor/audio_in 3
-ardour:Master/audio_out 4                |> ardour:Monitor/audio_in 4
 ardour:Monitor/audio_out 1               |> firewire_pcm:000a350196e1d168_pbk_phones-L_out
 ardour:Monitor/audio_out 2               |> firewire_pcm:000a350196e1d168_pbk_phones-R_out
 ardour:PiezzCrav/audio_out 1             |> sooperlooper:loop0_in_3
@@ -122,8 +122,10 @@ ardour:Zik/audio_out 1                   |> ardour:Master/audio_in 1
 ardour:Zik/audio_out 2                   |> ardour:Master/audio_in 2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
+firewire_pcm:000a350196e1d168_cap_analog-1_in |> PulseAudio JACK Source:front-left
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:LTC-in
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:Voix/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-2_in |> PulseAudio JACK Source:front-right
 firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:CravateAudio/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-2_in |> ardour:CravateSynth/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-3_in |> ardour:DPA/audio_in 1
