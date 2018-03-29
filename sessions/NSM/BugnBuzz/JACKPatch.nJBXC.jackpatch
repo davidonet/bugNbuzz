@@ -92,6 +92,8 @@ ardour:Table2Synth/audio_out 1           |> ardour:Table2/audio_in 3
 ardour:Table2Synth/audio_out 2           |> ardour:Table2/audio_in 4
 ardour:Table3Synth/audio_out 1           |> ardour:TableBnB/audio_in 3
 ardour:Table3Synth/audio_out 2           |> ardour:TableBnB/audio_in 4
+ardour:Table4 FX/audio_out 1             |> ardour:Table4/audio_in 1
+ardour:Table4 FX/audio_out 2             |> ardour:Table4/audio_in 2
 ardour:Table4/audio_out 1                |> sooperlooper:loop0_in_3
 ardour:Table4/audio_out 1                |> sooperlooper:loop1_in_3
 ardour:Table4/audio_out 1                |> sooperlooper:loop2_in_3
@@ -104,8 +106,6 @@ ardour:Table4Synth/audio_out 1           |> ardour:Table4/audio_in 3
 ardour:Table4Synth/audio_out 2           |> ardour:Table4/audio_in 4
 ardour:TableBnB Audio/audio_out 1        |> ardour:TableBnB/audio_in 1
 ardour:TableBnB Audio/audio_out 2        |> ardour:TableBnB/audio_in 2
-ardour:TableBnB FX/audio_out 1           |> ardour:TableBnB/audio_in 3
-ardour:TableBnB FX/audio_out 2           |> ardour:TableBnB/audio_in 4
 ardour:TableBnB/audio_out 1              |> sooperlooper:loop0_in_3
 ardour:TableBnB/audio_out 1              |> sooperlooper:loop1_in_3
 ardour:TableBnB/audio_out 1              |> sooperlooper:loop2_in_3
@@ -122,6 +122,7 @@ ardour:Zik/audio_out 1                   |> ardour:Master/audio_in 1
 ardour:Zik/audio_out 2                   |> ardour:Master/audio_in 2
 ardour:auditioner/audio_out 1            |> ardour:Monitor/audio_in 1
 ardour:auditioner/audio_out 2            |> ardour:Monitor/audio_in 2
+firewire_pcm:000a350196e1d168_cap_SPDIF-2_in |> ardour:Table2/audio_in 2
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> PulseAudio JACK Source:front-left
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:LTC-in
 firewire_pcm:000a350196e1d168_cap_analog-1_in |> ardour:Voix/audio_in 1
@@ -137,8 +138,8 @@ firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:Table2Audio/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-6_in |> ardour:Table2Synth/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:Table3Synth/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-7_in |> ardour:TableBnB Audio/audio_in 1
+firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:Table4 FX/audio_in 1
 firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:Table4Synth/audio_in 1
-firewire_pcm:000a350196e1d168_cap_analog-8_in |> ardour:TableBnB FX/audio_in 1
 sooperlooper:loop0_out_1                 |> ardour:Loop1 VX/audio_in 1
 sooperlooper:loop0_out_2                 |> ardour:Loop1 DPA/audio_in 1
 sooperlooper:loop0_out_3                 |> ardour:Loop1Piezz/audio_in 1

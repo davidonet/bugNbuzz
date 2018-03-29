@@ -14,12 +14,13 @@ Adil "c'est partit"    |  Play
                        |  Unmute Voix, DPA, Cravate
 ------------------------------------------------------------
 Adil " OK "            |  Mute Voix, DPA, Cravate
-                       |  No Boost DPA
+  +pause loop          |  No Boost DPA
                        |  VCA sortie 0dB
 ------------------------------------------------------------
-Maud + Adil assis      |  Unmute TableBnB
+Maud + Adil assis      |  Unmute TableBnB   + refresh cross
+                       |     + Unmut Cravatte
 ------------------------------------------------------------
-Adil prend Touilleur   |  Unmute Cravate
+Adil prend Touilleur   |  
                        |  Mute TableBnB
                        |  Cross TableBnB -> Synth
 ------------------------------------------------------------
@@ -41,15 +42,16 @@ Pose Archet            |  Mute Cravate
 ------------------------------------------------------------
 Adil prend Voix        |  Unmute Voix
 ------------------------------------------------------------
-Fin bug, Adil static   |  Unmute Cravate
+Fin bug, Adil static   |  Unmute Cravate (apres switch)
 ------------------------------------------------------------
 Loop Kik / Tata        |  Mute Cravate
 ------------------------------------------------------------
-Adil pose Voix         |  Unmute Cuisse
+Adil pose Voix         |  Unmute Cuisse + Cravatte + Table 1 
+                       |     + Mute Voix
 ------------------------------------------------------------
 Loop Kik/snare         |  Mute Cravate & Cuisse
                        |  Cross Table1 -> Audio
-                       |  Unmute Table1
+                       | 
 ------------------------------------------------------------
 Loop Table1 Audio  OK  |  Cross Table1 -> Synthé
    Adil redresse       |  Table1 + 3-6dB
@@ -58,7 +60,12 @@ Adil pret a loop       |  Table1 -2dB
 ------------------------------------------------------------
 OroPassi Loop     OK   |  Mute Table1
 ------------------------------------------------------------
-Master baisse,         |  Cross TableBnB -> Synth 
+Allumette	       |  Monte Mic Voix
+------------------------------------------------------------
+Pose Mic Voix sur      |  Unmut 
+  Table 4	       |////////////////////////////
+------------------------------------------------------------
+Master baisse,         |  Cross TableBnB -> Synth
 Arrivée TableBnB       |  Unmute TableBnB
                        |  Mute Voix
 ------------------------------------------------------------

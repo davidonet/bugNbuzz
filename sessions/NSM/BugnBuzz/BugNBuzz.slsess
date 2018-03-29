@@ -2,7 +2,7 @@
 <SLSession version="1.7.3">
   <Globals tempo="0" eighth_per_cycle="16" common_dry="0" common_wet="1" input_gain="1" sync_source="1" auto_disable_latency="1" jack_timebase_master="1" output_midi_clock="0" use_midi_start="0" use_midi_stop="0" send_midi_start_on_trigger="0" smart_eighths="0"/>
   <Loopers>
-    <Looper index="0" channels="4" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
+    <Looper index="0" channels="4" loop_secs="480" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
       <Panner linked="no" link_direction="0" bypassed="no">
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
@@ -36,7 +36,7 @@
         <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
-    <Looper index="1" channels="4" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
+    <Looper index="1" channels="4" loop_secs="480" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
       <Panner linked="no" link_direction="0" bypassed="no">
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
@@ -70,7 +70,7 @@
         <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
-    <Looper index="2" channels="4" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
+    <Looper index="2" channels="4" loop_secs="480" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
       <Panner linked="no" link_direction="0" bypassed="no">
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
@@ -104,7 +104,7 @@
         <Control name="round_integer_tempo" value="1"/>
       </Controls>
     </Looper>
-    <Looper index="3" channels="4" loop_secs="120" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
+    <Looper index="3" channels="4" loop_secs="480" discrete_io="yes" use_common_ins="no" use_common_outs="yes" relative_sync="yes" auto_latency="yes" tempo_stretch="no" stretch_ratio="1" pitch_shift="0">
       <Panner linked="no" link_direction="0" bypassed="no">
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
         <StreamPanner x="0.500000" type="Equal Power Stereo" muted="no"/>
